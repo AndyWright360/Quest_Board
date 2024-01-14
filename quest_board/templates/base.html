@@ -6,12 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- GOOGLE FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap" rel="stylesheet">
-
     <!-- STYLESHEETS -->
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- Materialize -->
     <link
       rel="stylesheet"
@@ -29,9 +39,40 @@
     <title>Quest Board</title>
   </head>
   <body>
-    Test
+    <header>
+      <!-- NAVBAR -->
+      <!-- Materialize Mobile Collapsible Navbar -->
+      <nav>
+        <div class="nav-wrapper">
+          <a href="{{ url_for('home') }}" class="brand-logo">Quest Board</a>
+          <a href="#" data-activates="mobile-demo" class="button-collapse"
+            ><i class="fa-solid fa-bars"></i
+          ></a>
+          <!-- Main Navbar -->
+          <ul class="right hide-on-med-and-down">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="">Events</a></li>
+            <li><a href="">Sign Up/Login</a></li>
+          </ul>
+          <!-- Mobile Sidenav -->
+          <ul class="side-nav" id="mobile-demo">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="">Events</a></li>
+            <li><a href="">Sign Up/Login</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
     <!-- JAVASCRIPT -->
+    <!-- jQuery -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- Local Javascript -->
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
     <!-- Materialize -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
