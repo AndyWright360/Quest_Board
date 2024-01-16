@@ -1,7 +1,62 @@
-/*---------- LOCAL FONTS ----------*/
+/*---------- FONTS ----------*/
 
 @font-face {
     font-family: 'DragonHunter';
     src: url('../fonts/dragonhunter.otf') format('opentype');
 }
 
+body {
+    font-family: 'Charm', sans-serif;
+    color: #FCF3D6;
+}
+
+h1 {
+    font-family: 'DragonHunter', sans-serif;
+    color: #FCF3D6;
+    font-size: 2.1rem;
+}
+
+/*---------- NAVBAR ----------*/
+
+nav {
+    background-color: #961E28;
+}
+
+nav .brand-logo {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    height: 100%;
+}
+
+.logo {
+    height: 90%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+nav ul a {
+    color: #FCF3D6;
+    font-size: 1.6rem;
+}
+
+nav ul a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.side-nav {
+    background-color: #961E28;
+}
+
+.side-nav li>a {
+    color: #FCF3D6;
+    font-size: 20px;
+}
+
+.side-nav li>a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.button-collapse {
+    color: #FCF3D6;
+}

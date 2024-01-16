@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- META TAGS -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -10,71 +11,57 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap"
-    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap" />
     <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Materialize -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"
-      type="text/css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"
+        type="text/css" />
     <!-- Stylesheet -->
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='css/style.css') }}"
-      type="text/css"
-    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css" />
 
     <!-- PAGE TITLE -->
     <title>Quest Board</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <header>
-      <!-- NAVBAR -->
-      <!-- Materialize Mobile Collapsible Navbar -->
-      <nav>
-        <div class="nav-wrapper">
-          <a href="{{ url_for('home') }}" class="brand-logo">Quest Board</a>
-          <a href="#" data-activates="mobile-demo" class="button-collapse"
-            ><i class="fa-solid fa-bars"></i
-          ></a>
-          <!-- Main Navbar -->
-          <ul class="right hide-on-med-and-down">
-            <li><a href="{{ url_for('home') }}">Home</a></li>
-            <li><a href="">Events</a></li>
-            <li><a href="">Sign Up/Login</a></li>
-          </ul>
-          <!-- Mobile Sidenav -->
-          <ul class="side-nav" id="mobile-demo">
-            <li><a href="{{ url_for('home') }}">Home</a></li>
-            <li><a href="">Events</a></li>
-            <li><a href="">Sign Up/Login</a></li>
-          </ul>
-        </div>
-      </nav>
+        <!-- NAVBAR -->
+        <!-- Materialize Mobile Collapsible Navbar -->
+        <nav>
+            <div class="nav-wrapper">
+                <a href="{{ url_for('home') }}" class="brand-logo"><img class="logo" src="/static/images/logo.png"
+                        alt="A wooden shield with a green letter Q painted in the center" />
+                    <h1>Quest Board</h1>
+                </a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="fa-solid fa-bars"></i></a>
+                <!-- Main Navbar -->
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="">Events</a></li>
+                    <li><a href="">Sign Up/Login</a></li>
+                </ul>
+                <!-- Mobile Sidenav -->
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="">Events</a></li>
+                    <li><a href="">Sign Up/Login</a></li>
+                </ul>
+            </div>
+        </nav>
     </header>
 
     <!-- JAVASCRIPT -->
     <!-- jQuery -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- Local Javascript -->
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
     <!-- Materialize -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-  </body>
+</body>
+
 </html>
