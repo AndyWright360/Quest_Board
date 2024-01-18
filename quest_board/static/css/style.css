@@ -16,7 +16,7 @@ h1 {
     font-size: 2.1rem;
 }
 
-/*---------- NAVBAR ----------*/
+/*---------- Navbar ----------*/
 
 nav {
     background-color: #961E28;
@@ -27,6 +27,9 @@ nav .brand-logo {
     align-items: center;
     justify-items: center;
     height: 100%;
+    width: max-content;
+    color: #FCF3D6;
+    font-family: 'DragonHunter', sans-serif;
 }
 
 .logo {
@@ -44,8 +47,23 @@ nav ul a:hover {
     background-color: rgba(0, 0, 0, 0.3);
 }
 
+/*---------- Side Nav ----------*/
+
 .side-nav {
-    background-color: #961E28;
+    background-color: transparent;
+    background: url(../images/banner.png);
+    background-size: 100% 80%;
+    background-repeat: no-repeat;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.side-nav li {
+    margin: 0 62px 0 23px;
+}
+
+.side-nav li:first-child {
+    margin-top: 25px;
 }
 
 .side-nav li>a {

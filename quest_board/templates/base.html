@@ -32,8 +32,8 @@
         <!-- Materialize Mobile Collapsible Navbar -->
         <nav>
             <div class="nav-wrapper">
-                <a href="{{ url_for('home') }}" class="brand-logo"><img class="logo" src="/static/images/logo.png"
-                        alt="A wooden shield with a green letter Q painted in the center" />
+                <a href="{{ url_for('home') }}" class="brand-logo"><img class="logo" src="{{ url_for('static', filename='images/logo.png') }}"
+                        alt="A wooden shield with paper nailed to the center. A green letter Q is painted on the paper" />
                     <h1>Quest Board</h1>
                 </a>
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="fa-solid fa-bars"></i></a>
