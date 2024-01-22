@@ -85,7 +85,7 @@ nav ul a:hover {
 /*---------- Hero Section ----------*/
 
 .hero-container {
-    background: url(assets/images/Original.jpeg);
+    background: url(assets/images/hero.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -102,6 +102,7 @@ nav ul a:hover {
     text-align: center;
     background-color: rgba(150, 30, 40, 0.75);
     max-width: 400px;
+    color: #FCF3D6;
 }
 
 #hero-text {
