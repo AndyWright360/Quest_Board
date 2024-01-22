@@ -110,6 +110,27 @@ nav ul a:hover {
     margin: 0 30px 20px;
 }
 
+/*---------- About Section ----------*/
+
+.dark-green-bg {
+    background-color: #03432B;
+    color: #FCF3D6;
+}
+
+.about-content {
+    padding: 50px 25%;
+    text-align: center;
+}
+
+.section-title {
+    margin: 0;
+}
+
+.section-text {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+}
+
 /*---------- Footer ----------*/
 
 footer {
