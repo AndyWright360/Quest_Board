@@ -2,21 +2,32 @@
 
 @font-face {
     font-family: 'DragonHunter';
-    src: url('assets/fonts/dragonhunter.otf') format('opentype');
+    src: url('../fonts/dragonhunter.otf') format('opentype');
 }
 
 /*---------- Fonts ----------*/
 
 body {
     font-family: 'Charm', sans-serif;
-    color: #FCF3D6;
 }
 
-h1 {
+h1,
+h2 {
     font-family: 'DragonHunter', sans-serif;
-    color: #FCF3D6;
     font-size: 2.5rem;
+}
+
+#hero-title {
     margin: 20px 30px 0;
+}
+
+.section-title {
+    margin: 0;
+}
+
+.section-text {
+    font-size: 1.5rem;
+    margin-bottom: 0;
 }
 
 /*---------- Navbar ----------*/
@@ -54,7 +65,7 @@ nav ul a:hover {
 
 .side-nav {
     background-color: transparent;
-    background: url(assets/images/Banner.png);
+    background: url(../images/banner.png);
     background-size: 100% 80%;
     background-repeat: no-repeat;
     box-shadow: none;
@@ -79,13 +90,19 @@ nav ul a:hover {
 }
 
 .button-collapse {
+    display: flex;
+    align-items: center;
+}
+
+#burger-menu {
     color: #FCF3D6;
+    height: 50%;
 }
 
 /*---------- Hero Section ----------*/
 
 .hero-container {
-    background: url(assets/images/hero.jpg);
+    background: url(../images/hero.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -122,15 +139,6 @@ nav ul a:hover {
     text-align: center;
 }
 
-.section-title {
-    margin: 0;
-}
-
-.section-text {
-    font-size: 1.5rem;
-    margin-bottom: 0;
-}
-
 /*---------- Locations Section ----------*/
 
 .light-green-bg {
@@ -146,6 +154,28 @@ nav ul a:hover {
 #map {
     height: 400px;
     width: 100%;
+    margin-top: 21px;
+}
+
+/*---------- Gallery Section ----------*/
+
+.gallery-content {
+    padding: 50px 25%;
+    text-align: center;
+}
+
+.carousel {
+    width: auto;
+    height: auto;
+    max-height: 600px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.carousel-item {
+    max-height: 75vh;
+    width: auto;
     margin-top: 21px;
 }
 
