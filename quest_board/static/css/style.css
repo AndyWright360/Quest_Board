@@ -131,6 +131,24 @@ nav ul a:hover {
     margin-bottom: 0;
 }
 
+/*---------- Locations Section ----------*/
+
+.light-green-bg {
+    background-color: #8EC5A2;
+    color: #59060D;
+}
+
+.locations-content {
+    padding: 50px 15%;
+    text-align: center;
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+    margin-top: 21px;
+}
+
 /*---------- Footer ----------*/
 
 footer {
