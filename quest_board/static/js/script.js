@@ -1,6 +1,8 @@
 $(document).ready(function () {
     // Initialise side navbar
     $(".button-collapse").sideNav();
+    // Initialise carousel
+    $('.carousel.carousel-slider').carousel({ fullWidth: true });
 });
 
 // Create variable of footer icons
