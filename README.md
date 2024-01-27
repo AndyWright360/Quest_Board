@@ -292,3 +292,81 @@ Wireframes were generated using Balsamiq for desktop, tablet, and mobile screen 
 </details>
 
 ---
+
+## **Features**
+
+### **General Features**
+
+#### **Responsive Design**
+
+<details><summary>Screenshots</summary>
+
+<img>
+
+*Responsive Layout*
+
+</details>
+
+- The layout adjusts to different device widths, providing users with a smooth experience across multiple device. This imporoves both accessibility and usability.
+
+#### **Footer**
+
+<details><summary>Screenshots</summary>
+
+<img>
+
+*Footer Design*
+
+<img>
+
+*Social Media Links*
+
+</details>
+
+- The design of the social media icons was crafted to resemble dice, maintaining thematic consistency across the entire page.
+
+- Links expand in size when users hover their mouse over them, suggesting interactivity and enhancing user engagement.
+
+#### **Buttons**
+
+<details><summary>Screenshots</summary>
+
+<img>
+
+*Button Transition*
+
+</details>
+
+- The buttons were fashioned to mirror the appearance of message boards, aligning them thematically with the core design.
+
+- Upon mouse hover, the buttons enlarge to offer interactive feedback, enhancing the user experience.
+
+### **Home Page**
+
+<details><summary>Screenshots</summary>
+
+<img>
+
+*Home Page*
+
+</details>
+
+- The design of the hero image was intended to capture the imaginations of the users. The concept being that the world of the game is being brought to life around the players. The colour palette was adjusted to better suit the theming of the website. A large red dragon is pictured centrally as a nod to the Welsh dragon.
+
+- The "Our Quest" section serves as a short blurb, summarising the website's purpose for users.
+
+- Partner game store locations are highlighted on the map, each revealing key information upon mouse click.
+
+- The map was crafted to resemble an adventurer's treasure map, adding a thematic touch to the overall style.
+
+- The gallery features an auto-play function, effectively conveying its purpose to users. The images depict past events, offering users a visual preview of what to anticipate from upcoming gatherings.
+
+### **Future Implementations**
+
+#### **Profile Personalisation**
+
+#### **Party Creation**
+
+#### **Message System**
+
+---
