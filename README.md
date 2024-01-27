@@ -50,3 +50,41 @@ From a visual perspective, the goal was to theme the website on the fantastical 
     1. I want to review and moderate user-created events to ensure they comply with community guidelines.
 
 ---
+
+## **Design**
+
+### **Colour Scheme**
+
+#### **Primary Palette**
+
+![Primary colour palette used in the project](documentation/primary-palette.jpg)
+
+The color scheme was inspired by the Welsh flag, not only as a nod to the location of the events but also to infuse a sense of regional identity into the platform. This design element aims to enhance the overall sense of community within the South Wales Dungeons & Dragons player base.
+
+#### **Additional Colours**
+
+![Additional colour palette used in the project]()
+
+These additional colours were used to compliment the primary colour scheme and offer some visual depth to the website.
+
+### **Typography**
+
+#### **Dragon Hunter**
+
+![Logo for Dragon Hunter font](documentation/dragon-hunter.jpg)
+
+Dragon Hunter was the font used for the headings of the website. The font was chosen to evoke the fantasy theme of the site and establish a thematic connection to Dungeons & Dragons.
+
+#### **Charm**
+
+![Logo for Charm font](documentation/charm.jpg)
+
+Charm was used for all other text content throughout the site. This font was chosen for its handwritten style, adding a touch of enchantment to the overall design. To maintain legibility, I implemented a high-contrast color scheme and increased the font size for enhanced clarity.
+
+### **Imagery**
+
+The central theme guiding the visual design of this website is to capture the fun and approachable essence of Dungeons & Dragons. To embody this, I opted for an animated visual style, incorporating many playful elements throughout the website.
+
+The goal was to integrate the fantastical world of the game into every aspect of the site. Notably, the Google Maps feature was styled to resemble an adventurer's map, and the side navigation bar was crafted to mirror the appearance of a knight's banner.
+
+At the heart of the site's concept was the idea of adventurers receiving quests from a message board. To achieve this, I designed the user created events to resemble sheets of parchment paper. Placing them against a wooden background to evoke the essence of a message board. I aimed to spark the imaginations of the users, encouraging them to take part and become active members of the community. These elements were also incorporated into the logo, for a more cohesive design.
