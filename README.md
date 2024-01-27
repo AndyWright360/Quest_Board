@@ -88,3 +88,207 @@ The central theme guiding the visual design of this website is to capture the fu
 The goal was to integrate the fantastical world of the game into every aspect of the site. Notably, the Google Maps feature was styled to resemble an adventurer's map, and the side navigation bar was crafted to mirror the appearance of a knight's banner.
 
 At the heart of the site's concept was the idea of adventurers receiving quests from a message board. To achieve this, I designed the user created events to resemble sheets of parchment paper. Placing them against a wooden background to evoke the essence of a message board. I aimed to spark the imaginations of the users, encouraging them to take part and become active members of the community. These elements were also incorporated into the logo, for a more cohesive design.
+
+### **Wireframes**
+
+Wireframes were generated using Balsamiq for desktop, tablet, and mobile screen dimensions, ensuring a responsive design. This method aids in visualising and configuring the layout, allowing for a more uniformed user experience across various devices.
+
+#### **Desktop**
+
+<details><summary>Home Page</summary>
+
+<img src="documentation/wireframes/home-dt.png">
+
+*Home Page*
+
+</details>
+
+<details><summary>Events Page</summary>
+
+<img src="documentation/wireframes/events-dt.png">
+
+*Events Page*
+
+</details>
+
+<details><summary>Create Event Page</summary>
+
+<img src="documentation/wireframes/create-event-dt.png">
+
+*Create Event Page*
+
+</details>
+
+<details><summary>Selected Event Page</summary>
+
+<img src="documentation/wireframes/selected-event-dt.png">
+
+*Selected Event Page*
+
+</details>
+
+<details><summary>Edit Event Page</summary>
+
+<img src="documentation/wireframes/edit-event-dt.png">
+
+*Edit Event Page*
+
+</details>
+
+<details><summary>Sign Up Page</summary>
+
+<img src="documentation/wireframes/sign-up-dt.png">
+
+*Sign Up Page*
+
+</details>
+
+<details><summary>Login Page</summary>
+
+<img src="documentation/wireframes/login-dt.png">
+
+*Login Page*
+
+</details>
+
+<details><summary>Profile Page</summary>
+
+<img src="documentation/wireframes/profile-dt.png">
+
+*Profile Page*
+
+</details>
+
+#### **Tablet**
+
+<details><summary>Home Page</summary>
+
+<img src="documentation/wireframes/home-tab.png">
+
+*Home Page*
+
+</details>
+
+<details><summary>Events Page</summary>
+
+<img src="documentation/wireframes/events-tab.png">
+
+*Events Page*
+
+</details>
+
+<details><summary>Create Event Page</summary>
+
+<img src="documentation/wireframes/create-event-tab.png">
+
+*Create Event Page*
+
+</details>
+
+<details><summary>Selected Event Page</summary>
+
+<img src="documentation/wireframes/selected-event-tab.png">
+
+*Selected Event Page*
+
+</details>
+
+<details><summary>Edit Event Page</summary>
+
+<img src="documentation/wireframes/edit-event-tab.png">
+
+*Edit Event Page*
+
+</details>
+
+<details><summary>Sign Up Page</summary>
+
+<img src="documentation/wireframes/sign-up-tab.png">
+
+*Sign Up Page*
+
+</details>
+
+<details><summary>Login Page</summary>
+
+<img src="documentation/wireframes/login-tab.png">
+
+*Login Page*
+
+</details>
+
+<details><summary>Profile Page</summary>
+
+<img src="documentation/wireframes/profile-tab.png">
+
+*Profile Page*
+
+</details>
+
+#### **Mobile**
+
+<details><summary>Home Page</summary>
+
+<img src="documentation/wireframes/home-mob.png">
+
+*Home Page*
+
+</details>
+
+<details><summary>Events Page</summary>
+
+<img src="documentation/wireframes/events-mob.png">
+
+*Events Page*
+
+</details>
+
+<details><summary>Create Event Page</summary>
+
+<img src="documentation/wireframes/create-event-mob.png">
+
+*Create Event Page*
+
+</details>
+
+<details><summary>Selected Event Page</summary>
+
+<img src="documentation/wireframes/selected-event-mob.png">
+
+*Selected Event Page*
+
+</details>
+
+<details><summary>Edit Event Page</summary>
+
+<img src="documentation/wireframes/edit-event-mob.png">
+
+*Edit Event Page*
+
+</details>
+
+<details><summary>Sign Up Page</summary>
+
+<img src="documentation/wireframes/sign-up-mob.png">
+
+*Sign Up Page*
+
+</details>
+
+<details><summary>Login Page</summary>
+
+<img src="documentation/wireframes/login-mob.png">
+
+*Login Page*
+
+</details>
+
+<details><summary>Profile Page</summary>
+
+<img src="documentation/wireframes/profile-mob.png">
+
+*Profile Page*
+
+</details>
+
+---
