@@ -14,6 +14,9 @@ $(document).ready(function () {
 
     // Initialise datepicker
     $('.datepicker').datepicker();
+
+    // Initialise character counter for forms
+    $('input#event_name, textarea#description').characterCounter();
 });
 
 // Create variable of footer icons

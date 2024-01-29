@@ -57,6 +57,46 @@
                         <span class="helper-text" data-error="Max 10">Between 1-10</span>
                     </div>
                 </div>
+                <div class="row">
+                    <!-- Description Textarea -->
+                    <div class="input-field col s12">
+                        <textarea id="description" class="materialize-textarea" data-length="250"></textarea>
+                        <label for="description">Description</label>
+                        <span class="helper-text" data-error="Too many characters"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- Radio Button - Beginner -->
+                    <div class="col s4">
+                        <p class="radio-container">
+                            <label>
+                                <input class="with-gap" name="group3" type="radio" checked />
+                                <span>Beginner</span>
+                                <img class="responsive-img stamp" img src="{{ url_for('static', filename='images/seal-green.png') }}" alt="A green wax seal with a D20 symbol" />
+                            </label>
+                        </p>
+                    </div>
+                    <!-- Radio Button - Everyone -->
+                    <div class="col s4">
+                        <p class="radio-container">
+                            <label>
+                                <input class="with-gap" name="group3" type="radio" />
+                                <span>Everyone</span>
+                                <img class="responsive-img stamp" img src="{{ url_for('static', filename='images/seal-yellow.png') }}" alt="A yellow wax seal with a D20 symbol" />
+                            </label>
+                        </p>
+                    </div>
+                    <div class="col s4">
+                        <!-- Radio Button - Experienced -->
+                        <p class="radio-container">
+                            <label>
+                                <input class="with-gap" name="group3" type="radio" />
+                                <span>Experienced</span>
+                                <img class="responsive-img stamp" img src="{{ url_for('static', filename='images/seal-red.png') }}" alt="A red wax seal with a D20 symbol" />
+                            </label>
+                        </p>
+                    </div>
+                </div>
             </form>
         </div>
     </div>
