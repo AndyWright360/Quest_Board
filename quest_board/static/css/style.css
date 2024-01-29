@@ -130,6 +130,30 @@ nav ul a:hover {
     margin: 0 30px 20px;
 }
 
+/*---------- Heading Section ----------*/
+
+.heading-container {
+    background-color: #961E28;
+    background-image: url(../images/title-bg.png);
+    background-repeat: repeat-x;
+    background-position: center bottom;
+    color: #42271D;
+    height: 250px;
+    position: relative;
+    text-align: center;
+}
+
+.heading-container h1 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -60%);
+    margin: 0;
+    width: 100%;
+    -webkit-filter: drop-shadow(1px 1px 0 #FCF3D6) drop-shadow(-1px -1px 0 #FCF3D6);
+    filter: drop-shadow(1px 1px 0 #FCF3D6) drop-shadow(-1px -1px 0 #FCF3D6);
+}
+
 /*---------- About Section ----------*/
 
 .dark-green-bg {
