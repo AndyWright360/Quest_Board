@@ -1,11 +1,16 @@
 $(document).ready(function () {
+
     // Initialise side navbar
     $('.sidenav').sidenav();
+
     // Initialise carousel
     $('.carousel.carousel-slider').carousel({
         fullWidth: true,
         indicators: true
     });
+
+    // Initialise form select
+    $('select').formSelect();
 });
 
 // Create variable of footer icons
