@@ -297,6 +297,29 @@ input[type=number] {
     -moz-appearance: textfield;
 }
 
+/*---------- Dropdown Table ----------*/
+
+/* Dropdown table background */
+.dropdown-content,
+.datepicker-calendar-container {
+    background-color: #FCF3D6;
+}
+
+/* Dropdown table options */
+.dropdown-content li>a,
+.dropdown-content li>span {
+    color: #42271D;
+    font-size: 1.5rem;
+}
+
+/* Dropdown table & datepicker heading */
+.select-dropdown li.disabled>span,
+.datepicker-date-display,
+.datepicker-date-display .year-text {
+    color: #FCF3D6;
+    background-color: #42271D;
+}
+
 /*---------- Footer ----------*/
 
 footer {
