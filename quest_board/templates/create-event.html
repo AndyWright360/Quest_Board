@@ -75,6 +75,15 @@
                                 <img class="responsive-img stamp" img src="{{ url_for('static', filename='images/seal-green.png') }}" alt="A green wax seal with a D20 symbol" />
                             </label>
                         </p>
+                        <!-- Popover Content Beginner - Credit Mihael Tomić (CodePen) -->
+                        <div class="popover-wrapper">
+                            <img class="popover-trigger" src="{{ url_for('static', filename='images/questionmark.png') }}" alt="A white questionmark painted on a circular shield" />
+                            <div class="popover-content beginner-content">
+                                <p class="popover-heading beginner-heading">Beginner</p>
+                                <p class="popover-message">Recommended for new players. The purpose of the event is to help you learn the rules
+                                    of play.</p>
+                            </div>
+                        </div>
                     </div>
                     <!-- Radio Button - Everyone -->
                     <div class="col s4">
@@ -85,6 +94,14 @@
                                 <img class="responsive-img stamp" img src="{{ url_for('static', filename='images/seal-yellow.png') }}" alt="A yellow wax seal with a D20 symbol" />
                             </label>
                         </p>
+                        <!-- Popover Content Everyone -->
+                        <div class="popover-wrapper">
+                            <img class="popover-trigger" src="{{ url_for('static', filename='images/questionmark.png') }}" alt="A white questionmark painted on a circular shield" />
+                            <div class="popover-content everyone-content">
+                                <p class="popover-heading everyone-heading">Everyone</p>
+                                <p class="popover-message">An open adventure for everyone. The aim of the game is to have fun!</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="col s4">
                         <!-- Radio Button - Experienced -->
@@ -95,6 +112,14 @@
                                 <img class="responsive-img stamp" img src="{{ url_for('static', filename='images/seal-red.png') }}" alt="A red wax seal with a D20 symbol" />
                             </label>
                         </p>
+                        <!-- Popover Content Experienced -->
+                        <div class="popover-wrapper">
+                            <img class="popover-trigger" src="{{ url_for('static', filename='images/questionmark.png') }}" alt="A white questionmark painted on a circular shield" />
+                            <div class="popover-content experienced-content">
+                                <p class="popover-heading experienced-heading">Experienced</p>
+                                <p class="popover-message">For advanced players only. No tutorials, only adventure!</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </form>
