@@ -206,6 +206,23 @@ nav ul a:hover {
     margin-top: 21px;
 }
 
+
+/*---------- Create Event ----------*/
+
+.red-bg {
+    background-color: #961E28;
+    padding: 21px 0;
+}
+
+.form-container {
+    background-color: #FCF3D6;
+    width: 75%;
+    max-width: 600px;
+    border-radius: 10px;
+    padding: 10px 25px 0;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
 /*---------- Footer ----------*/
 
 footer {
