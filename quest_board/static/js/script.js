@@ -11,6 +11,9 @@ $(document).ready(function () {
 
     // Initialise form select
     $('select').formSelect();
+
+    // Initialise datepicker
+    $('.datepicker').datepicker();
 });
 
 // Create variable of footer icons

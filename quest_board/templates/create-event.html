@@ -44,6 +44,19 @@
                         <label>Time</label>
                     </div>
                 </div>
+                <div class="row">
+                    <!-- Datepicker -->
+                    <div class="input-field col s6">
+                        <input id="date" type="text" class="datepicker">
+                        <label for="date">Date</label>
+                    </div>
+                    <!-- Party Size Input -->
+                    <div class="input-field col s6">
+                        <input id="party_size" type="number" class="validate" min="1" max="10" step="1">
+                        <label for="party_size">Max Party Size</label>
+                        <span class="helper-text" data-error="Max 10">Between 1-10</span>
+                    </div>
+                </div>
             </form>
         </div>
     </div>
