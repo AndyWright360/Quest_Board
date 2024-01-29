@@ -377,6 +377,44 @@ input[type=number] {
     width: 90px;
 }
 
+/*---------- Radio Buttons ----------*/
+
+.radio-container {
+    margin-bottom: 0;
+}
+
+/* Text for radio buttons */
+[type="radio"]:not(:checked)+span,
+[type="radio"]:checked+span {
+    padding-left: 25px;
+    font-size: 1.25rem;
+    color: #764330;
+}
+
+/* Radio button unchecked border colour */
+[type="radio"]:not(:checked)+span:before,
+[type="radio"]:not(:checked)+span:after {
+    border: 2px solid #764330;
+}
+
+/* Radio button checked circle colour */
+[type="radio"]:checked+span:after,
+[type="radio"].with-gap:checked+span:after {
+    background-color: #03432B;
+}
+
+/* Radio button checked border colour */
+[type="radio"]:checked+span:after,
+[type="radio"].with-gap:checked+span:before,
+[type="radio"].with-gap:checked+span:after {
+    border: 2px solid #03432B;
+}
+
+.stamp {
+    margin-top: 10px;
+    cursor: pointer;
+}
+
 /*---------- Footer ----------*/
 
 footer {
