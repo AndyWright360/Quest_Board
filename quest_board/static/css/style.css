@@ -320,6 +320,63 @@ input[type=number] {
     background-color: #42271D;
 }
 
+/*---------- Datepicker ----------*/
+
+/* Datepicker table font */
+.datepicker-table,
+.datepicker-day-button {
+    font-family: 'Charm', sans-serif;
+    font-size: 1.5rem;
+}
+
+/* Datepicker table font colour */
+.datepicker-table {
+    color: #42271D;
+}
+
+/* Datepicker date when selected */
+.datepicker-table td.is-selected {
+    background-color: #03432B;
+    color: #FCF3D6;
+}
+
+/* Datepicker weekday font colour */
+.datepicker-table abbr {
+    color: #764330;
+}
+
+/* Datepicker todays date colour */
+.datepicker-table td.is-today {
+    color: #961E28;
+}
+
+/* Datepicker todays date selected colour */
+.datepicker-table td.is-today.is-selected {
+    color: #FCF3D6;
+}
+
+/* Datepicker 'cancel' and 'ok' font  */
+.datepicker-cancel,
+.datepicker-done {
+    font-family: 'Charm', sans-serif;
+    font-size: 1.5rem;
+}
+
+/* Datepicker 'ok' font colour */
+.datepicker-done {
+    color: #03432B;
+}
+
+/* Datepicker 'cancel' font colour */
+.datepicker-cancel {
+    color: #961E28;
+}
+
+/* Datepicker month display width*/
+.datepicker-controls .select-month input {
+    width: 90px;
+}
+
 /*---------- Footer ----------*/
 
 footer {
