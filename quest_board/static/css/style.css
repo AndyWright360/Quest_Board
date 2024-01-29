@@ -223,6 +223,80 @@ nav ul a:hover {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
+/*---------- Form Labels & Inputs ----------*/
+
+/* Labels for form inputs */
+.input-field>label {
+    color: #764330;
+    font-size: 1.25rem;
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+}
+
+/* Labels for form inputs when active */
+.input-field>label:not(.label-icon).active {
+    -webkit-transform: translateY(-18px);
+    transform: translateY(-18px);
+}
+
+/* Form inputs */
+input[type=text]:not(.browser-default),
+input[type=number]:not(.browser-default),
+textarea.materialize-textarea {
+    color: #42271D;
+    font-family: 'Charm', sans-serif;
+    font-size: 1.5rem;
+    border-bottom: 1px solid #764330;
+}
+
+/* Form input box when active */
+input[type=text]:not(.browser-default):focus:not([readonly]),
+input[type=number]:not(.browser-default):focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #03432B;
+    -webkit-box-shadow: 0 1px 0 0 #03432B;
+    box-shadow: 0 1px 0 0 #03432B;
+}
+
+/* Form label when active */
+input[type=text]:not(.browser-default):focus:not([readonly])+label,
+input[type=number]:not(.browser-default):focus:not([readonly])+label,
+textarea.materialize-textarea:focus:not([readonly])+label {
+    color: #03432B;
+}
+
+/* Helper text for form inputs */
+.input-field .helper-text {
+    display: inline-block;
+    font-size: 1rem;
+    color: #764330;
+}
+
+/* Invalid form entry helper text */
+input[type=text]:not(.browser-default).invalid~.helper-text:after,
+input[type=text]:not(.browser-default):focus.invalid~.helper-text:after,
+input[type=number]:not(.browser-default).invalid~.helper-text:after,
+input[type=number]:not(.browser-default):focus.invalid~.helper-text:after,
+textarea.materialize-textarea.invalid~.helper-text:after,
+textarea.materialize-textarea:focus.invalid~.helper-text:after {
+    width: max-content;
+}
+
+/* Remove number input arrows across multiple browsers */
+/* Credit W3 School - https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp */
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
 /*---------- Footer ----------*/
 
 footer {
