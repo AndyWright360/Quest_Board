@@ -118,27 +118,36 @@
             <img src="{{ url_for('static', filename='images/metal-corner.png') }}" alt="A gold square corner plate" id="bottom-right" class="corner">
             <!-- Event Card -->
             <div class="event-card">
+                <div class="event-card-header">
                     <h2 class="event-title">Event Name</h2>
-                    <p class="event-info">Created by: Username</p>
-                <div>
+                </div>
+                <div class="event-section-1">
+                    <p class="event-info">Created by:<br>Username</p>
+                </div>
+                <div class="event-section-2">
                     <i class="fa-solid fa-location-dot event-icon"></i>
                     <p class="event-info">Location</p>
                 </div>
-                <div>
+                <div class="event-section-3">
                     <i class="fa-regular fa-calendar event-icon"></i>
                     <p class="event-info">Date</p>
                 </div>
-                <div>
+                <div class="event-section-4">
                     <i class="fa-regular fa-clock event-icon"></i>
                     <p class="event-info">Time</p>
                 </div>
-                <div>
+                <div class="event-section-5">
                     <i class="fa-solid fa-people-group event-icon"></i>
-                    <p class="event-info">Party Size</p>
+                    <p class="event-info">3/8</p>
                 </div>
-                <button>EDIT</button>
-                <button>DELETE</button>
-                <img src="{{ url_for('static', filename='images/seal-red.png') }}" class="event-stamp" alt="A wax seal with a D20 imprint">
+                <div class="event-section-6">
+                    <button>EDIT</button>
+                    <button>DELETE</button>
+                </div>
+                <div class="event-section-7">
+                    <img src="{{ url_for('static', filename='images/seal-red.png') }}" class="event-stamp"
+                        alt="A wax seal with a D20 imprint">
+                </div>
             </div>
         </div>
     </div>
