@@ -104,6 +104,19 @@
                 </div>
             </li>
         </ul>
+        <!-- Events Container -->
+        <div class="event-container">
+            <!-- Border Trim -->
+            <div class="border" id="top"></div>
+            <div class="border" id="left"></div>
+            <div class="border" id="right"></div>
+            <div class="border" id="bottom"></div>
+            <!-- Border Corners -->
+            <img src="{{ url_for('static', filename='images/metal-corner.png') }}" alt="A gold square corner plate" id="top-left" class="corner">
+            <img src="{{ url_for('static', filename='images/metal-corner.png') }}" alt="A gold square corner plate" id="top-right" class="corner">
+            <img src="{{ url_for('static', filename='images/metal-corner.png') }}" alt="A gold square corner plate" id="bottom-left" class="corner">
+            <img src="{{ url_for('static', filename='images/metal-corner.png') }}" alt="A gold square corner plate" id="bottom-right" class="corner">
+        </div>
     </div>
 </section>
 
