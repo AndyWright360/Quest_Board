@@ -118,27 +118,27 @@
             <img src="{{ url_for('static', filename='images/metal-corner.png') }}" alt="A gold square corner plate" id="bottom-right" class="corner">
             <!-- Event Card -->
             <div class="event-card">
-                    <h2>Event Name</h2>
-                    <p>Created by: Username</p>
+                    <h2 class="event-title">Event Name</h2>
+                    <p class="event-info">Created by: Username</p>
                 <div>
-                    <i class="fa-solid fa-location-dot"></i>
-                    <p>Location</p>
+                    <i class="fa-solid fa-location-dot event-icon"></i>
+                    <p class="event-info">Location</p>
                 </div>
                 <div>
-                    <i class="fa-regular fa-calendar"></i>
-                    <p>Date</p>
+                    <i class="fa-regular fa-calendar event-icon"></i>
+                    <p class="event-info">Date</p>
                 </div>
                 <div>
-                    <i class="fa-regular fa-clock"></i>
-                    <p>Time</p>
+                    <i class="fa-regular fa-clock event-icon"></i>
+                    <p class="event-info">Time</p>
                 </div>
                 <div>
-                    <i class="fa-solid fa-people-group"></i>
-                    <p>Party Size</p>
+                    <i class="fa-solid fa-people-group event-icon"></i>
+                    <p class="event-info">Party Size</p>
                 </div>
                 <button>EDIT</button>
                 <button>DELETE</button>
-                <img src="{{ url_for('static', filename='images/seal-red.png') }}">
+                <img src="{{ url_for('static', filename='images/seal-red.png') }}" class="event-stamp" alt="A wax seal with a D20 imprint">
             </div>
         </div>
     </div>

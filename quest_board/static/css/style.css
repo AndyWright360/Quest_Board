@@ -289,6 +289,38 @@ nav ul a:hover {
     right: -5px;
 }
 
+/*---------- Event Card ----------*/
+
+.event-card {
+    background-image: url(../images/paper.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color: #42271D;
+    text-align: center;
+    margin: 50px;
+    padding: 25px;
+}
+
+.event-title {
+    margin: 0;
+    font-size: 1.75rem;
+    text-align: center;
+}
+
+.event-icon {
+    font-size: 1.5rem;
+}
+
+.event-info {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.event-stamp {
+    width: 75px;
+    height: auto;
+}
+
 /*---------- Filter ----------*/
 
 .collapsible {
