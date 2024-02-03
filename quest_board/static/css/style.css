@@ -133,7 +133,6 @@ nav ul a:hover {
 /*---------- Heading Section ----------*/
 
 .heading-container {
-    background-color: #961E28;
     background-image: url(../images/title-bg.png);
     background-repeat: repeat-x;
     background-position: center bottom;
@@ -152,6 +151,14 @@ nav ul a:hover {
     width: 100%;
     -webkit-filter: drop-shadow(1px 1px 0 #FCF3D6) drop-shadow(-1px -1px 0 #FCF3D6);
     filter: drop-shadow(1px 1px 0 #FCF3D6) drop-shadow(-1px -1px 0 #FCF3D6);
+}
+
+.green-bg {
+    background-color: #03432B;
+}
+
+.red-bg {
+    background-color: #961E28;
 }
 
 /*---------- About Section ----------*/
