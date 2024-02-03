@@ -17,6 +17,9 @@ $(document).ready(function () {
 
     // Initialise character counter for forms
     $('input#event_name, textarea#description').characterCounter();
+
+    // Initialise collapsible
+    $('.collapsible').collapsible();
 });
 
 // Create variable of footer icons
