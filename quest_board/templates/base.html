@@ -40,16 +40,16 @@
                 <!-- Main Navbar -->
                 <ul class="right hide-on-med-and-down">
                     <li><a href="{{ url_for('home') }}">Home</a></li>
-                    <li><a href="">Events</a></li>
-                    <li><a href="">Sign Up/Login</a></li>
+                    <li><a href="{{ url_for('create_event') }}">Events</a></li>
+                    <li><a href="{{ url_for('events') }}">Sign Up/Login</a></li>
                 </ul>
             </div>
         </nav>
         <!-- Mobile Sidenav -->
         <ul class="sidenav" id="mobile-demo">
             <li><a href="{{ url_for('home') }}">Home</a></li>
-            <li><a href="">Events</a></li>
-            <li><a href="">Sign Up/Login</a></li>
+            <li><a href="{{ url_for('create_event') }}">Events</a></li>
+            <li><a href="{{ url_for('events') }}">Sign Up/Login</a></li>
         </ul>
     </header>
 
