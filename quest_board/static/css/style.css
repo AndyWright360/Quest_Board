@@ -221,10 +221,10 @@ nav ul a:hover {
 
 .event-container {
     width: 80%;
-    height: 500px;
     position: relative;
     background-image: url(../images/board-bg.png);
     margin: 0 auto;
+    display: flex;
 }
 
 .border {
@@ -395,6 +395,11 @@ nav ul a:hover {
     padding-bottom: 5px;
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
+    /* Fix for jittery text on scale increase obtained from Stack Overflow by Chris W.
+    https: //stackoverflow.com/questions/52708013/wobbly-text-on-transform-scale */
+    backface-visibility: hidden;
+    -webkit-font-smoothing: subpixel-antialiased;
+    will-change: transform;
 }
 
 .event-stamp {
@@ -821,6 +826,9 @@ footer p {
     height: 65px;
     width: auto;
     transition: transform 0.3s ease-in-out;
+    backface-visibility: hidden;
+    -webkit-font-smoothing: subpixel-antialiased;
+    will-change: transform;
 }
 
 .grow {
