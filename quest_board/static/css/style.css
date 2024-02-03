@@ -383,6 +383,20 @@ nav ul a:hover {
     font-size: 1.5rem;
 }
 
+.event-button {
+    background-image: url(../images/button.png);
+    background-size: 100% 100%;
+    padding: 10px 20px;
+    color: #FCF3D6;
+    background-color: transparent;
+    border: none;
+    font-family: 'Charm';
+    font-size: 1.5rem;
+    padding-bottom: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
 .event-stamp {
     width: auto;
     height: 90%;
