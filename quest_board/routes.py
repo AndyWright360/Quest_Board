@@ -8,7 +8,7 @@ def home():
     return render_template("index.html")
 
 
-@app.route("/create_event")
+@app.route("/create_event", methods=["GET", "POST"])
 def create_event():
     return render_template("create_event.html")
 

@@ -11,11 +11,11 @@
 <section>
     <div class="red-bg">
         <div class="row form-container">
-            <form class="col s12">
+            <form class="col s12" method="POST" action="{{ url_for('create_event') }}">
                 <div class="row">
                     <!-- Event Name Input -->
                     <div class="input-field col s12">
-                        <input id="event_name" type="text" class="validate" data-length="30">
+                        <input id="event_name" name="event_name" type="text" class="validate" data-length="24">
                         <label for="event_name">Event Name</label>
                         <span class="helper-text" data-error="Too many characters"></span>
                     </div>
@@ -23,36 +23,36 @@
                 <div class="row">
                     <!-- Dropbox - Select Location -->
                     <div class="input-field col s6">
-                        <select>
+                        <select id="location" name="location">
                             <option value="" disabled selected>Select Location</option>
-                            <option value="1">Swansea</option>
-                            <option value="2">Bridgend</option>
-                            <option value="3">Cardiff</option>
-                            <option value="4">Newport</option>
+                            <option value="swansea">Swansea</option>
+                            <option value="bridgend">Bridgend</option>
+                            <option value="cardiff">Cardiff</option>
+                            <option value="newport">Newport</option>
                         </select>
-                        <label>Location</label>
+                        <label for="location">Location</label>
                     </div>
                     <!-- Dropbox - Select Time -->
                     <div class="input-field col s6">
-                        <select>
+                        <select id="time" name="time">
                             <option value="" disabled selected>Select Time</option>
-                            <option value="1">10am</option>
-                            <option value="2">12pm</option>
-                            <option value="3">2pm</option>
-                            <option value="4">4pm</option>
+                            <option value="10am">10am</option>
+                            <option value="12pm">12pm</option>
+                            <option value="2pm">2pm</option>
+                            <option value="4pm">4pm</option>
                         </select>
-                        <label>Time</label>
+                        <label for="time">Time</label>
                     </div>
                 </div>
                 <div class="row">
                     <!-- Datepicker -->
                     <div class="input-field col s6">
-                        <input id="date" type="text" class="datepicker">
+                        <input id="date" name="date" type="text" class="datepicker">
                         <label for="date">Date</label>
                     </div>
                     <!-- Party Size Input -->
                     <div class="input-field col s6">
-                        <input id="party_size" type="number" class="validate" min="1" max="10" step="1">
+                        <input id="party_size" name="party_size" type="number" class="validate" min="1" max="10" step="1">
                         <label for="party_size">Max Party Size</label>
                         <span class="helper-text" data-error="Max 10">Between 1-10</span>
                     </div>
@@ -60,19 +60,19 @@
                 <div class="row">
                     <!-- Description Textarea -->
                     <div class="input-field col s12">
-                        <textarea id="description" class="materialize-textarea" data-length="250"></textarea>
+                        <textarea id="description" name="description" class="materialize-textarea" data-length="250"></textarea>
                         <label for="description">Description</label>
                         <span class="helper-text" data-error="Too many characters"></span>
                     </div>
                 </div>
                 <div class="row">
                     <!-- Radio Button - Beginner -->
-                    <div class="col s4">
+                    <div class="col s4 center-align">
                         <p class="radio-container">
-                            <label>
-                                <input class="with-gap" name="group3" type="radio" checked />
+                            <label for="beginner">
+                                <input class="with-gap" name="exp_level" id="beginner" type="radio" checked />
                                 <span>Beginner</span>
-                                <img class="responsive-img stamp" img src="{{ url_for('static', filename='images/seal-green.png') }}" alt="A green wax seal with a D20 symbol" />
+                                <img class="stamp" img src="{{ url_for('static', filename='images/seal-green.png') }}" alt="A green wax seal with a D20 symbol" />
                             </label>
                         </p>
                         <!-- Popover Content Beginner - Credit Mihael Tomić (CodePen) -->
@@ -86,12 +86,12 @@
                         </div>
                     </div>
                     <!-- Radio Button - Everyone -->
-                    <div class="col s4">
+                    <div class="col s4 center-align">
                         <p class="radio-container">
-                            <label>
-                                <input class="with-gap" name="group3" type="radio" />
+                            <label for="everyone">
+                                <input class="with-gap" name="exp_level" id="everyone" type="radio" />
                                 <span>Everyone</span>
-                                <img class="responsive-img stamp" img src="{{ url_for('static', filename='images/seal-yellow.png') }}" alt="A yellow wax seal with a D20 symbol" />
+                                <img class="stamp" img src="{{ url_for('static', filename='images/seal-yellow.png') }}" alt="A yellow wax seal with a D20 symbol" />
                             </label>
                         </p>
                         <!-- Popover Content Everyone -->
@@ -103,13 +103,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col s4">
+                    <div class="col s4 center-align">
                         <!-- Radio Button - Experienced -->
                         <p class="radio-container">
-                            <label>
-                                <input class="with-gap" name="group3" type="radio" />
+                            <label for="experienced">
+                                <input class="with-gap" name="exp_level" id="experienced" type="radio" />
                                 <span>Experienced</span>
-                                <img class="responsive-img stamp" img src="{{ url_for('static', filename='images/seal-red.png') }}" alt="A red wax seal with a D20 symbol" />
+                                <img class="stamp" img src="{{ url_for('static', filename='images/seal-red.png') }}" alt="A red wax seal with a D20 symbol" />
                             </label>
                         </p>
                         <!-- Popover Content Experienced -->
@@ -120,6 +120,13 @@
                                 <p class="popover-message">For advanced players only. No tutorials, only adventure!</p>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- Submit Button -->
+                    <div class="col s12 center-align">
+                        <button class="event-button submit-button" type="submit">Submit
+                        </button>
                     </div>
                 </div>
             </form>
