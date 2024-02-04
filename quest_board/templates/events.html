@@ -116,47 +116,49 @@
             <img src="{{ url_for('static', filename='images/metal-corner.png') }}" alt="A gold square corner plate" id="top-right" class="corner">
             <img src="{{ url_for('static', filename='images/metal-corner.png') }}" alt="A gold square corner plate" id="bottom-left" class="corner">
             <img src="{{ url_for('static', filename='images/metal-corner.png') }}" alt="A gold square corner plate" id="bottom-right" class="corner">
-            <!-- Event Card -->
-            {% for event in events %}
-            <div class="event-card">
-                <div class="event-card-header">
-                    <h2 class="event-title">{{ event.event_name }}</h2>
+            <div class="container-padding">
+                <!-- Event Card -->
+                {% for event in events %}
+                <div class="event-card">
+                    <div class="event-card-header">
+                        <h2 class="event-title">{{ event.event_name }}</h2>
+                    </div>
+                    <div class="event-section-1">
+                        <p class="event-info">Created by:<br>Username</p>
+                    </div>
+                    <div class="event-section-2">
+                        <i class="fa-solid fa-location-dot event-icon"></i>
+                        <p class="event-info">{{ event.location }}</p>
+                    </div>
+                    <div class="event-section-3">
+                        <i class="fa-regular fa-calendar event-icon"></i>
+                        <p class="event-info">{{ event.date }}</p>
+                    </div>
+                    <div class="event-section-4">
+                        <i class="fa-regular fa-clock event-icon"></i>
+                        <p class="event-info">{{ event.time }}</p>
+                    </div>
+                    <div class="event-section-5">
+                        <i class="fa-solid fa-people-group event-icon"></i>
+                        <p class="event-info">0/{{ event.party_size }}</p>
+                    </div>
+                    <div class="event-section-6">
+                        <button class="event-button">EDIT</button>
+                        <button class="event-button">DELETE</button>
+                    </div>
+                    <div class="event-section-7">
+                        {% if event.exp_level == 'beginner' %}
+                        <img src="{{ url_for('static', filename='images/seal-green.png') }}" class="event-stamp" alt="Beginner Seal">
+                        {% elif event.exp_level == 'everyone' %}
+                        <img src="{{ url_for('static', filename='images/seal-yellow.png') }}" class="event-stamp" alt="Everyone Seal">
+                        {% elif event.exp_level == 'experienced' %}
+                        <img src="{{ url_for('static', filename='images/seal-red.png') }}" class="event-stamp"
+                            alt="Experienced Seal">
+                        {% endif %}
+                    </div>
                 </div>
-                <div class="event-section-1">
-                    <p class="event-info">Created by:<br>Username</p>
-                </div>
-                <div class="event-section-2">
-                    <i class="fa-solid fa-location-dot event-icon"></i>
-                    <p class="event-info">{{ event.location }}</p>
-                </div>
-                <div class="event-section-3">
-                    <i class="fa-regular fa-calendar event-icon"></i>
-                    <p class="event-info">{{ event.date }}</p>
-                </div>
-                <div class="event-section-4">
-                    <i class="fa-regular fa-clock event-icon"></i>
-                    <p class="event-info">{{ event.time }}</p>
-                </div>
-                <div class="event-section-5">
-                    <i class="fa-solid fa-people-group event-icon"></i>
-                    <p class="event-info">0/{{ event.party_size }}</p>
-                </div>
-                <div class="event-section-6">
-                    <button class="event-button">EDIT</button>
-                    <button class="event-button">DELETE</button>
-                </div>
-                <div class="event-section-7">
-                    {% if event.exp_level == 'beginner' %}
-                    <img src="{{ url_for('static', filename='images/seal-green.png') }}" class="event-stamp" alt="Beginner Seal">
-                    {% elif event.exp_level == 'everyone' %}
-                    <img src="{{ url_for('static', filename='images/seal-yellow.png') }}" class="event-stamp" alt="Everyone Seal">
-                    {% elif event.exp_level == 'experienced' %}
-                    <img src="{{ url_for('static', filename='images/seal-red.png') }}" class="event-stamp"
-                        alt="Experienced Seal">
-                    {% endif %}
-                </div>
+                {% endfor %}
             </div>
-            {% endfor %}
         </div>
     </div>
 </section>

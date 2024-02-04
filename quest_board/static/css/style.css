@@ -220,11 +220,18 @@ nav ul a:hover {
 }
 
 .event-container {
-    width: 80%;
+    width: 90%;
     position: relative;
     background-image: url(../images/board-bg.png);
     margin: 0 auto;
+}
+
+.container-padding {
+    padding: 50px;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 25px;
 }
 
 .border {
@@ -304,7 +311,6 @@ nav ul a:hover {
     grid-template-rows: 65px 65px 65px 65px 115px;
     column-gap: 25px;
     width: 280px;
-    margin: 50px;
     padding: 25px;
     box-sizing: content-box;
 }
