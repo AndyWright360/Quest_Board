@@ -20,15 +20,15 @@ class Event(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     event_name = db.Column(db.String(24), nullable=False)
     created_by = db.Column(db.String(15), db.ForeignKey(
-        "user.username"), nullable=False)
+        "user.username"), nullable=True)
     location = db.Column(db.String(50), nullable=False)
     date = db.Column(db.Date, nullable=False)
-    time = db.Column(db.Time, nullable=False)
+    time = db.Column(db.String(50), nullable=False)
     description = db.Column(db.Text, nullable=False)
     exp_level = db.Column(db.String(50), nullable=False)
     party_size = db.Column(db.Integer, nullable=False)
     party_members = db.Column(db.String(15), db.ForeignKey(
-        "user.username"), nullable=False)
+        "user.username"), nullable=True)
 
     def __repr__(self):
         # __repr__ to represent itself in the form of a string
