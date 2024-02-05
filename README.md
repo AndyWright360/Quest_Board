@@ -309,6 +309,20 @@ Wireframes were generated using Balsamiq for desktop, tablet, and mobile screen 
 
 - The layout adjusts to different device widths, providing users with a smooth experience across multiple device. This imporoves both accessibility and usability.
 
+#### **Page Heading**
+
+<details><summary>Screenshots</summary>
+
+<img>
+
+*Page Heading*
+
+</details>
+
+- The heading of each page was designed to resemble torn parchment paper, aligning with the fantastical design aesthetic.
+
+- The image is seamlessly repeatable, ensuring consistent quality across various screen widths.
+
 #### **Footer**
 
 <details><summary>Screenshots</summary>
@@ -341,6 +355,8 @@ Wireframes were generated using Balsamiq for desktop, tablet, and mobile screen 
 
 - Upon mouse hover, the buttons enlarge to offer interactive feedback, enhancing the user experience.
 
+- When clicked, the buttons will subtly shrink to simulate the action of being pressed, offering visual feedback to the user.
+
 ### **Home Page**
 
 <details><summary>Screenshots</summary>
@@ -360,6 +376,40 @@ Wireframes were generated using Balsamiq for desktop, tablet, and mobile screen 
 - The map was crafted to resemble an adventurer's treasure map, adding a thematic touch to the overall style.
 
 - The gallery features an auto-play function, effectively conveying its purpose to users. The images depict past events, offering users a visual preview of what to anticipate from upcoming gatherings.
+
+### **Events Page**
+
+<details><summary>Screenshots</summary>
+
+<img>
+
+*Events Page*
+
+</details>
+
+- The events page was crafted to emulate adventurers gathering quests from a message board.
+
+- To enhance this theme, the event container adopts the appearance of a wooden board with metal trim, while the events themselves are represented as paper notes.
+
+- Both the bordered container and wooden slat background are endlessly repeatable, ensuring adaptability to any screen size without distortion or loss of image quality.
+
+- The filter system at the top of the page features a companion downward arrow icon. Signalling to users that additional information is available.
+
+- Upon click, the search categories become visible, aiding users in refining their requirements.
+
+- Multiple options can be selected to provide more tailored search criteria.
+
+- For events created by the current user, edit and delete option buttons are visible.
+
+- Events created by other users will instead display a join button, which changes to "leave" if the user has already joined the event.
+
+- A modal prompts user confirmation to either delete or leave an event, preventing accidental selections that can't be undone.
+
+- Upon hover, each event highlights, serving as a visual cue to users that they are interactive.
+
+- If users without an account attempt to join an event, a message is displayed indicating that a profile is required to perform this action.
+
+- Once the maximum party members have been reached, a "full" stamp will replace the "join" button, signaling to users that the event is at capacity and can no longer be joined.
 
 ### **Future Implementations**
 
