@@ -63,9 +63,9 @@ The color scheme was inspired by the Welsh flag, not only as a nod to the locati
 
 #### **Additional Colours**
 
-![Additional colour palette used in the project]()
+![Additional colour palette used in the project](documentation/secondary-palette.jpg)
 
-These additional colours were used to compliment the primary colour scheme and offer some visual depth to the website.
+These additional colours were chosen to complement the primary colour scheme and enhance the visual depth of the website. The dark brown serves as an alternative font colour, providing contrast against lighter backgrounds. Yellow accents were applied across various elements to evoke the appearance of golden decorative trim. Additionally, the deeper red was utilised as an alternative section shade for pages predominantly coloured in red.
 
 ### **Typography**
 
