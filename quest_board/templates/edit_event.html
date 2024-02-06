@@ -15,7 +15,7 @@
                 <div class="row">
                     <!-- Event Name Input -->
                     <div class="input-field col s12">
-                        <input id="event_name" name="event_name" type="text" class="validate" data-length="24">
+                        <input id="event_name" name="event_name" value="{{ event.event_name }}" type="text" class="validate" data-length="24">
                         <label for="event_name">Event Name</label>
                         <span class="helper-text" data-error="Too many characters"></span>
                     </div>
@@ -25,10 +25,10 @@
                     <div class="input-field col s6">
                         <select id="location" name="location">
                             <option value="" disabled selected>Select Location</option>
-                            <option value="swansea">Swansea</option>
-                            <option value="bridgend">Bridgend</option>
-                            <option value="cardiff">Cardiff</option>
-                            <option value="newport">Newport</option>
+                            <option value="swansea" {% if event.location == 'swansea' %} selected {% endif %}>Swansea</option>
+                            <option value="bridgend" {% if event.location == 'bridgend' %} selected {% endif %}>Bridgend</option>
+                            <option value="cardiff" {% if event.location == 'cardiff' %} selected {% endif %}>Cardiff</option>
+                            <option value="newport" {% if event.location == 'newport' %} selected {% endif %}>Newport</option>
                         </select>
                         <label for="location">Location</label>
                     </div>
@@ -36,10 +36,10 @@
                     <div class="input-field col s6">
                         <select id="time" name="time">
                             <option value="" disabled selected>Select Time</option>
-                            <option value="10am">10am</option>
-                            <option value="12pm">12pm</option>
-                            <option value="2pm">2pm</option>
-                            <option value="4pm">4pm</option>
+                            <option value="10am" {% if event.time == '10am' %} selected {% endif %}>10am</option>
+                            <option value="12pm" {% if event.time == '12pm' %} selected {% endif %}>12pm</option>
+                            <option value="2pm" {% if event.time == '2pm' %} selected {% endif %}>2pm</option>
+                            <option value="4pm" {% if event.time == '4pm' %} selected {% endif %}>4pm</option>
                         </select>
                         <label for="time">Time</label>
                     </div>
@@ -47,12 +47,12 @@
                 <div class="row">
                     <!-- Datepicker -->
                     <div class="input-field col s6">
-                        <input id="date" name="date" type="text" class="datepicker">
+                        <input id="date" name="date" value="{{ event.date }}" type="text" class="datepicker">
                         <label for="date">Date</label>
                     </div>
                     <!-- Party Size Input -->
                     <div class="input-field col s6">
-                        <input id="party_size" name="party_size" type="number" class="validate" min="1" max="10" step="1">
+                        <input id="party_size" name="party_size" value="{{ event.party_size }}" type="number" class="validate" min="1" max="10" step="1">
                         <label for="party_size">Max Party Size</label>
                         <span class="helper-text" data-error="Max 10">Between 1-10</span>
                     </div>
@@ -60,7 +60,7 @@
                 <div class="row">
                     <!-- Description Textarea -->
                     <div class="input-field col s12">
-                        <textarea id="description" name="description" class="materialize-textarea" data-length="250"></textarea>
+                        <textarea id="description" name="description" class="materialize-textarea" data-length="250">{{ event.description }}</textarea>
                         <label for="description">Description</label>
                         <span class="helper-text" data-error="Too many characters"></span>
                     </div>
@@ -70,7 +70,7 @@
                     <div class="col s4 center-align">
                         <p class="radio-container">
                             <label for="beginner">
-                                <input class="with-gap" name="exp_level" value="beginner" id="beginner" type="radio" checked />
+                                <input class="with-gap" name="exp_level" {% if event.exp_level == 'beginner' %} checked {% endif %} value="beginner" id="beginner" type="radio" />
                                 <span>Beginner</span>
                                 <img class="stamp" img src="{{ url_for('static', filename='images/seal-green.png') }}" alt="A green wax seal with a D20 symbol" />
                             </label>
@@ -89,7 +89,7 @@
                     <div class="col s4 center-align">
                         <p class="radio-container">
                             <label for="everyone">
-                                <input class="with-gap" name="exp_level" value="everyone" id="everyone" type="radio" />
+                                <input class="with-gap" name="exp_level" {% if event.exp_level == 'everyone' %} checked {% endif %} value="everyone" id="everyone" type="radio" />
                                 <span>Everyone</span>
                                 <img class="stamp" img src="{{ url_for('static', filename='images/seal-yellow.png') }}" alt="A yellow wax seal with a D20 symbol" />
                             </label>
@@ -107,7 +107,7 @@
                         <!-- Radio Button - Experienced -->
                         <p class="radio-container">
                             <label for="experienced">
-                                <input class="with-gap" name="exp_level" value="experienced" id="experienced" type="radio" />
+                                <input class="with-gap" name="exp_level"  {% if event.exp_level == 'experienced' %} checked {% endif %} value="experienced" id="experienced" type="radio" />
                                 <span>Experienced</span>
                                 <img class="stamp" img src="{{ url_for('static', filename='images/seal-red.png') }}" alt="A red wax seal with a D20 symbol" />
                             </label>
