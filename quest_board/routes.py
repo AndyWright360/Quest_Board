@@ -29,6 +29,16 @@ def create_event():
 @app.route("/edit_event/<int:event_id>", methods=["GET", "POST"])
 def edit_event(event_id):
     event = Event.query.get_or_404(event_id)
+    if request.method == "POST":
+        event.event_name = request.form.get("event_name"),
+        event.location = request.form.get("location"),
+        event.time = request.form.get("time"),
+        event.date = request.form.get("date"),
+        event.party_size = request.form.get("party_size"),
+        event.description = request.form.get("description"),
+        event.exp_level = request.form.get("exp_level")
+        db.session.commit()
+        return redirect(url_for("events"))
     return render_template("edit_event.html", event=event)
 
 
