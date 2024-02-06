@@ -143,8 +143,8 @@
                         <p class="event-info">0/{{ event.party_size }}</p>
                     </div>
                     <div class="event-section-6">
-                        <button class="event-button">EDIT</button>
-                        <button class="event-button">DELETE</button>
+                        <a href="{{ url_for('edit_event', event_id=event.id) }}" class="button event-button">EDIT</a>
+                        <a href="#" class="button event-button">DELETE</a>
                     </div>
                     <div class="event-section-7">
                         {% if event.exp_level == 'beginner' %}

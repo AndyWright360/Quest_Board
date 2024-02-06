@@ -26,7 +26,7 @@ $(document).ready(function () {
 const icons = document.getElementsByClassName("footer-icon");
 
 // Create variable of event buttons
-const buttons = document.getElementsByClassName("event-button");
+const buttons = document.getElementsByClassName("button");
 
 // Add the grow style class to target
 const grow = function () {

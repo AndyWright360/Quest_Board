@@ -389,16 +389,14 @@ nav ul a:hover {
     font-size: 1.5rem;
 }
 
-.event-button {
+.button {
     background-image: url(../images/button.png);
     background-size: 100% 100%;
-    padding: 10px 20px;
     color: #FCF3D6;
     background-color: transparent;
     border: none;
     font-family: 'Charm';
     font-size: 1.5rem;
-    padding-bottom: 5px;
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
     /* Fix for jittery text on scale increase obtained from Stack Overflow by Chris W.
@@ -406,6 +404,10 @@ nav ul a:hover {
     backface-visibility: hidden;
     -webkit-font-smoothing: subpixel-antialiased;
     will-change: transform;
+}
+
+.event-button {
+    padding: 7px 20px 2px;
 }
 
 .event-stamp {
@@ -523,6 +525,7 @@ nav ul a:hover {
 
 .submit-button {
     margin-top: 25px;
+    padding: 10px 20px 5px;
 }
 
 /*---------- Form Labels & Inputs ----------*/
