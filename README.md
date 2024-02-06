@@ -323,6 +323,18 @@ Wireframes were generated using Balsamiq for desktop, tablet, and mobile screen 
 
 - The image is seamlessly repeatable, ensuring consistent quality across various screen widths.
 
+#### **Flash Messages**
+
+<details><summary>Screenshots</summary>
+
+<img>
+
+*Flash Message*
+
+</details>
+
+- Flash messages serve as a means of providing feedback to the user following the execution of an action, communicating the successful completion of the task.
+
 #### **Footer**
 
 <details><summary>Screenshots</summary>
@@ -347,7 +359,7 @@ Wireframes were generated using Balsamiq for desktop, tablet, and mobile screen 
 
 <img>
 
-*Button Transition*
+*Buttons*
 
 </details>
 
@@ -410,6 +422,32 @@ Wireframes were generated using Balsamiq for desktop, tablet, and mobile screen 
 - If users without an account attempt to join an event, a message is displayed indicating that a profile is required to perform this action.
 
 - Once the maximum party members have been reached, a "full" stamp will replace the "join" button, signaling to users that the event is at capacity and can no longer be joined.
+
+### **Create Event Page**
+
+<details><summary>Screenshots</summary>
+
+<img>
+
+*Create Event Page*
+
+</details>
+
+- The form on this page incorporates several features aimed at helping users understand the required information and how to address any errors.
+
+- Text inputs with character limits display a character counter, offering users a visual cue on their input progress.
+
+- Helper text accompanies the max-party input, providing clarity regarding the available number range.
+
+- Data error messages are included for text inputs, offering guidance to users in case of invalid entries.
+
+- Required inputs are marked to alert users to any missed fields during submission.
+
+- Input validation is implemented for text and number fields, visually indicating validity with green or invalidity with red cues.
+
+- Popover messages are added to the experience level radio inputs. Offering clear descriptions of each experience level's purpose.
+
+- Images representing different experience levels are color-coded like traffic lights. The intention was to create an intuitive understanding of each level's significance.
 
 ### **Future Implementations**
 
