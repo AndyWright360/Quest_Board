@@ -26,6 +26,12 @@ def create_event():
     return render_template("create_event.html")
 
 
+@app.route("/edit_event/<int:event_id>", methods=["GET", "POST"])
+def edit_event(event_id):
+    event = Event.query.get_or_404(event_id)
+    return render_template("edit_event.html", event=event)
+
+
 @app.route("/events")
 def events():
     events = list(Event.query.order_by(Event.date).all())
