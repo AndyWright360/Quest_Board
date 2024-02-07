@@ -307,10 +307,9 @@ nav ul a:hover {
     text-align: center;
     align-items: center;
     justify-items: center;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 65px 65px 65px 65px 115px;
-    column-gap: 25px;
-    width: 280px;
+    grid-template-columns: 100px 100px;
+    grid-template-rows: 40px 50px 55px 55px 90px;
+    row-gap: 10px;
     padding: 25px;
     box-sizing: content-box;
 }
@@ -325,8 +324,7 @@ nav ul a:hover {
     grid-column: 1 / 3;
     grid-row: 2 / 3;
     word-wrap: break-word;
-    width: 280px;
-    height: 65px;
+    width: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -357,36 +355,42 @@ nav ul a:hover {
     grid-row: 5 / 6;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    height: 115px;
+    height: 100%;
     width: 100%;
 }
 
 .event-section-7 {
     grid-column: 2 / 3;
     grid-row: 5 / 6;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
-    height: 115px;
     display: flex;
+    height: 100%;
     width: 100%;
 }
 
 .event-title {
     margin: 0;
-    font-size: 1.75rem;
+    font-size: 18px;
     text-align: center;
-    width: 280px;
+    width: 200px;
+}
+
+.event-creator {
+    margin: 0;
+    font-size: 16px;
+    max-width: 200px;
 }
 
 .event-icon {
-    font-size: 1.5rem;
+    font-size: 20px;
 }
 
 .event-info {
     margin: 0;
-    font-size: 1.5rem;
+    font-size: 20px;
 }
 
 .button {
@@ -396,7 +400,7 @@ nav ul a:hover {
     background-color: transparent;
     border: none;
     font-family: 'Charm';
-    font-size: 1.5rem;
+    font-size: 18px;
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
     /* Fix for jittery text on scale increase obtained from Stack Overflow by Chris W.
@@ -407,7 +411,7 @@ nav ul a:hover {
 }
 
 .event-button {
-    padding: 7px 20px 2px;
+    padding: 7px 15px 2px;
 }
 
 .event-stamp {
