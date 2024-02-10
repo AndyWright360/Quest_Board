@@ -222,23 +222,13 @@ nav ul a:hover {
 /*---------- Gallery Section ----------*/
 
 .gallery-content {
-    padding: 50px 25%;
-    text-align: center;
+    width: 70%;
+    min-width: 300px;
+    max-width: 600px;
 }
 
 .carousel {
-    width: auto;
-    height: auto;
-    max-height: 600px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.carousel-item {
-    max-height: 75vh;
-    width: auto;
-    margin-top: 21px;
+    margin-top: 30px;
 }
 
 /*---------- Events ----------*/
