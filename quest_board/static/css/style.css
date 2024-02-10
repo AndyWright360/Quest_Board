@@ -41,10 +41,6 @@ h2 {
 
 /*---------- Navbar ----------*/
 
-nav {
-    background-color: #961E28;
-}
-
 nav .brand-logo {
     display: flex;
     align-items: center;

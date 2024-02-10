@@ -30,9 +30,9 @@
     <header>
         <!-- NAVBAR -->
         <!-- Materialize Mobile Collapsible Navbar -->
-        <nav class="green-nav">
+        <nav class="red-bg">
             <div class="nav-wrapper">
-                <a href="#!" class="brand-logo"><img class="logo" src="{{ url_for('static', filename='images/logo.png') }}"
+                <a href="{{ url_for('home') }}" class="brand-logo"><img class="logo" src="{{ url_for('static', filename='images/logo.png') }}"
                     alt="A wooden shield with paper nailed to the center. A green letter Q is painted on the paper" />
                     Quest Board</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fa-solid fa-bars"
@@ -40,16 +40,16 @@
                 <!-- Main Navbar -->
                 <ul class="right hide-on-med-and-down">
                     <li><a href="{{ url_for('home') }}">Home</a></li>
-                    <li><a href="{{ url_for('create_event') }}">Events</a></li>
-                    <li><a href="{{ url_for('events') }}">Sign Up/Login</a></li>
+                    <li><a href="{{ url_for('events') }}">Events</a></li>
+                    <li><a href="{{ url_for('create_event') }}">Sign Up/Login</a></li>
                 </ul>
             </div>
         </nav>
         <!-- Mobile Sidenav -->
         <ul class="sidenav" id="mobile-demo">
             <li><a href="{{ url_for('home') }}">Home</a></li>
-            <li><a href="{{ url_for('create_event') }}">Events</a></li>
-            <li><a href="{{ url_for('events') }}">Sign Up/Login</a></li>
+            <li><a href="{{ url_for('events') }}">Events</a></li>
+            <li><a href="{{ url_for('create_event') }}">Sign Up/Login</a></li>
         </ul>
     </header>
 
