@@ -22,10 +22,67 @@ h2 {
     margin: 20px 30px 0;
 }
 
+/*---------- Background Colours ----------*/
+
+.red-bg {
+    background-color: #961E28;
+}
+
+.green-bg {
+    background-color: #03432B;
+}
+
+.light-green-bg {
+    background-color: #8EC5A2;
+}
+
+.white-bg {
+    background-color: #FCF3D6;
+}
+
+.yellow-bg {
+    background-color: #EBC53F;
+}
+
 /*---------- Font Colour ----------*/
 
 .brown-font {
     color: #42271D;
+}
+
+/*---------- Buttons ----------*/
+
+.event-button {
+    background-image: url(../images/button.png);
+    background-size: 100% 100%;
+    padding: 7px 15px 2px;
+    background-color: transparent;
+    border: none;
+    font-family: 'Charm', sans-serif;
+    color: #FCF3D6;
+    font-size: 18px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    /* Fix for jittery text on scale increase obtained from Stack Overflow by Chris W.
+        https: //stackoverflow.com/questions/52708013/wobbly-text-on-transform-scale */
+    backface-visibility: hidden;
+    -webkit-font-smoothing: subpixel-antialiased;
+    will-change: transform;
+}
+
+.event-button:hover {
+    transform: scale(1.2);
+}
+
+.event-button:active {
+    transform: scale(1.1);
+    transition: transform 0.1s;
+}
+
+.submit {
+    font-size: 20px;
+    padding: 14px 20px 8px;
+    margin-top: 10px;
 }
 
 /*---------- Containers ----------*/
@@ -141,7 +198,6 @@ nav ul a:hover {
     background-image: url(../images/title-bg.png);
     background-repeat: repeat-x;
     background-position: center bottom;
-    color: #42271D;
     height: 250px;
     position: relative;
     text-align: center;
@@ -152,26 +208,12 @@ nav ul a:hover {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -60%);
-    margin: 0;
     width: 100%;
     -webkit-filter: drop-shadow(1px 1px 0 #FCF3D6) drop-shadow(-1px -1px 0 #FCF3D6);
     filter: drop-shadow(1px 1px 0 #FCF3D6) drop-shadow(-1px -1px 0 #FCF3D6);
 }
 
-.green-bg {
-    background-color: #03432B;
-}
-
-.red-bg {
-    background-color: #961E28;
-}
-
 /*---------- About Section ----------*/
-
-.green-bg {
-    background-color: #03432B;
-    color: #FCF3D6;
-}
 
 .about-content {
     width: 50%;
@@ -185,10 +227,6 @@ nav ul a:hover {
 }
 
 /*---------- Locations Section ----------*/
-
-.light-green-bg {
-    background-color: #8EC5A2;
-}
 
 .locations-content {
     width: 80%;
@@ -407,27 +445,6 @@ nav ul a:hover {
     font-size: 20px;
 }
 
-.button {
-    background-image: url(../images/button.png);
-    background-size: 100% 100%;
-    color: #FCF3D6;
-    background-color: transparent;
-    border: none;
-    font-family: 'Charm';
-    font-size: 18px;
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
-    /* Fix for jittery text on scale increase obtained from Stack Overflow by Chris W.
-    https: //stackoverflow.com/questions/52708013/wobbly-text-on-transform-scale */
-    backface-visibility: hidden;
-    -webkit-font-smoothing: subpixel-antialiased;
-    will-change: transform;
-}
-
-.event-button {
-    padding: 7px 15px 2px;
-}
-
 .event-stamp {
     width: auto;
     height: 90%;
@@ -527,23 +544,24 @@ nav ul a:hover {
 
 /*---------- Create Event ----------*/
 
-.red-bg {
-    background-color: #961E28;
-    padding: 21px 0;
-}
-
 .form-container {
-    background-color: #FCF3D6;
-    width: 75%;
+    width: 80%;
     max-width: 600px;
+    min-width: 280px;
     border-radius: 10px;
-    padding: 10px 25px 0;
+    padding: 20px 25px 0;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    margin: 0;
 }
 
-.submit-button {
-    margin-top: 25px;
-    padding: 10px 20px 5px;
+/* Materialize Row and Column Spacing */
+
+.row {
+    margin-bottom: 0;
+}
+
+.col {
+    margin-bottom: 20px;
 }
 
 /*---------- Form Labels & Inputs ----------*/
@@ -734,11 +752,12 @@ input[type=number] {
 }
 
 .stamp {
-    margin-top: 10px;
     cursor: pointer;
     max-width: 125px;
     width: 100%;
     height: auto;
+    display: block;
+    margin: 15px auto 10px;
 }
 
 /*---------- Popover ----------*/
@@ -763,21 +782,6 @@ input[type=number] {
     margin: 0;
     padding: 5px 0;
     font-weight: 700;
-}
-
-.beginner-heading {
-    color: #FCF3D6;
-    background-color: #03432B;
-}
-
-.everyone-heading {
-    color: #42271D;
-    background-color: #EBC53F;
-}
-
-.experienced-heading {
-    color: #FCF3D6;
-    background-color: #961E28;
 }
 
 .popover-content {

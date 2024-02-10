@@ -25,9 +25,6 @@ $(document).ready(function () {
 // Create variable of footer icons
 const icons = document.getElementsByClassName("footer-icon");
 
-// Create variable of event buttons
-const buttons = document.getElementsByClassName("button");
-
 // Add the grow style class to target
 const grow = function () {
     this.classList.add("grow");
@@ -42,10 +39,4 @@ const shrink = function () {
 for (let i = 0; i < icons.length; i++) {
     icons[i].addEventListener("mouseenter", grow);
     icons[i].addEventListener("mouseleave", shrink);
-};
-
-// Loop through event buttons to apply event listeners
-for (let b = 0; b < buttons.length; b++) {
-    buttons[b].addEventListener("mouseenter", grow);
-    buttons[b].addEventListener("mouseleave", shrink);
 };

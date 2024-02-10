@@ -2,15 +2,15 @@
 {% block content %}
 <!-- HEADING SECTION -->
 <section>
-    <div class="heading-container red-bg">
+    <div class="heading-container red-bg brown-font">
         <h1>Create Event</h1>
     </div>
 </section>
 
 <!-- CREATE EVENT FORM -->
 <section>
-    <div class="red-bg">
-        <div class="row form-container">
+    <div class="red-bg section-container">
+        <div class="row form-container white-bg">
             <form class="col s12" method="POST" action="{{ url_for('create_event') }}">
                 <div class="row">
                     <!-- Event Name Input -->
@@ -22,7 +22,7 @@
                 </div>
                 <div class="row">
                     <!-- Dropbox - Select Location -->
-                    <div class="input-field col s6">
+                    <div class="input-field col s12 m6">
                         <select id="location" name="location">
                             <option value="" disabled selected>Select Location</option>
                             <option value="swansea">Swansea</option>
@@ -33,7 +33,7 @@
                         <label for="location">Location</label>
                     </div>
                     <!-- Dropbox - Select Time -->
-                    <div class="input-field col s6">
+                    <div class="input-field col s12 m6">
                         <select id="time" name="time">
                             <option value="" disabled selected>Select Time</option>
                             <option value="10am">10am</option>
@@ -46,12 +46,12 @@
                 </div>
                 <div class="row">
                     <!-- Datepicker -->
-                    <div class="input-field col s6">
+                    <div class="input-field col s12 m6">
                         <input id="date" name="date" type="text" class="datepicker">
                         <label for="date">Date</label>
                     </div>
                     <!-- Party Size Input -->
-                    <div class="input-field col s6">
+                    <div class="input-field col s12 m6">
                         <input id="party_size" name="party_size" type="number" class="validate" min="1" max="10" step="1">
                         <label for="party_size">Max Party Size</label>
                         <span class="helper-text" data-error="Max 10">Between 1-10</span>
@@ -67,7 +67,7 @@
                 </div>
                 <div class="row">
                     <!-- Radio Button - Beginner -->
-                    <div class="col s4 center-align">
+                    <div class="col s12 m4 center-align">
                         <p class="radio-container">
                             <label for="beginner">
                                 <input class="with-gap" name="exp_level" value="beginner" id="beginner" type="radio" checked />
@@ -78,15 +78,15 @@
                         <!-- Popover Content Beginner - Credit Mihael Tomić (CodePen) -->
                         <div class="popover-wrapper">
                             <img class="popover-trigger" src="{{ url_for('static', filename='images/questionmark.png') }}" alt="A white questionmark painted on a circular shield" />
-                            <div class="popover-content beginner-content">
-                                <p class="popover-heading beginner-heading">Beginner</p>
-                                <p class="popover-message">Recommended for new players. The purpose of the event is to help you learn the rules
+                            <div class="popover-content beginner-content white-bg">
+                                <p class="popover-heading green-bg">Beginner</p>
+                                <p class="popover-message brown-font">Recommended for new players. The purpose of the event is to help you learn the rules
                                     of play.</p>
                             </div>
                         </div>
                     </div>
                     <!-- Radio Button - Everyone -->
-                    <div class="col s4 center-align">
+                    <div class="col s12 m4 center-align">
                         <p class="radio-container">
                             <label for="everyone">
                                 <input class="with-gap" name="exp_level" value="everyone" id="everyone" type="radio" />
@@ -97,13 +97,13 @@
                         <!-- Popover Content Everyone -->
                         <div class="popover-wrapper">
                             <img class="popover-trigger" src="{{ url_for('static', filename='images/questionmark.png') }}" alt="A white questionmark painted on a circular shield" />
-                            <div class="popover-content everyone-content">
-                                <p class="popover-heading everyone-heading">Everyone</p>
-                                <p class="popover-message">An open adventure for everyone. The aim of the game is to have fun!</p>
+                            <div class="popover-content everyone-content white-bg">
+                                <p class="popover-heading yellow-bg brown-font">Everyone</p>
+                                <p class="popover-message brown-font">An open adventure for everyone. The aim of the game is to have fun!</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col s4 center-align">
+                    <div class="col s12 m4 center-align">
                         <!-- Radio Button - Experienced -->
                         <p class="radio-container">
                             <label for="experienced">
@@ -115,9 +115,9 @@
                         <!-- Popover Content Experienced -->
                         <div class="popover-wrapper">
                             <img class="popover-trigger" src="{{ url_for('static', filename='images/questionmark.png') }}" alt="A white questionmark painted on a circular shield" />
-                            <div class="popover-content experienced-content">
-                                <p class="popover-heading experienced-heading">Experienced</p>
-                                <p class="popover-message">For advanced players only. No tutorials, only adventure!</p>
+                            <div class="popover-content experienced-content white-bg">
+                                <p class="popover-heading red-bg">Experienced</p>
+                                <p class="popover-message brown-font">For advanced players only. No tutorials, only adventure!</p>
                             </div>
                         </div>
                     </div>
@@ -125,7 +125,7 @@
                 <div class="row">
                     <!-- Submit Button -->
                     <div class="col s12 center-align">
-                        <button class="button submit-button" type="submit">Submit
+                        <button class="event-button submit" type="submit">SUBMIT
                         </button>
                     </div>
                 </div>
