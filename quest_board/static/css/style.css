@@ -83,21 +83,43 @@ h2 {
     transition: transform 0.1s;
 }
 
+.edit {
+    margin-bottom: auto;
+}
+
+.delete {
+    margin-top: auto;
+}
+
 .submit {
     font-size: 20px;
     padding: 14px 20px 8px;
     margin-top: 10px;
 }
 
+.create {
+    font-size: 20px;
+    padding: 12px 20px 8px;
+    margin-bottom: 2rem;
+}
+
 /*---------- Containers ----------*/
 
-.section-container {
+.section-container,
+.event-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+}
+
+.section-container {
     padding: 4rem 0;
+}
+
+.event-container {
+    padding-bottom: 4rem;
 }
 
 /*---------- Navbar ----------*/
@@ -271,15 +293,13 @@ nav ul a:hover {
 
 /*---------- Events ----------*/
 
-.padding {
-    padding-bottom: 50px;
-}
-
-.event-container {
-    width: 90%;
+.event-board {
+    width: 80%;
+    max-width: 1200px;
+    min-width: 320px;
     position: relative;
     background-image: url(../images/board-bg.png);
-    margin: 0 auto;
+    background-color: #764330;
 }
 
 .container-padding {
@@ -462,7 +482,6 @@ nav ul a:hover {
     -webkit-box-shadow: none;
     box-shadow: none;
     font-size: 1.5rem;
-    color: #FCF3D6;
 }
 
 .collapsible-header {
