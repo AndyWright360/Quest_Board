@@ -9,6 +9,10 @@
 
 body {
     font-family: 'Charm', sans-serif;
+    color: #FCF3D6;
+    overflow-x: hidden;
+    max-width: 1800px;
+    margin: 0 auto;
 }
 
 h1,
