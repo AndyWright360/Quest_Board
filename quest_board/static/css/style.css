@@ -153,6 +153,21 @@ button:focus-visible {
     padding-bottom: 4rem;
 }
 
+/*---------- Flash Messages ----------*/
+
+.flashes {
+    background-color: var(--yellow);
+    text-align: center;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.flash-message {
+    font-size: 26px;
+    font-weight: 700;
+    margin: 0;
+    padding: 10px 0;
+}
+
 /*---------- Navbar ----------*/
 
 nav .brand-logo {
