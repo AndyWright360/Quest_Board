@@ -1,4 +1,5 @@
-from flask import render_template, request, redirect, url_for
+from flask import render_template, request, redirect, flash, session, url_for
+from werkzeug.security import generate_password_hash, check_password_hash
 from quest_board import app, db
 from quest_board.models import User, Event
 
@@ -6,6 +7,34 @@ from quest_board.models import User, Event
 @app.route("/")
 def home():
     return render_template("index.html")
+
+
+@app.route("/sign_up", methods=["GET", "POST"])
+def sign_up():
+    if request.method == "POST":
+        username = request.form.get("username").lower()
+        password = request.form.get("password")
+
+        # Check if username already exists in database
+        existing_user = User.query.filter_by(username=username).first()
+        if existing_user:
+            flash("Username already exists!")
+            return redirect(url_for("sign_up"))
+
+        # Add user to database
+        user = User(
+            username=username,
+            password=generate_password_hash(password)
+        )
+        db.session.add(user)
+        db.session.commit()
+
+        # Put the new user into 'session' cookie
+        session["user"] = request.form.get("username").lower()
+        flash("Registration Successful!")
+        return redirect(url_for("sign_up"))
+
+    return render_template("sign_up.html")
 
 
 @app.route("/create_event", methods=["GET", "POST"])

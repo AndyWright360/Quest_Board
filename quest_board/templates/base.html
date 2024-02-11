@@ -40,7 +40,8 @@
                 <ul class="right hide-on-med-and-down">
                     <li><a href="{{ url_for('home') }}">Home</a></li>
                     <li><a href="{{ url_for('events') }}">Events</a></li>
-                    <li><a href="{{ url_for('create_event') }}">Sign Up/Login</a></li>
+                    <li><a href="{{ url_for('sign_up') }}">Sign Up</a></li>
+                    <li><a href="#">Login</a></li>
                 </ul>
             </div>
         </nav>
@@ -48,13 +49,31 @@
         <ul class="sidenav" id="mobile-demo">
             <li><a href="{{ url_for('home') }}">Home</a></li>
             <li><a href="{{ url_for('events') }}">Events</a></li>
-            <li><a href="{{ url_for('create_event') }}">Sign Up/Login</a></li>
+            <li><a href="{{ url_for('sign_up') }}">Sign Up</a></li>
+            <li><a href="#">Login</a></li>
         </ul>
     </header>
 
-    <!-- Main Page Content -->
-    <main>{% block content%} {% endblock %}</main>
+    <!-- FLASH MESSAGES -->
+    <section>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="flashes">
+                        <h3 class="flash-message">{{ message }}</h3>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </section>
 
+    <!-- MAIN PAGE CONTENT -->
+    <main>
+        {% block content%}
+        {% endblock %}
+    </main>
+
+    <!-- FOOTER -->
     <footer>
         <div class="footer-container">
             <a href="https://www.facebook.com/" target="_blank" aria-label="go to facebook website">
