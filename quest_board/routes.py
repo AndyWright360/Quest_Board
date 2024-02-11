@@ -42,6 +42,14 @@ def edit_event(event_id):
     return render_template("edit_event.html", event=event)
 
 
+@app.route("/delete_event/<int:event_id>")
+def delete_event(event_id):
+    event = Event.query.get_or_404(event_id)
+    db.session.delete(event)
+    db.session.commit()
+    return redirect(url_for("events"))
+
+
 @app.route("/events")
 def events():
     events = list(Event.query.order_by(Event.date).all())

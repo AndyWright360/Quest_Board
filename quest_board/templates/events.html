@@ -146,7 +146,7 @@
                         </div>
                         <div class="event-section-6">
                             <a href="{{ url_for('edit_event', event_id=event.id) }}" class="event-button edit">EDIT</a>
-                            <a href="#" class="event-button delete">DELETE</a>
+                            <a href="{{ url_for('delete_event', event_id=event.id) }}" class="event-button delete">DELETE</a>
                         </div>
                         <div class="event-section-7">
                             {% if event.exp_level == 'beginner' %}
