@@ -20,6 +20,9 @@ $(document).ready(function () {
 
     // Initialise collapsible
     $('.collapsible').collapsible();
+
+    // Initialise modal
+    $('.modal').modal();
 });
 
 // Create variable of footer icons
