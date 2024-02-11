@@ -651,6 +651,10 @@ textarea.materialize-textarea:focus:not([readonly])+label {
     color: var(--light-brown);
 }
 
+.character-counter {
+    color: var(--light-brown);
+}
+
 /* Invalid form entry helper text */
 input[type=text]:not(.browser-default).invalid~.helper-text:after,
 input[type=text]:not(.browser-default):focus.invalid~.helper-text:after,
