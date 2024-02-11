@@ -5,8 +5,7 @@ class User(db.Model):
     # schema for the User model
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(15), unique=True, nullable=False)
-    email = db.Column(db.String(50), nullable=False)
-    password = db.Column(db.String(50), nullable=False)
+    password = db.Column(db.String(80), nullable=False)
 
     def __repr__(self):
         # __repr__ to represent itself in the form of a string
