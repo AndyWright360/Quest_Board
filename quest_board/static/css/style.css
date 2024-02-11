@@ -122,6 +122,12 @@ button:focus-visible {
     margin-top: 10px;
 }
 
+.sign-up {
+    font-size: 20px;
+    padding: 15px 18px 11px;
+    margin: 15px 0 10px;
+}
+
 .create {
     font-size: 20px;
     padding: 12px 20px 8px;
@@ -621,6 +627,7 @@ nav ul a:hover {
 /* Form inputs */
 input[type=text]:not(.browser-default),
 input[type=number]:not(.browser-default),
+input[type=password]:not(.browser-default),
 textarea.materialize-textarea {
     color: var(--brown);
     font-family: var(--body-font);
@@ -631,6 +638,7 @@ textarea.materialize-textarea {
 /* Form input box when active */
 input[type=text]:not(.browser-default):focus:not([readonly]),
 input[type=number]:not(.browser-default):focus:not([readonly]),
+input[type=password]:not(.browser-default):focus:not([readonly]),
 textarea.materialize-textarea:focus:not([readonly]) {
     border-bottom: 1px solid var(--green);
     -webkit-box-shadow: 0 1px 0 0 var(--green);
@@ -640,6 +648,7 @@ textarea.materialize-textarea:focus:not([readonly]) {
 /* Form label when active */
 input[type=text]:not(.browser-default):focus:not([readonly])+label,
 input[type=number]:not(.browser-default):focus:not([readonly])+label,
+input[type=password]:not(.browser-default):focus:not([readonly])+label,
 textarea.materialize-textarea:focus:not([readonly])+label {
     color: var(--green);
 }
@@ -660,6 +669,8 @@ input[type=text]:not(.browser-default).invalid~.helper-text:after,
 input[type=text]:not(.browser-default):focus.invalid~.helper-text:after,
 input[type=number]:not(.browser-default).invalid~.helper-text:after,
 input[type=number]:not(.browser-default):focus.invalid~.helper-text:after,
+input[type=password]:not(.browser-default).invalid~.helper-text:after,
+input[type=password]:not(.browser-default):focus.invalid~.helper-text:after,
 textarea.materialize-textarea.invalid~.helper-text:after,
 textarea.materialize-textarea:focus.invalid~.helper-text:after {
     width: max-content;
@@ -871,6 +882,22 @@ input[type=number] {
 
 .popover-message {
     margin: 10px;
+}
+
+/*---------- Sign Up/Login ----------*/
+
+.sign-up-text {
+    font-size: 1.7rem;
+    margin: 0;
+}
+
+a.sign-up-text {
+    color: #008000;
+    font-weight: 700;
+}
+
+a.sign-up-text:hover {
+    text-decoration: underline;
 }
 
 /*---------- Footer ----------*/
