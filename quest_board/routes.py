@@ -17,6 +17,7 @@ def sign_up():
 
         # Check if username already exists in database
         existing_user = User.query.filter_by(username=username).first()
+
         if existing_user:
             flash("Username already exists!")
             return redirect(url_for("sign_up"))
@@ -35,6 +36,33 @@ def sign_up():
         return redirect(url_for("sign_up"))
 
     return render_template("sign_up.html")
+
+
+@app.route("/log_in", methods=["GET", "POST"])
+def log_in():
+    if request.method == "POST":
+        username = request.form.get("username").lower()
+        password = request.form.get("password")
+
+        # Check if username exists in database
+        existing_user = User.query.filter_by(username=username).first()
+
+        if existing_user:
+            # Ensure hashed password matches user input
+            if check_password_hash(existing_user.password, password):
+                session["user"] = username
+                flash("Welcome, {}".format(username.capitalize()))
+            else:
+                # Invalid password match
+                flash("Incorrect Username and/or Password")
+                return redirect(url_for("log_in"))
+
+        else:
+            # Username doesn't exist
+            flash("Incorrect Username and/or Password")
+            return redirect(url_for("log_in"))
+
+    return render_template("log_in.html")
 
 
 @app.route("/create_event", methods=["GET", "POST"])
