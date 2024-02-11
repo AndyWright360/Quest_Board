@@ -900,6 +900,55 @@ a.sign-up-text:hover {
     text-decoration: underline;
 }
 
+/*---------- Modal ----------*/
+
+.modal {
+    background-color: var(--white);
+    max-width: 400px;
+    word-wrap: break-word;
+}
+
+.modal .modal-footer {
+    background-color: var(--white);
+    width: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.modal-heading {
+    font-size: 24px;
+}
+
+.modal-text {
+    font-size: 20px;
+    margin-bottom: 0;
+}
+
+.green-btn,
+.red-btn {
+    color: var(--white);
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.green-btn,
+.green-btn:focus {
+    background-color: var(--green);
+}
+
+.red-btn,
+.red-btn:focus {
+    background-color: var(--red);
+}
+
+.green-btn:hover {
+    background-color: #033120;
+}
+
+.red-btn:hover {
+    background-color: #7B1821;
+}
+
 /*---------- Footer ----------*/
 
 footer {
