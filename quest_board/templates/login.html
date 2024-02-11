@@ -3,15 +3,15 @@
 <!-- HEADING SECTION -->
 <section>
     <div class="heading-container red-bg brown-font">
-        <h1>Sign Up</h1>
+        <h1>Login</h1>
     </div>
 </section>
 
-<!-- SIGN UP FORM -->
+<!-- LOGIN FORM -->
 <section>
     <div class="red-bg section-container">
         <div class="form-container white-bg">
-            <form method="POST" action="{{ url_for('sign_up') }}">
+            <form method="POST" action="{{ url_for('login') }}">
                 <div class="row">
                     <!-- Username Input -->
                     <div class="input-field col s12 m8 offset-m2">
@@ -31,15 +31,15 @@
                 <div class="row">
                     <!-- Submit Button -->
                     <div class="col s12 center-align">
-                        <button class="event-button sign-up" type="submit" name="action">SIGN UP
+                        <button class="event-button sign-up" type="submit" name="action">LOGIN
                         </button>
                     </div>
                 </div>
                 <div class="row">
                     <!-- Login Link -->
                     <div class="col s12 center-align">
-                        <p class=" brown-font sign-up-text">Already have an account?</p>
-                        <a class="sign-up-text" href="{{ url_for('login') }}">Login</a>
+                        <p class=" brown-font sign-up-text">Don't have an account?</p>
+                        <a class="sign-up-text" href="{{ url_for('sign_up') }}">Sign Up</a>
                     </div>
                 </div>
             </form>
