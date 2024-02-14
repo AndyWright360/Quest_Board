@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!-- Local stylesheet -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css" />
-    {% block styles%}
+    {% block styles %}
     {% endblock %}
 
     <!-- PAGE TITLE -->
@@ -29,11 +29,10 @@
     <header>
         <!-- NAVBAR -->
         <!-- Materialize Mobile Collapsible Navbar -->
-        <nav class="red-bg">
+        {% block nav_colour %}
+        {% endblock %}
             <div class="nav-wrapper">
-                <a href="{{ url_for('home') }}" class="brand-logo"><img class="logo" src="{{ url_for('static', filename='images/logo.png') }}"
-                    alt="A wooden shield with paper nailed to the center. A green letter Q is painted on the paper" />
-                    Quest Board</a>
+                <a href="{{ url_for('home') }}" class="brand-logo">{% block logo %}{% endblock %}Quest Board</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fa-solid fa-bars"
                         id="burger-menu"></i></a>
                 <!-- Main Navbar -->
@@ -46,7 +45,8 @@
             </div>
         </nav>
         <!-- Mobile Sidenav -->
-        <ul class="sidenav" id="mobile-demo">
+        {% block sidenav_colour %}
+        {% endblock %}
             <li><a href="{{ url_for('home') }}">Home</a></li>
             <li><a href="{{ url_for('events') }}">Events</a></li>
             <li><a href="{{ url_for('sign_up') }}">Sign Up</a></li>
@@ -69,7 +69,7 @@
 
     <!-- MAIN PAGE CONTENT -->
     <main>
-        {% block content%}
+        {% block content %}
         {% endblock %}
     </main>
 
@@ -85,7 +85,7 @@
             <a href="https://www.twitter.com/" target="_blank" aria-label="go to twitter website">
                 <img class="footer-icon" src="{{ url_for('static', filename='images/icon-twitter.png') }}" alt="Green D20 dice with Twitter logo">
             </a>
-            <p>
+            <p class="brown-font">
                 Copyright © 2024 Quest Board. All Rights Reserved.
             </p>
         </div>
@@ -100,7 +100,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <!-- Local Javascript -->
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
-    {% block scripts%}
+    {% block scripts %}
     {% endblock %}
     
     </body>

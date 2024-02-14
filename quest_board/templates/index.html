@@ -6,8 +6,20 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='css/map-style.css') }}" type="text/css" />
 {% endblock %}
 
-{% block content %}
+{% block nav_colour %}
+<nav class="red-bg">
+{% endblock %}
 
+{% block logo %}
+<img class="logo" src="{{ url_for('static', filename='images/logo.png') }}"
+    alt="A wooden shield with paper nailed to the center. A green letter Q is painted on the paper" />
+{% endblock %}
+
+{% block sidenav_colour %}
+<ul class="sidenav red-sidenav" id="mobile-demo">
+{% endblock %}
+
+{% block content %}
 <!-- HERO SECTION -->
 <section>
     <div class="hero-container">
@@ -70,7 +82,6 @@
         </div>
     </div>
 </section>
-
 {% endblock %}
 
 {% block scripts%}

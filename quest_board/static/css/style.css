@@ -197,10 +197,17 @@ nav ul a:hover {
 
 /*---------- Side Nav ----------*/
 
+.red-sidenav {
+    background: url(../images/banner.png);
+}
+
+.green-sidenav {
+    background: url(../images/banner-alt.png);
+}
+
 .sidenav {
     background-color: transparent;
-    background: url(../images/banner.png);
-    background-size: 100% 80%;
+    background-size: 100%;
     background-repeat: no-repeat;
     box-shadow: none;
     -webkit-box-shadow: none;
@@ -211,7 +218,7 @@ nav ul a:hover {
 }
 
 .sidenav li:first-child {
-    margin-top: 25px;
+    margin-top: 20px;
 }
 
 .sidenav li>a {
@@ -345,7 +352,7 @@ nav ul a:hover {
 .event-board {
     width: 80%;
     max-width: 1200px;
-    min-width: 320px;
+    min-width: 310px;
     position: relative;
     background-image: url(../images/board-bg.png);
     background-color: var(--light-brown);
