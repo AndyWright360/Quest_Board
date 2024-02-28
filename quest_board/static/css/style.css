@@ -922,6 +922,16 @@ a.sign-up-text:hover {
     text-decoration: underline;
 }
 
+/*---------- Profile ----------*/
+
+.profile-heading {
+    margin-bottom: 2rem;
+}
+
+.no-events {
+    font-size: 1.8rem;
+}
+
 /*---------- Modal ----------*/
 
 .modal {
