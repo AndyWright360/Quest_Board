@@ -33,7 +33,7 @@ def sign_up():
         # Put the new user into 'session' cookie
         session["user"] = request.form.get("username").lower()
         flash("Registration Successful!")
-        return redirect(url_for("sign_up"))
+        return redirect(url_for("profile", username=session["user"]))
 
     return render_template("sign_up.html")
 
@@ -52,6 +52,8 @@ def log_in():
             if check_password_hash(existing_user.password, password):
                 session["user"] = username
                 flash("Welcome, {}".format(username.capitalize()))
+                return redirect(
+                    url_for("profile", username=session["user"]))
             else:
                 # Invalid password match
                 flash("Incorrect Username and/or Password")
@@ -63,6 +65,14 @@ def log_in():
             return redirect(url_for("log_in"))
 
     return render_template("log_in.html")
+
+
+@app.route("/profile/<username>", methods=["GET", "POST"])
+def profile(username):
+    # Grab the session user's username from the database
+    username = User.query.filter_by(
+        username=session["user"]).first().username
+    return render_template("profile.html", username=username)
 
 
 @app.route("/create_event", methods=["GET", "POST"])

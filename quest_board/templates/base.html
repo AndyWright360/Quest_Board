@@ -41,6 +41,7 @@
                     <li><a href="{{ url_for('events') }}">Events</a></li>
                     <li><a href="{{ url_for('sign_up') }}">Sign Up</a></li>
                     <li><a href="{{ url_for('log_in') }}">Log In</a></li>
+                    <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                 </ul>
             </div>
         </nav>
@@ -51,6 +52,7 @@
             <li><a href="{{ url_for('events') }}">Events</a></li>
             <li><a href="{{ url_for('sign_up') }}">Sign Up</a></li>
             <li><a href="{{ url_for('log_in') }}">Log In</a></li>
+            <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
         </ul>
     </header>
 
@@ -60,7 +62,7 @@
             {% if messages %}
                 {% for message in messages %}
                     <div class="flashes">
-                        <h3 class="flash-message">{{ message }}</h3>
+                        <h3 class="flash-message brown-font">{{ message }}</h3>
                     </div>
                 {% endfor %}
             {% endif %}

@@ -17,7 +17,7 @@
     <!-- HEADING SECTION -->
     <section>
         <div class="heading-container green-bg brown-font">
-            <h1>Profile</h1>
+            <h1>{{ username }}'s Profile</h1>
         </div>
     </section>
 
@@ -38,11 +38,11 @@
                 <img src="{{ url_for('static', filename='images/metal-corner.png') }}" alt="A gold square corner plate" id="bottom-left" class="corner">
                 <img src="{{ url_for('static', filename='images/metal-corner.png') }}" alt="A gold square corner plate" id="bottom-right" class="corner">
                 <div class="container-padding">
-                    {% for event in events %}
-                        {% if events|length == 0 %}
-                            <!-- No Events Message -->
-                            <p class="no-events">You don't currently have any events created.<br>Why not create one?</p>
-                        {% else %}
+                    {% if events|length == 0 %}
+                        <!-- No Events Message -->
+                        <p class="no-events">You don't currently have any events created.<br>Why not create one?</p>
+                    {% else %}
+                        {% for event in events %}
                             <!-- Event Card -->
                             <div class="event-card brown-font">
                                 <div class="event-card-header">
@@ -96,8 +96,8 @@
                                     {% endif %}
                                 </div>
                             </div>
-                        {% endif %}
-                    {% endfor %}
+                        {% endfor %}
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -119,11 +119,11 @@
                 <img src="{{ url_for('static', filename='images/metal-corner.png') }}" alt="A gold square corner plate" id="bottom-left" class="corner">
                 <img src="{{ url_for('static', filename='images/metal-corner.png') }}" alt="A gold square corner plate" id="bottom-right" class="corner">
                 <div class="container-padding">
-                    {% for event in events %}
-                        {% if events|length == 0 %}
-                            <!-- No Events Message -->
-                            <p class="no-events">You haven't yet joined any events.<br>Why not check out the Events page?</p>
-                        {% else %}
+                    {% if events|length == 0 %}
+                        <!-- No Events Message -->
+                        <p class="no-events">You haven't yet joined any events.<br>Why not check out the Events page?</p>
+                    {% else %}
+                        {% for event in events %}
                             <!-- Event Card -->
                             <div class="event-card brown-font">
                                 <div class="event-card-header">
@@ -162,8 +162,8 @@
                                     {% endif %}
                                 </div>
                             </div>
-                        {% endif %}
-                    {% endfor %}
+                        {% endfor %}
+                    {% endif %}
                 </div>
             </div>
         </div>
