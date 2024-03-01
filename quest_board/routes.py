@@ -72,7 +72,19 @@ def profile(username):
     # Grab the session user's username from the database
     username = User.query.filter_by(
         username=session["user"]).first().username
-    return render_template("profile.html", username=username)
+    
+    if session["user"]:
+        return render_template("profile.html", username=username)
+    
+    return redirect(url_for("log_in"))
+
+
+@app.route("/logout")
+def logout():
+    # Remove user from session cookies
+    flash("You have been logged out")
+    session.pop("user")
+    return redirect(url_for("log_in"))
 
 
 @app.route("/create_event", methods=["GET", "POST"])
