@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("no-results").style.display = "none";
     
     /*
-    Takes the value of the selected checkbox within each category and stores it in an array.
+    Takes the value of the selected checkbox within each category and stores it in an array. Passes each array into the filter function.
     */
     function checkFilters() {
         // Location option checkboxes
@@ -70,5 +70,95 @@ document.addEventListener("DOMContentLoaded", function () {
         if (experienced) {
             expFilters.push("experienced");
         }
+
+        if (locationFilters.length === 0 && timeFilters.length === 0 && expFilters.length === 0) {
+            // Display all events and hide no results message if no filters are selected
+            filter([""], timeFilters, expFilters);
+            document.getElementById("no-results").style.display = "none";
+            const event = document.getElementsByClassName("event-card");
+            for (let i = 0; i < event.length; i++) {
+                event[i].style.display = "grid";
+            }
+            
+        } else {
+            // Apply filters if any are selected
+            filter(locationFilters, timeFilters, expFilters);
+        }
+
     };
+
+    /*
+    This function checks the data-type attribute of each event card and compares it to each index value within the provided filter arrays. If a match is found, the card remains visible; otherwise, it is hidden.
+    */
+    function filter(locations, times, expLevels) {
+        const event = document.getElementsByClassName("event-card");
+
+        for (let i = 0; i < event.length; i++) {
+            let matchFound = false;
+            event[i].style.display = "none";
+
+            // Compares the data-type value across each possible combination of selected filter options.
+            for (let l = 0; l < locations.length; l++) {
+                for (let t = 0; t < times.length; t++) {
+                    for (let e = 0; e < expLevels.length; e++) {
+                        if (event[i].getAttribute("data-location") === locations[l] &&
+                        event[i].getAttribute("data-time") === times[t] &&
+                        event[i].getAttribute("data-exp") === expLevels[e]) {
+                            matchFound = true;
+                        }
+                    }
+                }
+            }
+
+            if (locations.length === 0 && times.length === 0 && expLevels.length === 0) {
+                matchFound = true; // If no filters selected, show all events
+            } else if (locations.length === 0 && times.length === 0) {
+                for (let e = 0; e < expLevels.length; e++) {
+                    if (event[i].getAttribute("data-exp") === expLevels[e]) {
+                        matchFound = true;
+                    }
+                }
+            } else if (locations.length === 0 && expLevels.length === 0) {
+                for (let t = 0; t < times.length; t++) {
+                    if (event[i].getAttribute("data-time") === times[t]) {
+                        matchFound = true;
+                    }
+                }
+            } else if (times.length === 0 && expLevels.length === 0) {
+                for (let l = 0; l < locations.length; l++) {
+                    if (event[i].getAttribute("data-location") === locations[l]) {
+                        matchFound = true;
+                    }
+                }
+            } else if (locations.length === 0) {
+                for (let t = 0; t < times.length; t++) {
+                    for (let e = 0; e < expLevels.length; e++) {
+                        if (event[i].getAttribute("data-time") === times[t] && event[i].getAttribute("data-exp") === expLevels[e]) {
+                            matchFound = true;
+                        }
+                    }
+                }
+            } else if (times.length === 0) {
+                for (let l = 0; l < locations.length; l++) {
+                    for (let e = 0; e < expLevels.length; e++) {
+                        if (event[i].getAttribute("data-location") === locations[l] && event[i].getAttribute("data-exp") === expLevels[e]) {
+                            matchFound = true;
+                        }
+                    }
+                }
+            } else if (expLevels.length === 0) {
+                for (let l = 0; l < locations.length; l++) {
+                    for (let t = 0; t < times.length; t++) {
+                        if (event[i].getAttribute("data-location") === locations[l] && event[i].getAttribute("data-time") === times[t]) {
+                            matchFound = true;
+                        }
+                    }
+                }
+            }
+
+            if (matchFound) {
+                event[i].style.display = "grid";
+            }
+        }
+    }
 });
