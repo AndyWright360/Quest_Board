@@ -1,196 +1,196 @@
 {% extends "base.html" %}
 
 {% block nav_colour %}
-<nav class="red-bg">
+    <nav class="red-bg">
 {% endblock %}
 
 {% block logo %}
-<img class="logo" src="{{ url_for('static', filename='images/logo.png') }}"
-    alt="A wooden shield with paper nailed to the center. A green letter Q is painted on the paper" />
+    <img class="logo" src="{{ url_for('static', filename='images/logo.png') }}"
+        alt="A wooden shield with paper nailed to the center. A green letter Q is painted on the paper" />
 {% endblock %}
 
 {% block sidenav_colour %}
-<ul class="sidenav red-sidenav" id="mobile-demo">
+    <ul class="sidenav red-sidenav" id="mobile-demo">
 {% endblock %}
 
 {% block content %}
-<!-- HEADING SECTION -->
-<section>
-    <div class="heading-container green-bg brown-font">
-        <h1>Events</h1>
-    </div>
-</section>
+    <!-- HEADING SECTION -->
+    <section>
+        <div class="heading-container green-bg brown-font">
+            <h1>Events</h1>
+        </div>
+    </section>
 
-<!-- EVENTS -->
-<section>
-    <div class="green-bg">
-        <!-- Filter -->
-        <ul class="collapsible">
-            <li>
-                <div class="collapsible-header green-bg">Filter<i class="fa-solid fa-sort-down"></i></div>
-                <div class="collapsible-body green-bg">
-                    <div class="flex-container">
-                        <!-- Location options -->
-                        <div class="filter-category">
-                            <div class="category-heading">
-                                <p>Location</p>
+    <!-- EVENTS -->
+    <section>
+        <div class="green-bg">
+            <!-- Filter -->
+            <ul class="collapsible">
+                <li>
+                    <div class="collapsible-header green-bg">Filter<i class="fa-solid fa-sort-down"></i></div>
+                    <div class="collapsible-body green-bg">
+                        <div class="flex-container">
+                            <!-- Location options -->
+                            <div class="filter-category">
+                                <div class="category-heading">
+                                    <p>Location</p>
+                                </div>
+                                <div class="filter-option-1">
+                                    <label for="cardiff">
+                                        <input type="checkbox" id="cardiff" name="cardiff" data-category="location" />
+                                        <span>Cardiff</span>
+                                    </label>
+                                </div>
+                                <div class="filter-option-2">
+                                    <label for="newport">
+                                        <input type="checkbox" id="newport" name="newport" data-category="location" />
+                                        <span>Newport</span>
+                                    </label>
+                                </div>
+                                <div class="filter-option-3">
+                                    <label for="swansea">
+                                        <input type="checkbox" id="swansea" name="swansea" data-category="location" />
+                                        <span>Swansea</span>
+                                    </label>
+                                </div>
+                                <div class="filter-option-4">
+                                    <label for="bridgend">
+                                        <input type="checkbox" id="bridgend" name="bridgend" data-category="location" />
+                                        <span>Bridgend</span>
+                                    </label>
+                                </div>
                             </div>
-                            <div class="filter-option-1">
-                                <label for="cardiff">
-                                    <input type="checkbox" id="cardiff" />
-                                    <span>Cardiff</span>
-                                </label>
+                            <!-- Time options -->
+                            <div class="filter-category">
+                                <div class="category-heading">
+                                    <p>Time</p>
+                                </div>
+                                <div class="filter-option-1">
+                                    <label for="10am">
+                                        <input type="checkbox" id="10am" name="10am" data-category="time" />
+                                        <span>10am</span>
+                                    </label>
+                                </div>
+                                <div class="filter-option-2">
+                                    <label for="12pm">
+                                        <input type="checkbox" id="12pm" name="12pm" data-category="time" />
+                                        <span>12pm</span>
+                                    </label>
+                                </div>
+                                <div class="filter-option-3">
+                                    <label for="2pm">
+                                        <input type="checkbox" id="2pm" name="2pm" data-category="time" />
+                                        <span>2pm</span>
+                                    </label>
+                                </div>
+                                <div class="filter-option-4">
+                                    <label for="4pm">
+                                        <input type="checkbox" id="4pm" name="4pm" data-category="time" />
+                                        <span>4pm</span>
+                                    </label>
+                                </div>
                             </div>
-                            <div class="filter-option-2">
-                                <label for="newport">
-                                    <input type="checkbox" id="newport" />
-                                    <span>Newport</span>
-                                </label>
-                            </div>
-                            <div class="filter-option-3">
-                                <label for="swansea">
-                                    <input type="checkbox" id="swansea" />
-                                    <span>Swansea</span>
-                                </label>
-                            </div>
-                            <div class="filter-option-4">
-                                <label for="bridgend">
-                                    <input type="checkbox" id="bridgend" />
-                                    <span>Bridgend</span>
-                                </label>
-                            </div>
-                        </div>
-                        <!-- Time options -->
-                        <div class="filter-category">
-                            <div class="category-heading">
-                                <p>Time</p>
-                            </div>
-                            <div class="filter-option-1">
-                                <label for="10am">
-                                    <input type="checkbox" id="10am" />
-                                    <span>10am</span>
-                                </label>
-                            </div>
-                            <div class="filter-option-2">
-                                <label for="12pm">
-                                    <input type="checkbox" id="12pm" />
-                                    <span>12pm</span>
-                                </label>
-                            </div>
-                            <div class="filter-option-3">
-                                <label for="2pm">
-                                    <input type="checkbox" id="2pm" />
-                                    <span>2pm</span>
-                                </label>
-                            </div>
-                            <div class="filter-option-4">
-                                <label for="4pm">
-                                    <input type="checkbox" id="4pm" />
-                                    <span>4pm</span>
-                                </label>
-                            </div>
-                        </div>
-                        <!-- Experience options -->
-                        <div class="filter-category">
-                            <div class="category-heading">
-                                <p>Exp Level</p>
-                            </div>
-                            <div class="filter-option-1">
-                                <label for="beginner">
-                                    <input type="checkbox" id="beginner" />
-                                    <span>Beginner</span>
-                                </label>
-                            </div>
-                            <div class="filter-option-2">
-                                <label for="everyone">
-                                    <input type="checkbox" id="everyone" />
-                                    <span>Everyone</span>
-                                </label>
-                            </div>
-                            <div class="filter-option-3">
-                                <label for="experienced">
-                                    <input type="checkbox" id="experienced" />
-                                    <span>Experienced</span>
-                                </label>
+                            <!-- Experience options -->
+                            <div class="filter-category">
+                                <div class="category-heading">
+                                    <p>Exp Level</p>
+                                </div>
+                                <div class="filter-option-1">
+                                    <label for="beginner">
+                                        <input type="checkbox" id="beginner" name="beginner" data-category="exp" />
+                                        <span>Beginner</span>
+                                    </label>
+                                </div>
+                                <div class="filter-option-2">
+                                    <label for="everyone">
+                                        <input type="checkbox" id="everyone" name="everyone" data-category="exp" />
+                                        <span>Everyone</span>
+                                    </label>
+                                </div>
+                                <div class="filter-option-3">
+                                    <label for="experienced">
+                                        <input type="checkbox" id="experienced" name="experienced" data-category="exp" />
+                                        <span>Experienced</span>
+                                    </label>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </li>
-        </ul>
-        <!-- Events Container -->
-        <div class="event-container">
-            <a href="{{ url_for('create_event') }}" class="event-button create">CREATE EVENT</a>
-            <div class="event-board">
-                <!-- Border Trim -->
-                <div class="border" id="top"></div>
-                <div class="border" id="left"></div>
-                <div class="border" id="right"></div>
-                <div class="border" id="bottom"></div>
-                <!-- Border Corners -->
-                <img src="{{ url_for('static', filename='images/metal-corner.png') }}" alt="A gold square corner plate" id="top-left" class="corner">
-                <img src="{{ url_for('static', filename='images/metal-corner.png') }}" alt="A gold square corner plate" id="top-right" class="corner">
-                <img src="{{ url_for('static', filename='images/metal-corner.png') }}" alt="A gold square corner plate" id="bottom-left" class="corner">
-                <img src="{{ url_for('static', filename='images/metal-corner.png') }}" alt="A gold square corner plate" id="bottom-right" class="corner">
-                <div class="container-padding">
-                    <!-- Event Card -->
-                    {% for event in events %}
-                    <div class="event-card brown-font">
-                        <div class="event-card-header">
-                            <h2 class="event-title">{{ event.event_name }}</h2>
-                        </div>
-                        <div class="event-section-1">
-                            <p class="event-creator">Created by:<br>Username</p>
-                        </div>
-                        <div class="event-section-2">
-                            <i class="fa-solid fa-location-dot event-icon"></i>
-                            <p class="event-info">{{ event.location.capitalize() }}</p>
-                        </div>
-                        <div class="event-section-3">
-                            <i class="fa-regular fa-calendar event-icon"></i>
-                            <p class="event-info">{{ event.date.strftime("%-d/%-m/%y") }}</p>
-                        </div>
-                        <div class="event-section-4">
-                            <i class="fa-regular fa-clock event-icon"></i>
-                            <p class="event-info">{{ event.time }}</p>
-                        </div>
-                        <div class="event-section-5">
-                            <i class="fa-solid fa-people-group event-icon"></i>
-                            <p class="event-info">0/{{ event.party_size }}</p>
-                        </div>
-                        <div class="event-section-6">
-                            <a href="{{ url_for('edit_event', event_id=event.id) }}" class="event-button edit">EDIT</a>
-                            <!-- Modal Trigger -->
-                            <a href="#modal-{{ event.id }}" class="event-button delete modal-trigger">DELETE</a>
-                        </div>
-                        
-                        <!-- Modal - Delete Event -->
-                        <div id="modal-{{ event.id }}" class="modal">
-                            <div class="modal-content">
-                                <h2 class="brown-font modal-heading">Delete {{ event.event_name }}</h2>
-                                <p class="brown-font modal-text">Are you sure you want to delete this event?<br>This action cannot be undone.</p>
-                            </div>
-                            <div class="modal-footer">
-                                <a href="#!" class="modal-close btn green-btn">Cancel</a>
-                                <a href="{{ url_for('delete_event', event_id=event.id) }}" class="btn red-btn">Delete</a>
-                            </div>
-                        </div>
+                </li>
+            </ul>
+            <!-- Events Container -->
+            <div class="event-container">
+                <a href="{{ url_for('create_event') }}" class="event-button create">CREATE EVENT</a>
+                <div class="event-board">
+                    <!-- Border Trim -->
+                    <div class="border top"></div>
+                    <div class="border left"></div>
+                    <div class="border right"></div>
+                    <div class="border bottom"></div>
+                    <!-- Border Corners -->
+                    <img src="{{ url_for('static', filename='images/metal-corner.png') }}" alt="A gold square corner plate" class="corner top-left">
+                    <img src="{{ url_for('static', filename='images/metal-corner.png') }}" alt="A gold square corner plate" class="corner top-right">
+                    <img src="{{ url_for('static', filename='images/metal-corner.png') }}" alt="A gold square corner plate" class="corner bottom-left">
+                    <img src="{{ url_for('static', filename='images/metal-corner.png') }}" alt="A gold square corner plate" class="corner bottom-right">
+                    <div class="container-padding">
+                        <!-- Event Card -->
+                        {% for event in events %}
+                            <div class="event-card brown-font">
+                                <div class="event-card-header">
+                                    <h2 class="event-title">{{ event.event_name }}</h2>
+                                </div>
+                                <div class="event-section-1">
+                                    <p class="event-creator">Created by:<br>Username</p>
+                                </div>
+                                <div class="event-section-2">
+                                    <i class="fa-solid fa-location-dot event-icon"></i>
+                                    <p class="event-info">{{ event.location.capitalize() }}</p>
+                                </div>
+                                <div class="event-section-3">
+                                    <i class="fa-regular fa-calendar event-icon"></i>
+                                    <p class="event-info">{{ event.date.strftime("%-d/%-m/%y") }}</p>
+                                </div>
+                                <div class="event-section-4">
+                                    <i class="fa-regular fa-clock event-icon"></i>
+                                    <p class="event-info">{{ event.time }}</p>
+                                </div>
+                                <div class="event-section-5">
+                                    <i class="fa-solid fa-people-group event-icon"></i>
+                                    <p class="event-info">0/{{ event.party_size }}</p>
+                                </div>
+                                <div class="event-section-6">
+                                    <a href="{{ url_for('edit_event', event_id=event.id) }}" class="event-button edit">EDIT</a>
+                                    <!-- Modal Trigger -->
+                                    <a href="#modal-{{ event.id }}" class="event-button delete modal-trigger">DELETE</a>
+                                </div>
+                                
+                                <!-- Modal - Delete Event -->
+                                <div id="modal-{{ event.id }}" class="modal">
+                                    <div class="modal-content">
+                                        <h2 class="brown-font modal-heading">Delete {{ event.event_name }}</h2>
+                                        <p class="brown-font modal-text">Are you sure you want to delete this event?<br>This action cannot be undone.</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <a href="#!" class="modal-close btn green-btn">Cancel</a>
+                                        <a href="{{ url_for('delete_event', event_id=event.id) }}" class="btn red-btn">Delete</a>
+                                    </div>
+                                </div>
 
-                        <div class="event-section-7">
-                            {% if event.exp_level == 'beginner' %}
-                            <img src="{{ url_for('static', filename='images/seal-green.png') }}" class="event-stamp" alt="Beginner Seal">
-                            {% elif event.exp_level == 'everyone' %}
-                            <img src="{{ url_for('static', filename='images/seal-yellow.png') }}" class="event-stamp" alt="Everyone Seal">
-                            {% elif event.exp_level == 'experienced' %}
-                            <img src="{{ url_for('static', filename='images/seal-red.png') }}" class="event-stamp"
-                                alt="Experienced Seal">
-                            {% endif %}
-                        </div>
+                                <div class="event-section-7">
+                                    {% if event.exp_level == 'beginner' %}
+                                        <img src="{{ url_for('static', filename='images/seal-green.png') }}" class="event-stamp" alt="Beginner Seal">
+                                    {% elif event.exp_level == 'everyone' %}
+                                        <img src="{{ url_for('static', filename='images/seal-yellow.png') }}" class="event-stamp" alt="Everyone Seal">
+                                    {% elif event.exp_level == 'experienced' %}
+                                        <img src="{{ url_for('static', filename='images/seal-red.png') }}" class="event-stamp"
+                                            alt="Experienced Seal">
+                                    {% endif %}
+                                </div>
+                            </div>
+                        {% endfor %}
                     </div>
-                    {% endfor %}
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 {% endblock %}
