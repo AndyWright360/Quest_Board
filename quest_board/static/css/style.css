@@ -605,6 +605,10 @@ nav ul a:hover {
     grid-area: 3 / 2 / 4 / 3;
 }
 
+#no-results {
+    font-size: 1.8rem;
+}
+
 /* selection options */
 [type="checkbox"]+span:not(.lever) {
     padding-left: 25px;

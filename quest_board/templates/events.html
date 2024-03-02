@@ -133,6 +133,8 @@
                     <img src="{{ url_for('static', filename='images/metal-corner.png') }}" alt="A gold square corner plate" class="corner bottom-left-corner">
                     <img src="{{ url_for('static', filename='images/metal-corner.png') }}" alt="A gold square corner plate" class="corner bottom-right-corner">
                     <div class="container-padding">
+                        <!-- No Filter Results Message --> 
+                        <p id="no-results">No events match your search criteria.<br>Why not create one?</p>
                         <!-- Event Card -->
                         {% for event in events %}
                             <div class="event-card brown-font" data-location="{{ event.location }}" data-time="{{ event.time }}" data-exp="{{ event.exp_level }}">
