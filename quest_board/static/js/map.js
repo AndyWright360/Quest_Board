@@ -3,12 +3,20 @@ The following code was obtained from https://developers.google.com/maps/document
 */
 
 async function initMap() {
+    // Set map zoom dependant on screen width
+    let mapZoom;
+    if (window.innerWidth <= 700) {
+        mapZoom = 8;
+    } else {
+        mapZoom = 9;
+    }
+
     // Request needed libraries.
     const { Map } = await google.maps.importLibrary("maps");
     const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
     const center = { lat: 51.562179, lng: -3.47715 };
     const map = new Map(document.getElementById("map"), {
-        zoom: 9,
+        zoom: mapZoom,
         center,
         mapId: "97b0dc5f1a34eb32",
     });
