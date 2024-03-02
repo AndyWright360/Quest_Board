@@ -160,5 +160,28 @@ document.addEventListener("DOMContentLoaded", function () {
                 event[i].style.display = "grid";
             }
         }
+
+        checkForNoMatches();
+    }
+
+    /*
+    This function checks if any events are currently displayed. If they are, it adds them to the matchFound array. If the matchFound array is empty, it displays the no results message.
+    */
+    function checkForNoMatches() {
+        const events = document.getElementsByClassName("event-card");
+        let matchFound = [];
+
+        for (let i = 0; i < events.length; i++) {
+            if (events[i].style.display === "grid") {
+                matchFound.push(events[i]);
+                break;
+            }
+        }
+
+        if (matchFound.length > 0) {
+            document.getElementById("no-results").style.display = "none";
+        } else {
+            document.getElementById("no-results").style.display = "grid";
+        }
     }
 });
