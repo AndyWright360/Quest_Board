@@ -1,150 +1,150 @@
 {% extends "base.html" %}
 
 {% block nav_colour %}
-<nav class="green-bg">
+    <nav class="green-bg">
 {% endblock %}
 
 {% block logo %}
-<img class="logo" src="{{ url_for('static', filename='images/logo-alt.png') }}"
-    alt="A wooden shield with paper nailed to the center. A red letter Q is painted on the paper" />
+    <img class="logo" src="{{ url_for('static', filename='images/logo-alt.png') }}"
+        alt="A wooden shield with paper nailed to the center. A red letter Q is painted on the paper" />
 {% endblock %}
 
 {% block sidenav_colour %}
-<ul class="sidenav green-sidenav" id="mobile-demo">
+    <ul class="sidenav green-sidenav" id="mobile-demo">
 {% endblock %}
 
 {% block content %}
-<!-- HEADING SECTION -->
-<section>
-    <div class="heading-container red-bg brown-font">
-        <h1>Edit Event</h1>
-    </div>
-</section>
-
-<!-- EDIT EVENT FORM -->
-<section>
-    <div class="red-bg section-container">
-        <div class="form-container white-bg">
-            <form method="POST" action="{{ url_for('edit_event', event_id=event.id) }}">
-                <div class="row">
-                    <!-- Event Name Input -->
-                    <div class="input-field col s12">
-                        <input id="event_name" name="event_name" value="{{ event.event_name }}" type="text" class="validate" data-length="24">
-                        <label for="event_name">Event Name</label>
-                        <span class="helper-text" data-error="Too many characters"></span>
-                    </div>
-                </div>
-                <div class="row">
-                    <!-- Dropbox - Select Location -->
-                    <div class="input-field col s12 m6">
-                        <select id="location" name="location">
-                            <option value="" disabled selected>Select Location</option>
-                            <option value="swansea" {% if event.location == 'swansea' %} selected {% endif %}>Swansea</option>
-                            <option value="bridgend" {% if event.location == 'bridgend' %} selected {% endif %}>Bridgend</option>
-                            <option value="cardiff" {% if event.location == 'cardiff' %} selected {% endif %}>Cardiff</option>
-                            <option value="newport" {% if event.location == 'newport' %} selected {% endif %}>Newport</option>
-                        </select>
-                        <label for="location">Location</label>
-                    </div>
-                    <!-- Dropbox - Select Time -->
-                    <div class="input-field col s12 m6">
-                        <select id="time" name="time">
-                            <option value="" disabled selected>Select Time</option>
-                            <option value="10am" {% if event.time == '10am' %} selected {% endif %}>10am</option>
-                            <option value="12pm" {% if event.time == '12pm' %} selected {% endif %}>12pm</option>
-                            <option value="2pm" {% if event.time == '2pm' %} selected {% endif %}>2pm</option>
-                            <option value="4pm" {% if event.time == '4pm' %} selected {% endif %}>4pm</option>
-                        </select>
-                        <label for="time">Time</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <!-- Datepicker -->
-                    <div class="input-field col s12 m6">
-                        <input id="date" name="date" value="{{ event.date }}" type="text" class="datepicker">
-                        <label for="date">Date</label>
-                    </div>
-                    <!-- Party Size Input -->
-                    <div class="input-field col s12 m6">
-                        <input id="party_size" name="party_size" value="{{ event.party_size }}" type="number" class="validate" min="1" max="10" step="1">
-                        <label for="party_size">Max Party Size</label>
-                        <span class="helper-text" data-error="Max 10">Between 1-10</span>
-                    </div>
-                </div>
-                <div class="row">
-                    <!-- Description Textarea -->
-                    <div class="input-field col s12">
-                        <textarea id="description" name="description" class="materialize-textarea" data-length="250">{{ event.description }}</textarea>
-                        <label for="description">Description</label>
-                        <span class="helper-text" data-error="Too many characters"></span>
-                    </div>
-                </div>
-                <div class="row">
-                    <!-- Radio Button - Beginner -->
-                    <div class="col s12 m4 center-align">
-                        <p class="radio-container">
-                            <label for="beginner">
-                                <input class="with-gap" name="exp_level" {% if event.exp_level == 'beginner' %} checked {% endif %} value="beginner" id="beginner" type="radio" />
-                                <span>Beginner</span>
-                                <img class="stamp" img src="{{ url_for('static', filename='images/seal-green.png') }}" alt="A green wax seal with a D20 symbol" />
-                            </label>
-                        </p>
-                        <!-- Popover Content Beginner - Credit Mihael Tomić (CodePen) -->
-                        <div class="popover-wrapper">
-                            <img class="popover-trigger" src="{{ url_for('static', filename='images/questionmark.png') }}" alt="A white questionmark painted on a circular shield" />
-                            <div class="popover-content beginner-content white-bg">
-                                <p class="popover-heading green-bg">Beginner</p>
-                                <p class="popover-message brown-font">Recommended for new players. The purpose of the event is to help you learn the rules
-                                    of play.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Radio Button - Everyone -->
-                    <div class="col s12 m4 center-align">
-                        <p class="radio-container">
-                            <label for="everyone">
-                                <input class="with-gap" name="exp_level" {% if event.exp_level == 'everyone' %} checked {% endif %} value="everyone" id="everyone" type="radio" />
-                                <span>Everyone</span>
-                                <img class="stamp" img src="{{ url_for('static', filename='images/seal-yellow.png') }}" alt="A yellow wax seal with a D20 symbol" />
-                            </label>
-                        </p>
-                        <!-- Popover Content Everyone -->
-                        <div class="popover-wrapper">
-                            <img class="popover-trigger" src="{{ url_for('static', filename='images/questionmark.png') }}" alt="A white questionmark painted on a circular shield" />
-                            <div class="popover-content everyone-content white-bg">
-                                <p class="popover-heading yellow-bg brown-font">Everyone</p>
-                                <p class="popover-message brown-font">An open adventure for everyone. The aim of the game is to have fun!</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s12 m4 center-align">
-                        <!-- Radio Button - Experienced -->
-                        <p class="radio-container">
-                            <label for="experienced">
-                                <input class="with-gap" name="exp_level"  {% if event.exp_level == 'experienced' %} checked {% endif %} value="experienced" id="experienced" type="radio" />
-                                <span>Experienced</span>
-                                <img class="stamp" img src="{{ url_for('static', filename='images/seal-red.png') }}" alt="A red wax seal with a D20 symbol" />
-                            </label>
-                        </p>
-                        <!-- Popover Content Experienced -->
-                        <div class="popover-wrapper">
-                            <img class="popover-trigger" src="{{ url_for('static', filename='images/questionmark.png') }}" alt="A white questionmark painted on a circular shield" />
-                            <div class="popover-content experienced-content white-bg">
-                                <p class="popover-heading red-bg">Experienced</p>
-                                <p class="popover-message brown-font">For advanced players only. No tutorials, only adventure!</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <!-- Submit Button -->
-                    <div class="col s12 center-align">
-                        <button class="event-button submit" type="submit">SUBMIT
-                        </button>
-                    </div>
-                </div>
-            </form>
+    <!-- HEADING SECTION -->
+    <section>
+        <div class="heading-container red-bg brown-font">
+            <h1>Edit Event</h1>
         </div>
-    </div>
-</section>
+    </section>
+
+    <!-- EDIT EVENT FORM -->
+    <section>
+        <div class="red-bg section-container">
+            <div class="form-container white-bg">
+                <form method="POST" action="{{ url_for('edit_event', event_id=event.id) }}">
+                    <div class="row">
+                        <!-- Event Name Input -->
+                        <div class="input-field col s12">
+                            <input id="event_name" name="event_name" value="{{ event.event_name }}" type="text" class="validate" data-length="24">
+                            <label for="event_name">Event Name</label>
+                            <span class="helper-text" data-error="Too many characters"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- Dropbox - Select Location -->
+                        <div class="input-field col s12 m6">
+                            <select id="location" name="location">
+                                <option value="" disabled selected>Select Location</option>
+                                <option value="swansea" {% if event.location == 'swansea' %} selected {% endif %}>Swansea</option>
+                                <option value="bridgend" {% if event.location == 'bridgend' %} selected {% endif %}>Bridgend</option>
+                                <option value="cardiff" {% if event.location == 'cardiff' %} selected {% endif %}>Cardiff</option>
+                                <option value="newport" {% if event.location == 'newport' %} selected {% endif %}>Newport</option>
+                            </select>
+                            <label for="location">Location</label>
+                        </div>
+                        <!-- Dropbox - Select Time -->
+                        <div class="input-field col s12 m6">
+                            <select id="time" name="time">
+                                <option value="" disabled selected>Select Time</option>
+                                <option value="10am" {% if event.time == '10am' %} selected {% endif %}>10am</option>
+                                <option value="12pm" {% if event.time == '12pm' %} selected {% endif %}>12pm</option>
+                                <option value="2pm" {% if event.time == '2pm' %} selected {% endif %}>2pm</option>
+                                <option value="4pm" {% if event.time == '4pm' %} selected {% endif %}>4pm</option>
+                            </select>
+                            <label for="time">Time</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- Datepicker -->
+                        <div class="input-field col s12 m6">
+                            <input id="date" name="date" value="{{ event.date }}" type="text" class="datepicker">
+                            <label for="date">Date</label>
+                        </div>
+                        <!-- Party Size Input -->
+                        <div class="input-field col s12 m6">
+                            <input id="party_size" name="party_size" value="{{ event.party_size }}" type="number" class="validate" min="1" max="10" step="1">
+                            <label for="party_size">Max Party Size</label>
+                            <span class="helper-text" data-error="Max 10">Between 1-10</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- Description Textarea -->
+                        <div class="input-field col s12">
+                            <textarea id="description" name="description" class="materialize-textarea" data-length="250">{{ event.description }}</textarea>
+                            <label for="description">Description</label>
+                            <span class="helper-text" data-error="Too many characters"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- Radio Button - Beginner -->
+                        <div class="col s12 m4 center-align">
+                            <p class="radio-container">
+                                <label for="beginner">
+                                    <input class="with-gap" name="exp_level" {% if event.exp_level == 'beginner' %} checked {% endif %} value="beginner" id="beginner" type="radio" />
+                                    <span>Beginner</span>
+                                    <img class="stamp" img src="{{ url_for('static', filename='images/seal-green.png') }}" alt="A green wax seal with a D20 symbol" />
+                                </label>
+                            </p>
+                            <!-- Popover Content Beginner - Credit Mihael Tomić (CodePen) -->
+                            <div class="popover-wrapper">
+                                <img class="popover-trigger" src="{{ url_for('static', filename='images/questionmark.png') }}" alt="A white questionmark painted on a circular shield" />
+                                <div class="popover-content beginner-content white-bg">
+                                    <p class="popover-heading green-bg">Beginner</p>
+                                    <p class="popover-message brown-font">Recommended for new players. The purpose of the event is to help you learn the rules
+                                        of play.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Radio Button - Everyone -->
+                        <div class="col s12 m4 center-align">
+                            <p class="radio-container">
+                                <label for="everyone">
+                                    <input class="with-gap" name="exp_level" {% if event.exp_level == 'everyone' %} checked {% endif %} value="everyone" id="everyone" type="radio" />
+                                    <span>Everyone</span>
+                                    <img class="stamp" img src="{{ url_for('static', filename='images/seal-yellow.png') }}" alt="A yellow wax seal with a D20 symbol" />
+                                </label>
+                            </p>
+                            <!-- Popover Content Everyone -->
+                            <div class="popover-wrapper">
+                                <img class="popover-trigger" src="{{ url_for('static', filename='images/questionmark.png') }}" alt="A white questionmark painted on a circular shield" />
+                                <div class="popover-content everyone-content white-bg">
+                                    <p class="popover-heading yellow-bg brown-font">Everyone</p>
+                                    <p class="popover-message brown-font">An open adventure for everyone. The aim of the game is to have fun!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12 m4 center-align">
+                            <!-- Radio Button - Experienced -->
+                            <p class="radio-container">
+                                <label for="experienced">
+                                    <input class="with-gap" name="exp_level"  {% if event.exp_level == 'experienced' %} checked {% endif %} value="experienced" id="experienced" type="radio" />
+                                    <span>Experienced</span>
+                                    <img class="stamp" img src="{{ url_for('static', filename='images/seal-red.png') }}" alt="A red wax seal with a D20 symbol" />
+                                </label>
+                            </p>
+                            <!-- Popover Content Experienced -->
+                            <div class="popover-wrapper">
+                                <img class="popover-trigger" src="{{ url_for('static', filename='images/questionmark.png') }}" alt="A white questionmark painted on a circular shield" />
+                                <div class="popover-content experienced-content white-bg">
+                                    <p class="popover-heading red-bg">Experienced</p>
+                                    <p class="popover-message brown-font">For advanced players only. No tutorials, only adventure!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- Submit Button -->
+                        <div class="col s12 center-align">
+                            <button class="event-button submit" type="submit">SUBMIT
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
 {% endblock %}

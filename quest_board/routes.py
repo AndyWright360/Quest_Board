@@ -133,3 +133,9 @@ def delete_event(event_id):
 def events():
     events = list(Event.query.order_by(Event.date).all())
     return render_template("events.html", events=events)
+
+
+@app.route("/event/<int:event_id>")
+def event(event_id):
+    event = Event.query.get_or_404(event_id)
+    return render_template("event.html", event=event)

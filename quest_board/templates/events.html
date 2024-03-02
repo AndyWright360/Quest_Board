@@ -182,12 +182,12 @@
 
                                 <div class="event-section-7">
                                     {% if event.exp_level == 'beginner' %}
-                                        <img src="{{ url_for('static', filename='images/seal-green.png') }}" class="event-stamp" alt="Beginner Seal">
+                                        <a href="{{ url_for('event', event_id=event.id) }}"><img src="{{ url_for('static', filename='images/seal-green.png') }}" class="event-stamp" alt="Beginner Seal"></a>
                                     {% elif event.exp_level == 'everyone' %}
-                                        <img src="{{ url_for('static', filename='images/seal-yellow.png') }}" class="event-stamp" alt="Everyone Seal">
+                                        <a href="{{ url_for('event', event_id=event.id) }}"><img src="{{ url_for('static', filename='images/seal-yellow.png') }}" class="event-stamp" alt="Everyone Seal"></a>
                                     {% elif event.exp_level == 'experienced' %}
-                                        <img src="{{ url_for('static', filename='images/seal-red.png') }}" class="event-stamp"
-                                            alt="Experienced Seal">
+                                        <a href="{{ url_for('event', event_id=event.id) }}"><img src="{{ url_for('static', filename='images/seal-red.png') }}" class="event-stamp"
+                                            alt="Experienced Seal"></a>
                                     {% endif %}
                                 </div>
                             </div>
