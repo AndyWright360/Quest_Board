@@ -381,6 +381,11 @@ nav ul a:hover {
     gap: 25px;
 }
 
+.notice {
+    font-size: 1.6rem;
+    margin: 0 0 2rem;
+}
+
 /*Border Styles*/
 
 .border {
