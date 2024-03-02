@@ -124,6 +124,12 @@ button:focus-visible {
 
 .sign-up {
     font-size: 20px;
+    padding: 12px 18px 8px;
+    margin: 2rem 0 0;
+}
+
+.login {
+    font-size: 20px;
     padding: 15px 18px 11px;
     margin: 15px 0 10px;
 }
@@ -151,6 +157,14 @@ button:focus-visible {
 
 .event-container {
     padding-bottom: 4rem;
+}
+
+.button-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
 /*---------- Flash Messages ----------*/

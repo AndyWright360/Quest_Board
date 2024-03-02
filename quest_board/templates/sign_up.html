@@ -1,63 +1,63 @@
 {% extends "base.html" %}
 
 {% block nav_colour %}
-<nav class="green-bg">
+    <nav class="green-bg">
 {% endblock %}
 
 {% block logo %}
-<img class="logo" src="{{ url_for('static', filename='images/logo-alt.png') }}"
-    alt="A wooden shield with paper nailed to the center. A red letter Q is painted on the paper" />
+    <img class="logo" src="{{ url_for('static', filename='images/logo-alt.png') }}"
+        alt="A wooden shield with paper nailed to the center. A red letter Q is painted on the paper" />
 {% endblock %}
 
 {% block sidenav_colour %}
-<ul class="sidenav green-sidenav" id="mobile-demo">
+    <ul class="sidenav green-sidenav" id="mobile-demo">
 {% endblock %}
 
 {% block content %}
-<!-- HEADING SECTION -->
-<section>
-    <div class="heading-container red-bg brown-font">
-        <h1>Sign Up</h1>
-    </div>
-</section>
-
-<!-- SIGN UP FORM -->
-<section>
-    <div class="red-bg section-container">
-        <div class="form-container white-bg">
-            <form method="POST" action="{{ url_for('sign_up') }}">
-                <div class="row">
-                    <!-- Username Input -->
-                    <div class="input-field col s12 m8 offset-m2">
-                        <input id="username" name="username" type="text" class="validate" data-length="15" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" required>
-                        <label for="username">Username</label>
-                        <span class="helper-text" data-error="Invalid entry">Please enter 5-15 characters</span>
-                    </div>
-                </div>
-                <div class="row">
-                    <!-- Password Input -->
-                    <div class="input-field col s12 m8 offset-m2">
-                        <input id="password" name="password" type="password" class="validate" data-length="15" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" required>
-                        <label for="password">Password</label>
-                        <span class="helper-text" data-error="Invalid entry">Please enter 5-15 characters</span>
-                    </div>
-                </div>
-                <div class="row">
-                    <!-- Submit Button -->
-                    <div class="col s12 center-align">
-                        <button class="event-button sign-up" type="submit" name="action">SIGN UP
-                        </button>
-                    </div>
-                </div>
-                <div class="row">
-                    <!-- Login Link -->
-                    <div class="col s12 center-align">
-                        <p class=" brown-font sign-up-text">Already have an account?</p>
-                        <a class="sign-up-text" href="{{ url_for('log_in') }}">Log In</a>
-                    </div>
-                </div>
-            </form>
+    <!-- HEADING SECTION -->
+    <section>
+        <div class="heading-container red-bg brown-font">
+            <h1>Sign Up</h1>
         </div>
-    </div>
-</section>
+    </section>
+
+    <!-- SIGN UP FORM -->
+    <section>
+        <div class="red-bg section-container">
+            <div class="form-container white-bg">
+                <form method="POST" action="{{ url_for('sign_up') }}">
+                    <div class="row">
+                        <!-- Username Input -->
+                        <div class="input-field col s12 m8 offset-m2">
+                            <input id="username" name="username" type="text" class="validate" data-length="15" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" required>
+                            <label for="username">Username</label>
+                            <span class="helper-text" data-error="Invalid entry">Please enter 5-15 characters</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- Password Input -->
+                        <div class="input-field col s12 m8 offset-m2">
+                            <input id="password" name="password" type="password" class="validate" data-length="15" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" required>
+                            <label for="password">Password</label>
+                            <span class="helper-text" data-error="Invalid entry">Please enter 5-15 characters</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- Submit Button -->
+                        <div class="col s12 center-align">
+                            <button class="event-button login" type="submit" name="action">SIGN UP
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- Login Link -->
+                        <div class="col s12 center-align">
+                            <p class=" brown-font sign-up-text">Already have an account?</p>
+                            <a class="sign-up-text" href="{{ url_for('log_in') }}">Log In</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
 {% endblock %}
