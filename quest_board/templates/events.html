@@ -135,7 +135,7 @@
                     <div class="container-padding">
                         <!-- Event Card -->
                         {% for event in events %}
-                            <div class="event-card brown-font">
+                            <div class="event-card brown-font" data-location="{{ event.location }}" data-time="{{ event.time }}" data-exp="{{ event.exp_level }}">
                                 <div class="event-card-header">
                                     <h2 class="event-title">{{ event.event_name }}</h2>
                                 </div>
