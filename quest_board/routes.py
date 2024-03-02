@@ -90,18 +90,23 @@ def logout():
 @app.route("/create_event", methods=["GET", "POST"])
 def create_event():
     if request.method == "POST":
-        event = Event(
-            event_name=request.form.get("event_name"),
-            location=request.form.get("location"),
-            time=request.form.get("time"),
-            date=request.form.get("date"),
-            party_size=request.form.get("party_size"),
-            description=request.form.get("description"),
-            exp_level=request.form.get("exp_level")
-        )
-        db.session.add(event)
-        db.session.commit()
-        return redirect(url_for("events"))
+        if "user" in session:  # Check if user is logged in
+            event = Event(
+                event_name=request.form.get("event_name"),
+                location=request.form.get("location"),
+                time=request.form.get("time"),
+                date=request.form.get("date"),
+                created_by=session["user"],
+                party_size=request.form.get("party_size"),
+                description=request.form.get("description"),
+                exp_level=request.form.get("exp_level")
+            )
+            db.session.add(event)
+            db.session.commit()
+            return redirect(url_for("events"))
+        else:
+            flash("You need to be logged in to create an event")
+            return redirect(url_for("log_in"))  # Redirect to login page if user is not logged in
     return render_template("create_event.html")
 
 
