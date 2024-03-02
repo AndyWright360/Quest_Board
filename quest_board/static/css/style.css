@@ -388,34 +388,34 @@ nav ul a:hover {
     box-shadow: var(--box-shadow);
 }
 
-.top,
-.bottom {
+.top-border,
+.bottom-border {
     width: 100%;
     height: 25px;
 }
 
-.left,
-.right {
+.left-border,
+.right-border {
     width: 25px;
     height: 100%;
 }
 
-.top {
+.top-border {
     top: 0;
     background-image: url(../images/metal-trim-top.png);
 }
 
-.bottom {
+.bottom-border {
     bottom: 0;
     background-image: url(../images/metal-trim-bottom.png);
 }
 
-.left {
+.left-border {
     left: 0;
     background-image: url(../images/metal-trim-left.png);
 }
 
-.right {
+.right-border {
     right: 0;
     background-image: url(../images/metal-trim-right.png);
 }
@@ -425,22 +425,22 @@ nav ul a:hover {
     box-shadow: var(--box-shadow);
 }
 
-.top-left {
+.top-left-corner {
     top: -5px;
     left: -5px;
 }
 
-.top-right {
+.top-right-corner {
     top: -5px;
     right: -5px;
 }
 
-.bottom-left {
+.bottom-left-corner {
     bottom: -5px;
     left: -5px;
 }
 
-.bottom-right {
+.bottom-right-corner {
     bottom: -5px;
     right: -5px;
 }

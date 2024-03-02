@@ -28,15 +28,15 @@
             <a href="{{ url_for('create_event') }}" class="event-button create">CREATE EVENT</a>
             <div class="event-board">
                 <!-- Border Trim -->
-                <div class="border top"></div>
-                <div class="border left"></div>
-                <div class="border right"></div>
-                <div class="border bottom"></div>
+                <div class="border top-border"></div>
+                <div class="border left-border"></div>
+                <div class="border right-border"></div>
+                <div class="border bottom-border"></div>
                 <!-- Border Corners -->
-                <img src="{{ url_for('static', filename='images/metal-corner.png') }}" alt="A gold square corner plate" class="corner top-left">
-                <img src="{{ url_for('static', filename='images/metal-corner.png') }}" alt="A gold square corner plate" class="corner top-right">
-                <img src="{{ url_for('static', filename='images/metal-corner.png') }}" alt="A gold square corner plate" class="corner bottom-left">
-                <img src="{{ url_for('static', filename='images/metal-corner.png') }}" alt="A gold square corner plate" class="corner bottom-right">
+                <img src="{{ url_for('static', filename='images/metal-corner.png') }}" alt="A gold square corner plate" class="corner top-left-corner">
+                <img src="{{ url_for('static', filename='images/metal-corner.png') }}" alt="A gold square corner plate" class="corner top-right-corner">
+                <img src="{{ url_for('static', filename='images/metal-corner.png') }}" alt="A gold square corner plate" class="corner bottom-left-corner">
+                <img src="{{ url_for('static', filename='images/metal-corner.png') }}" alt="A gold square corner plate" class="corner bottom-right-corner">
                 <div class="container-padding">
                     {% if events|length == 0 %}
                         <!-- No Events Message -->
@@ -109,15 +109,15 @@
             <h2 class="profile-heading brown-font">Joined Events</h2>
             <div class="event-board">
                 <!-- Border Trim -->
-                <div class="border top"></div>
-                <div class="border left"></div>
-                <div class="border right"></div>
-                <div class="border bottom"></div>
+                <div class="border top-border"></div>
+                <div class="border left-border"></div>
+                <div class="border right-border"></div>
+                <div class="border bottom-border"></div>
                 <!-- Border Corners -->
-                <img src="{{ url_for('static', filename='images/metal-corner.png') }}" alt="A gold square corner plate" class="corner top-left">
-                <img src="{{ url_for('static', filename='images/metal-corner.png') }}" alt="A gold square corner plate" class="corner top-right">
-                <img src="{{ url_for('static', filename='images/metal-corner.png') }}" alt="A gold square corner plate" class="corner bottom-left">
-                <img src="{{ url_for('static', filename='images/metal-corner.png') }}" alt="A gold square corner plate" class="corner bottom-right">
+                <img src="{{ url_for('static', filename='images/metal-corner.png') }}" alt="A gold square corner plate" class="corner top-left-corner">
+                <img src="{{ url_for('static', filename='images/metal-corner.png') }}" alt="A gold square corner plate" class="corner top-right-corner">
+                <img src="{{ url_for('static', filename='images/metal-corner.png') }}" alt="A gold square corner plate" class="corner bottom-left-corner">
+                <img src="{{ url_for('static', filename='images/metal-corner.png') }}" alt="A gold square corner plate" class="corner bottom-right-corner">
                 <div class="container-padding">
                     {% if events|length == 0 %}
                         <!-- No Events Message -->
