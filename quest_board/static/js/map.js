@@ -66,7 +66,7 @@ function buildContent(location) {
 
 const locations = [
     {
-        address: "45, Castle Arcade, Cardiff CF10 1BW",
+        address: "45 Castle Arcade, Cardiff CF10 1BW",
         name: "Castle Games",
         icon: "fa-brands fa-fort-awesome",
         type: "castle",
