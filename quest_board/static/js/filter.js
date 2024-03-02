@@ -3,6 +3,9 @@
 
 document.addEventListener("DOMContentLoaded", function () {
 
+    // Hide no results message when page loads
+    document.getElementById("no-results").style.display = "none";
+    
     /*
     Takes the value of the selected checkbox within each category and stores it in an array.
     */
