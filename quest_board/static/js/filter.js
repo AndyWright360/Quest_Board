@@ -184,4 +184,12 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById("no-results").style.display = "grid";
         }
     }
+
+    // Get all checkboxes
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+    // Run filter function each time a checkbox is clicked
+    checkboxes.forEach(function (checkbox) {
+        checkbox.addEventListener('change', checkFilters);
+    });
 });
