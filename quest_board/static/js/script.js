@@ -23,6 +23,13 @@ $(document).ready(function () {
 
     // Initialise modal
     $('.modal').modal();
+
+    // Sets an auto timer to scroll to the next slide for the carousel.
+    autoplay();
+    function autoplay() {
+        $('.carousel').carousel('next');
+        setTimeout(autoplay, 5000);
+    };
 });
 
 // Create variable of footer icons

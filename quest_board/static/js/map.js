@@ -5,7 +5,7 @@ The following code was obtained from https://developers.google.com/maps/document
 async function initMap() {
     // Set map zoom dependant on screen width
     let mapZoom;
-    if (window.innerWidth <= 700) {
+    if (window.innerWidth <= 750) {
         mapZoom = 8;
     } else {
         mapZoom = 9;
