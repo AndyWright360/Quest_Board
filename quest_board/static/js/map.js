@@ -10,7 +10,7 @@ async function initMap() {
     const map = new Map(document.getElementById("map"), {
         zoom: 9,
         center,
-        mapId: "4504f8b37365c3d0",
+        mapId: "97b0dc5f1a34eb32",
     });
 
     for (const location of locations) {

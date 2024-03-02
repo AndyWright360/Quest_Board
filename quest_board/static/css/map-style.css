@@ -1,3 +1,10 @@
+:root {
+    /* Colours */
+    --green: #03432B;
+    --white: #FCF3D6;
+    --brown: #42271D;
+}
+
 /*
 The following code was obtained from https://developers.google.com/maps/documentation/javascript/examples/advanced-markers-html and has been modified.
 */
@@ -6,7 +13,7 @@ The following code was obtained from https://developers.google.com/maps/document
 /* Location styles in unhighlighted state. */
 .location {
     align-items: center;
-    background-color: #961E28;
+    background-color: var(--green);
     border-radius: 50%;
     display: flex;
     font-size: 14px;
@@ -22,7 +29,7 @@ The following code was obtained from https://developers.google.com/maps/document
 .location::after {
     border-left: 9px solid transparent;
     border-right: 9px solid transparent;
-    border-top: 9px solid #961E28;
+    border-top: 9px solid var(--green);
     content: "";
     height: 0;
     left: 50%;
@@ -38,7 +45,7 @@ The following code was obtained from https://developers.google.com/maps/document
     align-items: center;
     display: flex;
     justify-content: center;
-    color: #FCF3D6;
+    color: var(--white);
 }
 
 .location .icon svg {
@@ -50,7 +57,7 @@ The following code was obtained from https://developers.google.com/maps/document
     display: none;
     flex-direction: column;
     flex: 1;
-    color: #59060D;
+    color: var(--brown);
     margin-top: 5px;
     margin-bottom: 5px;
 }
@@ -62,7 +69,7 @@ The following code was obtained from https://developers.google.com/maps/document
 
 /* Location styles in highlighted state. */
 .location.highlight {
-    background-color: #FCF3D6;
+    background-color: var(--white);
     border-radius: 8px;
     box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
     height: 100px;
@@ -71,7 +78,7 @@ The following code was obtained from https://developers.google.com/maps/document
 }
 
 .location.highlight::after {
-    border-top: 9px solid #FCF3D6;
+    border-top: 9px solid var(--white);
 }
 
 .location.highlight .details {
@@ -86,5 +93,5 @@ The following code was obtained from https://developers.google.com/maps/document
 .location.highlight .icon svg {
     width: 50px;
     height: 50px;
-    color: #961E28;
+    color: var(--green);
 }
