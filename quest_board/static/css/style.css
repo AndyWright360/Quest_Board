@@ -632,6 +632,64 @@ nav ul a:hover {
     border-bottom: 2px solid var(--white);
 }
 
+/*---------- Event ----------*/
+
+.event-page {
+    width: 90%;
+    max-width: 600px;
+    min-width: 300px;
+    background-image: url(../images/paper.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 50px;
+}
+
+.event-heading {
+    margin: 0;
+    font-size: 24px;
+    word-wrap: break-word;
+    max-width: 100%;
+}
+
+.event-subheading {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.event-content {
+    margin: 10px 0 0;
+    font-size: 18px;
+}
+
+.party-member {
+    margin: 5px 10px 10px;
+    border-bottom: 1px solid #42271D;
+    font-size: 18px;
+}
+
+ol {
+    padding-inline-start: 20px;
+}
+
+.page-stamp {
+    width: 40%;
+    height: auto;
+    max-width: 125px;
+}
+
+.flex-div {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
 /*---------- Create Event ----------*/
 
 .form-container {
