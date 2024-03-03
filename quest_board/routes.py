@@ -1,5 +1,6 @@
 from flask import render_template, request, redirect, flash, session, url_for
 from werkzeug.security import generate_password_hash, check_password_hash
+from datetime import datetime
 from quest_board import app, db
 from quest_board.models import User, Event
 
@@ -91,11 +92,18 @@ def logout():
 def create_event():
     if request.method == "POST":
         if "user" in session:  # Check if user is logged in
+            event_date = datetime.strptime(request.form.get("date"), "%d/%m/%Y").date()
+
+            # Check event date against current date
+            if event_date < datetime.today():
+                flash("Event date cannot be in the past")
+                return redirect(url_for("create_event"))
+
             event = Event(
                 event_name=request.form.get("event_name"),
                 location=request.form.get("location"),
                 time=request.form.get("time"),
-                date=request.form.get("date"),
+                date=event_date,
                 created_by=session["user"],
                 party_size=request.form.get("party_size"),
                 description=request.form.get("description"),
@@ -114,26 +122,35 @@ def create_event():
 def edit_event(event_id):
     event = Event.query.get_or_404(event_id)
     if request.method == "POST":
-        new_party_size = int(request.form.get("party_size"))
-        
-        # Check if the new party size is greater than or equal to the number of party members
-        if new_party_size >= len(event.party_members):
-            # Update the event with the new party size
-            event.party_size = new_party_size
-            event.event_name = request.form.get("event_name")
-            event.location = request.form.get("location")
-            event.time = request.form.get("time")
-            event.date = request.form.get("date")
-            event.description = request.form.get("description")
-            event.exp_level = request.form.get("exp_level")
+        if "user" in session:  # Check if user is logged in
+            new_party_size = int(request.form.get("party_size"))
             
-            db.session.commit()
-            flash("Event updated successfully")
-            return redirect(url_for("events"))
-        else:
-            flash("Cannot reduce party size below the number of joined members")
-            return redirect(url_for("edit_event", event_id=event_id))
+            # Check if the new party size is greater than or equal to the number of party members
+            if new_party_size >= len(event.party_members):
+                new_event_date = datetime.strptime(request.form.get("date"), "%d/%m/%Y").date()
 
+                # Check event date against current date
+                if new_event_date < datetime.today():
+                    flash("Event date cannot be in the past")
+                    return redirect(url_for("edit_event", event_id=event_id))
+                    
+                event.party_size = new_party_size
+                event.event_name = request.form.get("event_name")
+                event.location = request.form.get("location")
+                event.time = request.form.get("time")
+                event.date = new_event_date
+                event.description = request.form.get("description")
+                event.exp_level = request.form.get("exp_level")
+                
+                db.session.commit()
+                flash("Event updated successfully")
+                return redirect(url_for("events"))
+            else:
+                flash("Cannot reduce party size below the number of joined members")
+                return redirect(url_for("edit_event", event_id=event_id))
+        else:
+            flash("You need to be logged in to edit an event")
+            return redirect(url_for("log_in"))  # Redirect to login page if user is not logged in
     return render_template("edit_event.html", event=event)
 
 
