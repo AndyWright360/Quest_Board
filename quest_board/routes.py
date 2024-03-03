@@ -114,15 +114,26 @@ def create_event():
 def edit_event(event_id):
     event = Event.query.get_or_404(event_id)
     if request.method == "POST":
-        event.event_name = request.form.get("event_name"),
-        event.location = request.form.get("location"),
-        event.time = request.form.get("time"),
-        event.date = request.form.get("date"),
-        event.party_size = request.form.get("party_size"),
-        event.description = request.form.get("description"),
-        event.exp_level = request.form.get("exp_level")
-        db.session.commit()
-        return redirect(url_for("events"))
+        new_party_size = int(request.form.get("party_size"))
+        
+        # Check if the new party size is greater than or equal to the number of party members
+        if new_party_size >= len(event.party_members):
+            # Update the event with the new party size
+            event.party_size = new_party_size
+            event.event_name = request.form.get("event_name")
+            event.location = request.form.get("location")
+            event.time = request.form.get("time")
+            event.date = request.form.get("date")
+            event.description = request.form.get("description")
+            event.exp_level = request.form.get("exp_level")
+            
+            db.session.commit()
+            flash("Event updated successfully")
+            return redirect(url_for("events"))
+        else:
+            flash("Cannot reduce party size below the number of joined members")
+            return redirect(url_for("edit_event", event_id=event_id))
+
     return render_template("edit_event.html", event=event)
 
 
