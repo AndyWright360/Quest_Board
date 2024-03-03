@@ -155,9 +155,27 @@ def join_event(event_id):
         if user:
             event.party_members.append(user)
             db.session.commit()
+            flash(f"You have joined '{event.event_name}'")
             return redirect(url_for('event', event_id=event_id))
         else:
             flash("User not found")
     else:
         flash("You need to be logged in to join an event")
         return redirect(url_for('log_in'))
+
+
+@app.route("/leave_event/<int:event_id>", methods=["POST"])
+def leave_event(event_id):
+    if "user" in session:
+        username = session["user"]
+        event = Event.query.get_or_404(event_id)
+        user = User.query.filter_by(username=username).first()
+        if user in event.party_members:
+            event.party_members.remove(user)
+            db.session.commit()
+            flash(f"You have left '{event.event_name}'")
+        else:
+            flash("You are not currently a member of this event")
+    else:
+        flash("You need to be logged in to leave an event")
+    return redirect(url_for('event', event_id=event_id))
