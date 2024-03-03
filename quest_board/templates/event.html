@@ -90,6 +90,9 @@
                             <form action="{{ url_for('leave_event', event_id=event.id) }}" method="post">
                                 <input type="submit" class="event-button leave" value="LEAVE">
                             </form>
+                        {% elif event.party_members|length == event.party_size and 
+                            session['user'] not in [member.username for member in event.party_members] %}
+                            <img src="{{ url_for('static', filename='images/full.png') }}" class="full">
                         {% else %}
                             <form action="{{ url_for('join_event', event_id=event.id) }}" method="post">
                                 <input type="submit" class="event-button join" value="JOIN">
