@@ -554,6 +554,7 @@ nav ul a:hover {
     width: 100%;
     height: auto;
     margin: auto;
+    max-width: 125px;
 }
 
 /*---------- Filter ----------*/
@@ -1115,4 +1116,21 @@ footer p {
 
 .grow {
     transform: scale(1.2);
+}
+
+/*---------- Media Queries ----------*/
+
+@media screen and (max-width: 600px) {
+
+    .event-page {
+        padding: 60px 20px 40px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    nav .brand-logo {
+        justify-content: end;
+        width: 100%;
+    }
 }

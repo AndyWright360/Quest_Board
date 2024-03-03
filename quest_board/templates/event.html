@@ -86,12 +86,12 @@
                             <a href="{{ url_for('edit_event', event_id=event.id) }}" class="event-button edit">EDIT</a>
                             <!-- Modal Trigger -->
                             <a href="#modal-{{ event.id }}" class="event-button delete modal-trigger">DELETE</a>
-                        {% elif session['user'] in [member.username for member in event.party_members] %}
+                        {% elif session['user'] in event.party_members|map(attribute='username') %}
                             <form action="{{ url_for('leave_event', event_id=event.id) }}" method="post">
                                 <input type="submit" class="event-button leave" value="LEAVE">
                             </form>
                         {% elif event.party_members|length == event.party_size and 
-                            session['user'] not in [member.username for member in event.party_members] %}
+                            session['user'] not in event.party_members|map(attribute='username') %}
                             <img src="{{ url_for('static', filename='images/full.png') }}" class="full">
                         {% else %}
                             <form action="{{ url_for('join_event', event_id=event.id) }}" method="post">
