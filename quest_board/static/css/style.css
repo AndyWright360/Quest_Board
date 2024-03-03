@@ -1031,10 +1031,11 @@ a.sign-up-text:hover {
 
 /*---------- Modal ----------*/
 
-.modal {
+.delete-modal {
     background-color: var(--white);
     max-width: 400px;
     word-wrap: break-word;
+    text-align: center;
 }
 
 .modal .modal-footer {
