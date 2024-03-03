@@ -20,7 +20,11 @@ class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(15), unique=True, nullable=False)
     password = db.Column(db.String(), nullable=False)
-    events = db.relationship('Event', secondary=event_user, back_populates='party_members')
+    events = db.relationship(
+        'Event',
+        secondary=event_user,
+        back_populates='party_members',
+        cascade="all, delete")
 
     def __repr__(self):
         # __repr__ to represent itself in the form of a string
@@ -42,7 +46,11 @@ class Event(db.Model):
     description = db.Column(db.Text, nullable=False)
     exp_level = db.Column(db.String(50), nullable=False)
     party_size = db.Column(db.Integer, nullable=False)
-    party_members = db.relationship('User', secondary=event_user, back_populates='events')
+    party_members = db.relationship(
+        'User', 
+        secondary=event_user, 
+        back_populates='events', 
+        cascade="all, delete")
 
     def __repr__(self):
         # __repr__ to represent itself in the form of a string
