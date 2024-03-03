@@ -144,3 +144,20 @@ def events():
 def event(event_id):
     event = Event.query.get_or_404(event_id)
     return render_template("event.html", event=event)
+
+
+@app.route("/join_event/<int:event_id>", methods=["POST"])
+def join_event(event_id):
+    if "user" in session:
+        username = session["user"]
+        event = Event.query.get_or_404(event_id)
+        user = User.query.filter_by(username=username).first()
+        if user:
+            event.party_members.append(user)
+            db.session.commit()
+            return redirect(url_for('event', event_id=event_id))
+        else:
+            flash("User not found")
+    else:
+        flash("You need to be logged in to join an event")
+    return redirect(url_for('log_in'))
