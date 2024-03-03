@@ -92,10 +92,10 @@ def logout():
 def create_event():
     if request.method == "POST":
         if "user" in session:  # Check if user is logged in
-            event_date = datetime.strptime(request.form.get("date"), "%d/%m/%Y").date()
+            event_date = datetime.strptime(request.form.get("date"), "%d %b, %Y").date()
 
             # Check event date against current date
-            if event_date < datetime.today():
+            if event_date < datetime.today().date():
                 flash("Event date cannot be in the past")
                 return redirect(url_for("create_event"))
 
@@ -127,10 +127,10 @@ def edit_event(event_id):
             
             # Check if the new party size is greater than or equal to the number of party members
             if new_party_size >= len(event.party_members):
-                new_event_date = datetime.strptime(request.form.get("date"), "%d/%m/%Y").date()
+                new_event_date = datetime.strptime(request.form.get("date"), "%d %b, %Y").date()
 
                 # Check event date against current date
-                if new_event_date < datetime.today():
+                if new_event_date < datetime.today().date():
                     flash("Event date cannot be in the past")
                     return redirect(url_for("edit_event", event_id=event_id))
                     

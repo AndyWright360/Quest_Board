@@ -13,7 +13,9 @@ $(document).ready(function () {
     $('select').formSelect();
 
     // Initialise datepicker
-    $('.datepicker').datepicker();
+    $('.datepicker').datepicker({
+        format: "dd mmm, yyyy"
+    });
 
     // Initialise character counter for forms
     $('input#event_name, textarea#description').characterCounter();

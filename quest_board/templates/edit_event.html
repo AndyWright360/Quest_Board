@@ -61,7 +61,7 @@
                     <div class="row">
                         <!-- Datepicker -->
                         <div class="input-field col s12 m6">
-                            <input id="date" name="date" value="{{ event.date }}" type="text" class="datepicker">
+                            <input id="date" name="date" value="{{ event.date.strftime('%d %b, %Y') }}" type="text" class="datepicker">
                             <label for="date">Date</label>
                         </div>
                         <!-- Party Size Input -->
