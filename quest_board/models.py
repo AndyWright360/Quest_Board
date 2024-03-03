@@ -23,8 +23,7 @@ class User(db.Model):
     events = db.relationship(
         'Event',
         secondary=event_user,
-        back_populates='party_members',
-        cascade="all, delete")
+        back_populates='party_members')
 
     def __repr__(self):
         # __repr__ to represent itself in the form of a string
@@ -49,8 +48,7 @@ class Event(db.Model):
     party_members = db.relationship(
         'User', 
         secondary=event_user, 
-        back_populates='events', 
-        cascade="all, delete")
+        back_populates='events')
 
     def __repr__(self):
         # __repr__ to represent itself in the form of a string
