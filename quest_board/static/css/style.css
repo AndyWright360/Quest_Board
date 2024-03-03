@@ -108,12 +108,19 @@ button:focus-visible {
     transition: transform 0.1s;
 }
 
+.join {
+    margin: auto 0;
+    padding: 9px 20px 5px;
+}
+
 .edit {
     margin-bottom: auto;
+    background-image: url(../images/green-button.png);
 }
 
 .delete {
     margin-top: auto;
+    background-image: url(../images/red-button.png);
 }
 
 .submit {

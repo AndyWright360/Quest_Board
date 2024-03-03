@@ -79,9 +79,15 @@
                 </div>
                 <div class="flex-div">
                     <div class="btn-container">
-                        <a href="{{ url_for('edit_event', event_id=event.id) }}" class="event-button edit">EDIT</a>
-                        <!-- Modal Trigger -->
-                        <a href="#modal-{{ event.id }}" class="event-button delete modal-trigger">DELETE</a>
+                        {% if event.created_by == session['user'] %}
+                            <a href="{{ url_for('edit_event', event_id=event.id) }}" class="event-button edit">EDIT</a>
+                            <!-- Modal Trigger -->
+                            <a href="#modal-{{ event.id }}" class="event-button delete modal-trigger">DELETE</a>
+                        {% else %}
+                            <form action="{{ url_for('join_event', event_id=event.id) }}" method="post">
+                                <input type="submit" class="event-button join" value="JOIN">
+                            </form>
+                        {% endif %}
                     </div>
                     {% if event.exp_level == 'beginner' %}
                         <img src="{{ url_for('static', filename='images/seal-green.png') }}" class="page-stamp" alt="Beginner Seal">

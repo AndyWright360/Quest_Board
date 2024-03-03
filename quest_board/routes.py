@@ -160,4 +160,4 @@ def join_event(event_id):
             flash("User not found")
     else:
         flash("You need to be logged in to join an event")
-    return redirect(url_for('log_in'))
+        return redirect(url_for('log_in'))
