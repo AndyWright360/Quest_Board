@@ -70,10 +70,13 @@
                     <div class="col s12 m6">
                         <h3 class="event-subheading">Who's joining?</h3>
                         <ol>
-                            <li class="party-member">Username</li>
-                            <li class="party-member"></li>
-                            <li class="party-member"></li>
-                            <li class="party-member"></li>
+                            {% for member in range(event.party_size) %}
+                                {% if member < event.party_members|length %}
+                                    <li class="party-member">{{ event.party_members[member].username.capitalize() }}</li>
+                                {% else %}
+                                    <li class="party-member"></li>
+                                {% endif %}
+                            {% endfor %}
                         </ol>
                     </div>
                 </div>
