@@ -550,6 +550,12 @@ nav ul a:hover {
     height: 80px;
 }
 
+.full {
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+
 /*---------- Filter ----------*/
 
 .collapsible {
