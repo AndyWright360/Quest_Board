@@ -524,6 +524,13 @@ nav ul a:hover {
     width: 100%;
 }
 
+.flex-form {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .event-title {
     font-size: 18px;
     text-align: center;
