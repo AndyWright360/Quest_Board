@@ -15,6 +15,12 @@ def sign_up():
     if request.method == "POST":
         username = request.form.get("username").lower()
         password = request.form.get("password")
+        confirm_password = request.form.get("confirm_password")
+
+        # Check if passwords match
+        if password != confirm_password:
+            flash("Passwords do not match!")
+            return redirect(url_for("sign_up"))
 
         # Check if username already exists in database
         existing_user = User.query.filter_by(username=username).first()
@@ -32,9 +38,9 @@ def sign_up():
         db.session.commit()
 
         # Put the new user into 'session' cookie
-        session["user"] = request.form.get("username").lower()
+        session["user"] = username
         flash("Registration Successful!")
-        return redirect(url_for("profile", username=session["user"]))
+        return redirect(url_for("profile", username=username))
 
     return render_template("sign_up.html")
 
