@@ -76,13 +76,20 @@ def log_in():
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
-    # Grab the session user's username from the database
-    username = User.query.filter_by(
-        username=session["user"]).first().username
-    
-    if session["user"]:
-        return render_template("profile.html", username=username)
-    
+    if "user" in session:
+        # Retrieve the user object from the database
+        user = User.query.filter_by(username=session["user"]).first()
+
+        # Retrieve events created by the user
+        created_events = Event.query.filter_by(created_by=user.username).order_by(Event.date).all()
+
+        # Retrieve events joined by the user
+        joined_events = user.events
+
+        return render_template("profile.html", username=username, 
+                               created_events=created_events, 
+                               joined_events=joined_events)
+
     return redirect(url_for("log_in"))
 
 
