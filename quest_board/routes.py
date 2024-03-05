@@ -225,3 +225,8 @@ def leave_event(event_id):
 @app.errorhandler(400)
 def bad_request_error(error):
     return render_template('400.html'), 400
+
+
+@app.errorhandler(403)
+def forbidden_error(error):
+    return render_template('403.html'), 403
