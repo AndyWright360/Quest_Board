@@ -220,3 +220,8 @@ def leave_event(event_id):
     else:
         flash("You need to be logged in to leave an event")
     return redirect(url_for('event', event_id=event_id))
+
+
+@app.errorhandler(400)
+def bad_request_error(error):
+    return render_template('400.html'), 400
