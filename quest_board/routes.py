@@ -7,7 +7,7 @@ from quest_board.models import User, Event
 
 @app.route("/")
 def home():
-    return render_template("404.html")
+    return render_template("500.html")
 
 
 @app.route("/sign_up", methods=["GET", "POST"])

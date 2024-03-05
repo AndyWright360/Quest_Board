@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block nav_colour %}
+    <nav class="green-bg">
+{% endblock %}
+
+{% block logo %}
+<img class="logo" src="{{ url_for('static', filename='images/logo-alt.png') }}"
+    alt="A wooden shield with paper nailed to the center. A red letter Q is painted on the paper" />
+{% endblock %}
+
+{% block sidenav_colour %}
+    <ul class="sidenav green-sidenav" id="mobile-demo">
+{% endblock %}
+
+{% block content %}
+    <section class="section-container red-bg">
+        <div class="error-content">
+            <h1>500 Error:<br>Internal Server Error</h1>
+            <img class="error-image" src="{{ url_for('static', filename='images/green-dice.png') }}"
+                alt="A green D20 dice picturing a one">
+            <p class="error-text">A mysterious force has gripped the very heart of this website, casting it into
+                chaos. Fear not, for the webmasters are delving deep into the dungeons of code to banish this dark
+                magic. Return when the shadows have dispersed.</p>
+            <div class="button-container">
+                <a href="{{ url_for('home') }}" class="event-button home">RETURN HOME</a>
+            </div>
+        </div>
+    </section>
+{% endblock %}
