@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block nav_colour %}
+    <nav class="red-bg">
+{% endblock %}
+
+{% block logo %}
+    <img class="logo" src="{{ url_for('static', filename='images/logo.png') }}"
+        alt="A wooden shield with paper nailed to the center. A green letter Q is painted on the paper" />
+{% endblock %}
+
+{% block sidenav_colour %}
+    <ul class="sidenav red-sidenav" id="mobile-demo">
+{% endblock %}
+
+{% block content %}
+    <section class="section-container green-bg">
+        <div class="error-content">
+            <h1>404 Error:<br>Page Not Found</h1>
+            <img class="error-image" src="{{ url_for('static', filename='images/red-dice.png') }}"
+                alt="A red D20 dice picturing a one">
+            <p class="error-text">Alas, brave adventurer, it seems the path you seek has vanished into the mists of
+                the unknown.<br>Your footsteps echo in the empty halls of this digital realm, but the page you seek
+                eludes your grasp.</p>
+            <div class=" button-container">
+                <a href="{{ url_for('home') }}" class="event-button home">RETURN HOME</a>
+            </div>
+        </div>
+    </section>
+{% endblock %}
