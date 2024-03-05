@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block nav_colour %}
+    <nav class="green-bg">
+{% endblock %}
+
+{% block logo %}
+    <img class="logo" src="{{ url_for('static', filename='images/logo-alt.png') }}"
+        alt="A wooden shield with paper nailed to the center. A red letter Q is painted on the paper" />
+{% endblock %}
+
+{% block sidenav_colour %}
+    <ul class="sidenav green-sidenav" id="mobile-demo">
+{% endblock %}
+
+{% block content %}
+    <section class="section-container red-bg">
+        <div class="error-content">
+            <h1>400 Error:<br>Bad Request</h1>
+            <img class="error-image" src="{{ url_for('static', filename='images/green-dice.png') }}" alt="A green D20 dice picturing a one">
+            <p class="error-text">The paths of the digital realm are labyrinthine, and not all who tread upon them
+                do so with care. Your request has stumbled upon unseen obstacles, casting it into
+                disarray.<br>Reconsider your approach, and let your next endeavor be guided by wisdom and clarity.
+            </p>
+            <div class="button-container">
+                <a href="index.html" class="event-button home">RETURN HOME</a>
+            </div>
+        </div>
+    </section>
+{% endblock %}
