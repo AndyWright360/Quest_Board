@@ -38,18 +38,18 @@
                 <img src="{{ url_for('static', filename='images/metal-corner.png') }}" alt="A gold square corner plate" class="corner bottom-left-corner">
                 <img src="{{ url_for('static', filename='images/metal-corner.png') }}" alt="A gold square corner plate" class="corner bottom-right-corner">
                 <div class="container-padding">
-                    {% if events|length == 0 %}
+                    {% if created_events|length == 0 %}
                         <!-- No Events Message -->
                         <p class="no-events">You don't currently have any events created.<br>Why not create one?</p>
                     {% else %}
-                        {% for event in events %}
+                        {% for event in created_events %}
                             <!-- Event Card -->
                             <div class="event-card brown-font">
                                 <div class="event-card-header">
                                     <h2 class="event-title">{{ event.event_name }}</h2>
                                 </div>
                                 <div class="event-section-1">
-                                    <p class="event-creator">Created by:<br>Username</p>
+                                    <p class="event-creator">Created by:<br>{{ event.created_by.capitalize() }}</p>
                                 </div>
                                 <div class="event-section-2">
                                     <i class="fa-solid fa-location-dot event-icon"></i>
@@ -65,7 +65,7 @@
                                 </div>
                                 <div class="event-section-5">
                                     <i class="fa-solid fa-people-group event-icon"></i>
-                                    <p class="event-info">0/{{ event.party_size }}</p>
+                                    <p class="event-info">{{ event.party_members|length }}/{{ event.party_size }}</p>
                                 </div>
                                 <div class="event-section-6">
                                     <a href="{{ url_for('edit_event', event_id=event.id) }}" class="event-button edit">EDIT</a>
@@ -87,12 +87,12 @@
 
                                 <div class="event-section-7">
                                     {% if event.exp_level == 'beginner' %}
-                                        <img src="{{ url_for('static', filename='images/seal-green.png') }}" class="event-stamp" alt="Beginner Seal">
+                                        <a href="{{ url_for('event', event_id=event.id) }}"><img src="{{ url_for('static', filename='images/seal-green.png') }}" class="event-stamp" alt="Beginner Seal"></a>
                                     {% elif event.exp_level == 'everyone' %}
-                                        <img src="{{ url_for('static', filename='images/seal-yellow.png') }}" class="event-stamp" alt="Everyone Seal">
+                                        <a href="{{ url_for('event', event_id=event.id) }}"><img src="{{ url_for('static', filename='images/seal-yellow.png') }}" class="event-stamp" alt="Everyone Seal"></a>
                                     {% elif event.exp_level == 'experienced' %}
-                                        <img src="{{ url_for('static', filename='images/seal-red.png') }}" class="event-stamp"
-                                        alt="Experienced Seal">
+                                        <a href="{{ url_for('event', event_id=event.id) }}"><img src="{{ url_for('static', filename='images/seal-red.png') }}" class="event-stamp"
+                                            alt="Experienced Seal"></a>
                                     {% endif %}
                                 </div>
                             </div>
@@ -119,18 +119,18 @@
                 <img src="{{ url_for('static', filename='images/metal-corner.png') }}" alt="A gold square corner plate" class="corner bottom-left-corner">
                 <img src="{{ url_for('static', filename='images/metal-corner.png') }}" alt="A gold square corner plate" class="corner bottom-right-corner">
                 <div class="container-padding">
-                    {% if events|length == 0 %}
+                    {% if joined_events|length == 0 %}
                         <!-- No Events Message -->
                         <p class="no-events">You haven't yet joined any events.<br>Why not check out the Events page?</p>
                     {% else %}
-                        {% for event in events %}
+                        {% for event in joined_events|sort(attribute='date') %}
                             <!-- Event Card -->
                             <div class="event-card brown-font">
                                 <div class="event-card-header">
                                     <h2 class="event-title">{{ event.event_name }}</h2>
                                 </div>
                                 <div class="event-section-1">
-                                    <p class="event-creator">Created by:<br>Username</p>
+                                    <p class="event-creator">Created by:<br>{{ event.created_by.capitalize() }}</p>
                                 </div>
                                 <div class="event-section-2">
                                     <i class="fa-solid fa-location-dot event-icon"></i>
@@ -146,19 +146,21 @@
                                 </div>
                                 <div class="event-section-5">
                                     <i class="fa-solid fa-people-group event-icon"></i>
-                                    <p class="event-info">0/{{ event.party_size }}</p>
+                                    <p class="event-info">{{ event.party_members|length }}/{{ event.party_size }}</p>
                                 </div>
                                 <div class="event-section-6">
-                                    <a href="#" class="event-button leave">LEAVE</a>
+                                    <form action="{{ url_for('leave_event', event_id=event.id) }}" method="post" class="flex-form">
+                                        <input type="submit" class="event-button leave" value="LEAVE">
+                                    </form>
                                 </div>
                                 <div class="event-section-7">
                                     {% if event.exp_level == 'beginner' %}
-                                        <img src="{{ url_for('static', filename='images/seal-green.png') }}" class="event-stamp" alt="Beginner Seal">
+                                        <a href="{{ url_for('event', event_id=event.id) }}"><img src="{{ url_for('static', filename='images/seal-green.png') }}" class="event-stamp" alt="Beginner Seal"></a>
                                     {% elif event.exp_level == 'everyone' %}
-                                        <img src="{{ url_for('static', filename='images/seal-yellow.png') }}" class="event-stamp" alt="Everyone Seal">
+                                        <a href="{{ url_for('event', event_id=event.id) }}"><img src="{{ url_for('static', filename='images/seal-yellow.png') }}" class="event-stamp" alt="Everyone Seal"></a>
                                     {% elif event.exp_level == 'experienced' %}
-                                        <img src="{{ url_for('static', filename='images/seal-red.png') }}" class="event-stamp"
-                                        alt="Experienced Seal">
+                                        <a href="{{ url_for('event', event_id=event.id) }}"><img src="{{ url_for('static', filename='images/seal-red.png') }}" class="event-stamp"
+                                            alt="Experienced Seal"></a>
                                     {% endif %}
                                 </div>
                             </div>
