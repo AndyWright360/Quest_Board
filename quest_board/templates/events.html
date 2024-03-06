@@ -163,7 +163,7 @@
                                     <p class="event-info">{{ event.party_members|length }}/{{ event.party_size }}</p>
                                 </div>
                                 <div class="event-section-6">
-                                    {% if event.created_by == session['user'] %}
+                                    {% if event.created_by == session['user'] or session['user'] == 'admin' %}
                                         <a href="{{ url_for('edit_event', event_id=event.id) }}" class="event-button edit">EDIT</a>
                                         <!-- Modal Trigger -->
                                         <a href="#modal-{{ event.id }}" class="event-button delete modal-trigger">DELETE</a>

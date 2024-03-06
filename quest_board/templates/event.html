@@ -82,7 +82,7 @@
                 </div>
                 <div class="flex-div">
                     <div class="btn-container">
-                        {% if event.created_by == session['user'] %}
+                        {% if event.created_by == session['user'] or session['user'] == 'admin' %}
                             <a href="{{ url_for('edit_event', event_id=event.id) }}" class="event-button edit">EDIT</a>
                             <!-- Modal Trigger -->
                             <a href="#modal-{{ event.id }}" class="event-button delete modal-trigger">DELETE</a>
