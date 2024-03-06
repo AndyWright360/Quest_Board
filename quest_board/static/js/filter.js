@@ -7,7 +7,8 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("no-results").style.display = "none";
     
     /*
-    Takes the value of the selected checkbox within each category and stores it in an array. Passes each array into the filter function.
+    Takes the value of the selected checkbox within each category and stores it in an array.
+    Passes each array into the filter function.
     */
     function checkFilters() {
         // Location option checkboxes

@@ -25,7 +25,7 @@
     <section>
         <div class="red-bg section-container">
             <div class="form-container white-bg">
-                <form method="POST" action="{{ url_for('edit_event', event_id=event.id) }}">
+                <form id="event-form" method="POST" action="{{ url_for('edit_event', event_id=event.id) }}">
                     <div class="row">
                         <!-- Event Name Input -->
                         <div class="input-field col s12">
