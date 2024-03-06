@@ -201,9 +201,9 @@ nav .brand-logo {
     color: var(--white);
     display: flex;
     align-items: center;
-    justify-items: center;
     height: 100%;
     width: max-content;
+    padding-right: 10px;
     font-family: var(--heading-font);
 }
 
