@@ -762,10 +762,93 @@ Enable users to create and join parties with other members, fostering a stronger
 
 Implement a messaging system within events and user parties, facilitating communication among players. This would enhance event organisation and coordination, allowing users to discuss plans and make arrangements with ease.
 
-#### **Profile Personalisation**
+---
 
-#### **Party Creation**
+## **Technologies Used**
 
-#### **Message System**
+### **Languages Used**
+
+- HTML5
+- CSS3
+- JavaScript
+- Python
+
+### **Frameworks, Libraries & Programs Used**
+
+- **Codeanywhere & Gitpod**
+    
+    - Utilised for version control, employing the terminal to commit and push changes seamlessly to GitHub.
+
+- **GitHub**
+    
+    - Functions as the repository for securely storing the project's code after it's been pushed from Codeanywhere.
+
+- **Heroku**
+    
+    - Serves as the platform for deploying the live site.
+
+- **Materialize v1.0.0**
+
+    - Utilised for website layout and responsive design features. The site incorporates Materialize components such as the navbar and carousel.
+
+- **Google Fonts**
+
+    - The 'Charm' font is the primary typeface consistently used throughout the entire project.
+
+- **Font Awesome**
+
+    - Used to incorporate icons on Google Map pins, uniquely identifying each game store.
+
+- **Pixlr**
+
+    - Applied for image modifications, including adjustments to colouring and resizing.
+
+- **Balsamiq**
+
+    - Utilised during the design stage for creating wireframes.
+
+- **XnConvert**
+
+    - Employed to convert all image files from JPEG and PNG formats to WebP.
+
+- **TinyPNG**
+
+    - Used to compress image files, contributing to enhanced performance.
+
+- **ScreenToGif**
+
+    - Implemented for capturing screen recordings saved as gif files.
+
+- **Google Chrome Dev Tools**
+
+    - Utilised to inspect page elements, debug site issues, and test responsiveness on various mockup devices.
+
+- **Google Maps API**
+
+    - Linked to the Google Maps API to load the relevant map location and generate clickable markers.
+
+- **PostgreSQL**
+
+    - Utilised as a relational database to store both user and event data.
+
+- **Flask**
+
+    - A micro-framework employed in the development of the website.
+
+- **SQLAlchemy**
+
+    - A database abstraction library utilised for interacting with PostgreSQL.
+
+- **JQuery**
+
+    - A JavaScript library that was primarily used to initialise Materialize features.
+
+- **Am I Responsive?**
+
+    - Implemented to showcase the website image across a variety of devices.
+
+- **Lucid**
+
+    - Utilised for the creation of the database schema.
 
 ---
