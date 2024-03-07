@@ -654,31 +654,67 @@ Wireframes were generated using Balsamiq for desktop, tablet, and mobile screen 
 
 - **Join & Leave:** Users can join or leave events created by other users form this page.
 
-### **Create Event Page**
+### **Create/Edit Event Page**
 
 <details><summary>Screenshots</summary>
 
-<img>
+<img src="documentation/features/create-event.jpg">
 
 *Create Event Page*
 
+<img src="documentation/features/edit-event.jpg">
+
+*Edit Event Page*
+
+<img src="documentation/features/character-counter.gif">
+
+*Character Counter*
+
+<img src="documentation/features/event-helper-text.jpg">
+
+*Helper Text*
+
+<img src="documentation/features/event-invalid.jpg">
+
+*Invalid Input*
+
+<img src="documentation/features/event-required.gif">
+
+*Required Input Notification*
+
+<img src="documentation/features/date-picker.gif">
+
+*Date Picker*
+
+<img src="documentation/features/popover.gif">
+
+*Popover Messages*
+
+<img src="documentation/features/stamps.jpg">
+
+*Colour-Coded Stamps*
+
 </details>
 
-- The form on this page incorporates several features aimed at helping users understand the required information and how to address any errors.
+The form on this page incorporates several features aimed at helping users understand the required information and how to address any errors.
 
-- Text inputs with character limits display a character counter, offering users a visual cue on their input progress.
+- **Character Counter:** Text inputs with character limits display a character counter, offering users a visual cue on their input progress.
 
-- Helper text accompanies the max-party input, providing clarity regarding the available number range.
+- **Helper Text:** Helper text accompanies the max-party input, providing clarity regarding the available number range.
 
-- Data error messages are included for text inputs, offering guidance to users in case of invalid entries.
+- **Invalid Input Notification:** Data error messages are included for text inputs, offering guidance to users in case of invalid entries.
 
-- Required inputs are marked to alert users to any missed fields during submission.
+- **Required Field Indication:** Required inputs are marked to alert users to any missed fields during submission.
 
-- Input validation is implemented for text and number fields, visually indicating validity with green or invalidity with red cues.
+- **Input Validation:** Implemented for text and number fields, visually indicating validity with green or invalidity with red cues.
 
-- Popover messages are added to the experience level radio inputs. Offering clear descriptions of each experience level's purpose.
+- **Date Picker:** Implemented the Materialize date picker modal. Offering users an intuitive way to input dates that was easily customisable to match the colour theme of the website. 
 
-- Images representing different experience levels are color-coded like traffic lights. The intention was to create an intuitive understanding of each level's significance.
+- **Popover Messages:** Added to the experience level radio inputs. Offering clear descriptions of each experience level's purpose.
+
+- **Colour-Coded Stamps:** Images representing different experience levels are colour-coded like traffic lights. The intention was to create an intuitive understanding of each level's significance.
+
+- **Pre-populated Inputs:** When editing an event, the form fields will be pre-populated with the existing data. This feature eliminates the need for users to re-enter all information, enabling them to conveniently modify specific details as needed.
 
 ### **Future Implementations**
 
