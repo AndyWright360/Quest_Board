@@ -558,35 +558,67 @@ Wireframes were generated using Balsamiq for desktop, tablet, and mobile screen 
 
 <details><summary>Screenshots</summary>
 
-<img>
+<img src="documentation/features/events.jpg">
 
 *Events Page*
 
+<img src="documentation/features/event-board.jpg">
+
+*Events Board*
+
+<img src="documentation/features/filter.gif">
+
+*Filter*
+
+<img src="documentation/features/edit-delete.jpg">
+
+*Edit & Delete Buttons*
+
+<img src="documentation/features/join-leave.jpg">
+
+*Join & Leave Buttons*
+
+<img src="documentation/features/event-full.jpg">
+
+*Event Full*
+
+<img src="documentation/features/delete-modal.gif">
+
+*Delete Modal*
+
+<img src="documentation/features/user-instruction.jpg">
+
+*User Instruction*
+
+<img>
+
+*User Authentication*
+
 </details>
 
-- The events page was crafted to emulate adventurers gathering quests from a message board.
+- **Events Page Design:** The events page was crafted to emulate adventurers gathering quests from a message board.
 
-- To enhance this theme, the event container adopts the appearance of a wooden board with metal trim, while the events themselves are represented as paper notes.
+- **Board Design:** To enhance this theme, the event container adopts the appearance of a wooden board with metal trim, while the events themselves are represented as paper notes.
 
-- Both the bordered container and wooden slat background are endlessly repeatable, ensuring adaptability to any screen size without distortion or loss of image quality.
+- **Repeatable Pattern:** Both the bordered container and wooden slat background are endlessly repeatable, ensuring adaptability to any screen size without distortion or loss of image quality.
 
-- The filter system at the top of the page features a companion downward arrow icon. Signalling to users that additional information is available.
+- **Filter Design:** The filter system at the top of the page features a companion downward arrow icon. Signalling to users that additional information is available.
 
-- Upon click, the search categories become visible, aiding users in refining their requirements.
+- **Filter Search:** Upon click, the search categories become visible, aiding users in refining their requirements.
 
-- Multiple options can be selected to provide more tailored search criteria.
+- **Search Options:** Multiple options can be selected to provide more tailored search criteria.
 
-- For events created by the current user, edit and delete option buttons are visible.
+- **Edit & Delete Events:** For events created by the current user, edit and delete option buttons are visible.
 
-- Events created by other users will instead display a join button, which changes to "leave" if the user has already joined the event.
+- **Join & Leave Events:** Events created by other users will instead display a "join" button, which changes to "leave" if the user has already joined the event.
 
-- A modal prompts user confirmation to either delete or leave an event, preventing accidental selections that can't be undone.
+- **Feedback on Full Events:** Once the maximum party members have been reached, a "full" stamp will replace the "join" button, signaling to users that the event is at capacity and can no longer be joined.
 
-- Upon hover, each event highlights, serving as a visual cue to users that they are interactive.
+- **Deletion Notification:** A modal prompts user confirmation to delete an event, preventing accidental selections that can't be undone.
 
-- If users without an account attempt to join an event, a message is displayed indicating that a profile is required to perform this action.
+- **User Instruction:** Positioned prominently at the top of the page, a notification prompts users to interact with event stamps for additional information. This provides the user with clear instruction on how to use the feature.
 
-- Once the maximum party members have been reached, a "full" stamp will replace the "join" button, signaling to users that the event is at capacity and can no longer be joined.
+- **User Authentication Requirement:** To access this page, users must be signed in to their account. If a user attempts to access the page without being signed in, they will be automatically redirected to the sign-up page. A clear notification will inform them of the sign-in requirement, ensuring a seamless and guided user experience.
 
 ### **Create Event Page**
 
