@@ -405,3 +405,27 @@ Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | Return Home Button | Redirect to the home page | Click button | Redirected to home page | - |
 | Button Hover Effect | Button scale increase on mouse hover | Hover mouse over button | Button scale increases | - |
 | Button Click Animation | Button scale decreases on click | Click button | Button scale decreases | - |
+
+### **Bugs & Fixes**
+
+#### **Button Scale Bug**
+
+![Button Scale Bug](documentation/testing/button-scale-bug.gif)
+
+I noticed that the text within buttons moved as the scale increased on mouse hover. Upon searching online I was able to find a resolution on Stack Overflow contributed by Chris W (please see credits section below). The fix incorporated additional CSS classes to create a seamless transition during scaling.
+
+![Button Scale Fix](documentation/testing/button-scale-fix.gif)
+
+#### **Horizontal Scroll Bug**
+
+![Horizontal Scroll Bug](documentation/testing/horizontal-scroll-bug.gif)
+
+After including the popover messages to the Create Event page, I encountered this bug. After the size of the page window had been reduced, the width of the body exceeded the display width, creating horizontal page scroll. This occurred even though no content on the page was being pushed outside the display. 
+
+As far as I could tell, the page wasn't resizing the popover content correctly. Upon reloading the page, the horizontal scroll would disappear. The fix I implemented to was to apply `overflow-x: hidden` to the body element. 
+
+### **Known Bugs**
+
+#### **Bug**
+
+![Bug]()
