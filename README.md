@@ -620,6 +620,40 @@ Wireframes were generated using Balsamiq for desktop, tablet, and mobile screen 
 
 - **User Authentication Requirement:** To access this page, users must be signed in to their account. If a user attempts to access the page without being signed in, they will be automatically redirected to the sign-up page. A clear notification will inform them of the sign-in requirement, ensuring a seamless and guided user experience.
 
+### **Event Page**
+
+<details><summary>Screenshots</summary>
+
+<img src="documentation/features/event.jpg">
+
+*Event Page*
+
+<img src="documentation/features/party-list.jpg">
+
+*Party Member List*
+
+<img src="documentation/features/event-edit-delete.jpg">
+
+*Edit & Delete Buttons*
+
+<img src="documentation/features/event-delete-modal.gif">
+
+*Delete Modal*
+
+<img>
+
+*Join/Leave Party*
+
+</details>
+
+- **Event Details:** This page provides additional details about the event, aiming to give users all the relevant information they may require.
+
+- **Party Member List:** The number of available party member spaces are displayed in the form of a list. As users join the event, their usernames dynamically populate the list, reflecting the current participant count.
+
+- **Edit & Delete:** Users are able to edit or delete events they have created from this page.
+
+- **Join & Leave:** Users can join or leave events created by other users form this page.
+
 ### **Create Event Page**
 
 <details><summary>Screenshots</summary>
