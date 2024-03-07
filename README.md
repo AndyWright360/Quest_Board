@@ -427,21 +427,45 @@ Wireframes were generated using Balsamiq for desktop, tablet, and mobile screen 
 
 <details><summary>Screenshots</summary>
 
-<img>
+<img src="documentation/features/home-page.jpg">
 
 *Home Page*
 
+<img src="documentation/features/hero-image.jpg">
+
+*Hero Image*
+
+<img src="documentation/features/our-quest.jpg">
+
+*Our Quest*
+
+<img src="documentation/features/locations.jpg">
+
+*Locations*
+
+<img src="documentation/features/map.gif">
+
+*Map*
+
+<img src="documentation/features/gallery.jpg">
+
+*Gallery*
+
+<img src="documentation/features/auto-gallery.gif">
+
+*Gallery Auto-Play*
+
 </details>
 
-- The design of the hero image was intended to capture the imaginations of the users. The concept being that the world of the game is being brought to life around the players. The colour palette was adjusted to better suit the theming of the website. A large red dragon is pictured centrally as a nod to the Welsh dragon.
+- **Hero Image Design:** The design of the hero image was intended to capture the imaginations of the users. The concept being that the world of the game is being brought to life around the players. The colour palette was adjusted to better suit the theming of the website. A large red dragon is pictured centrally as a nod to the Welsh dragon.
 
-- The "Our Quest" section serves as a short blurb, summarising the website's purpose for users.
+- **Introduction:** The "Our Quest" section serves as a short blurb, summarising the website's purpose for users.
 
-- Partner game store locations are highlighted on the map, each revealing key information upon mouse click.
+- **Interactive Map Elements:** Partner game store locations are highlighted on the map, each revealing key information upon mouse click.
 
-- The map was crafted to resemble an adventurer's treasure map, adding a thematic touch to the overall style.
+- **Map Visual Design:** The map was crafted to resemble an adventurer's treasure map, adding a thematic touch to the overall style.
 
-- The gallery features an auto-play function, effectively conveying its purpose to users. The images depict past events, offering users a visual preview of what to anticipate from upcoming gatherings.
+- **Auto-Play Gallery:** The gallery features an auto-play function, scrolling through each image on a timer. The images depict past events, offering users a visual preview of what to anticipate from upcoming gatherings.
 
 ### **Events Page**
 
