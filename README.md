@@ -467,6 +467,62 @@ Wireframes were generated using Balsamiq for desktop, tablet, and mobile screen 
 
 - **Auto-Play Gallery:** The gallery features an auto-play function, scrolling through each image on a timer. The images depict past events, offering users a visual preview of what to anticipate from upcoming gatherings.
 
+### **Sign Up/Login Page**
+
+<details><summary>Screenshots</summary>
+
+<img src="documentation/features/sign-up.jpg">
+
+*Sign Up Page*
+
+<img src="documentation/features/login.jpg">
+
+*Login Page*
+
+<img src="documentation/features/username-validation.gif">
+
+*Input Validation*
+
+<img src="documentation/features/character-limit.gif">
+
+*Character Limit*
+
+<img src="documentation/features/character-counter.gif">
+
+*Character Counter*
+
+<img src="documentation/features/required-notification.gif">
+
+*Required Input Notification*
+
+<img src="documentation/features/helper-text.jpg">
+
+*Helper Text*
+
+<img src="documentation/features/pattern-recognition.gif">
+
+*Input Pattern Recognition*
+
+<img src="documentation/features/sign-up-navigation.gif">
+
+*Navigation*
+
+</details>
+
+- **Visual Feedback:** Utilising Materialize validation classes, input borders change colour to green for valid inputs and red for invalid inputs. Providing users with immediate visual feedback on the validity of their input.
+
+- **Character Limitation:** Implemented a 15-character limitation on input fields, preventing users from exceeding the specified limit and ensuring data integrity.
+
+- **Character Counter:** Integrated Materialize character counter to dynamically display the current character count. Assisting users in staying within the specified character limits.
+
+- **Required Field Indication:** Applied the required attribute to username and password input fields. Prompting users to complete all required inputs before submission and providing notification if incomplete data is detected.
+
+- **Helper Text:** Included helper text to clearly communicate character count requirements, aiding users in understanding input expectations.
+
+- **Pattern Recognition:** Implemented pattern recognition on input fields to ensure the submission of correct data. Notifying users if invalid characters are entered and guiding them to input valid information.
+
+- **Convenient Navigation:** Included links to the login/sign up page on both pages, ensuring easy navigation between pages and enhancing the user experience.
+
 ### **Events Page**
 
 <details><summary>Screenshots</summary>
