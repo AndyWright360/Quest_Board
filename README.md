@@ -83,7 +83,7 @@ Dragon Hunter was the font used for the headings of the website. The font was ch
 
 ![Logo for Charm font](documentation/charm.jpg)
 
-Charm was used for all other text content throughout the site. This font was chosen for its handwritten style, adding a touch of enchantment to the overall design. To maintain legibility, I implemented a high-contrast color scheme and increased the font size for enhanced clarity.
+Charm was used for all other text content throughout the site. This font was chosen for its handwritten style, adding a touch of enchantment to the overall design. To maintain legibility, I implemented a high-contrast colour scheme and increased the font size for enhanced clarity.
 
 ### **Imagery**
 
@@ -305,27 +305,65 @@ Wireframes were generated using Balsamiq for desktop, tablet, and mobile screen 
 
 <details><summary>Screenshots</summary>
 
-<img>
+<img src="documentation/features/responsive.gif">
 
 *Responsive Layout*
 
 </details>
 
-- The layout adjusts to different device widths, providing users with a smooth experience across multiple device. This imporoves both accessibility and usability.
+- **Responsive:** The layout adjusts to different device widths, providing users with a smooth experience across multiple devices. This improves both accessibility and usability.
 
 #### **Page Heading**
 
 <details><summary>Screenshots</summary>
 
-<img>
+<img src="documentation/features/heading.jpg">
 
 *Page Heading*
 
+<img src="documentation/features/heading-pattern.gif">
+
+*Repeatable Pattern*
+
 </details>
 
-- The heading of each page was designed to resemble torn parchment paper, aligning with the fantastical design aesthetic.
+- **Heading Design:** The heading of each page was designed to resemble torn parchment paper, aligning with the fantastical design aesthetic.
 
-- The image is seamlessly repeatable, ensuring consistent quality across various screen widths.
+- **Repeatable Pattern:** The image is seamlessly repeatable, ensuring consistent quality across various screen widths.
+
+#### **Navbar**
+
+<details><summary>Screenshots</summary>
+
+<img src="documentation/features/red-navbar.jpg">
+<img src="documentation/features/green-navbar.jpg">
+
+*Navbar*
+
+<img src="documentation/features/red-nav-hover.gif">
+<img src="documentation/features/green-nav-hover.gif">
+
+*Navbar - Hover*
+
+<img src="documentation/features/red-sidenav.jpg">
+<img src="documentation/features/green-sidenav.jpg">
+
+*Sidenav*
+
+<img src="documentation/features/red-sidenav-hover.gif">
+<img src="documentation/features/green-sidenav-hover.gif">
+
+*Sidenav - Hover*
+
+</details>
+
+- **Alternative Colour Scheme:** Implemented a variation between red and green navbars to provide an alternative colour scheme across the site. This variation distinguishes between primary site pages (e.g. home page, events page) and secondary pages (e.g. edit events, sign up).
+
+- **Nav Link Hover Effect:** Applied a hover effect to navbar links to provide users with visual feedback as they select their desired link, enhancing the interactive experience.
+
+- **Sidenav Design:** The sidenav was designed to resemble a medieval banner, aligning with the fantasy adventure visual theme of the website. This design element adds a thematic touch to the navigation experience.
+
+- **Logo Navigation:** The website logo serves as a consistent link to return home, ensuring easy navigation back to the home page from any section of the site. This contributes to a seamless user experience by providing a familiar and intuitive method of navigation.
 
 #### **Flash Messages**
 
@@ -337,41 +375,53 @@ Wireframes were generated using Balsamiq for desktop, tablet, and mobile screen 
 
 </details>
 
-- Flash messages serve as a means of providing feedback to the user following the execution of an action, communicating the successful completion of the task.
+- **Flash Messages:** Serve as a means of providing feedback to the user following the execution of an action, communicating the successful completion of the task.
 
 #### **Footer**
 
 <details><summary>Screenshots</summary>
 
-<img>
+<img src="documentation/features/footer-design.jpg">
 
 *Footer Design*
 
-<img>
+<img src="documentation/features/footer-icons.jpg">
 
-*Social Media Links*
+*Icon Design*
+
+<img src="documentation/features/icon-hover.gif">
+
+*Icon Hover*
 
 </details>
 
-- The design of the social media icons was crafted to resemble dice, maintaining thematic consistency across the entire page.
+- **Icon Design:** The design of the social media icons was crafted to resemble dice, maintaining thematic consistency across the entire page.
 
-- Links expand in size when users hover their mouse over them, suggesting interactivity and enhancing user engagement.
+- **Icon Hover Feedback:** Links expand in size when users hover their mouse over them, suggesting interactivity and enhancing user engagement.
 
 #### **Buttons**
 
 <details><summary>Screenshots</summary>
 
-<img>
+<img src="documentation/features/button-design.jpg">
 
-*Buttons*
+*Button Design*
+
+<img src="documentation/features/button-hover.gif">
+
+*Button Hover*
+
+<img src="documentation/features/button-click.gif">
+
+*Click Animation*
 
 </details>
 
-- The buttons were fashioned to mirror the appearance of message boards, aligning them thematically with the core design.
+- **Button Design:** The buttons were fashioned to mirror the appearance of message boards, aligning them thematically with the core design.
 
-- Upon mouse hover, the buttons enlarge to offer interactive feedback, enhancing the user experience.
+- **Mouse Hover Feedback:** Upon mouse hover, the buttons enlarge to offer interactive feedback, enhancing the user experience.
 
-- When clicked, the buttons will subtly shrink to simulate the action of being pressed, offering visual feedback to the user.
+- **Click Animation:** When clicked, the buttons will subtly shrink to simulate the action of being pressed, offering visual feedback to the user.
 
 ### **Home Page**
 
