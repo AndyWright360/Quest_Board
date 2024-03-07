@@ -182,3 +182,226 @@ Lighthouse within Chrome Developer Tools was used to assess the website's perfor
 | 500.html | ![Lighthouse results for mobile]() |
 
 ---
+
+## **Manual Testing**
+
+### **Testing User Stories**
+
+#### **First Time Visitor Goals**
+
+| Goals | How are they achieved? |
+| :--- | :--- |
+| I want to create a profile so that I can start creating and joining events. |  |
+| I want to filter events based on store location to find events in my preferred area. |  |
+| I want to view the details of an event to ensure it aligns with my preferences and schedule. |  |
+
+#### **Returning Visitor Goals**
+
+| Goals | How are they achieved? |
+| :--- | :--- |
+| I want to log in to my account. |  |
+| I want to join an event created by another user. |  |
+| I want to edit the details of an event in case there are changes or updates. |  |
+
+#### **Frequent User Goals**
+
+| Goals | How are they achieved? |
+| :--- | :--- |
+| I want to check my profile page so I can easily monitor my created and joined events. |  |
+| I want to leave an event if my plans change or I can no longer attend. |  |
+
+#### **Administrator**
+
+| Goals | How are they achieved? |
+| :--- | :--- |
+| I want to review and moderate user-created events to ensure they comply with community guidelines. |  |
+
+### **Full Testing**
+
+Full testing was performed on the following devices:
+
+- Laptop:
+  - MSI Thin GF63 15 inch screen
+- Mobile Device:
+  - iPhone XR
+
+The following browsers were tested using each device:
+
+- Laptop:
+  - Google Chrome
+  - Microsoft Edge
+  - Mozilla Firefox
+- Mobile:
+  - Safari
+
+Friends and family also tested the website using a variety of devices. No issues were reported.
+
+Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+| `Navbar` |
+| Page Title | Redirect to the home page | Click page title | Redirected to home page | - |
+| Home Link | Redirect to the home page | Click link | Redirected to home page | - |
+| Events Link | Redirect to the events page | Click link | Redirected to events page | - |
+| Sign Up Link | Redirect to the sign up page | Click link | Redirected to sign up page | - |
+| Login Link | Redirect to the login page | Click link | Redirected to login page | - |
+| Profile Link | Redirect to the profile page | Click link | Redirected to profile page | - |
+| Burger Menu | Opens sidenav | Click icon | Sidenav opens | - |
+| `Sidenav` |
+| Home Link | Redirect to the home page | Click link | Redirected to home page | - |
+| Events Link | Redirect to the events page | Click link | Redirected to events page | - |
+| Sign Up Link | Redirect to the sign up page | Click link | Redirected to sign up page | - |
+| Login Link | Redirect to the login page | Click link | Redirected to login page | - |
+| Profile Link | Redirect to the profile page | Click link | Redirected to profile page | - |
+| Close Sidenav | Close the sidenav bar | Click outside sidenav | Sidenav closed | - |
+| `Footer` |
+| Social Media Link (Facebook) | Opens Facebook link in a new tab | Clicked Facebook icon | New tab opened to Facebook | - |
+| Social Media Link (YouTube) | Opens YouTube link in a new tab | Clicked YouTube icon | New tab opened to YouTube | - |
+| Social Media Link (Twitter) | Opens Twitter link in a new tab | Clicked Twitter icon | New tab opened to Twitter | - |
+| Icon Hover Effect | Icon size increases on mouse hover | Hover mouse over icon | Icon size increases | - |
+| `Flash Messages` |
+| Event Created | Message appear when event created | Create event | Message appeared | - |
+| Event Deleted | Message appear when event deleted | Delete event | Message appeared | - |
+| Join Event | Message appear when event joined | Join event | Message appeared | - |
+| Leave Event | Message appear when leaveing event | Leave event | Message appeared | - |
+| Welcome User | Message appear when user signs in | Sign In User | Message appeared | - |
+| `Home Page` |
+| Button Hover Effect | Button scale increase on mouse hover | Hover mouse over button | Button scale increases | - |
+| Button Click Animation | Button scale decreases on click | Click button | Button scale decreases | - |
+| Sign Up Button | Redirect to the sign up page | Click button | Redirected to sign up page | - |
+| Open Map Marker (Checkmates) | Display store information window | Click marker | Store information window displayed | - |
+| Close Map Marker (Checkmates) | Close store information window | Click information widow | Store information window closed | - |
+| Open Map Marker (Dungeons & Dice) | Display store information window | Click marker | Store information window displayed | - |
+| Close Map Marker (Dungeons & Dice) | Close store information window | Click information widow | Store information window closed | - |
+| Open Map Marker (Castle Games) | Display store information window | Click marker | Store information window displayed | - |
+| Close Map Marker (Castle Games) | Close store information window | Click information widow | Store information window closed | - |
+| Open Map Marker (Boarderlands) | Display store information window | Click marker | Store information window displayed | - |
+| Close Map Marker (Boarderlands) | Close store information window | Click information widow | Store information window closed | - |
+| Display Next Gallery Image | Next sequential gallery image displays on screen | Drag gallery image to the left | Next gallery image displayed | - |
+| Display Previous Gallery Image | Previous gallery image displays on screen | Drag gallery image to the right | Previous gallery image displayed | - |
+| Select Gallery Indicator | Display the selected gallery image | Click gallery indicator | Selected gallery image displayed | - |
+| `Events Page` |
+| Fliter Dropdown (Open) | Open filter dropdown to display search options | Click filter | Filter dropdown opens | - |
+| Fliter Dropdown (Close) | Close filter dropdown to remove search options | Click filter | Filter dropdown closes | - |
+| Filter Checkbox (Cardiff) | Display events matching selected option | Click checkbox | Display corresponding events | - |
+| Filter Checkbox (Newport) | Display events matching selected option | Click checkbox | Display corresponding events | - |
+| Filter Checkbox (Swansea) | Display events matching selected option | Click checkbox | Display corresponding events | - |
+| Filter Checkbox (Bridgend) | Display events matching selected option | Click checkbox | Display corresponding events | - |
+| Filter Checkbox (10am) | Display events matching selected option | Click checkbox | Display corresponding events | - |
+| Filter Checkbox (12pm) | Display events matching selected option | Click checkbox | Display corresponding events | - |
+| Filter Checkbox (2pm) | Display events matching selected option | Click checkbox | Display corresponding events | - |
+| Filter Checkbox (4pm) | Display events matching selected option | Click checkbox | Display corresponding events | - |
+| Filter Checkbox (Beginner) | Display events matching selected option | Click checkbox | Display corresponding events | - |
+| Filter Checkbox (Everyone) | Display events matching selected option | Click checkbox | Display corresponding events | - |
+| Filter Checkbox (Experienced) | Display events matching selected option | Click checkbox | Display corresponding events | - |
+| Button Hover Effect | Button scale increase on mouse hover | Hover mouse over button | Button scale increases | - |
+| Button Click Animation | Button scale decreases on click | Click button | Button scale decreases | - |
+| Create Event Button | Redirect to the create event page | Click button | Redirected to create event page | - |
+| Edit Button | Redirect to the edit event page | Click button | Redirected to edit event page | - |
+| Delete Button | Open delete event modal | Click button | Delete event modal opened | - |
+| Join Button | Increase party member display by one | Click button | Party member display increased by one | - |
+| Leave Button | Decrease party member display by one | Click button | Party member display decreased by one | - |
+| Full Event | Display "Full" stamp when party list reaches capacity | Fill party list | "Full" stamp displays on event | - |
+| Event Stamp | Redirect to the selected event page | Click stamp | Redirected to selected event page | - |
+| `Event Page` |
+| Button Hover Effect | Button scale increase on mouse hover | Hover mouse over button | Button scale increases | - |
+| Button Click Animation | Button scale decreases on click | Click button | Button scale decreases | - |
+| Edit Button | Redirect to the edit event page | Click button | Redirected to edit event page | - |
+| Delete Button | Open delete event modal | Click button | Delete event modal opened | - |
+| Join Button | Add username to party member list | Click button | Username added to party list | - |
+| Leave Button | Remove username from party member list | Click button | Username removed from party list | - |
+| Full Event | Display "Full" stamp when party list reaches capacity | Fill party list | "Full" stamp displays on event | - |
+| `Create Event Page` |
+| Valid Input (Username) | Input border turns green | Enter valid input | Input border turned green | - |
+| Invalid Input (Username) | Input border turns red and displays "invalid entry" text | Enter invalid input | Input border turned red and displayed "invalid entry" text | - |
+| Valid Input (Max Party Size) | Input border turns green | Enter valid input | Input border turned green | - |
+| Invalid Input (Max Party Size) | Input border turns red and displays "max 10" text | Enter invalid input | Input border turned red and displayed "max 10" text | - |
+| Valid Input (Description) | Input border turns green | Enter valid input | Input border turned green | - |
+| Invalid Input (Description) | Input border turns red and displays "invalid entry" text | Enter invalid input | Input border turned red and displayed "invalid entry" text | - |
+| Character Counter (Username) | Dynamically display character number as input is entered | Enter input data | Counter displays current character number | - |
+| Character Counter (Description) | Dynamically display character number as input is entered | Enter input data | Counter displays current character number | - |
+| Select Dropdown (Location) | Display list of location options | Click input | Displays list of location options | - |
+| Select Dropdown (Time) | Display list of time options | Click input | Displays list of time options | - |
+| Date Picker | Open date picker modal | Click date input | Date picker modal opens | - |
+| Required Inputs | Display message to user for unfilled input field | Submit form with empty inputs | Message displayed notifying of empty input field | - |
+| Radio Input (Beginner) | Radio button highligted when input selected | Select input | Radio button highlighted | - |
+| Radio Input (Everyone) | Radio button highligted when input selected | Select input | Radio button highlighted | - |
+| Radio Input (Experienced) | Radio button highligted when input selected | Select input | Radio button highlighted | - |
+| Popover Message (Beginner) | Display popover message when hovering over question mark icon | Hover over icon | Corresponding popover message displayed | - |
+| Popover Message (Everyone) | Display popover message when hovering over question mark icon | Hover over icon | Corresponding popover message displayed | - |
+| Popover Message (Experienced) | Display popover message when hovering over question mark icon | Hover over icon | Corresponding popover message displayed | - |
+| `Edit Event Page` |
+| Valid Input (Event Name) | Input border turns green | Enter valid input | Input border turned green | - |
+| Invalid Input (Event Name) | Input border turns red and displays "invalid entry" text | Enter invalid input | Input border turned red and displayed "invalid entry" text | - |
+| Valid Input (Max Party Size) | Input border turns green | Enter valid input | Input border turned green | - |
+| Invalid Input (Max Party Size) | Input border turns red and displays "max 10" text | Enter invalid input | Input border turned red and displayed "max 10" text | - |
+| Valid Input (Description) | Input border turns green | Enter valid input | Input border turned green | - |
+| Invalid Input (Description) | Input border turns red and displays "invalid entry" text | Enter invalid input | Input border turned red and displayed "invalid entry" text | - |
+| Character Counter (Username) | Dynamically display character number as input is entered | Enter input data | Counter displays current character number | - |
+| Character Counter (Description) | Dynamically display character number as input is entered | Enter input data | Counter displays current character number | - |
+| Select Dropdown (Location) | Display list of location options | Click input | Displays list of location options | - |
+| Select Dropdown (Time) | Display list of time options | Click input | Displays list of time options | - |
+| Date Picker | Open date picker modal | Click date input | Date picker modal opens | - |
+| Required Inputs | Display message to user for unfilled input field | Submit form with empty inputs | Message displayed notifying of empty input field | - |
+| Radio Input (Beginner) | Radio button highligted when input selected | Select input | Radio button highlighted | - |
+| Radio Input (Everyone) | Radio button highligted when input selected | Select input | Radio button highlighted | - |
+| Radio Input (Experienced) | Radio button highligted when input selected | Select input | Radio button highlighted | - |
+| Popover Message (Beginner) | Display popover message when hovering over question mark icon | Hover over icon | Corresponding popover message displayed | - |
+| Popover Message (Everyone) | Display popover message when hovering over question mark icon | Hover over icon | Corresponding popover message displayed | - |
+| Popover Message (Experienced) | Display popover message when hovering over question mark icon | Hover over icon | Corresponding popover message displayed | - |
+| `Delete Event Modal` |
+| Button Hover Effect | Button colour darkens on mouse hover | Hover mouse over button | Button colour darkens | - |
+| Cancel Button | Close delete modal | Click button | Modal closed | - |
+| Delete Button | Delete event data and redirect to events page | Click button | Redirected to events page and event deleted | - |
+| Close Modal (Click outside modal window) | Close modal by clicking outside window | Click outside modal window | Modal closed | - |
+| `Sign Up Page` |
+| Valid Input (Username) | Input border turns green and displays "valid" text | Enter valid input | Input border turned green and displayed "valid" text | - |
+| Invalid Input (Username) | Input border turns red and displays "invalid entry" text | Enter invalid input | Input border turned red and displayed "invalid entry" text | - |
+| Valid Input (Password) | Input border turns green and displays "valid" text | Enter valid input | Input border turned green and displayed "valid" text | - |
+| Invalid Input (Password) | Input border turns red and displays "invalid entry" text | Enter invalid input | Input border turned red and displayed "invalid entry" text | - |
+| Character Counter (Username) | Dynamically display character number as input is entered | Enter input data | Counter displays current character number | - |
+| Character Counter (Password) | Dynamically display character number as input is entered | Enter input data | Counter displays current character number | - |
+| Required Inputs | Display message to user for unfilled input field | Submit form with empty inputs | Message displayed notifying of empty input field | - |
+| Input Pattern Recognition | Display message to user if keys outside the pattern requirements are entered | Submit form with invalid inputs | Message displayed notifying of incorrect input type | - |
+| Link Hover Effect | Text underlines on mouse hover | Hover over link text | Link text underlined | - |
+| Log In Link | Redirect to login page | Click button | Redirected to login page | - |
+| Successful Sign Up | Redirect to profile page | Submit valid sign up details | Redirected to profile page | - |
+| `Login Page` |
+| Valid Input (Username) | Input border turns green and displays "valid" text | Enter valid input | Input border turned green and displayed "valid" text | - |
+| Invalid Input (Username) | Input border turns red and displays "invalid entry" text | Enter invalid input | Input border turned red and displayed "invalid entry" text | - |
+| Valid Input (Password) | Input border turns green and displays "valid" text | Enter valid input | Input border turned green and displayed "valid" text | - |
+| Invalid Input (Password) | Input border turns red and displays "invalid entry" text | Enter invalid input | Input border turned red and displayed "invalid entry" text | - |
+| Character Counter (Username) | Dynamically display character number as input is entered | Enter input data | Counter displays current character number | - |
+| Character Counter (Password) | Dynamically display character number as input is entered | Enter input data | Counter displays current character number | - |
+| Required Inputs | Display message to user for unfilled input field | Submit form with empty inputs | Message displayed notifying of empty input field | - |
+| Input Pattern Recognition | Display message to user if keys outside the pattern requirements are entered | Submit form with invalid inputs | Message displayed notifying of incorrect input type | - |
+| Link Hover Effect | Text underlines on mouse hover | Hover over link text | Link text underlined | - |
+| Sign Up Link | Redirect to sign up page | Click button | Redirected to sign up page | - |
+| Invalid Username | Display message notifying of invalid username or password | Submit incorrect username | Message displayed notifying of invalid username or password | - |
+| Invalid Password | Display message notifying of invalid username or password | Submit incorrect password | Message displayed notifying of invalid username or password | - |
+| Successful Login | Redirect to profile page | Submit valid login details | Redirected to profile page | - |
+| `Profile Page` |
+| Button Hover Effect | Button scale increase on mouse hover | Hover mouse over button | Button scale increases | - |
+| Button Click Animation | Button scale decreases on click | Click button | Button scale decreases | - |
+| Create Event Button | Redirect to the create event page | Click button | Redirected to create event page | - |
+| Edit Button | Redirect to the edit event page | Click button | Redirected to edit event page | - |
+| Delete Button | Open delete event modal | Click button | Delete event modal opened | - |
+| Leave Button | Remove event from joined event list | Click button | Event removed from joined events list | - |
+| Event Stamp | Redirect to the selected event page | Click stamp | Redirected to selected event page | - |
+| No Events Message | Display message if no created events exist | Enter page with no created events | Message displayed notifying of no events | - |
+| No Joined Events Message | Display message if no joined events exist | Enter page with no joined events | Message displayed notifying of no joined events | - |
+| `400 Error Page` |
+| Return Home Button | Redirect to the home page | Click button | Redirected to home page | - |
+| Button Hover Effect | Button scale increase on mouse hover | Hover mouse over button | Button scale increases | - |
+| Button Click Animation | Button scale decreases on click | Click button | Button scale decreases | - |
+| `403 Error Page` |
+| Return Home Button | Redirect to the home page | Click button | Redirected to home page | - |
+| Button Hover Effect | Button scale increase on mouse hover | Hover mouse over button | Button scale increases | - |
+| Button Click Animation | Button scale decreases on click | Click button | Button scale decreases | - |
+| `404 Error Page` |
+| Return Home Button | Redirect to the home page | Click button | Redirected to home page | - |
+| Button Hover Effect | Button scale increase on mouse hover | Hover mouse over button | Button scale increases | - |
+| Button Click Animation | Button scale decreases on click | Click button | Button scale decreases | - |
+| `500 Error Page` |
+| Return Home Button | Redirect to the home page | Click button | Redirected to home page | - |
+| Button Hover Effect | Button scale increase on mouse hover | Hover mouse over button | Button scale increases | - |
+| Button Click Animation | Button scale decreases on click | Click button | Button scale decreases | - |
