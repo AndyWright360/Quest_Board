@@ -716,6 +716,38 @@ The form on this page incorporates several features aimed at helping users under
 
 - **Pre-populated Inputs:** When editing an event, the form fields will be pre-populated with the existing data. This feature eliminates the need for users to re-enter all information, enabling them to conveniently modify specific details as needed.
 
+### **Error Pages**
+
+<details><summary>Screenshots</summary>
+
+<img src="documentation/features/400-error.jpg">
+
+*400 Error Page*
+
+<img src="documentation/features/403-error.jpg">
+
+*403 Error Page*
+
+<img src="documentation/features/404-error.jpg">
+
+*404 Error Page*
+
+<img src="documentation/features/500-error.jpg">
+
+*500 Error Page*
+
+<img src="documentation/features/error-return-home.gif">
+
+*Link Home*
+
+</details>
+
+- **Error Image:** The prominant image of each page is of a D20 that has landed on a 1. This references the game of Dungeons & Dragons and is the lowest roll that can occur when attempting an action.
+
+- **Error Message:** The error message for each page is written from a Dungeon Master's perpective to a player. Offering a humerous explanation of the error tailored to the fantasy theme.
+
+- **Return Home Button:** Prominently placed on each page, the "Return Home" button offers straightforward navigation. Allowing users to easily return to the main page.
+
 ### **Future Implementations**
 
 #### **Profile Personalisation**
