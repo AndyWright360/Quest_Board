@@ -852,3 +852,125 @@ Implement a messaging system within events and user parties, facilitating commun
     - Utilised for the creation of the database schema.
 
 ---
+
+## **Deployment & Local Development**
+
+### **Deployment**
+
+### **Local Development**
+
+#### **How to Fork**
+
+---
+
+## **Testing**
+
+For a detailed overview of all conducted testing, please refer to the [TESTING.md](TESTING.md) file.
+
+---
+
+## **Credits**
+
+### **Code Used** 
+
+- [Remove jittery text on scale increase for buttons by Chris W](https://stackoverflow.com/questions/52708013/wobbly-text-on-transform-scale)
+
+  - This code was employed as a bug fix to provide a smoother transition for the button hover effect.
+
+- [Remove number input arrows from W3Schools](https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp)
+
+  - This code was used to remove the default arrows on number inputs across multiple browsers.
+
+- [Popover messages by Mihael Tomić](https://codepen.io/mihaeltomic/pen/PqxVaq)
+
+  - Enabled the implementation of popover messages to describe experience levels to users during event creation. 
+
+- [Interactive map markers from Google Maps Documentation](https://developers.google.com/maps/documentation/javascript/examples/advanced-markers-html)
+
+  - This documentation helped me to implement custom interactive Google map markers.
+
+- [Checkbox Filtering with Subfilters by Kassandra Flanders](https://codepen.io/tornadicshark/pen/XWboaRp?editors=1010)
+
+  - This code helped me create the filter search functionalitly across multiple categories.
+
+- [User Registration Page with Flask-SQLAlchemy & PostgreSQL by Sandeep Sudhakaran](https://www.youtube.com/watch?v=7EeAZx78P2U)
+
+  - This tutorial helped me to understand how to check if a username already existed within a PostgreSQL database.
+
+### **Content**
+
+All content for the website was written by the developer Andrew Wright.
+
+### **Media**
+
+The majority of images used on the website we're obtained from the following websites:
+
+- [Freepik](https://www.freepik.com/)
+- [Pngtree](https://pngtree.com/)
+- [Pixabay](https://pixabay.com/)
+
+Additional images were AI generated using Microsoft Copilot.
+
+#### **AI Generated Images**
+
+- Hero Image
+
+- Gallery Images
+
+- Quest Board Logo
+
+- Events Board Metal Trim
+
+#### **Footer Icons**
+
+- [D20 Icon](https://www.freepik.com/icon/octahedron_3810286#fromView=resource_detail&position=0)
+
+- [D12 Icon](https://www.freepik.com/icon/dodecahedron_3810289#fromView=resource_detail&position=0)
+
+- [D8 Icon](https://www.freepik.com/icon/icosahedron_3810283#fromView=resource_detail&position=1)
+
+- [Facebook Icon](https://www.freepik.com/icon/facebook-logo_49052#fromView=search&page=1&position=9&uuid=8c7a5de0-c86c-46e9-a924-4b4a6b6d35b0)
+
+- [YouTube Icon](https://www.freepik.com/icon/youtube_1384028#fromView=search&page=1&position=1&uuid=6e01ff6e-cfde-48ba-82a3-ba7cb8e5f3fe)
+
+- [Twitter Icon](https://www.freepik.com/icon/twitter_5968958#fromView=search&page=1&position=1&uuid=a238cc9b-6909-4c4f-a7ac-0dff27b48290)
+
+#### **Home Page Images**
+
+- [Sidenav Banner](https://www.freepik.com/free-vector/vertical-flag-banner-medieval-3d-game-scene_38352010.htm#&position=1&from_view=user&uuid=1790e749-2c15-49d7-8ac9-760d988683eb)
+
+- [Button](https://www.freepik.com/free-vector/wood-pirate-ui-game-frame-board-button-vector-wooden-texture-menu-interface-with-arrow-panel-signboard-2d-shape-round-metal-web-plank-medieval-mobile-app-brown-fantasy-plate-kit_126735788.htm#&position=5&from_view=user&uuid=238b5a6b-646d-429e-bae7-785eb9868813)
+
+- [Map](https://pngtree.com/freepng/old-paper-antique-grunge-paper_5325324.html)
+
+- [Map Trim](https://pngtree.com/freepng/colorful-long-strips-of-korean-traditional-pattern-decoration_6568707.html)
+
+#### **Events Page Images**
+
+- [Page Heading](https://pngtree.com/freepng/archaic-scrapbook_6188365.html)
+
+- [Events Board](https://www.freepik.com/free-vector/wooden-signboards-banners-arrow-sign_40511675.htm#&position=0&from_view=user&uuid=238b5a6b-646d-429e-bae7-785eb9868813)
+
+- [Event Paper](https://pngtree.com/freepng/collection-vintage-old-paper-scrolls_6958546.html)
+
+- [Wax Seal](https://pngtree.com/freepng/creative-discounts-wax-seal-vector-material_2064005.html)
+
+- [D20 Stamp Imprint](https://www.freepik.com/free-vector/set-abstract-geometric-forms-vector_1371599.htm#&position=3&from_view=user&uuid=238b5a6b-646d-429e-bae7-785eb9868813)
+
+- [Full Stamp](https://pngtree.com/freepng/stamp-border-red-stamp-red-border-retro-broken-border-rectangle-border_8293809.html)
+
+#### **Create Event Images**
+
+- [Question Mark](https://www.freepik.com/free-vector/set-multi-colored-stone-shields-various-shapes_11930793.htm#&position=2&from_view=user&uuid=238b5a6b-646d-429e-bae7-785eb9868813)
+
+#### **Error Page Images**
+
+- [D20](https://pixabay.com/illustrations/d20-dice-dungeons-dragons-2699387/)
+
+### **Acknowledgments**
+
+- My mentor [Jubril Akolade](https://github.com/Jubrillionaire) for all his encouragement and valuable advice throughout the project.
+
+- Everyone at [Code Institute](https://codeinstitute.net/) for their exceptional support.
+
+- The Code Institute Slack community for the invaluable feedback and assistance I received along the way.
