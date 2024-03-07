@@ -752,6 +752,18 @@ The form on this page incorporates several features aimed at helping users under
 
 #### **Profile Personalisation**
 
+Enhance user profiles with customisable features, including profile images, short bios, and character information and stats. Allowing users to express themselves and showcase their character creations.
+
+#### **Party Creation**
+
+Enable users to create and join parties with other members, fostering a stronger sense of community. Parties can collaborate on events and adventures, enhancing teamwork and camaraderie among users.
+
+#### **Message System**
+
+Implement a messaging system within events and user parties, facilitating communication among players. This would enhance event organisation and coordination, allowing users to discuss plans and make arrangements with ease.
+
+#### **Profile Personalisation**
+
 #### **Party Creation**
 
 #### **Message System**
