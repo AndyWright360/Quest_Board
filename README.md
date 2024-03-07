@@ -523,6 +523,37 @@ Wireframes were generated using Balsamiq for desktop, tablet, and mobile screen 
 
 - **Convenient Navigation:** Included links to the login/sign up page on both pages, ensuring easy navigation between pages and enhancing the user experience.
 
+### **Profile Page**
+
+<details><summary>Screenshots</summary>
+
+<img src="documentation/features/profile.jpg">
+
+*Profile Page*
+
+<img src="documentation/features/profile-heading.jpg">
+
+*Profile Heading*
+
+<img src="documentation/features/no-events.jpg">
+<img src="documentation/features/no-joined-events.jpg">
+
+*No Events Message*
+
+<img src="documentation/features/profile-delete-modal.gif">
+
+*Delete Modal*
+
+</details>
+
+- **Personalised Heading:** The page heading is dynamically set to the username of the logged-in user, adding a personalised touch to the user's experience.
+
+- **Centralised Event Management:** Access to all events created and joined by the user is provided, allowing easy management within a single space. User-created and joined events are arranged into separate sections for enhanced clarity and organisation.
+
+- **No Events Message:** In case no created or joined events exist, a message prompts the user to either create a new event or explore existing events on the events page. This encourages user engagement and activity to further foster a sense of community amoungst users.
+
+- **Delete Modal:** Upon clicking the 'Delete' button, a modal will appear to confirm that the user wants to proceed with this action.
+
 ### **Events Page**
 
 <details><summary>Screenshots</summary>
