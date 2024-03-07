@@ -18,6 +18,10 @@ This project was created as part of the Code Institute Level 5 Diploma in Web Ap
 
 ---
 
+## **Contents** <!-- omit in toc --> 
+
+--- 
+
 ## **User Experience (UX)**
 
 ### **Initial Concept**
@@ -57,15 +61,15 @@ From a visual perspective, the goal was to theme the website on the fantastical 
 
 #### **Primary Palette**
 
-![Primary colour palette used in the project](documentation/primary-palette.jpg)
+![Primary colour palette used in the project](documentation/primary-palette.png)
 
-The color scheme was inspired by the Welsh flag, not only as a nod to the location of the events but also to infuse a sense of regional identity into the platform. This design element aims to enhance the overall sense of community within the South Wales Dungeons & Dragons player base.
+The colour scheme was inspired by the Welsh flag, not only as a nod to the location of the events but also to infuse a sense of regional identity into the platform. This design element aims to enhance the overall sense of community within the South Wales Dungeons & Dragons player base.
 
 #### **Additional Colours**
 
-![Additional colour palette used in the project](documentation/secondary-palette.jpg)
+![Additional colour palette used in the project](documentation/secondary-palette.png)
 
-These additional colours were chosen to complement the primary colour scheme and enhance the visual depth of the website. The dark brown serves as an alternative font colour, providing contrast against lighter backgrounds. Yellow accents were applied across various elements to evoke the appearance of golden decorative trim. Additionally, the deeper red was utilised as an alternative section shade for pages predominantly coloured in red.
+These additional colours were chosen to complement the primary colour scheme and enhance the visual depth of the website. Light brown was chosen as an alternative font colour, applied to labels for form inputs. Yellow accents were incorporated into various elements to evoke the appearance of golden decorative trim. This colour was also used as the background for Flash messages, ensuring they catch the user's attention. Green was applied to the "sign up" and "log in" links, making them more prominent. The lighter shade of green was employed as an alternative section colour for pages predominantly themed in green.
 
 ### **Typography**
 
