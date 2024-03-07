@@ -45,9 +45,11 @@
                     covered. Sign up today and embark on a journey with fellow players. Your next epic adventure starts
                     here!
                 </p>
-                <div class="button-container">
-                    <a href="{{ url_for('sign_up') }}" class="event-button sign-up">SIGN UP</a>
-                </div>
+                {% if not session.user %}
+                    <div class="button-container">
+                        <a href="{{ url_for('sign_up') }}" class="event-button sign-up">SIGN UP</a>
+                    </div>
+                {% endif %}
             </div>
         </div>
     </section>
