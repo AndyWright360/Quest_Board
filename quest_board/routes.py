@@ -114,13 +114,13 @@ def create_event():
                 flash("Event date cannot be in the past")
                 return redirect(url_for("create_event"))
             
-            # Check if text inputs start or end with spaces
-            if event_name != event_name.strip() or description != description.strip():
-                flash("Inputs must not start or end with spaces")
-                return redirect(url_for("create_event"))
             # Check if text inputs are only white spaces
             elif event_name.strip() == "" or description.strip() == "":
                 flash("Inputs must not be empty")
+                return redirect(url_for("create_event"))
+            # Check if text inputs start or end with spaces
+            elif event_name != event_name.strip() or description != description.strip():
+                flash("Inputs must not start or end with spaces")
                 return redirect(url_for("create_event"))
 
             event = Event(
@@ -154,23 +154,23 @@ def edit_event(event_id):
             new_description = request.form.get("description")
             
             # Check if the new party size is greater than or equal to the number of party members
-            if new_party_size >= len(event.party_members):
+            if new_party_size < len(event.party_members):
                 flash("Cannot reduce party size below the number of joined members")
                 return redirect(url_for("edit_event", event_id=event_id))
 
             # Check event date against current date
-            if new_event_date < datetime.today().date():
+            elif new_event_date < datetime.today().date():
                 flash("Event date cannot be in the past")
                 return redirect(url_for("edit_event", event_id=event_id))
             
-            # Check if text inputs start or end with spaces
-            if new_event_name != new_event_name.strip() or new_description != new_description.strip():
-                flash("Inputs must not start or end with spaces")
-                return redirect(url_for("create_event"))
             # Check if text inputs are only white spaces
             elif new_event_name.strip() == "" or new_description.strip() == "":
                 flash("Inputs must not be empty")
-                return redirect(url_for("create_event"))
+                return redirect(url_for("edit_event", event_id=event_id))
+            # Check if text inputs start or end with spaces
+            elif new_event_name != new_event_name.strip() or new_description != new_description.strip():
+                flash("Inputs must not start or end with spaces")
+                return redirect(url_for("edit_event", event_id=event_id))
                     
             event.party_size = new_party_size
             event.event_name = new_event_name
