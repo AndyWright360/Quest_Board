@@ -106,24 +106,36 @@ def create_event():
     if request.method == "POST":
         if "user" in session:  # Check if user is logged in
             event_date = datetime.strptime(request.form.get("date"), "%d %b, %Y").date()
+            event_name = request.form.get("event_name")
+            description = request.form.get("description")
 
             # Check event date against current date
             if event_date < datetime.today().date():
                 flash("Event date cannot be in the past")
                 return redirect(url_for("create_event"))
+            
+            # Check if text inputs start or end with spaces
+            if event_name != event_name.strip() or description != description.strip():
+                flash("Inputs must not start or end with spaces")
+                return redirect(url_for("create_event"))
+            # Check if text inputs are only white spaces
+            elif event_name.strip() == "" or description.strip() == "":
+                flash("Inputs must not be empty")
+                return redirect(url_for("create_event"))
 
             event = Event(
-                event_name=request.form.get("event_name"),
+                event_name=event_name,
                 location=request.form.get("location"),
                 time=request.form.get("time"),
                 date=event_date,
                 created_by=session["user"],
                 party_size=request.form.get("party_size"),
-                description=request.form.get("description"),
+                description=description,
                 exp_level=request.form.get("exp_level")
             )
             db.session.add(event)
             db.session.commit()
+            flash((f"Event '{event.event_name}' created"))
             return redirect(url_for("events"))
         else:
             flash("You need to be logged in to create an event")
@@ -137,33 +149,43 @@ def edit_event(event_id):
     if request.method == "POST":
         if "user" in session:  # Check if user is logged in
             new_party_size = int(request.form.get("party_size"))
+            new_event_date = datetime.strptime(request.form.get("date"), "%d %b, %Y").date()
+            new_event_name = request.form.get("event_name")
+            new_description = request.form.get("description")
             
             # Check if the new party size is greater than or equal to the number of party members
             if new_party_size >= len(event.party_members):
-                new_event_date = datetime.strptime(request.form.get("date"), "%d %b, %Y").date()
-
-                # Check event date against current date
-                if new_event_date < datetime.today().date():
-                    flash("Event date cannot be in the past")
-                    return redirect(url_for("edit_event", event_id=event_id))
-                    
-                event.party_size = new_party_size
-                event.event_name = request.form.get("event_name")
-                event.location = request.form.get("location")
-                event.time = request.form.get("time")
-                event.date = new_event_date
-                event.description = request.form.get("description")
-                event.exp_level = request.form.get("exp_level")
-                
-                db.session.commit()
-                flash("Event updated successfully")
-                return redirect(url_for("events"))
-            else:
                 flash("Cannot reduce party size below the number of joined members")
                 return redirect(url_for("edit_event", event_id=event_id))
-        else:
-            flash("You need to be logged in to edit an event")
-            return redirect(url_for("log_in"))  # Redirect to login page if user is not logged in
+
+            # Check event date against current date
+            if new_event_date < datetime.today().date():
+                flash("Event date cannot be in the past")
+                return redirect(url_for("edit_event", event_id=event_id))
+            
+            # Check if text inputs start or end with spaces
+            if new_event_name != new_event_name.strip() or new_description != new_description.strip():
+                flash("Inputs must not start or end with spaces")
+                return redirect(url_for("create_event"))
+            # Check if text inputs are only white spaces
+            elif new_event_name.strip() == "" or new_description.strip() == "":
+                flash("Inputs must not be empty")
+                return redirect(url_for("create_event"))
+                    
+            event.party_size = new_party_size
+            event.event_name = new_event_name
+            event.location = request.form.get("location")
+            event.time = request.form.get("time")
+            event.date = new_event_date
+            event.description = new_description
+            event.exp_level = request.form.get("exp_level")
+                
+            db.session.commit()
+            flash("Event updated successfully")
+            return redirect(url_for("events"))
+
+        flash("You need to be logged in to edit an event")
+        return redirect(url_for("log_in"))  # Redirect to login page if user is not logged in
     return render_template("edit_event.html", event=event)
 
 
