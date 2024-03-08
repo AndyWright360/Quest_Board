@@ -153,6 +153,8 @@ def create_event():
 def edit_event(event_id):
     event = Event.query.get_or_404(event_id)
     if "user" in session:  # Check if user is logged in
+
+        # Check user is authorised to edit the event
         if session["user"] == event.created_by or session["user"] == "admin":
             if request.method == "POST":
                 new_party_size = int(request.form.get("party_size"))
@@ -204,8 +206,10 @@ def edit_event(event_id):
 
 @app.route("/delete_event/<int:event_id>")
 def delete_event(event_id):
-    if "user" in session:
+    if "user" in session: # Check if user is logged in
         event = Event.query.get_or_404(event_id)
+
+        # Check user is authorised to delete the event
         if session["user"] == event.created_by or session["user"] == "admin":
             db.session.delete(event)
             db.session.commit()
@@ -220,22 +224,32 @@ def delete_event(event_id):
 
 @app.route("/events")
 def events():
-    events = list(Event.query.order_by(Event.date).all())
-    return render_template("events.html", events=events)
+    if "user" in session: # Check if user is logged in
+        events = list(Event.query.order_by(Event.date).all())
+        return render_template("events.html", events=events)
+    else:
+        flash("You need to be logged in to view events")
+        return redirect(url_for("log_in"))
 
 
 @app.route("/event/<int:event_id>")
 def event(event_id):
-    event = Event.query.get_or_404(event_id)
-    return render_template("event.html", event=event)
+    if "user" in session: # Check if user is logged in
+        event = Event.query.get_or_404(event_id)
+        return render_template("event.html", event=event)
+    else:
+        flash("You need to be logged in to view events")
+        return redirect(url_for("log_in"))
 
 
 @app.route("/join_event/<int:event_id>", methods=["POST"])
 def join_event(event_id):
-    if "user" in session:
+    if "user" in session: # Check if user is logged in
         username = session["user"]
         event = Event.query.get_or_404(event_id)
         user = User.query.filter_by(username=username).first()
+
+        # Check username exists, if so add them to party member list
         if user:
             event.party_members.append(user)
             db.session.commit()
@@ -251,10 +265,12 @@ def join_event(event_id):
 
 @app.route("/leave_event/<int:event_id>", methods=["POST"])
 def leave_event(event_id):
-    if "user" in session:
+    if "user" in session: # Check if user is logged in
         username = session["user"]
         event = Event.query.get_or_404(event_id)
         user = User.query.filter_by(username=username).first()
+
+        # Check username exists within list of party members
         if user in event.party_members:
             event.party_members.remove(user)
             db.session.commit()
