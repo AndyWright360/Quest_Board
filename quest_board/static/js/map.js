@@ -1,9 +1,11 @@
 /*
-The following code was obtained from https://developers.google.com/maps/documentation/javascript/examples/advanced-markers-html and has been modified.
+The following code was obtained from Google Maps doucumentation and has been modified.
+Source - https://developers.google.com/maps/documentation/javascript/examples/advanced-markers-html
 */
 
+// Function to initialize the map
 async function initMap() {
-    // Set map zoom dependant on screen width
+    // Set map zoom dependent on screen width
     let mapZoom;
     if (window.innerWidth <= 750) {
         mapZoom = 8;
@@ -21,7 +23,9 @@ async function initMap() {
         mapId: "97b0dc5f1a34eb32",
     });
 
+    // Loop through locations array to create markers
     for (const location of locations) {
+        // Create marker for each location
         const AdvancedMarkerElement = new google.maps.marker.AdvancedMarkerElement({
             map,
             content: buildContent(location),
@@ -29,12 +33,14 @@ async function initMap() {
             title: location.name,
         });
 
+        // Add click event listener to toggle highlight
         AdvancedMarkerElement.addListener("click", () => {
             toggleHighlight(AdvancedMarkerElement, location);
         });
     }
 }
 
+// Function to toggle highlight class
 function toggleHighlight(markerView, location) {
     if (markerView.content.classList.contains("highlight")) {
         markerView.content.classList.remove("highlight");
@@ -45,6 +51,7 @@ function toggleHighlight(markerView, location) {
     }
 }
 
+// Function to build content for marker
 function buildContent(location) {
     const content = document.createElement("div");
 
@@ -64,6 +71,7 @@ function buildContent(location) {
     return content;
 }
 
+// Array containing location data
 const locations = [
     {
         address: "45 Castle Arcade, Cardiff CF10 1BW",
@@ -111,4 +119,5 @@ const locations = [
     }
 ];
 
+// Initialise the map
 initMap();

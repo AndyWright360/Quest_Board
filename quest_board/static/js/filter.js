@@ -1,5 +1,7 @@
-// Code obtained from https://codepen.io/tornadicshark/pen/XWboaRp?editors=1010 and modified to suit the project.
-// Credit - Kassandra Flanders
+/*
+Code obtained from https://codepen.io/tornadicshark/pen/XWboaRp?editors=1010 and modified to suit the project.
+Credit - Kassandra Flanders
+*/
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -89,7 +91,8 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     /*
-    This function checks the data-type attribute of each event card and compares it to each index value within the provided filter arrays. If a match is found, the card remains visible; otherwise, it is hidden.
+    Checks the data-type attribute of each event card and compares it to each index value within the provided filter arrays.
+    If a match is found, the card remains visible; otherwise, it is hidden.
     */
     function filter(locations, times, expLevels) {
         const event = document.getElementsByClassName("event-card");
@@ -166,7 +169,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     /*
-    This function checks if any events are currently displayed. If they are, it adds them to the matchFound array. If the matchFound array is empty, it displays the no results message.
+    Checks if any events are currently displayed. If they are, it adds them to the matchFound array.
+    If the matchFound array is empty, it displays the no results message.
     */
     function checkForNoMatches() {
         const events = document.getElementsByClassName("event-card");
