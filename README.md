@@ -410,6 +410,11 @@ Wireframes were generated using Balsamiq for desktop, tablet, and mobile screen 
 
 *Sidenav - Hover*
 
+<img src="documentation/features/nav-active-link.gif">
+<img src="documentation/features/sidenav-active-link.gif">
+
+*Active Links*
+
 </details>
 
 - **Alternative Colour Scheme:** Implemented a variation between red and green navbars to provide an alternative colour scheme across the site. This variation distinguishes between primary site pages (e.g. home page, events page) and secondary pages (e.g. edit events, sign up).
@@ -419,6 +424,8 @@ Wireframes were generated using Balsamiq for desktop, tablet, and mobile screen 
 - **Sidenav Design:** The sidenav was designed to resemble a medieval banner, aligning with the fantasy adventure visual theme of the website. This design element adds a thematic touch to the navigation experience.
 
 - **Logo Navigation:** The website logo serves as a consistent link to return home, ensuring easy navigation back to the home page from any section of the site. This contributes to a seamless user experience by providing a familiar and intuitive method of navigation.
+
+- **Active Links:** Utilised to aid users in navigating the site, making it easier for them to identify the current page they're viewing.
 
 #### **Flash Messages**
 
@@ -558,6 +565,10 @@ Wireframes were generated using Balsamiq for desktop, tablet, and mobile screen 
 
 *Input Pattern Recognition*
 
+<img src="documentation/features/confirm-password.gif">
+
+*Confirm Password*
+
 <img src="documentation/features/sign-up-navigation.gif">
 
 *Navigation*
@@ -575,6 +586,8 @@ Wireframes were generated using Balsamiq for desktop, tablet, and mobile screen 
 - **Helper Text:** Included helper text to clearly communicate character count requirements, aiding users in understanding input expectations.
 
 - **Pattern Recognition:** Implemented pattern recognition on input fields to ensure the submission of correct data. Notifying users if invalid characters are entered and guiding them to input valid information.
+
+- **Confirm Password:** Added to improve the sign-up user experience and prevent unintentional spelling errors when creating a user profile.
 
 - **Convenient Navigation:** Included links to the login/sign up page on both pages, ensuring easy navigation between pages and enhancing the user experience.
 
@@ -749,6 +762,10 @@ Wireframes were generated using Balsamiq for desktop, tablet, and mobile screen 
 
 *Colour-Coded Stamps*
 
+<img src="documentation/features/event-form-validation.gif">
+
+*Input Validation*
+
 </details>
 
 The form on this page incorporates several features aimed at helping users understand the required information and how to address any errors.
@@ -770,6 +787,8 @@ The form on this page incorporates several features aimed at helping users under
 - **Colour-Coded Stamps:** Images representing different experience levels are colour-coded like traffic lights. The intention was to create an intuitive understanding of each level's significance.
 
 - **Pre-populated Inputs:** When editing an event, the form fields will be pre-populated with the existing data. This feature eliminates the need for users to re-enter all information, enabling them to conveniently modify specific details as needed.
+
+- **Input Validation:** To guarantee that users provide the necessary data, validation checks were integrated into various inputs. These include prohibiting users from selecting an event date in the past, preventing the input of whitespace-only characters for text inputs, and disallowing text inputs from starting or ending with a space.
 
 ### **Error Pages**
 
@@ -816,6 +835,10 @@ Enable users to create and join parties with other members, fostering a stronger
 #### **Message System**
 
 Implement a messaging system within events and user parties, facilitating communication among players. This would enhance event organisation and coordination, allowing users to discuss plans and make arrangements with ease.
+
+#### **Background Image Backup**
+
+Given that many content containers rely on background images, there's a concern regarding font readability should these images fail to load. As the images have tranparent elements, the option to include a background colour wasn't available. To address this, I intend to implement a feature in the future as a failsafe measure. This could involve using JavaScript to check if the image has loaded, and if not, provide an alternative option. Alternatively, divs with background colors could be positioned absolutely behind the background image, using z-index to keep them hidden unless the image fails to load.
 
 ---
 
