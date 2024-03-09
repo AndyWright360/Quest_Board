@@ -424,13 +424,13 @@ Wireframes were generated using Balsamiq for desktop, tablet, and mobile screen 
 
 <details><summary>Screenshots</summary>
 
-<img>
+<img src="documentation/features/flash-messages.gif">
 
 *Flash Message*
 
 </details>
 
-- **Flash Messages:** Serve as a means of providing feedback to the user following the execution of an action, communicating the successful completion of the task.
+- **Flash Messages:** Serve as a communication tool by providing feedback to users after executing an action or correcting an error. They convey the successful completion of a task while also guiding users on how to input valid data.
 
 #### **Footer**
 
