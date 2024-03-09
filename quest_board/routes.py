@@ -269,6 +269,7 @@ Prevent logged out users from accessing the page,
 Check user has the relevant authorisation to delete the event,
 Removes event data from database
 """
+@app.route("/delete_event/<int:event_id>")
 def delete_event(event_id):
     event = Event.query.get_or_404(event_id)  # Check if the event exists
     if "user" in session: # Check if user is logged in
