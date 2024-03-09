@@ -42,14 +42,14 @@
                         id="burger-menu"></i></a>
                 <!-- Main Navbar -->
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li {% if request.endpoint == 'home' %} class="active-link" {% endif %}><a href="{{ url_for('home') }}">Home</a></li>
                     {% if session.user %}
-                        <li><a href="{{ url_for('events') }}">Events</a></li>
-                        <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
+                        <li {% if request.endpoint == 'events' %} class="active-link" {% endif %}><a href="{{ url_for('events') }}">Events</a></li>
+                        <li {% if request.endpoint == 'profile' %} class="active-link" {% endif %}><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                         <li><a href="{{ url_for('logout') }}">Log Out</a></li>
                     {% else %}
-                        <li><a href="{{ url_for('sign_up') }}">Sign Up</a></li>
-                        <li><a href="{{ url_for('log_in') }}">Log In</a></li>
+                        <li {% if request.endpoint == 'sign_up' %} class="active-link" {% endif %}><a href="{{ url_for('sign_up') }}">Sign Up</a></li>
+                        <li {% if request.endpoint == 'log_in' %} class="active-link" {% endif %}><a href="{{ url_for('log_in') }}">Log In</a></li>
                     {% endif %}
                 </ul>
             </div>
@@ -57,14 +57,14 @@
         <!-- Mobile Sidenav -->
         {% block sidenav_colour %}
         {% endblock %}
-            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li {% if request.endpoint == 'home' %} class="active-link" {% endif %}><a href="{{ url_for('home') }}">Home</a></li>
             {% if session.user %}
-                <li><a href="{{ url_for('events') }}">Events</a></li>
-                <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
+                <li {% if request.endpoint == 'events' %} class="active-link" {% endif %}><a href="{{ url_for('events') }}">Events</a></li>
+                <li {% if request.endpoint == 'profile' %} class="active-link" {% endif %}><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                 <li><a href="{{ url_for('logout') }}">Log Out</a></li>
             {% else %}
-                <li><a href="{{ url_for('sign_up') }}">Sign Up</a></li>
-                <li><a href="{{ url_for('log_in') }}">Log In</a></li>
+                <li {% if request.endpoint == 'sign_up' %} class="active-link" {% endif %}><a href="{{ url_for('sign_up') }}">Sign Up</a></li>
+                <li {% if request.endpoint == 'log_in' %} class="active-link" {% endif %}><a href="{{ url_for('log_in') }}">Log In</a></li>
             {% endif %}
         </ul>
     </header>
