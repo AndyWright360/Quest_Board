@@ -5,13 +5,30 @@ from quest_board import app, db
 from quest_board.models import User, Event
 
 
+"""
+Render home page
+"""
 @app.route("/")
 def home():
     return render_template("index.html")
 
 
+"""
+Prevent logged in users from accessing the page,
+Retrieves data from user inputs,
+Checks if both password inputs match,
+Checks if username already exists in the database,
+On unsuccessful validation reload page with flash message,
+Stores user details in database if validations pass,
+Stores username in session cookie,
+Redirects user to profile page
+"""
 @app.route("/sign_up", methods=["GET", "POST"])
 def sign_up():
+    if "user" in session: # Checks if user is logged in
+        flash("You're already logged in")
+        return redirect(url_for("profile", username=session["user"]))
+
     if request.method == "POST":
         username = request.form.get("username").lower()
         password = request.form.get("password")
@@ -46,8 +63,20 @@ def sign_up():
         return render_template("sign_up.html")
 
 
+"""
+Prevent logged in users from accessing the page,
+Retrieves data from user inputs,
+Search database for matching username,
+Checks password input against stored data,
+On successful validation redirect user to profile page,
+On unsuccessful validation reload login page with flash message
+"""
 @app.route("/log_in", methods=["GET", "POST"])
 def log_in():
+    if "user" in session: # Checks if user is logged in
+        flash("You're already logged in")
+        return redirect(url_for("profile", username=session["user"]))
+
     if request.method == "POST":
         username = request.form.get("username").lower()
         password = request.form.get("password")
@@ -76,9 +105,14 @@ def log_in():
         return render_template("log_in.html")
 
 
-@app.route("/profile/<username>", methods=["GET", "POST"])
+"""
+Prevent logged out users from accessing the page,
+Search database for user object that matches the username,
+Retrive all events associated with the user and pass them through to the profile page
+"""
+@app.route("/profile/<username>")
 def profile(username):
-    if "user" in session:
+    if "user" in session: # Checks if user is logged in
         # Retrieve the user object from the database
         user = User.query.filter_by(username=session["user"]).first()
 
@@ -93,21 +127,36 @@ def profile(username):
                                joined_events=joined_events)
 
     else:
+        flash("You need to be logged in to access this page")
         return redirect(url_for("log_in"))
 
 
+"""
+Prevent users who aren't logged in from accessing the function,
+Removes the username from the session cookie
+"""
 @app.route("/logout")
 def logout():
-    # Remove user from session cookies
-    flash("You have been logged out")
-    session.pop("user")
-    return redirect(url_for("log_in"))
+    if "user" in session:  # Check if user is logged in
+        # Remove user from session cookies
+        flash("You have been logged out")
+        session.pop("user")
+        return redirect(url_for("log_in"))
+    else:
+        flash("You need to be logged in to log out")
+        return redirect(url_for("log_in"))
 
 
+"""
+Prevent logged out users from accessing the page,
+Prevent date input from being in the past,
+Checks text inputs contain valid data,
+Posts event data to relevant database table
+"""
 @app.route("/create_event", methods=["GET", "POST"])
 def create_event():
-    if request.method == "POST":
-        if "user" in session:  # Check if user is logged in
+    if "user" in session: # Check if user is logged in
+        if request.method == "POST":
             event_date = datetime.strptime(request.form.get("date"), "%d %b, %Y").date()
             event_name = request.form.get("event_name")
             description = request.form.get("description")
@@ -118,12 +167,12 @@ def create_event():
                 return redirect(url_for("create_event"))
             
             # Check if text inputs are only white spaces
-            elif event_name.strip() == "" or description.strip() == "":
+            if event_name.strip() == "" or description.strip() == "":
                 flash("Inputs must not be empty")
                 return redirect(url_for("create_event"))
 
             # Check if text inputs start or end with spaces
-            elif event_name != event_name.strip() or description != description.strip():
+            if event_name != event_name.strip() or description != description.strip():
                 flash("Inputs must not start or end with spaces")
                 return redirect(url_for("create_event"))
 
@@ -143,15 +192,25 @@ def create_event():
             return redirect(url_for("events"))
 
         else:
-            flash("You need to be logged in to create an event")
-            return redirect(url_for("log_in"))  # Redirect to login page if user is not logged in
+            return render_template("create_event.html")
+
     else:
-        return render_template("create_event.html")
+        flash("You need to be logged in to create an event")
+        return redirect(url_for("log_in"))
 
 
+"""
+Check that the event exists within the database,
+Prevent logged out users from accessing the page,
+Check user has the relevant authorisation to edit the event,
+Prevent user from reducing party size below number of currently joined party members,
+Prevent date input from being in the past,
+Checks text inputs contain valid data,
+Posts updated event data to relevant database table
+"""
 @app.route("/edit_event/<int:event_id>", methods=["GET", "POST"])
 def edit_event(event_id):
-    event = Event.query.get_or_404(event_id)
+    event = Event.query.get_or_404(event_id) # Check if the event exists
     if "user" in session:  # Check if user is logged in
 
         # Check user is authorised to edit the event
@@ -168,17 +227,17 @@ def edit_event(event_id):
                     return redirect(url_for("edit_event", event_id=event_id))
 
                 # Check event date against current date
-                elif new_event_date < datetime.today().date():
+                if new_event_date < datetime.today().date():
                     flash("Event date cannot be in the past")
                     return redirect(url_for("edit_event", event_id=event_id))
                 
                 # Check if text inputs are only white spaces
-                elif new_event_name.strip() == "" or new_description.strip() == "":
+                if new_event_name.strip() == "" or new_description.strip() == "":
                     flash("Inputs must not be empty")
                     return redirect(url_for("edit_event", event_id=event_id))
 
                 # Check if text inputs start or end with spaces
-                elif new_event_name != new_event_name.strip() or new_description != new_description.strip():
+                if new_event_name != new_event_name.strip() or new_description != new_description.strip():
                     flash("Inputs must not start or end with spaces")
                     return redirect(url_for("edit_event", event_id=event_id))
                         
@@ -197,31 +256,41 @@ def edit_event(event_id):
             else:
                 return render_template("edit_event.html", event=event)
         else:
-            flash("You are not authorised to edit this event")
+            flash("You're not authorised to edit this event")
             abort(403)  # Forbidden access
     else:
         flash("You need to be logged in to edit an event")
-        return redirect(url_for("log_in"))  # Redirect to login page if user is not logged in
+        return redirect(url_for("log_in"))
 
 
-@app.route("/delete_event/<int:event_id>")
+"""
+Check that the event exists within the database,
+Prevent logged out users from accessing the page,
+Check user has the relevant authorisation to delete the event,
+Removes event data from database
+"""
 def delete_event(event_id):
+    event = Event.query.get_or_404(event_id)  # Check if the event exists
     if "user" in session: # Check if user is logged in
-        event = Event.query.get_or_404(event_id)
 
         # Check user is authorised to delete the event
         if session["user"] == event.created_by or session["user"] == "admin":
             db.session.delete(event)
             db.session.commit()
             flash("Event deleted successfully")
+            return redirect(url_for("events"))
         else:
-            flash("You are not authorised to delete this event")
+            flash("You're not authorised to delete this event")
             abort(403) # Forbidden access
     else:
         flash("You need to be logged in to delete an event")
-    return redirect(url_for("events"))
+        return redirect(url_for("log_in"))
 
 
+"""
+Prevent logged out users from accessing the page,
+Retrieve list of all events and pass them through to events page
+"""
 @app.route("/events")
 def events():
     if "user" in session: # Check if user is logged in
@@ -232,6 +301,10 @@ def events():
         return redirect(url_for("log_in"))
 
 
+"""
+Prevent logged out users from accessing the page,
+Retrieve event matching relevant id and pass it through to event page
+"""
 @app.route("/event/<int:event_id>")
 def event(event_id):
     if "user" in session: # Check if user is logged in
@@ -242,12 +315,16 @@ def event(event_id):
         return redirect(url_for("log_in"))
 
 
+"""
+Prevent logged out users from accessing the page,
+Check if username exists within user table,
+Add relevant username to party_members table
+"""
 @app.route("/join_event/<int:event_id>", methods=["POST"])
 def join_event(event_id):
     if "user" in session: # Check if user is logged in
-        username = session["user"]
         event = Event.query.get_or_404(event_id)
-        user = User.query.filter_by(username=username).first()
+        user = User.query.filter_by(username=session["user"]).first()
 
         # Check username exists, if so add them to party member list
         if user:
@@ -263,12 +340,16 @@ def join_event(event_id):
         return redirect(url_for('log_in'))
 
 
+"""
+Prevent logged out users from accessing the page,
+Check if username exists within party_members table,
+Remove relevant username from party_members table
+"""
 @app.route("/leave_event/<int:event_id>", methods=["POST"])
 def leave_event(event_id):
     if "user" in session: # Check if user is logged in
-        username = session["user"]
         event = Event.query.get_or_404(event_id)
-        user = User.query.filter_by(username=username).first()
+        user = User.query.filter_by(username=session["user"]).first()
 
         # Check username exists within list of party members
         if user in event.party_members:
@@ -281,24 +362,36 @@ def leave_event(event_id):
             return redirect(url_for('event', event_id=event_id))
     else:
         flash("You need to be logged in to leave an event")
-        return redirect(url_for('event', event_id=event_id))
+        return redirect(url_for('log_in'))
 
 
+"""
+Render custom error page when corresponding error detected
+"""
 @app.errorhandler(400)
-def bad_request_error(error):
+def bad_request(error):
     return render_template('400.html'), 400
 
 
+"""
+Render custom error page when corresponding error detected
+"""
 @app.errorhandler(403)
-def forbidden_error(error):
+def forbidden(error):
     return render_template('403.html'), 403
 
 
+"""
+Render custom error page when corresponding error detected
+"""
 @app.errorhandler(404)
-def not_found_error(error):
+def page_not_found(error):
     return render_template('404.html'), 404
 
 
+"""
+Render custom error page when corresponding error detected
+"""
 @app.errorhandler(500)
-def internal_server_error(error):
+def internal_server(error):
     return render_template('500.html'), 500
