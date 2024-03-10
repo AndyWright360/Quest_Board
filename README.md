@@ -687,6 +687,10 @@ Enable users to create and join parties with other members, fostering a stronger
 
 Implement a messaging system within events and user parties, facilitating communication among players. This would enhance event organisation and coordination, allowing users to discuss plans and make arrangements with ease.
 
+#### **Auto Delete Expired Events**
+
+In the future, I aim to implement a feature that automatically deletes expired events. This would eliminate the need for event creators or administrators to manually remove events, as it could be handled systematically.
+
 #### **Background Image Failsafe**
 
 Given that many content containers rely on background images, there's a concern regarding font readability should these images fail to load. As the images have tranparent elements, the option to include a background colour wasn't available. To address this, I intend to implement a feature in the future as a failsafe measure. This could involve using JavaScript to check if the image has loaded, and if not, provide an alternative option. Alternatively, divs with background colors could be positioned absolutely behind the background image, using z-index to keep them hidden unless the image fails to load.
