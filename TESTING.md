@@ -422,10 +422,18 @@ I noticed that the text within buttons moved as the scale increased on mouse hov
 
 After including the popover messages to the Create Event page, I encountered this bug. After the size of the page window had been reduced, the width of the body exceeded the display width, creating horizontal page scroll. This occurred even though no content on the page was being pushed outside the display. 
 
-As far as I could tell, the page wasn't resizing the popover content correctly. Upon reloading the page, the horizontal scroll would disappear. The fix I implemented to was to apply `overflow-x: hidden` to the body element. 
+As far as I could tell, the page wasn't resizing the popover content correctly. Upon reloading the page, the horizontal scroll would disappear. The fix I implemented to was to apply `overflow-x: hidden` to the body element.
+
+#### **Navbar Link Bug**
+
+![Navbar Link Bug](documentation/testing/navbar-bug.gif)
+
+This issue occurred after I changed the "id" attribute to a "class" attribute for the board trim on the events page. The reason behind this change was to address a situation where both sets of boards were being displayed simultaneously on the profile page. Instead of using unique IDs to target each side of the trim and corner plates, I opted for class names. However, one of these class names inadvertently matched a Materialize class associated with navbar links. Consequently, the CSS styling intended for the board trim was also affecting the position of the navbar links. To resolve this, I assigned alternative class names to the board trim and corner plates.
 
 ### **Known Bugs**
 
-#### **Bug**
+#### **Section Pixel Bug**
 
-![Bug]()
+![Section Pixel Bug](documentation/testing/section-pixel-bug.jpg)
+
+Despite thorough research, I couldn't find a definitive solution to this issue. It occurs when two sections with the same background color connect, resulting in occasional misalignment and a 1 or 2-pixel white line gap between them. The size of this gap varies based on the width of the display screen. To mitigate this, I adjusted the height of the header section, which removed it from the range of display widths that the site can be viewed. However, I'm unsure if this would fix the issue across all browsers.
