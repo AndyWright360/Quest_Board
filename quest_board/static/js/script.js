@@ -31,7 +31,7 @@ $(document).ready(function () {
     function autoplay() {
         $('.carousel').carousel('next');
         setTimeout(autoplay, 5000);
-    };
+    }
 
     // Function sourced from Code Institute Non-Relational Database TaskManager Project.
     validateMaterializeSelect();
@@ -80,4 +80,4 @@ const shrink = function () {
 for (let i = 0; i < icons.length; i++) {
     icons[i].addEventListener("mouseenter", grow);
     icons[i].addEventListener("mouseleave", shrink);
-};
+}

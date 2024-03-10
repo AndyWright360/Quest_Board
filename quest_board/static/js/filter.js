@@ -87,8 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // Apply filters if any are selected
             filter(locationFilters, timeFilters, expFilters);
         }
-
-    };
+    }
 
     /*
     Checks the data-type attribute of each event card and compares it to each index value within the provided filter arrays.
