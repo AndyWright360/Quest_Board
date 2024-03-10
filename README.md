@@ -886,6 +886,14 @@ pip3 install -r requirements.txt
 
   - This tutorial helped me to understand how to check if a username already existed within a PostgreSQL database.
 
+- [Many-to-Many Relationships in SQLAlchemy by Warren Zhang](https://medium.com/@warrenzhang17/many-to-many-relationships-in-sqlalchemy-ba08f8e9ccf7)
+
+  - This helped me understand how to utilise association tables to establish a many-to-many relationship between my primary tables.
+
+- [Python datetime by Programiz](https://www.programiz.com/python-programming/datetime)
+
+  - Improved my knowledge of how to use Python datetime methods and compare the values of dates.
+
 ### **Content**
 
 All content for the website was written by the developer Andrew Wright.
