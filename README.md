@@ -152,203 +152,37 @@ At the heart of the site's concept was the idea of adventurers receiving quests 
 
 Wireframes were generated using Balsamiq for desktop, tablet, and mobile screen dimensions, ensuring a responsive design. This method aids in visualising and configuring the layout, allowing for a more uniformed user experience across various devices.
 
-#### **Desktop**
+#### **Home Page**
 
-<details><summary>Home Page</summary>
+![Home page wireframes](documentation/wireframes/home.png)
 
-<img src="documentation/wireframes/home-dt.png">
+#### **Events Page**
 
-*Home Page*
+![Events page wireframes](documentation/wireframes/events.png)
 
-</details>
+#### **Event Page**
 
-<details><summary>Events Page</summary>
+![Event page wireframes](documentation/wireframes/event.png)
 
-<img src="documentation/wireframes/events-dt.png">
+#### **Create Event Page**
 
-*Events Page*
+![Create event page wireframes](documentation/wireframes/create-event.png)
 
-</details>
+#### **Edit Event Page**
 
-<details><summary>Create Event Page</summary>
+![Edit event page wireframes](documentation/wireframes/edit-event.png)
 
-<img src="documentation/wireframes/create-event-dt.png">
+#### **Sign Up Page**
 
-*Create Event Page*
+![Sign up page wireframes](documentation/wireframes/sign-up.png)
 
-</details>
+#### **Login Page**
 
-<details><summary>Selected Event Page</summary>
+![Login page wireframes](documentation/wireframes/login.png)
 
-<img src="documentation/wireframes/selected-event-dt.png">
+#### **Profile Page**
 
-*Selected Event Page*
-
-</details>
-
-<details><summary>Edit Event Page</summary>
-
-<img src="documentation/wireframes/edit-event-dt.png">
-
-*Edit Event Page*
-
-</details>
-
-<details><summary>Sign Up Page</summary>
-
-<img src="documentation/wireframes/sign-up-dt.png">
-
-*Sign Up Page*
-
-</details>
-
-<details><summary>Login Page</summary>
-
-<img src="documentation/wireframes/login-dt.png">
-
-*Login Page*
-
-</details>
-
-<details><summary>Profile Page</summary>
-
-<img src="documentation/wireframes/profile-dt.png">
-
-*Profile Page*
-
-</details>
-
-#### **Tablet**
-
-<details><summary>Home Page</summary>
-
-<img src="documentation/wireframes/home-tab.png">
-
-*Home Page*
-
-</details>
-
-<details><summary>Events Page</summary>
-
-<img src="documentation/wireframes/events-tab.png">
-
-*Events Page*
-
-</details>
-
-<details><summary>Create Event Page</summary>
-
-<img src="documentation/wireframes/create-event-tab.png">
-
-*Create Event Page*
-
-</details>
-
-<details><summary>Selected Event Page</summary>
-
-<img src="documentation/wireframes/selected-event-tab.png">
-
-*Selected Event Page*
-
-</details>
-
-<details><summary>Edit Event Page</summary>
-
-<img src="documentation/wireframes/edit-event-tab.png">
-
-*Edit Event Page*
-
-</details>
-
-<details><summary>Sign Up Page</summary>
-
-<img src="documentation/wireframes/sign-up-tab.png">
-
-*Sign Up Page*
-
-</details>
-
-<details><summary>Login Page</summary>
-
-<img src="documentation/wireframes/login-tab.png">
-
-*Login Page*
-
-</details>
-
-<details><summary>Profile Page</summary>
-
-<img src="documentation/wireframes/profile-tab.png">
-
-*Profile Page*
-
-</details>
-
-#### **Mobile**
-
-<details><summary>Home Page</summary>
-
-<img src="documentation/wireframes/home-mob.png">
-
-*Home Page*
-
-</details>
-
-<details><summary>Events Page</summary>
-
-<img src="documentation/wireframes/events-mob.png">
-
-*Events Page*
-
-</details>
-
-<details><summary>Create Event Page</summary>
-
-<img src="documentation/wireframes/create-event-mob.png">
-
-*Create Event Page*
-
-</details>
-
-<details><summary>Selected Event Page</summary>
-
-<img src="documentation/wireframes/selected-event-mob.png">
-
-*Selected Event Page*
-
-</details>
-
-<details><summary>Edit Event Page</summary>
-
-<img src="documentation/wireframes/edit-event-mob.png">
-
-*Edit Event Page*
-
-</details>
-
-<details><summary>Sign Up Page</summary>
-
-<img src="documentation/wireframes/sign-up-mob.png">
-
-*Sign Up Page*
-
-</details>
-
-<details><summary>Login Page</summary>
-
-<img src="documentation/wireframes/login-mob.png">
-
-*Login Page*
-
-</details>
-
-<details><summary>Profile Page</summary>
-
-<img src="documentation/wireframes/profile-mob.png">
-
-*Profile Page*
-
-</details>
+![Profile page wireframes](documentation/wireframes/profile.png)
 
 ---
 
@@ -836,7 +670,7 @@ Enable users to create and join parties with other members, fostering a stronger
 
 Implement a messaging system within events and user parties, facilitating communication among players. This would enhance event organisation and coordination, allowing users to discuss plans and make arrangements with ease.
 
-#### **Background Image Backup**
+#### **Background Image Failsafe**
 
 Given that many content containers rely on background images, there's a concern regarding font readability should these images fail to load. As the images have tranparent elements, the option to include a background colour wasn't available. To address this, I intend to implement a feature in the future as a failsafe measure. This could involve using JavaScript to check if the image has loaded, and if not, provide an alternative option. Alternatively, divs with background colors could be positioned absolutely behind the background image, using z-index to keep them hidden unless the image fails to load.
 
