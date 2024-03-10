@@ -798,6 +798,62 @@ For a detailed overview of all conducted testing, please refer to the [TESTING.m
 
 ---
 
+## **Deployment & Local Development**
+
+### **Deployment to Heroku**
+
+### **Local Development**
+
+#### **How to Fork**
+
+Forking the GitHub Repository allows for changes to be made without altering the original repository. To do this please follow the following steps:
+
+1. Log in to GitHub.
+
+2. Locate the relevant repository for this project [Quest Board](https://github.com/AndyWright360/Quest_Board).
+
+3. Select the '**Fork**' button located towards the top right of the repository.
+
+4. You should now have a copy of the original repository in your GitHub account.
+
+#### **How to Clone**
+
+To clone this project, please follow the steps below:
+
+1. Log in to GitHub.
+
+2. Locate the relevant repository for this project [Quest Board](https://github.com/AndyWright360/Quest_Board).
+
+3. Click on the green '**Code**' drop-down button.
+
+4. Select the '**Local**' tab in the window that appears.
+
+5. Select the option '**HTTPS**' and copy the link shown.
+
+6. Open the terminal in your IDE of choice.
+
+7. Change the current working directory to the location you want to use for the cloned directory.
+
+8. Type '**git clone**' into the terminal and then paste the link you copied in Step 5.
+
+```bash
+git clone (relavant link)
+```
+
+9. Press enter.
+
+10. Set up a virtual environment.
+
+**NB: If you're using the Code Institute Template in GitPod, you can proceed directly to the next step as the virtual environment is pre-configured for you.**
+
+11. Install the required packages listed in the requirements.txt file by executing the following command in the Terminal:
+
+```bash
+pip3 install -r requirements.txt
+```
+
+---
+
 ## **Credits**
 
 ### **Code Used** 
