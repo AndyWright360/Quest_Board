@@ -189,6 +189,18 @@ Wireframes were generated using Balsamiq for desktop, tablet, and mobile screen 
 
 ![Profile page wireframes](documentation/wireframes/profile.png)
 
+### **User Journey**
+
+![User Journey](documentation/user-journey.jpeg)
+
+This navigation blueprint was created for the website to help establish how each page would be connected. The design concept positions the events page as the central hub, providing access to all features available on the website.
+
+### **Database Schema**
+
+![Database Schema](documentation/database.jpeg)
+
+A relational database schema was implemented using PostgreSQL, featuring primary tables for Users and Events. This design choice aimed to establish a connection between users and events. To facilitate this relationship, an association table named 'event_user' was introduced, enabling a many-to-many relationship between users and events. In this setup, users have the ability to create multiple events, while events can be joined by multiple users.
+
 ---
 
 ## **Features**
