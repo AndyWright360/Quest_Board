@@ -833,8 +833,9 @@ select {
     display: none;
     -webkit-display: none;
     -moz-display: none;
-    -ms-display: none;
-    -o-display: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
 }
 
 /* Dropdown table background */
