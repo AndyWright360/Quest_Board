@@ -224,6 +224,7 @@ nav ul a:hover {
 
 .active-link {
     text-decoration: underline var(--white) 2px;
+    -webkit-text-decoration: underline var(--white) 2px;
     text-underline-offset: 5px;
 }
 
