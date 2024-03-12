@@ -82,7 +82,7 @@ button:focus-visible {
 /*---------- Buttons ----------*/
 
 .event-button {
-    background-image: url(../images/button.png);
+    background-image: url(../images/button.webp);
     background-size: 100% 100%;
     padding: 7px 15px 2px;
     background-color: transparent;
@@ -116,12 +116,12 @@ button:focus-visible {
 
 .edit {
     margin-bottom: auto;
-    background-image: url(../images/green-button.png);
+    background-image: url(../images/green-button.webp);
 }
 
 .delete {
     margin-top: auto;
-    background-image: url(../images/red-button.png);
+    background-image: url(../images/red-button.webp);
 }
 
 .submit {
@@ -230,11 +230,11 @@ nav ul a:hover {
 /*---------- Side Nav ----------*/
 
 .red-sidenav {
-    background: url(../images/banner.png);
+    background: url(../images/banner.webp);
 }
 
 .green-sidenav {
-    background: url(../images/banner-alt.png);
+    background: url(../images/banner-alt.webp);
 }
 
 .sidenav {
@@ -278,7 +278,7 @@ nav ul a:hover {
 /*---------- Hero Section ----------*/
 
 .hero-container {
-    background: url(../images/hero.jpg);
+    background: url(../images/hero.webp);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -309,7 +309,7 @@ nav ul a:hover {
 /*---------- Heading Section ----------*/
 
 .heading-container {
-    background-image: url(../images/title-bg.png);
+    background-image: url(../images/title-bg.webp);
     background-repeat: repeat-x;
     background-position: center bottom;
     height: 253px;
@@ -387,7 +387,7 @@ nav ul a:hover {
     max-width: 1200px;
     min-width: 310px;
     position: relative;
-    background-image: url(../images/board-bg.png);
+    background-image: url(../images/board-bg.webp);
     background-color: var(--light-brown);
 }
 
@@ -425,22 +425,22 @@ nav ul a:hover {
 
 .top-border {
     top: 0;
-    background-image: url(../images/metal-trim-top.png);
+    background-image: url(../images/metal-trim-top.webp);
 }
 
 .bottom-border {
     bottom: 0;
-    background-image: url(../images/metal-trim-bottom.png);
+    background-image: url(../images/metal-trim-bottom.webp);
 }
 
 .left-border {
     left: 0;
-    background-image: url(../images/metal-trim-left.png);
+    background-image: url(../images/metal-trim-left.webp);
 }
 
 .right-border {
     right: 0;
-    background-image: url(../images/metal-trim-right.png);
+    background-image: url(../images/metal-trim-right.webp);
 }
 
 .corner {
@@ -471,7 +471,7 @@ nav ul a:hover {
 /*---------- Event Card ----------*/
 
 .event-card {
-    background-image: url(../images/paper.png);
+    background-image: url(../images/paper.webp);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     color: var(--brown);
@@ -670,7 +670,7 @@ nav ul a:hover {
     width: 90%;
     max-width: 600px;
     min-width: 300px;
-    background-image: url(../images/paper.png);
+    background-image: url(../images/paper.webp);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     padding: 50px;

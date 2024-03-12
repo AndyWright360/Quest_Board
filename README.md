@@ -1,6 +1,6 @@
 # **Quest Board** <!-- omit in toc -->
 
-![Quest Board logo](quest_board/static/images/logo.png)
+![Quest Board logo](quest_board/static/images/logo.webp)
 
 ## **Welcome to Quest Board: Your Gateway to D&D Adventures in South Wales** <!-- omit in toc -->
 

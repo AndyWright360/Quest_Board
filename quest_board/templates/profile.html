@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block logo %}
-    <img class="logo" src="{{ url_for('static', filename='images/logo.png') }}"
+    <img class="logo" src="{{ url_for('static', filename='images/logo.webp') }}"
         alt="A wooden shield with paper nailed to the center. A green letter Q is painted on the paper">
 {% endblock %}
 
@@ -31,10 +31,10 @@
                 <div class="border right-border"></div>
                 <div class="border bottom-border"></div>
                 <!-- Border Corners -->
-                <img src="{{ url_for('static', filename='images/metal-corner.png') }}" alt="A gold square corner plate" class="corner top-left-corner">
-                <img src="{{ url_for('static', filename='images/metal-corner.png') }}" alt="A gold square corner plate" class="corner top-right-corner">
-                <img src="{{ url_for('static', filename='images/metal-corner.png') }}" alt="A gold square corner plate" class="corner bottom-left-corner">
-                <img src="{{ url_for('static', filename='images/metal-corner.png') }}" alt="A gold square corner plate" class="corner bottom-right-corner">
+                <img src="{{ url_for('static', filename='images/metal-corner.webp') }}" alt="A gold square corner plate" class="corner top-left-corner">
+                <img src="{{ url_for('static', filename='images/metal-corner.webp') }}" alt="A gold square corner plate" class="corner top-right-corner">
+                <img src="{{ url_for('static', filename='images/metal-corner.webp') }}" alt="A gold square corner plate" class="corner bottom-left-corner">
+                <img src="{{ url_for('static', filename='images/metal-corner.webp') }}" alt="A gold square corner plate" class="corner bottom-right-corner">
                 <div class="container-padding">
                     {% if created_events|length == 0 %}
                         <!-- No Events Message -->
@@ -85,11 +85,11 @@
 
                                 <div class="event-section-7">
                                     {% if event.exp_level == 'beginner' %}
-                                        <a href="{{ url_for('event', event_id=event.id) }}"><img src="{{ url_for('static', filename='images/seal-green.png') }}" class="event-stamp" alt="Beginner Seal"></a>
+                                        <a href="{{ url_for('event', event_id=event.id) }}"><img src="{{ url_for('static', filename='images/seal-green.webp') }}" class="event-stamp" alt="Beginner Seal"></a>
                                     {% elif event.exp_level == 'everyone' %}
-                                        <a href="{{ url_for('event', event_id=event.id) }}"><img src="{{ url_for('static', filename='images/seal-yellow.png') }}" class="event-stamp" alt="Everyone Seal"></a>
+                                        <a href="{{ url_for('event', event_id=event.id) }}"><img src="{{ url_for('static', filename='images/seal-yellow.webp') }}" class="event-stamp" alt="Everyone Seal"></a>
                                     {% elif event.exp_level == 'experienced' %}
-                                        <a href="{{ url_for('event', event_id=event.id) }}"><img src="{{ url_for('static', filename='images/seal-red.png') }}" class="event-stamp"
+                                        <a href="{{ url_for('event', event_id=event.id) }}"><img src="{{ url_for('static', filename='images/seal-red.webp') }}" class="event-stamp"
                                             alt="Experienced Seal"></a>
                                     {% endif %}
                                 </div>
@@ -112,10 +112,10 @@
                 <div class="border right-border"></div>
                 <div class="border bottom-border"></div>
                 <!-- Border Corners -->
-                <img src="{{ url_for('static', filename='images/metal-corner.png') }}" alt="A gold square corner plate" class="corner top-left-corner">
-                <img src="{{ url_for('static', filename='images/metal-corner.png') }}" alt="A gold square corner plate" class="corner top-right-corner">
-                <img src="{{ url_for('static', filename='images/metal-corner.png') }}" alt="A gold square corner plate" class="corner bottom-left-corner">
-                <img src="{{ url_for('static', filename='images/metal-corner.png') }}" alt="A gold square corner plate" class="corner bottom-right-corner">
+                <img src="{{ url_for('static', filename='images/metal-corner.webp') }}" alt="A gold square corner plate" class="corner top-left-corner">
+                <img src="{{ url_for('static', filename='images/metal-corner.webp') }}" alt="A gold square corner plate" class="corner top-right-corner">
+                <img src="{{ url_for('static', filename='images/metal-corner.webp') }}" alt="A gold square corner plate" class="corner bottom-left-corner">
+                <img src="{{ url_for('static', filename='images/metal-corner.webp') }}" alt="A gold square corner plate" class="corner bottom-right-corner">
                 <div class="container-padding">
                     {% if joined_events|length == 0 %}
                         <!-- No Events Message -->
@@ -153,11 +153,11 @@
                                 </div>
                                 <div class="event-section-7">
                                     {% if event.exp_level == 'beginner' %}
-                                        <a href="{{ url_for('event', event_id=event.id) }}"><img src="{{ url_for('static', filename='images/seal-green.png') }}" class="event-stamp" alt="Beginner Seal"></a>
+                                        <a href="{{ url_for('event', event_id=event.id) }}"><img src="{{ url_for('static', filename='images/seal-green.webp') }}" class="event-stamp" alt="Beginner Seal"></a>
                                     {% elif event.exp_level == 'everyone' %}
-                                        <a href="{{ url_for('event', event_id=event.id) }}"><img src="{{ url_for('static', filename='images/seal-yellow.png') }}" class="event-stamp" alt="Everyone Seal"></a>
+                                        <a href="{{ url_for('event', event_id=event.id) }}"><img src="{{ url_for('static', filename='images/seal-yellow.webp') }}" class="event-stamp" alt="Everyone Seal"></a>
                                     {% elif event.exp_level == 'experienced' %}
-                                        <a href="{{ url_for('event', event_id=event.id) }}"><img src="{{ url_for('static', filename='images/seal-red.png') }}" class="event-stamp"
+                                        <a href="{{ url_for('event', event_id=event.id) }}"><img src="{{ url_for('static', filename='images/seal-red.webp') }}" class="event-stamp"
                                             alt="Experienced Seal"></a>
                                     {% endif %}
                                 </div>

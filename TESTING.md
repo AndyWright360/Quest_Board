@@ -1,6 +1,6 @@
 # **Quest Board - Testing** <!-- omit in toc -->
 
-![Quest Board logo](quest_board/static/images/logo-alt.png)
+![Quest Board logo](quest_board/static/images/logo-alt.webp)
 
 ![Quest Board displayed on miltiple devices]()
 
