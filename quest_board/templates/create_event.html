@@ -14,13 +14,13 @@
 {% endblock %}
 
 {% block content %}
-    <!-- HEADING -->
-    <div class="heading-container red-bg brown-font">
-        <h1>Create Event</h1>
-    </div>
-
-    <!-- CREATE EVENT FORM -->
     <section>
+        <!-- HEADING -->
+        <div class="heading-container red-bg brown-font">
+            <h1>Create Event</h1>
+        </div>
+
+        <!-- CREATE EVENT FORM -->
         <div class="red-bg section-container">
             <div class="form-container white-bg">
                 <form id="event-form" method="POST" action="{{ url_for('create_event') }}">

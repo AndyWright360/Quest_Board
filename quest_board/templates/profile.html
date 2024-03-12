@@ -20,151 +20,147 @@
     </div>
 
     <!-- YOUR EVENTS SECTION -->
-    <section>
-        <div class="section-container green-bg">
-            <h2 class="profile-heading">Your Events</h2>
-            <a href="{{ url_for('create_event') }}" class="event-button create">CREATE EVENT</a>
-            <div class="event-board">
-                <!-- Border Trim -->
-                <div class="border top-border"></div>
-                <div class="border left-border"></div>
-                <div class="border right-border"></div>
-                <div class="border bottom-border"></div>
-                <!-- Border Corners -->
-                <img src="{{ url_for('static', filename='images/metal-corner.webp') }}" alt="A gold square corner plate" class="corner top-left-corner">
-                <img src="{{ url_for('static', filename='images/metal-corner.webp') }}" alt="A gold square corner plate" class="corner top-right-corner">
-                <img src="{{ url_for('static', filename='images/metal-corner.webp') }}" alt="A gold square corner plate" class="corner bottom-left-corner">
-                <img src="{{ url_for('static', filename='images/metal-corner.webp') }}" alt="A gold square corner plate" class="corner bottom-right-corner">
-                <div class="container-padding">
-                    {% if created_events|length == 0 %}
-                        <!-- No Events Message -->
-                        <p class="no-events">You don't currently have any events created.<br>Why not create one?</p>
-                    {% else %}
-                        {% for event in created_events %}
-                            <!-- Event Card -->
-                            <div class="event-card brown-font">
-                                <div class="event-card-header">
-                                    <h2 class="event-title">{{ event.event_name }}</h2>
-                                </div>
-                                <div class="event-section-1">
-                                    <p class="event-creator">Created by:<br>{{ event.created_by.capitalize() }}</p>
-                                </div>
-                                <div class="event-section-2">
-                                    <i class="fa-solid fa-location-dot event-icon"></i>
-                                    <p class="event-info">{{ event.location.capitalize() }}</p>
-                                </div>
-                                <div class="event-section-3">
-                                    <i class="fa-regular fa-calendar event-icon"></i>
-                                    <p class="event-info">{{ event.date.strftime("%-d/%-m/%y") }}</p>
-                                </div>
-                                <div class="event-section-4">
-                                    <i class="fa-regular fa-clock event-icon"></i>
-                                    <p class="event-info">{{ event.time }}</p>
-                                </div>
-                                <div class="event-section-5">
-                                    <i class="fa-solid fa-people-group event-icon"></i>
-                                    <p class="event-info">{{ event.party_members|length }}/{{ event.party_size }}</p>
-                                </div>
-                                <div class="event-section-6">
-                                    <a href="{{ url_for('edit_event', event_id=event.id) }}" class="event-button edit">EDIT</a>
-                                    <!-- Modal Trigger -->
-                                    <a href="#modal-{{ event.id }}" class="event-button delete modal-trigger">DELETE</a>
-                                </div>
+    <section class="section-container green-bg">
+        <h2 class="profile-heading">Your Events</h2>
+        <a href="{{ url_for('create_event') }}" class="event-button create">CREATE EVENT</a>
+        <div class="event-board">
+            <!-- Border Trim -->
+            <div class="border top-border"></div>
+            <div class="border left-border"></div>
+            <div class="border right-border"></div>
+            <div class="border bottom-border"></div>
+            <!-- Border Corners -->
+            <img src="{{ url_for('static', filename='images/metal-corner.webp') }}" alt="A gold square corner plate" class="corner top-left-corner">
+            <img src="{{ url_for('static', filename='images/metal-corner.webp') }}" alt="A gold square corner plate" class="corner top-right-corner">
+            <img src="{{ url_for('static', filename='images/metal-corner.webp') }}" alt="A gold square corner plate" class="corner bottom-left-corner">
+            <img src="{{ url_for('static', filename='images/metal-corner.webp') }}" alt="A gold square corner plate" class="corner bottom-right-corner">
+            <div class="container-padding">
+                {% if created_events|length == 0 %}
+                    <!-- No Events Message -->
+                    <p class="no-events">You don't currently have any events created.<br>Why not create one?</p>
+                {% else %}
+                    {% for event in created_events %}
+                        <!-- Event Card -->
+                        <div class="event-card brown-font">
+                            <div class="event-card-header">
+                                <h2 class="event-title">{{ event.event_name }}</h2>
+                            </div>
+                            <div class="event-section-1">
+                                <p class="event-creator">Created by:<br>{{ event.created_by.capitalize() }}</p>
+                            </div>
+                            <div class="event-section-2">
+                                <i class="fa-solid fa-location-dot event-icon"></i>
+                                <p class="event-info">{{ event.location.capitalize() }}</p>
+                            </div>
+                            <div class="event-section-3">
+                                <i class="fa-regular fa-calendar event-icon"></i>
+                                <p class="event-info">{{ event.date.strftime("%-d/%-m/%y") }}</p>
+                            </div>
+                            <div class="event-section-4">
+                                <i class="fa-regular fa-clock event-icon"></i>
+                                <p class="event-info">{{ event.time }}</p>
+                            </div>
+                            <div class="event-section-5">
+                                <i class="fa-solid fa-people-group event-icon"></i>
+                                <p class="event-info">{{ event.party_members|length }}/{{ event.party_size }}</p>
+                            </div>
+                            <div class="event-section-6">
+                                <a href="{{ url_for('edit_event', event_id=event.id) }}" class="event-button edit">EDIT</a>
+                                <!-- Modal Trigger -->
+                                <a href="#modal-{{ event.id }}" class="event-button delete modal-trigger">DELETE</a>
+                            </div>
                                 
-                                <!-- Modal - Delete Event -->
-                                <div id="modal-{{ event.id }}" class="modal delete-modal">
-                                    <div class="modal-content">
-                                        <h2 class="brown-font modal-heading">Delete {{ event.event_name }}</h2>
-                                        <p class="brown-font modal-text">Are you sure you want to delete this event?<br>This action cannot be undone.</p>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <a href="#!" class="modal-close btn green-btn">Cancel</a>
-                                        <a href="{{ url_for('delete_event', event_id=event.id) }}" class="btn red-btn">Delete</a>
-                                    </div>
+                            <!-- Modal - Delete Event -->
+                            <div id="modal-{{ event.id }}" class="modal delete-modal">
+                                <div class="modal-content">
+                                    <h2 class="brown-font modal-heading">Delete {{ event.event_name }}</h2>
+                                    <p class="brown-font modal-text">Are you sure you want to delete this event?<br>This action cannot be undone.</p>
                                 </div>
-
-                                <div class="event-section-7">
-                                    {% if event.exp_level == 'beginner' %}
-                                        <a href="{{ url_for('event', event_id=event.id) }}"><img src="{{ url_for('static', filename='images/seal-green.webp') }}" class="event-stamp" alt="Beginner Seal"></a>
-                                    {% elif event.exp_level == 'everyone' %}
-                                        <a href="{{ url_for('event', event_id=event.id) }}"><img src="{{ url_for('static', filename='images/seal-yellow.webp') }}" class="event-stamp" alt="Everyone Seal"></a>
-                                    {% elif event.exp_level == 'experienced' %}
-                                        <a href="{{ url_for('event', event_id=event.id) }}"><img src="{{ url_for('static', filename='images/seal-red.webp') }}" class="event-stamp"
-                                            alt="Experienced Seal"></a>
-                                    {% endif %}
+                                <div class="modal-footer">
+                                    <a href="#!" class="modal-close btn green-btn">Cancel</a>
+                                    <a href="{{ url_for('delete_event', event_id=event.id) }}" class="btn red-btn">Delete</a>
                                 </div>
                             </div>
-                        {% endfor %}
-                    {% endif %}
-                </div>
+
+                            <div class="event-section-7">
+                                {% if event.exp_level == 'beginner' %}
+                                    <a href="{{ url_for('event', event_id=event.id) }}"><img src="{{ url_for('static', filename='images/seal-green.webp') }}" class="event-stamp" alt="Beginner Seal"></a>
+                                {% elif event.exp_level == 'everyone' %}
+                                    <a href="{{ url_for('event', event_id=event.id) }}"><img src="{{ url_for('static', filename='images/seal-yellow.webp') }}" class="event-stamp" alt="Everyone Seal"></a>
+                                {% elif event.exp_level == 'experienced' %}
+                                    <a href="{{ url_for('event', event_id=event.id) }}"><img src="{{ url_for('static', filename='images/seal-red.webp') }}" class="event-stamp"
+                                        alt="Experienced Seal"></a>
+                                {% endif %}
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% endif %}
             </div>
         </div>
     </section>
 
     <!-- JOINED EVENTS SECTION -->
-    <section>
-        <div class="section-container light-green-bg">
-            <h2 class="profile-heading brown-font">Joined Events</h2>
-            <div class="event-board">
-                <!-- Border Trim -->
-                <div class="border top-border"></div>
-                <div class="border left-border"></div>
-                <div class="border right-border"></div>
-                <div class="border bottom-border"></div>
-                <!-- Border Corners -->
-                <img src="{{ url_for('static', filename='images/metal-corner.webp') }}" alt="A gold square corner plate" class="corner top-left-corner">
-                <img src="{{ url_for('static', filename='images/metal-corner.webp') }}" alt="A gold square corner plate" class="corner top-right-corner">
-                <img src="{{ url_for('static', filename='images/metal-corner.webp') }}" alt="A gold square corner plate" class="corner bottom-left-corner">
-                <img src="{{ url_for('static', filename='images/metal-corner.webp') }}" alt="A gold square corner plate" class="corner bottom-right-corner">
-                <div class="container-padding">
-                    {% if joined_events|length == 0 %}
-                        <!-- No Events Message -->
-                        <p class="no-events">You haven't yet joined any events.<br>Why not check out the Events page?</p>
-                    {% else %}
-                        {% for event in joined_events|sort(attribute='date') %}
-                            <!-- Event Card -->
-                            <div class="event-card brown-font">
-                                <div class="event-card-header">
-                                    <h2 class="event-title">{{ event.event_name }}</h2>
-                                </div>
-                                <div class="event-section-1">
-                                    <p class="event-creator">Created by:<br>{{ event.created_by.capitalize() }}</p>
-                                </div>
-                                <div class="event-section-2">
-                                    <i class="fa-solid fa-location-dot event-icon"></i>
-                                    <p class="event-info">{{ event.location.capitalize() }}</p>
-                                </div>
-                                <div class="event-section-3">
-                                    <i class="fa-regular fa-calendar event-icon"></i>
-                                    <p class="event-info">{{ event.date.strftime("%-d/%-m/%y") }}</p>
-                                </div>
-                                <div class="event-section-4">
-                                    <i class="fa-regular fa-clock event-icon"></i>
-                                    <p class="event-info">{{ event.time }}</p>
-                                </div>
-                                <div class="event-section-5">
-                                    <i class="fa-solid fa-people-group event-icon"></i>
-                                    <p class="event-info">{{ event.party_members|length }}/{{ event.party_size }}</p>
-                                </div>
-                                <div class="event-section-6">
-                                    <form action="{{ url_for('leave_event', event_id=event.id) }}" method="post" class="flex-form">
-                                        <input type="submit" class="event-button leave" value="LEAVE">
-                                    </form>
-                                </div>
-                                <div class="event-section-7">
-                                    {% if event.exp_level == 'beginner' %}
-                                        <a href="{{ url_for('event', event_id=event.id) }}"><img src="{{ url_for('static', filename='images/seal-green.webp') }}" class="event-stamp" alt="Beginner Seal"></a>
-                                    {% elif event.exp_level == 'everyone' %}
-                                        <a href="{{ url_for('event', event_id=event.id) }}"><img src="{{ url_for('static', filename='images/seal-yellow.webp') }}" class="event-stamp" alt="Everyone Seal"></a>
-                                    {% elif event.exp_level == 'experienced' %}
-                                        <a href="{{ url_for('event', event_id=event.id) }}"><img src="{{ url_for('static', filename='images/seal-red.webp') }}" class="event-stamp"
-                                            alt="Experienced Seal"></a>
-                                    {% endif %}
-                                </div>
+    <section class="section-container light-green-bg">
+        <h2 class="profile-heading brown-font">Joined Events</h2>
+        <div class="event-board">
+            <!-- Border Trim -->
+            <div class="border top-border"></div>
+            <div class="border left-border"></div>
+            <div class="border right-border"></div>
+            <div class="border bottom-border"></div>
+            <!-- Border Corners -->
+            <img src="{{ url_for('static', filename='images/metal-corner.webp') }}" alt="A gold square corner plate" class="corner top-left-corner">
+            <img src="{{ url_for('static', filename='images/metal-corner.webp') }}" alt="A gold square corner plate" class="corner top-right-corner">
+            <img src="{{ url_for('static', filename='images/metal-corner.webp') }}" alt="A gold square corner plate" class="corner bottom-left-corner">
+            <img src="{{ url_for('static', filename='images/metal-corner.webp') }}" alt="A gold square corner plate" class="corner bottom-right-corner">
+            <div class="container-padding">
+                {% if joined_events|length == 0 %}
+                    <!-- No Events Message -->
+                    <p class="no-events">You haven't yet joined any events.<br>Why not check out the Events page?</p>
+                {% else %}
+                    {% for event in joined_events|sort(attribute='date') %}
+                        <!-- Event Card -->
+                        <div class="event-card brown-font">
+                            <div class="event-card-header">
+                                <h2 class="event-title">{{ event.event_name }}</h2>
                             </div>
-                        {% endfor %}
-                    {% endif %}
-                </div>
+                            <div class="event-section-1">
+                                <p class="event-creator">Created by:<br>{{ event.created_by.capitalize() }}</p>
+                            </div>
+                            <div class="event-section-2">
+                                <i class="fa-solid fa-location-dot event-icon"></i>
+                                <p class="event-info">{{ event.location.capitalize() }}</p>
+                            </div>
+                            <div class="event-section-3">
+                                <i class="fa-regular fa-calendar event-icon"></i>
+                                <p class="event-info">{{ event.date.strftime("%-d/%-m/%y") }}</p>
+                            </div>
+                            <div class="event-section-4">
+                                <i class="fa-regular fa-clock event-icon"></i>
+                                <p class="event-info">{{ event.time }}</p>
+                            </div>
+                            <div class="event-section-5">
+                                <i class="fa-solid fa-people-group event-icon"></i>
+                                <p class="event-info">{{ event.party_members|length }}/{{ event.party_size }}</p>
+                            </div>
+                            <div class="event-section-6">
+                                <form action="{{ url_for('leave_event', event_id=event.id) }}" method="post" class="flex-form">
+                                    <input type="submit" class="event-button leave" value="LEAVE">
+                                </form>
+                            </div>
+                            <div class="event-section-7">
+                                {% if event.exp_level == 'beginner' %}
+                                    <a href="{{ url_for('event', event_id=event.id) }}"><img src="{{ url_for('static', filename='images/seal-green.webp') }}" class="event-stamp" alt="Beginner Seal"></a>
+                                {% elif event.exp_level == 'everyone' %}
+                                    <a href="{{ url_for('event', event_id=event.id) }}"><img src="{{ url_for('static', filename='images/seal-yellow.webp') }}" class="event-stamp" alt="Everyone Seal"></a>
+                                {% elif event.exp_level == 'experienced' %}
+                                    <a href="{{ url_for('event', event_id=event.id) }}"><img src="{{ url_for('static', filename='images/seal-red.webp') }}" class="event-stamp"
+                                        alt="Experienced Seal"></a>
+                                {% endif %}
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% endif %}
             </div>
         </div>
     </section>

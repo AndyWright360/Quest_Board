@@ -70,17 +70,15 @@
     </header>
 
     <!-- FLASH MESSAGES -->
-    <section>
-        {% with messages = get_flashed_messages() %}
-            {% if messages %}
-                {% for message in messages %}
-                    <div class="flashes">
-                        <h3 class="flash-message brown-font">{{ message }}</h3>
-                    </div>
-                {% endfor %}
-            {% endif %}
-        {% endwith %}
-    </section>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <div class="flashes">
+                    <h3 class="flash-message brown-font">{{ message }}</h3>
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
 
     <!-- MAIN PAGE CONTENT -->
     <main>
