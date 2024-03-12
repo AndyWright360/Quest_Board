@@ -26,6 +26,14 @@ $(document).ready(function () {
     // Initialise modal
     $('.modal').modal();
 
+    // Materialise select input bug fix for mobile.
+    // Credit Akintomiwa Opemipo - Stackoverflow
+    $(document).click(function(){
+        $('li[id^="select-options"]').on('touchend', function (e) {
+            e.stopPropagation();
+        });
+    });
+
     // Sets an auto timer to scroll to the next slide for the carousel.
     autoplay();
     function autoplay() {
