@@ -829,6 +829,14 @@ input[type=number] {
 
 /*---------- Dropdown Table ----------*/
 
+select {
+    display: none;
+    -webkit-display: none;
+    -moz-display: none;
+    -ms-display: none;
+    -o-display: none;
+}
+
 /* Dropdown table background */
 .dropdown-content,
 .datepicker-calendar-container {
