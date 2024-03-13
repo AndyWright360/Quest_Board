@@ -27,15 +27,14 @@
                     <div class="row">
                         <!-- Event Name Input -->
                         <div class="input-field col s12">
-                            <input id="event_name" name="event_name" value="{{ event.event_name }}" type="text" class="validate" data-length="24" maxlength="24" required>
+                            <input id="event_name" name="event_name" value="{{ event.event_name }}" type="text" data-length="24" maxlength="24" required>
                             <label for="event_name">Event Name</label>
-                            <span class="helper-text" data-error="Invalid entry"></span>
                         </div>
                     </div>
                     <div class="row">
                         <!-- Dropbox - Select Location -->
                         <div class="input-field col s12 m6">
-                            <select id="location" name="location" class="validate" required>
+                            <select id="location" name="location" required>
                                 <option value="" disabled>Select Location</option>
                                 <option value="swansea" {% if event.location == 'swansea' %} selected {% endif %}>Swansea</option>
                                 <option value="bridgend" {% if event.location == 'bridgend' %} selected {% endif %}>Bridgend</option>
@@ -46,7 +45,7 @@
                         </div>
                         <!-- Dropbox - Select Time -->
                         <div class="input-field col s12 m6">
-                            <select id="time" name="time" class="validate" required>
+                            <select id="time" name="time" required>
                                 <option value="" disabled>Select Time</option>
                                 <option value="10am" {% if event.time == '10am' %} selected {% endif %}>10am</option>
                                 <option value="12pm" {% if event.time == '12pm' %} selected {% endif %}>12pm</option>
@@ -59,22 +58,22 @@
                     <div class="row">
                         <!-- Datepicker -->
                         <div class="input-field col s12 m6">
-                            <input id="date" name="date" value="{{ event.date.strftime('%d %b, %Y') }}" type="text" class="datepicker" class="validate" required>
+                            <input id="date" name="date" value="{{ event.date.strftime('%d %b, %Y') }}" type="text" class="datepicker" required>
                             <label for="date">Date</label>
                         </div>
                         <!-- Party Size Input -->
                         <div class="input-field col s12 m6">
-                            <input id="party_size" name="party_size" value="{{ event.party_size }}" type="number" class="validate" min="1" max="10" step="1" required>
+                            <input id="party_size" name="party_size" value="{{ event.party_size }}" type="number" min="1" max="10" step="1" required>
                             <label for="party_size">Max Party Size</label>
-                            <span class="helper-text" data-error="Max 10">Between 1-10</span>
+                            <span class="helper-text">Between 1-10</span>
                         </div>
                     </div>
                     <div class="row">
                         <!-- Description Textarea -->
                         <div class="input-field col s12">
-                            <textarea id="description" name="description" class="materialize-textarea" data-length="250" maxlength="250" class="validate" required>{{ event.description }}</textarea>
+                            <textarea id="description" name="description" class="materialize-textarea" data-length="250" maxlength="250" required>{{ event.description }}</textarea>
                             <label for="description">Description</label>
-                            <span class="helper-text" data-error="Too many characters"></span>
+                            <span class="helper-text"></span>
                         </div>
                     </div>
                     <div class="row">
