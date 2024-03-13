@@ -430,6 +430,20 @@ As far as I could tell, the page wasn't resizing the popover content correctly. 
 
 This issue occurred after I changed the "id" attribute to a "class" attribute for the board trim on the events page. The reason behind this change was to address a situation where both sets of boards were being displayed simultaneously on the profile page. Instead of using unique IDs to target each side of the trim and corner plates, I opted for class names. However, one of these class names inadvertently matched a Materialize class associated with navbar links. Consequently, the CSS styling intended for the board trim was also affecting the position of the navbar links. To resolve this, I assigned alternative class names to the board trim and corner plates.
 
+#### **Materialize Select Validation Bug**
+
+![Select Validation Bug](documentation/testing/select-validation-bug.gif)
+
+This bug involved the use of JavaScript to replicate the Materialize validate class for form inputs. This class provides visual feedback to the user for valid and invalid inputs by dynamically altering the colour of the input border. The bug resulted in the border colour changing to red whenever the input lost focus, regardless of its validity. This only affected the select inputs on the create event page and functioned as intended on the edit event page. I also tested this on multiple devices and found it only to be present on my laptop, despite the same browser being used on other tests.
+
+As I was unable to find a method to add the validate class to the date and textarea inputs. I opted to remove this class from the event form inputs altogether. As this validation method wasn't consistent across all inputs on the form, I felt it wasn't offering the user experience I intended. And with no known fix for the bug, I wanted to avoid the possibility of users being provided incorrect feedback.
+
+#### **Materialize Select Input Mobile Bug**
+
+I encountered this issue while testing the site on an iPhone. The Materialize select dropdown menu doesn't function effectively on touchscreen devices. Often, the input would populate with a different option than the one selected, resulting in a frustrating user experience as it becomes challenging to select the intended option.
+
+Upon researching online, I discovered that this issue is widely documented and found a solution on Stack Overflow.
+
 ### **Known Bugs**
 
 #### **Section Pixel Bug**
