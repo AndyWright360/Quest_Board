@@ -67,26 +67,12 @@ To address this, I refactored the section containers across all pages. Instead o
 
 [W3C](https://jigsaw.w3.org/css-validator/) was used to validate the CSS code.
 
-- style.css - RESULT
-- map-style.css - RESULT
+| Page | Results |
+| :--- | :--- |
+| style.css | ![CSS Validation Result](documentation/testing/css-validation.jpg) |
+| map-style.css | ![CSS Validation Result](documentation/testing/css-validation.jpg) |
 
-![W3C CSS validation errors]()
-
-*Error*
-
-![W3C CSS validation warnings]()
-
-*Warnings*
-
-Description of errors and warnings if they appeared.
-
-#### **Second Validation Test**
-
-The fix implemented. The results from the second validation were a pass.
-
-![W3C CSS validation pass]()
-
-*Pass*
+Several warnings were flagged, all related to the use of vendor extensions, which I opted to disregard.
 
 ### **JSHint JavaScript Validation**
 
