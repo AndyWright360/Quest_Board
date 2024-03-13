@@ -788,23 +788,78 @@ Given that many content containers rely on background images, there's a concern 
 
 ## **Deployment & Local Development**
 
-### **Deployment**
-
-### **Local Development**
-
-#### **How to Fork**
-
----
-
-## **Testing**
-
-For a detailed overview of all conducted testing, please refer to the [TESTING.md](TESTING.md) file.
-
----
-
-## **Deployment & Local Development**
-
 ### **Deployment to Heroku**
+
+This web application is deployed using Heroku. Follow these steps to recreate the deployment process:
+
+1. **Prepare Required Files**
+
+- Create a requirements.txt file in the root directory, containing all necessary applications and dependencies.
+- Create a Procfile in the root directory, which informs Heroku about the files that run the app and how to run it.
+
+NB: Ensure the Procfile has a capital "P" and no file extension.
+
+2. **Check Procfile**
+
+- Check for any blank lines at the end of the file and remove them if present.
+
+3. **GitHub Repository**
+
+- Save both files, add, commit, and push them to your GitHub repository.
+
+4. **Heroku Setup**
+
+- Log in to Heroku.
+- Click on the "New" button and select "Create new app".
+
+5. **App Configuration**
+
+- Enter a unique name for your app and select a region. Click "Create app".
+
+6. **GitHub Integration**
+
+- In the deployment section, select GitHub.
+- Connect the correct repository for the project.
+
+7. **Environment Variables**
+
+- Navigate to the settings tab and click "Reveal Config Vars".
+- Add the required environment key/value variables from the env.py file.
+
+| KEY | VALUE |
+| :-- | :-- |
+| IP | 0.0.0.0 |
+| PORT | 5000 |
+| SECRET_KEY| YOUR_SECRET_KEY* |
+| DATABASE_URL | POSTGRES_DB* |
+| DEBUG | TRUE |
+
+8. **Debugging**
+
+- Ensure the DEBUG variable is set to TRUE.
+
+NB: Remember to delete this variable once debugging is complete.
+
+9. **Deployment**
+
+- Enable automatic deploys (this step is optional).
+- Within the Manual deploy section. Select the "main" brack from the list of branch options.
+- Click the "Manual Deploy" button.
+
+10. **Table Creation**
+
+- In the dashboard, select "More" and then "Run console".
+- Type python3 and execute the following commands:
+
+```bash
+from quest_board import db
+db.create_all()
+exit()
+```
+
+11. **Launch**
+
+- Click "Open app" and the application should open in a new tab.
 
 ### **Local Development**
 
@@ -841,7 +896,7 @@ To clone this project, please follow the steps below:
 8. Type '**git clone**' into the terminal and then paste the link you copied in Step 5.
 
 ```bash
-git clone (relavant link)
+git clone (relevant link)
 ```
 
 9. Press enter.
@@ -855,6 +910,12 @@ git clone (relavant link)
 ```bash
 pip3 install -r requirements.txt
 ```
+
+---
+
+## **Testing**
+
+For a detailed overview of all conducted testing, please refer to the [TESTING.md](TESTING.md) file.
 
 ---
 
