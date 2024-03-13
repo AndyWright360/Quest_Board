@@ -78,15 +78,13 @@ Several warnings were flagged, all related to the use of vendor extensions, whic
 
 [JSHint](https://jshint.com/) was used to validate the JavaScript code.
 
-- script.js - RESULTS
-- map.js - RESULTS
-- filter.js - RESULTS
+| Page | Results |
+| :--- | :--- |
+| script.js | ![JavaScript Validation Result](documentation/testing/js-script-validation.jpg) |
+| map.js | ![JavaScript Validation Result](documentation/testing/js-map-validation.jpg) |
+| filter.js | ![JavaScript Validation Result](documentation/testing/js-filter-validation.jpg) |
 
-![JSHint JavaScript validation results]()
-
-*Results*
-
-Description of results and any steps needed to rectify them.
+Two warnings were found in the map.js file. However, since this code was provided by the documentation for the Google Maps API, I decided to overlook them.
 
 ### **WCAG Colour Contrast Checker**
 
