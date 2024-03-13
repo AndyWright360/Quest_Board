@@ -42,20 +42,26 @@ This is the testing documentation for the Quest Board website. [The full README 
 
 [W3C](https://validator.w3.org/) was used to validate the HTML code.
 
-- index.html - RESULT
-- events.html - RESULT
-- event.html - RESULT
-- create_event.html - RESULT
-- edit_event.html - RESULT
-- sign_up.html - RESULT
-- log_in.html - RESULT
-- profile.html - RESULT
-- 400.html - RESULT
-- 403.html - RESULT
-- 404.html - RESULT
-- 500.html - RESULT
+| Page | Results |
+| :--- | :--- |
+| index.html | ![HTML Validation Result](documentation/testing/html-validation.png) |
+| events.html | ![HTML Validation Result](documentation/testing/html-validation.png) |
+| event.html | ![HTML Validation Result](documentation/testing/html-validation.png) |
+| create_event.html | ![HTML Validation Result](documentation/testing/html-validation.png) |
+| edit_event.html | ![HTML Validation Result](documentation/testing/html-validation.png) |
+| sign_up.html | ![HTML Validation Result](documentation/testing/html-validation.png) |
+| log_in.html | ![HTML Validation Result](documentation/testing/html-validation.png) |
+| profile.html | ![HTML Validation Result](documentation/testing/html-validation.png) |
+| 400.html | ![HTML Validation Result](documentation/testing/html-validation.png) |
+| 403.html | ![HTML Validation Result](documentation/testing/html-validation.png) |
+| 404.html | ![HTML Validation Result](documentation/testing/html-validation.png) |
+| 500.html | ![HTML Validation Result](documentation/testing/html-validation.png) |
 
-![W3C HTML validation results](documentation/testing/html-validation.jpg)
+![HTML validation warning](documentation/testing/html-section-warning.jpg)
+
+I encountered a warning across multiple pages regarding section elements lacking an associated heading. This issue primarily arose from wrapping flash messages in a section tag, which consequently made them accessible on every page. However, there were also a few instances where sections were used without a heading.
+
+To address this, I refactored the section containers across all pages. Instead of using section tags, I wrapped the flash messages inside div elements. After implementing these changes, all pages passed the validation.
 
 ### **W3C CSS Validation**
 
@@ -229,7 +235,6 @@ The following browsers were tested using each device:
 
 - Laptop:
   - Google Chrome
-  - Microsoft Edge
   - Mozilla Firefox
 - Mobile:
   - Safari
