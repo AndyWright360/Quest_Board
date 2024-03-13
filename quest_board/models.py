@@ -2,15 +2,22 @@ from quest_board import db
 
 
 """
-Code for association table and creating many-to-many relationship between User and Event
-models was modified from https://medium.com/@warrenzhang17/many-to-many-relationships-in-sqlalchemy-ba08f8e9ccf7
+Code for association table and creating many-to-many
+relationship between User and Event models was modified from
+https://medium.com/@warrenzhang17/many-to-many-relationships-in-sqlalchemy-ba08f8e9ccf7
 Credit: Warren Zhang
 """
 # Association table for many-to-many relationship between events and users
 event_user = db.Table(
     'event_user',
-    db.Column('event_id', db.Integer, db.ForeignKey('events.id'), primary_key=True),
-    db.Column('user_id', db.Integer, db.ForeignKey('users.id'), primary_key=True)
+    db.Column('event_id',
+              db.Integer,
+              db.ForeignKey('events.id'),
+              primary_key=True),
+    db.Column('user_id',
+              db.Integer,
+              db.ForeignKey('users.id'),
+              primary_key=True)
 )
 
 
@@ -46,8 +53,8 @@ class Event(db.Model):
     exp_level = db.Column(db.String(50), nullable=False)
     party_size = db.Column(db.Integer, nullable=False)
     party_members = db.relationship(
-        'User', 
-        secondary=event_user, 
+        'User',
+        secondary=event_user,
         back_populates='events')
 
     def __repr__(self):
