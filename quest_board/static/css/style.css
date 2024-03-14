@@ -30,6 +30,7 @@
 body {
     font-family: var(--body-font);
     color: var(--white);
+    background-color: var(--white);
     overflow-x: hidden;
     max-width: 1800px;
     margin: 0 auto;

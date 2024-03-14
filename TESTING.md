@@ -93,7 +93,7 @@ Two warnings were found in the map.js file. However, since this code was provide
 | Page | Results |
 | :--- | :--- |
 | app.py | ![Python Validation Result](documentation/testing/python-validation.jpg) |
-| --init--.py | ![Python Validation Result](documentation/testing/python-validation.jpg) |
+| init.py | ![Python Validation Result](documentation/testing/python-validation.jpg) |
 | models.py | ![Python Validation Result](documentation/testing/python-validation.jpg) |
 | routes.py | ![Python Validation Result](documentation/testing/python-validation.jpg) |
 
