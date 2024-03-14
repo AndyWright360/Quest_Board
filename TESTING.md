@@ -194,30 +194,31 @@ Lighthouse within Chrome Developer Tools was used to assess the website's perfor
 
 | Goals | How are they achieved? |
 | :--- | :--- |
-| I want to create a profile so that I can start creating and joining events. |  |
-| I want to filter events based on store location to find events in my preferred area. |  |
-| I want to view the details of an event to ensure it aligns with my preferences and schedule. |  |
+| I want to create a profile so that I can start creating and joining events. | For users who aren't signed in, a "Sign Up" button is conveniently placed in the "Our Quest" section for easy navigation. Additionally, the sign-up page can be accessed directly from the navbar link. |
+| I want to filter events based on store location to find events in my preferred area. | On the events page, a filter option is situated at the top, accompanied by a caret down icon to indicate a dropdown menu. Filter options are categorised, with labelled checkboxes for each selectable search option. Visible events dynamically adjust based on the user's selected search criteria. |
+| I want to view the details of an event to ensure it aligns with my preferences and schedule. | A notification is prominently displayed at the top of the events page, providing clear instructions to users on how to reveal further details on events. The colour-coded wax seal stamp, depicting the recommended experience level of the event, serves as a link to the selected event page. The event page offers comprehensive details to the user, including location, time, joined members, and a description of the event. |
 
 #### **Returning Visitor Goals**
 
 | Goals | How are they achieved? |
 | :--- | :--- |
-| I want to log in to my account. |  |
-| I want to join an event created by another user. |  |
-| I want to edit the details of an event in case there are changes or updates. |  |
+| I want to log in to my account. | From the home page, the login link is easily located within the navbar. The login form requests the user's username and password to sign into their profile. Users will remain logged in until manually logging out, provided they return to the website using the same device.. |
+| I want to join an event created by another user. | On the events page, all events created by other users will display a "Join" button if open slots are available. Upon selecting, users will be redirected to the event page where their username will appear on the list of joined members. All joined events will be listed on the users profile page. |
+| I want to edit the details of an event in case there are changes or updates. | All events created by a user will display an "Edit" button for easy access to modify any details. A collection of all events created by a user will be collated on their profile page for convenient event management. |
 
 #### **Frequent User Goals**
 
 | Goals | How are they achieved? |
 | :--- | :--- |
-| I want to check my profile page so I can easily monitor my created and joined events. |  |
-| I want to leave an event if my plans change or I can no longer attend. |  |
+| I want to check my profile page so I can easily monitor my created and joined events. | Upon logging in to their account, users will be redirected to their profile page. This page can also be accessed from the navbar link when a user is logged in. The profile page displays all events created by the user and separately lists any events they have joined. This provides a single page where all events associated with the user can be managed. |
+| I want to leave an event if my plans change or I can no longer attend. | Events that have been joined by a user will display a "Leave" button. Upon selecting, the user will be redirected to the corresponding event page where their username will be removed from the list of joined participants. A notification message will confirm that the user has successfully left the event. |
+| I want to delete a created event. | All events created by a user will display a "Delete" button. Upon selection, a modal will appear requesting confirmation of the deletion. Once confirmed, a message will notify the user that the event was deleted successfully. |
 
 #### **Administrator**
 
 | Goals | How are they achieved? |
 | :--- | :--- |
-| I want to review and moderate user-created events to ensure they comply with community guidelines. |  |
+| I want to review and moderate user-created events to ensure they comply with community guidelines. | As an admin, all events created by users can be editted or deleted. This allows details to be easily modified if required. |
 
 ### **Full Testing**
 

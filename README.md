@@ -108,6 +108,7 @@ From a visual perspective, the goal was to theme the website on the fantastical 
 
     1. I want to check my profile page so I can easily monitor my created and joined events.
     2. I want to leave an event if my plans change or I can no longer attend.
+    3. I want to delete a created event.
 
 - **Administrator**
 
