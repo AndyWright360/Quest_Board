@@ -2,11 +2,11 @@
 
 ![Quest Board logo](quest_board/static/images/logo-alt.webp)
 
-![Quest Board displayed on miltiple devices]()
+![Quest Board displayed on miltiple devices](documentation/responsive.jpg)
 
 This is the testing documentation for the Quest Board website. [The full README is available here.](README.md)
 
-[Click here to visit Quest Board]()
+[Click here to visit Quest Board](https://quest-board-a1869a6a1ddf.herokuapp.com/)
 
 **By [Andrew Wright](https://github.com/AndyWright360)**
 
@@ -154,35 +154,35 @@ Lighthouse within Chrome Developer Tools was used to assess the website's perfor
 
 | Page | Results |
 | :--- | :--- |
-| index.html | ![Lighthouse results for desktop]() |
-| events.html | ![Lighthouse results for desktop]() |
-| event.html | ![Lighthouse results for desktop]() |
-| create_event.html | ![Lighthouse results for desktop]() |
-| edit_event.html | ![Lighthouse results for desktop]() |
-| sign_up.html | ![Lighthouse results for desktop]() |
-| log_in.html | ![Lighthouse results for desktop]() |
-| profile.html | ![Lighthouse results for desktop]() |
-| 400.html | ![Lighthouse results for desktop]() |
-| 403.html | ![Lighthouse results for desktop]() |
-| 404.html | ![Lighthouse results for desktop]() |
-| 500.html | ![Lighthouse results for desktop]() |
+| index.html | ![Lighthouse results for desktop](documentation/testing/index-dt.jpg) |
+| events.html | ![Lighthouse results for desktop](documentation/testing/events-dt.jpg) |
+| event.html | ![Lighthouse results for desktop](documentation/testing/event-dt.jpg) |
+| create_event.html | ![Lighthouse results for desktop](documentation/testing/create_event-dt.jpg) |
+| edit_event.html | ![Lighthouse results for desktop](documentation/testing/edit_event-dt.jpg) |
+| sign_up.html | ![Lighthouse results for desktop](documentation/testing/sign_up-dt.jpg) |
+| log_in.html | ![Lighthouse results for desktop](documentation/testing/log_in-dt.jpg) |
+| profile.html | ![Lighthouse results for desktop](documentation/testing/profile-dt.jpg) |
+| 400.html | ![Lighthouse results for desktop](documentation/testing/400-dt.jpg) |
+| 403.html | ![Lighthouse results for desktop](documentation/testing/403-dt.jpg) |
+| 404.html | ![Lighthouse results for desktop](documentation/testing/404-dt.jpg) |
+| 500.html | ![Lighthouse results for desktop](documentation/testing/500-dt.jpg) |
 
 #### **Mobile Results**
 
 | Page | Results |
 | :--- | :--- |
-| index.html | ![Lighthouse results for mobile]() |
-| events.html | ![Lighthouse results for mobile]() |
-| event.html | ![Lighthouse results for mobile]() |
-| create_event.html | ![Lighthouse results for mobile]() |
-| edit_event.html | ![Lighthouse results for mobile]() |
-| sign_up.html | ![Lighthouse results for mobile]() |
-| log_in.html | ![Lighthouse results for mobile]() |
-| profile.html | ![Lighthouse results for mobile]() |
-| 400.html | ![Lighthouse results for mobile]() |
-| 403.html | ![Lighthouse results for mobile]() |
-| 404.html | ![Lighthouse results for mobile]() |
-| 500.html | ![Lighthouse results for mobile]() |
+| index.html | ![Lighthouse results for desktop](documentation/testing/index-mob.jpg) |
+| events.html | ![Lighthouse results for desktop](documentation/testing/events-mob.jpg) |
+| event.html | ![Lighthouse results for desktop](documentation/testing/event-mob.jpg) |
+| create_event.html | ![Lighthouse results for desktop](documentation/testing/create_event-mob.jpg) |
+| edit_event.html | ![Lighthouse results for desktop](documentation/testing/edit_event-mob.jpg) |
+| sign_up.html | ![Lighthouse results for desktop](documentation/testing/sign_up-mob.jpg) |
+| log_in.html | ![Lighthouse results for desktop](documentation/testing/log_in-mob.jpg) |
+| profile.html | ![Lighthouse results for desktop](documentation/testing/profile-mob.jpg) |
+| 400.html | ![Lighthouse results for desktop](documentation/testing/400-mob.jpg) |
+| 403.html | ![Lighthouse results for desktop](documentation/testing/403-mob.jpg) |
+| 404.html | ![Lighthouse results for desktop](documentation/testing/404-mob.jpg) |
+| 500.html | ![Lighthouse results for desktop](documentation/testing/500-mob.jpg) |
 
 ---
 

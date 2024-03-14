@@ -10,9 +10,9 @@ So sharpen those pencils, dust off your dice, and prepare for adventure!
 
 This project was created as part of the Code Institute Level 5 Diploma in Web Application Development course.
 
-![Quest Board displayed on miltiple devices]()
+![Quest Board displayed on miltiple devices](documentation/responsive.jpg)
 
-[Click here to visit Quest Board]()
+[Click here to visit Quest Board](https://quest-board-a1869a6a1ddf.herokuapp.com/)
 
 **By [Andrew Wright](https://github.com/AndyWright360)**
 
