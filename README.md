@@ -594,10 +594,6 @@ A relational database schema was implemented using PostgreSQL, featuring primary
 
 *Helper Text*
 
-<img src="documentation/features/event-invalid.jpg">
-
-*Invalid Input*
-
 <img src="documentation/features/event-required.gif">
 
 *Required Input Notification*
@@ -625,8 +621,6 @@ The form on this page incorporates several features aimed at helping users under
 - **Character Counter:** Text inputs with character limits display a character counter, offering users a visual cue on their input progress.
 
 - **Helper Text:** Helper text accompanies the max-party input, providing clarity regarding the available number range.
-
-- **Invalid Input Notification:** Data error messages are included for text inputs, offering guidance to users in case of invalid entries.
 
 - **Required Field Indication:** Required inputs are marked to alert users to any missed fields during submission.
 
