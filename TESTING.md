@@ -242,69 +242,72 @@ Friends and family also tested the website using a variety of devices. No issues
 Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
 | `Navbar` |
-| Page Title | Redirect to the home page | Click page title | Redirected to home page | - |
-| Home Link | Redirect to the home page | Click link | Redirected to home page | - |
-| Events Link | Redirect to the events page | Click link | Redirected to events page | - |
-| Sign Up Link | Redirect to the sign up page | Click link | Redirected to sign up page | - |
-| Login Link | Redirect to the login page | Click link | Redirected to login page | - |
-| Profile Link | Redirect to the profile page | Click link | Redirected to profile page | - |
-| Burger Menu | Opens sidenav | Click icon | Sidenav opens | - |
+| Page Title | Redirect to the home page | Click page title | Redirected to home page | Pass |
+| Home Link | Redirect to the home page | Click link | Redirected to home page | Pass |
+| Events Link | Redirect to the events page | Click link | Redirected to events page | Pass |
+| Sign Up Link | Redirect to the sign up page | Click link | Redirected to sign up page | Pass |
+| Login Link | Redirect to the login page | Click link | Redirected to login page | Pass |
+| Profile Link | Redirect to the profile page | Click link | Redirected to profile page | Pass |
+| Log Out Link | Logs user out | Click link | User logged out | Pass |
+| Burger Menu | Opens sidenav | Click icon | Sidenav opens | Pass |
 | `Sidenav` |
-| Home Link | Redirect to the home page | Click link | Redirected to home page | - |
-| Events Link | Redirect to the events page | Click link | Redirected to events page | - |
-| Sign Up Link | Redirect to the sign up page | Click link | Redirected to sign up page | - |
-| Login Link | Redirect to the login page | Click link | Redirected to login page | - |
-| Profile Link | Redirect to the profile page | Click link | Redirected to profile page | - |
-| Close Sidenav | Close the sidenav bar | Click outside sidenav | Sidenav closed | - |
+| Home Link | Redirect to the home page | Click link | Redirected to home page | Pass |
+| Events Link | Redirect to the events page | Click link | Redirected to events page | Pass |
+| Sign Up Link | Redirect to the sign up page | Click link | Redirected to sign up page | Pass |
+| Login Link | Redirect to the login page | Click link | Redirected to login page | Pass |
+| Profile Link | Redirect to the profile page | Click link | Redirected to profile page | Pass |
+| Log Out Link | Logs user out | Click link | User logged out | Pass |
+| Close Sidenav | Close the sidenav bar | Click outside sidenav | Sidenav closed | Pass |
 | `Footer` |
-| Social Media Link (Facebook) | Opens Facebook link in a new tab | Clicked Facebook icon | New tab opened to Facebook | - |
-| Social Media Link (YouTube) | Opens YouTube link in a new tab | Clicked YouTube icon | New tab opened to YouTube | - |
-| Social Media Link (Twitter) | Opens Twitter link in a new tab | Clicked Twitter icon | New tab opened to Twitter | - |
-| Icon Hover Effect | Icon size increases on mouse hover | Hover mouse over icon | Icon size increases | - |
-| `Flash Messages` |
-| Event Created | Message appear when event created | Create event | Message appeared | - |
-| Event Deleted | Message appear when event deleted | Delete event | Message appeared | - |
-| Join Event | Message appear when event joined | Join event | Message appeared | - |
-| Leave Event | Message appear when leaveing event | Leave event | Message appeared | - |
-| Welcome User | Message appear when user signs in | Sign In User | Message appeared | - |
+| Social Media Link (Facebook) | Opens Facebook link in a new tab | Clicked Facebook icon | New tab opened to Facebook | Pass |
+| Social Media Link (YouTube) | Opens YouTube link in a new tab | Clicked YouTube icon | New tab opened to YouTube | Pass |
+| Social Media Link (Twitter) | Opens Twitter link in a new tab | Clicked Twitter icon | New tab opened to Twitter | Pass |
+| Icon Hover Effect | Icon size increases on mouse hover | Hover mouse over icon | Icon size increases | Pass |
 | `Home Page` |
-| Button Hover Effect | Button scale increase on mouse hover | Hover mouse over button | Button scale increases | - |
-| Button Click Animation | Button scale decreases on click | Click button | Button scale decreases | - |
-| Sign Up Button | Redirect to the sign up page | Click button | Redirected to sign up page | - |
-| Open Map Marker (Checkmates) | Display store information window | Click marker | Store information window displayed | - |
-| Close Map Marker (Checkmates) | Close store information window | Click information widow | Store information window closed | - |
-| Open Map Marker (Dungeons & Dice) | Display store information window | Click marker | Store information window displayed | - |
-| Close Map Marker (Dungeons & Dice) | Close store information window | Click information widow | Store information window closed | - |
-| Open Map Marker (Castle Games) | Display store information window | Click marker | Store information window displayed | - |
-| Close Map Marker (Castle Games) | Close store information window | Click information widow | Store information window closed | - |
-| Open Map Marker (Boarderlands) | Display store information window | Click marker | Store information window displayed | - |
-| Close Map Marker (Boarderlands) | Close store information window | Click information widow | Store information window closed | - |
-| Display Next Gallery Image | Next sequential gallery image displays on screen | Drag gallery image to the left | Next gallery image displayed | - |
-| Display Previous Gallery Image | Previous gallery image displays on screen | Drag gallery image to the right | Previous gallery image displayed | - |
-| Select Gallery Indicator | Display the selected gallery image | Click gallery indicator | Selected gallery image displayed | - |
+| Button Hover Effect | Button scale increase on mouse hover | Hover mouse over button | Button scale increases | Pass |
+| Button Click Animation | Button scale decreases on click | Click button | Button scale decreases | Pass |
+| Sign Up Button | Redirect to the sign up page | Click button | Redirected to sign up page | Pass |
+| Open Map Marker (Checkmates) | Display store information window | Click marker | Store information window displayed | Pass |
+| Close Map Marker (Checkmates) | Close store information window | Click information widow | Store information window closed | Pass |
+| Open Map Marker (Dungeons & Dice) | Display store information window | Click marker | Store information window displayed | Pass |
+| Close Map Marker (Dungeons & Dice) | Close store information window | Click information widow | Store information window closed | Pass |
+| Open Map Marker (Castle Games) | Display store information window | Click marker | Store information window displayed | Pass |
+| Close Map Marker (Castle Games) | Close store information window | Click information widow | Store information window closed | Pass |
+| Open Map Marker (Boarderlands) | Display store information window | Click marker | Store information window displayed | Pass |
+| Close Map Marker (Boarderlands) | Close store information window | Click information widow | Store information window closed | Pass |
+| Display Next Gallery Image | Next sequential gallery image displays on screen | Drag gallery image to the left | Next gallery image displayed | Pass |
+| Display Previous Gallery Image | Previous gallery image displays on screen | Drag gallery image to the right | Previous gallery image displayed | Pass |
+| Select Gallery Indicator | Display the selected gallery image | Click gallery indicator | Selected gallery image displayed | Pass |
 | `Events Page` |
-| Fliter Dropdown (Open) | Open filter dropdown to display search options | Click filter | Filter dropdown opens | - |
-| Fliter Dropdown (Close) | Close filter dropdown to remove search options | Click filter | Filter dropdown closes | - |
-| Filter Checkbox (Cardiff) | Display events matching selected option | Click checkbox | Display corresponding events | - |
-| Filter Checkbox (Newport) | Display events matching selected option | Click checkbox | Display corresponding events | - |
-| Filter Checkbox (Swansea) | Display events matching selected option | Click checkbox | Display corresponding events | - |
-| Filter Checkbox (Bridgend) | Display events matching selected option | Click checkbox | Display corresponding events | - |
-| Filter Checkbox (10am) | Display events matching selected option | Click checkbox | Display corresponding events | - |
-| Filter Checkbox (12pm) | Display events matching selected option | Click checkbox | Display corresponding events | - |
-| Filter Checkbox (2pm) | Display events matching selected option | Click checkbox | Display corresponding events | - |
-| Filter Checkbox (4pm) | Display events matching selected option | Click checkbox | Display corresponding events | - |
-| Filter Checkbox (Beginner) | Display events matching selected option | Click checkbox | Display corresponding events | - |
-| Filter Checkbox (Everyone) | Display events matching selected option | Click checkbox | Display corresponding events | - |
-| Filter Checkbox (Experienced) | Display events matching selected option | Click checkbox | Display corresponding events | - |
-| Button Hover Effect | Button scale increase on mouse hover | Hover mouse over button | Button scale increases | - |
-| Button Click Animation | Button scale decreases on click | Click button | Button scale decreases | - |
-| Create Event Button | Redirect to the create event page | Click button | Redirected to create event page | - |
+| Prevent logged out users from accessing the page | Users who aren't logged in will recieve a falsh message and be redirected to the log in page. | Access the page via the url link whilst logged out | Redirected to log in page and flash message displayed | Pass |
+| Fliter Dropdown (Open) | Open filter dropdown to display search options | Click filter | Filter dropdown opens | Pass |
+| Fliter Dropdown (Close) | Close filter dropdown to remove search options | Click filter | Filter dropdown closes | Pass |
+| Filter Checkbox (Cardiff) | Display events matching selected option | Click checkbox | Display corresponding events | Pass |
+| Filter Checkbox (Newport) | Display events matching selected option | Click checkbox | Display corresponding events | Pass |
+| Filter Checkbox (Swansea) | Display events matching selected option | Click checkbox | Display corresponding events | Pass |
+| Filter Checkbox (Bridgend) | Display events matching selected option | Click checkbox | Display corresponding events | Pass |
+| Filter Checkbox (10am) | Display events matching selected option | Click checkbox | Display corresponding events | Pass |
+| Filter Checkbox (12pm) | Display events matching selected option | Click checkbox | Display corresponding events | Pass |
+| Filter Checkbox (2pm) | Display events matching selected option | Click checkbox | Display corresponding events | Pass |
+| Filter Checkbox (4pm) | Display events matching selected option | Click checkbox | Display corresponding events | Pass |
+| Filter Checkbox (Beginner) | Display events matching selected option | Click checkbox | Display corresponding events | Pass |
+| Filter Checkbox (Everyone) | Display events matching selected option | Click checkbox | Display corresponding events | Pass |
+| Filter Checkbox (Experienced) | Display events matching selected option | Click checkbox | Display corresponding events | Pass |
+| Button Hover Effect | Button scale increase on mouse hover | Hover mouse over button | Button scale increases | Pass |
+| Button Click Animation | Button scale decreases on click | Click button | Button scale decreases | Pass |
+| Create Event Button | Redirect to the create event page | Click button | Redirected to create event page | Pass |
 | Edit Button | Redirect to the edit event page | Click button | Redirected to edit event page | - |
 | Delete Button | Open delete event modal | Click button | Delete event modal opened | - |
 | Join Button | Increase party member display by one | Click button | Party member display increased by one | - |
 | Leave Button | Decrease party member display by one | Click button | Party member display decreased by one | - |
 | Full Event | Display "Full" stamp when party list reaches capacity | Fill party list | "Full" stamp displays on event | - |
 | Event Stamp | Redirect to the selected event page | Click stamp | Redirected to selected event page | - |
+| Unathorised Deletion | Redirect to 403 error page and display flash message | Attempt to delete other users event via the url link | Redirected to 403 error page and flash message displayed | Pass |
+| Unathorised Edit | Redirect to 403 error page and display flash message | Attempt to edit other users event via the url link | Redirected to 403 error page and flash message displayed | Pass |
+| Logged Out Deletion | Redirect to log in page and display flash message | Attempt to delete event via the url link while logged out | Redirected to log in page and flash message displayed | Pass |
+| Logged Out Edit | Redirect to log in page and display flash message | Attempt to edit event via the url link while logged out | Redirected to log in page and flash message displayed | Pass |
+| GET Method Join | Redirect to 405 error page and display flash message | Attempt to join event via the url link | Redirected to 405 error page and flash message displayed | - |
+| GET Method Leave | Redirect to 405 error page and display flash message | Attempt to leave event via the url link | Redirected to 405 error page and flash message displayed | - |
 | `Event Page` |
 | Button Hover Effect | Button scale increase on mouse hover | Hover mouse over button | Button scale increases | - |
 | Button Click Animation | Button scale decreases on click | Click button | Button scale decreases | - |

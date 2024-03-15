@@ -168,7 +168,7 @@ def create_event():
 
             # Check event date against current date
             if event_date < datetime.today().date():
-                flash("Event date cannot be in the past")
+                flash("Event date can't be in the past")
                 return redirect(url_for("create_event"))
 
             # Check if text inputs are only white spaces
@@ -239,7 +239,7 @@ def edit_event(event_id):
 
                 # Check event date against current date
                 if new_event_date < datetime.today().date():
-                    flash("Event date cannot be in the past")
+                    flash("Event date can't be in the past")
                     return redirect(url_for("edit_event", event_id=event_id))
 
                 # Check if text inputs are only white spaces
