@@ -798,7 +798,7 @@ This web application is deployed using Heroku. Follow these steps to recreate th
 - Create a requirements.txt file in the root directory, containing all necessary applications and dependencies.
 - Create a Procfile in the root directory, which informs Heroku about the files that run the app and how to run it.
 
-NB: Ensure the Procfile has a capital "P" and no file extension.
+**NB: Ensure the Procfile has a capital "P" and no file extension.**
 
 2. **Check Procfile**
 
@@ -839,7 +839,7 @@ NB: Ensure the Procfile has a capital "P" and no file extension.
 
 - Ensure the DEBUG variable is set to TRUE.
 
-NB: Remember to delete this variable once debugging is complete.
+**NB: Remember to delete this variable once debugging is complete.**
 
 9. **Deployment**
 
@@ -955,6 +955,14 @@ For a detailed overview of all conducted testing, please refer to the [TESTING.m
 - [Python datetime by Programiz](https://www.programiz.com/python-programming/datetime)
 
   - Improved my knowledge of how to use Python datetime methods and compare the values of dates.
+
+- [Apply required functionality to Materialize select input by Imran Saleem](https://stackoverflow.com/questions/34248898/how-to-validate-select-option-for-a-materialize-dropdown/34809423#34809423)
+
+  - Incorporated into my event forms to ensure users input accurate data across all fields.
+
+- [Materialise select input bug fix for mobile by Akintomiwa Opemipo](https://stackoverflow.com/questions/52850091/materialize-select-and-dropdown-touch-event-selecting-wrong-item)
+
+  - Implemented this code as a bug fix to address the known issue with Materialize select inputs on touch screen devices.
 
 ### **Content**
 
