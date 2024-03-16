@@ -321,6 +321,7 @@ Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | Leave Button | Remove username from party member list | Click button | Username removed from party list | Pass |
 | Full Event | Display "Full" stamp when party list reaches capacity | Fill party list | "Full" stamp displays on event | Pass |
 | `Create Event Page` |
+| Prevent logged out users from accessing the page | Users who aren't logged in will recieve a falsh message and be redirected to the log in page. | Access the page via the url link whilst logged out | Redirected to log in page and flash message displayed | Pass |
 | Valid Input (Username) | Input border turns green | Enter valid input | Input border turned green | - |
 | Invalid Input (Username) | Input border turns red and displays "invalid entry" text | Enter invalid input | Input border turned red and displayed "invalid entry" text | - |
 | Valid Input (Max Party Size) | Input border turns green | Enter valid input | Input border turned green | - |
@@ -408,6 +409,10 @@ Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | Button Hover Effect | Button scale increase on mouse hover | Hover mouse over button | Button scale increases | - |
 | Button Click Animation | Button scale decreases on click | Click button | Button scale decreases | - |
 | `404 Error Page` |
+| Return Home Button | Redirect to the home page | Click button | Redirected to home page | - |
+| Button Hover Effect | Button scale increase on mouse hover | Hover mouse over button | Button scale increases | - |
+| Button Click Animation | Button scale decreases on click | Click button | Button scale decreases | - |
+| `405 Error Page` |
 | Return Home Button | Redirect to the home page | Click button | Redirected to home page | - |
 | Button Hover Effect | Button scale increase on mouse hover | Hover mouse over button | Button scale increases | - |
 | Button Click Animation | Button scale decreases on click | Click button | Button scale decreases | - |
