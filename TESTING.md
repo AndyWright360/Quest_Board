@@ -415,16 +415,17 @@ Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | Invalid Password | Display message notifying of invalid username or password | Submit incorrect password | Message displayed notifying of invalid username or password | Pass |
 | Successful Login | Redirect to profile page | Submit valid login details | Redirected to profile page | Pass |
 | `Profile Page` |
-| Prevent logged out users from accessing the page | Users who aren't logged in will recieve a flash message and be redirected to the log in page. | Access the page via the url link whilst logged out | Redirected to log in page and flash message displayed | - |
-| Button Hover Effect | Button scale increase on mouse hover | Hover mouse over button | Button scale increases | - |
-| Button Click Animation | Button scale decreases on click | Click button | Button scale decreases | - |
-| Create Event Button | Redirect to the create event page | Click button | Redirected to create event page | - |
-| Edit Button | Redirect to the edit event page | Click button | Redirected to edit event page | - |
-| Delete Button | Open delete event modal | Click button | Delete event modal opened | - |
-| Leave Button | Remove event from joined event list | Click button | Event removed from joined events list | - |
-| Event Stamp | Redirect to the selected event page | Click stamp | Redirected to selected event page | - |
-| No Events Message | Display message if no created events exist | Enter page with no created events | Message displayed notifying of no events | - |
-| No Joined Events Message | Display message if no joined events exist | Enter page with no joined events | Message displayed notifying of no joined events | - |
+| Prevent logged out users from accessing the page | Users who aren't logged in will recieve a flash message and be redirected to the log in page. | Access the page via the url link whilst logged out | Redirected to log in page and flash message displayed | Pass |
+| Prevent users from accessing profile's of other users | If currenly logged in user doesn't match the username passed to the url a 403 error will trigger | Access the page via the url link whilst logged in as a different user | Redirected to 403 error page | Pass |
+| Button Hover Effect | Button scale increase on mouse hover | Hover mouse over button | Button scale increases | Pass |
+| Button Click Animation | Button scale decreases on click | Click button | Button scale decreases | Pass |
+| Create Event Button | Redirect to the create event page | Click button | Redirected to create event page | Pass |
+| Edit Button | Redirect to the edit event page | Click button | Redirected to edit event page | Pass |
+| Delete Button | Open delete event modal | Click button | Delete event modal opened | Pass |
+| Leave Button | Remove event from joined event list | Click button | Event removed from joined events list | Pass |
+| Event Stamp | Redirect to the selected event page | Click stamp | Redirected to selected event page | Pass |
+| No Events Message | Display message if no created events exist | Enter page with no created events | Message displayed notifying of no events | Pass |
+| No Joined Events Message | Display message if no joined events exist | Enter page with no joined events | Message displayed notifying of no joined events | Pass |
 | `400 Error Page` |
 | Return Home Button | Redirect to the home page | Click button | Redirected to home page | - |
 | Button Hover Effect | Button scale increase on mouse hover | Hover mouse over button | Button scale increases | - |
