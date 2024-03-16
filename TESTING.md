@@ -473,3 +473,12 @@ Upon researching online, I discovered that this issue is widely documented and f
 ![Section Pixel Bug](documentation/testing/section-pixel-bug.jpg)
 
 Despite thorough research, I couldn't find a definitive solution to this issue. It occurs when two sections with the same background color connect, resulting in occasional misalignment and a 1 or 2-pixel white line gap between them. The size of this gap varies based on the width of the display screen. To mitigate this, I adjusted the height of the header section, which removed it from the range of display widths that the site can be viewed. However, I'm unsure if this would fix the issue across all browsers.
+
+#### Select Required Mobile Bug
+
+<video controls height="550">
+  <source src="documentation/testing/select-required-mobile-bug.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+While testing my website on mobile devices, I encountered a bug related to the required attribute in select inputs. Although the required attribute successfully prevents users from submitting the form if a select option hasn't been chosen, it fails to provide the necessary feedback message to alert users of the issue. Despite efforts to identify the cause, I have been unable to find a solution for this issue.
