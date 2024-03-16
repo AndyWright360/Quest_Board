@@ -353,9 +353,10 @@ def join_event(event_id):
                     return redirect(url_for('event', event_id=event_id))
                 else:
                     flash("User not found")
+                    return redirect(url_for('event', event_id=event_id))
             else:
                 flash("Sorry, this event is already full")
-            return redirect(url_for('event', event_id=event_id))
+                return redirect(url_for("events"))
         else:
             flash("You need to be logged in to join an event")
             return redirect(url_for('log_in'))
