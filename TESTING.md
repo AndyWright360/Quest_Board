@@ -427,25 +427,25 @@ Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | No Events Message | Display message if no created events exist | Enter page with no created events | Message displayed notifying of no events | Pass |
 | No Joined Events Message | Display message if no joined events exist | Enter page with no joined events | Message displayed notifying of no joined events | Pass |
 | `400 Error Page` |
-| Return Home Button | Redirect to the home page | Click button | Redirected to home page | - |
-| Button Hover Effect | Button scale increase on mouse hover | Hover mouse over button | Button scale increases | - |
-| Button Click Animation | Button scale decreases on click | Click button | Button scale decreases | - |
+| Return Home Button | Redirect to the home page | Click button | Redirected to home page | Pass |
+| Button Hover Effect | Button scale increase on mouse hover | Hover mouse over button | Button scale increases | Pass |
+| Button Click Animation | Button scale decreases on click | Click button | Button scale decreases | Pass |
 | `403 Error Page` |
-| Return Home Button | Redirect to the home page | Click button | Redirected to home page | - |
-| Button Hover Effect | Button scale increase on mouse hover | Hover mouse over button | Button scale increases | - |
-| Button Click Animation | Button scale decreases on click | Click button | Button scale decreases | - |
+| Return Home Button | Redirect to the home page | Click button | Redirected to home page | Pass |
+| Button Hover Effect | Button scale increase on mouse hover | Hover mouse over button | Button scale increases | Pass |
+| Button Click Animation | Button scale decreases on click | Click button | Button scale decreases | Pass |
 | `404 Error Page` |
-| Return Home Button | Redirect to the home page | Click button | Redirected to home page | - |
-| Button Hover Effect | Button scale increase on mouse hover | Hover mouse over button | Button scale increases | - |
-| Button Click Animation | Button scale decreases on click | Click button | Button scale decreases | - |
+| Return Home Button | Redirect to the home page | Click button | Redirected to home page | Pass |
+| Button Hover Effect | Button scale increase on mouse hover | Hover mouse over button | Button scale increases | Pass |
+| Button Click Animation | Button scale decreases on click | Click button | Button scale decreases | Pass |
 | `405 Error Page` |
-| Return Home Button | Redirect to the home page | Click button | Redirected to home page | - |
-| Button Hover Effect | Button scale increase on mouse hover | Hover mouse over button | Button scale increases | - |
-| Button Click Animation | Button scale decreases on click | Click button | Button scale decreases | - |
+| Return Home Button | Redirect to the home page | Click button | Redirected to home page | Pass |
+| Button Hover Effect | Button scale increase on mouse hover | Hover mouse over button | Button scale increases | Pass |
+| Button Click Animation | Button scale decreases on click | Click button | Button scale decreases | Pass |
 | `500 Error Page` |
-| Return Home Button | Redirect to the home page | Click button | Redirected to home page | - |
-| Button Hover Effect | Button scale increase on mouse hover | Hover mouse over button | Button scale increases | - |
-| Button Click Animation | Button scale decreases on click | Click button | Button scale decreases | - |
+| Return Home Button | Redirect to the home page | Click button | Redirected to home page | Pass |
+| Button Hover Effect | Button scale increase on mouse hover | Hover mouse over button | Button scale increases | Pass |
+| Button Click Animation | Button scale decreases on click | Click button | Button scale decreases | Pass |
 
 ### **Bugs & Fixes**
 
