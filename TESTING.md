@@ -17,13 +17,16 @@ This is the testing documentation for the Quest Board website. [The full README 
 - [**Automated Testing**](#automated-testing)
   - [**W3C HTML Validation**](#w3c-html-validation)
   - [**W3C CSS Validation**](#w3c-css-validation)
-    - [**Second Validation Test**](#second-validation-test)
   - [**JSHint JavaScript Validation**](#jshint-javascript-validation)
+  - [**Python Validation**](#python-validation)
   - [**WCAG Colour Contrast Checker**](#wcag-colour-contrast-checker)
-    - [**Page Content**](#page-content)
-    - [**Score Display**](#score-display)
-    - [**Buttons**](#buttons)
-    - [**Footer Content**](#footer-content)
+    - [**Red & White**](#red--white)
+    - [**Green & White**](#green--white)
+    - [**Light Green & Brown**](#light-green--brown)
+    - [**White & Brown**](#white--brown)
+    - [**White & Light Brown**](#white--light-brown)
+    - [**White & Mid Green**](#white--mid-green)
+    - [**Yellow & Brown**](#yellow--brown)
   - [**Lighthouse Testing**](#lighthouse-testing)
     - [**Desktop Results**](#desktop-results)
     - [**Mobile Results**](#mobile-results)
@@ -32,7 +35,17 @@ This is the testing documentation for the Quest Board website. [The full README 
     - [**First Time Visitor Goals**](#first-time-visitor-goals)
     - [**Returning Visitor Goals**](#returning-visitor-goals)
     - [**Frequent User Goals**](#frequent-user-goals)
+    - [**Administrator**](#administrator)
   - [**Full Testing**](#full-testing)
+  - [**Bugs & Fixes**](#bugs--fixes)
+    - [**Button Scale Bug**](#button-scale-bug)
+    - [**Horizontal Scroll Bug**](#horizontal-scroll-bug)
+    - [**Navbar Link Bug**](#navbar-link-bug)
+    - [**Materialize Select Validation Bug**](#materialize-select-validation-bug)
+    - [**Materialize Select Input Mobile Bug**](#materialize-select-input-mobile-bug)
+  - [**Known Bugs**](#known-bugs)
+    - [**Section Pixel Bug**](#section-pixel-bug)
+    - [**Select Required Mobile Bug**](#select-required-mobile-bug)
 
 ---
 
@@ -220,7 +233,7 @@ Lighthouse within Chrome Developer Tools was used to assess the website's perfor
 
 | Goals | How are they achieved? |
 | :--- | :--- |
-| I want to review and moderate user-created events to ensure they comply with community guidelines. | As an admin, all events created by users can be editted or deleted. This allows details to be easily modified if required. |
+| I want to review and moderate user-created events to ensure they comply with community guidelines. | As an admin, all events created by users can be edited or deleted. This allows details to be easily modified if required. |
 
 ### **Full Testing**
 
@@ -281,9 +294,9 @@ Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | Display Previous Gallery Image | Previous gallery image displays on screen | Drag gallery image to the right | Previous gallery image displayed | Pass |
 | Select Gallery Indicator | Display the selected gallery image | Click gallery indicator | Selected gallery image displayed | Pass |
 | `Events Page` |
-| Prevent logged out users from accessing the page | Users who aren't logged in will recieve a flash message and be redirected to the log in page. | Access the page via the url link whilst logged out | Redirected to log in page and flash message displayed | Pass |
-| Fliter Dropdown (Open) | Open filter dropdown to display search options | Click filter | Filter dropdown opens | Pass |
-| Fliter Dropdown (Close) | Close filter dropdown to remove search options | Click filter | Filter dropdown closes | Pass |
+| Prevent logged out users from accessing the page | Users who aren't logged in will receive a flash message and be redirected to the log in page. | Access the page via the URL link whilst logged out | Redirected to log in page and flash message displayed | Pass |
+| Filter Dropdown (Open) | Open filter dropdown to display search options | Click filter | Filter dropdown opens | Pass |
+| Filter Dropdown (Close) | Close filter dropdown to remove search options | Click filter | Filter dropdown closes | Pass |
 | Filter Checkbox (Cardiff) | Display events matching selected option | Click checkbox | Display corresponding events | Pass |
 | Filter Checkbox (Newport) | Display events matching selected option | Click checkbox | Display corresponding events | Pass |
 | Filter Checkbox (Swansea) | Display events matching selected option | Click checkbox | Display corresponding events | Pass |
@@ -304,15 +317,15 @@ Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | Leave Button | Decrease party member display by one | Click button | Party member display decreased by one | Pass |
 | Full Event | Display "Full" stamp when party list reaches capacity | Fill party list | "Full" stamp displays on event | Pass |
 | Event Stamp | Redirect to the selected event page | Click stamp | Redirected to selected event page | Pass |
-| Unathorised Deletion | Redirect to 403 error page and display flash message | Attempt to delete other users event via the url link | Redirected to 403 error page and flash message displayed | Pass |
-| Unathorised Edit | Redirect to 403 error page and display flash message | Attempt to edit other users event via the url link | Redirected to 403 error page and flash message displayed | Pass |
-| Logged Out Deletion | Redirect to log in page and display flash message | Attempt to delete event via the url link while logged out | Redirected to log in page and flash message displayed | Pass |
-| Logged Out Edit | Redirect to log in page and display flash message | Attempt to edit event via the url link while logged out | Redirected to log in page and flash message displayed | Pass |
-| GET Method Join | Redirect to 405 error page and display flash message | Attempt to join event via the url link | Redirected to 405 error page and flash message displayed | Pass |
-| GET Method Leave | Redirect to 405 error page and display flash message | Attempt to leave event via the url link | Redirected to 405 error page and flash message displayed | Pass |
+| Unauthorised Deletion | Redirect to 403 error page and display flash message | Attempt to delete other users event via the URL link | Redirected to 403 error page and flash message displayed | Pass |
+| Unauthorised Edit | Redirect to 403 error page and display flash message | Attempt to edit other users event via the URL link | Redirected to 403 error page and flash message displayed | Pass |
+| Logged Out Deletion | Redirect to log in page and display flash message | Attempt to delete event via the URL link while logged out | Redirected to log in page and flash message displayed | Pass |
+| Logged Out Edit | Redirect to log in page and display flash message | Attempt to edit event via the URL link while logged out | Redirected to log in page and flash message displayed | Pass |
+| GET Method Join | Redirect to 405 error page and display flash message | Attempt to join event via the URL link | Redirected to 405 error page and flash message displayed | Pass |
+| GET Method Leave | Redirect to 405 error page and display flash message | Attempt to leave event via the URL link | Redirected to 405 error page and flash message displayed | Pass |
 | Join Full Event | Redirect to events page and display flash message | Attempt to join an event that's full | Redirected to events page and flash message displayed | Pass |
 | `Event Page` |
-| Prevent logged out users from accessing the page | Users who aren't logged in will recieve a flash message and be redirected to the log in page. | Access the page via the url link whilst logged out | Redirected to log in page and flash message displayed | Pass |
+| Prevent logged out users from accessing the page | Users who aren't logged in will receive a flash message and be redirected to the log in page. | Access the page via the URL link whilst logged out | Redirected to log in page and flash message displayed | Pass |
 | Button Hover Effect | Button scale increase on mouse hover | Hover mouse over button | Button scale increases | Pass |
 | Button Click Animation | Button scale decreases on click | Click button | Button scale decreases | Pass |
 | Edit Button | Redirect to the edit event page | Click button | Redirected to edit event page | Pass |
@@ -321,7 +334,7 @@ Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | Leave Button | Remove username from party member list | Click button | Username removed from party list | Pass |
 | Full Event | Display "Full" stamp when party list reaches capacity | Fill party list | "Full" stamp displays on event | Pass |
 | `Create Event Page` |
-| Prevent logged out users from accessing the page | Users who aren't logged in will recieve a flash message and be redirected to the log in page. | Access the page via the url link whilst logged out | Redirected to log in page and flash message displayed | Pass |
+| Prevent logged out users from accessing the page | Users who aren't logged in will receive a flash message and be redirected to the log in page. | Access the page via the URL link whilst logged out | Redirected to log in page and flash message displayed | Pass |
 | Character Counter (Username) | Dynamically display character number as input is entered | Enter input data | Counter displays current character number | Pass |
 | Character Counter (Description) | Dynamically display character number as input is entered | Enter input data | Counter displays current character number | Pass |
 | Select Dropdown (Location) | Display list of location options | Click input | Displays list of location options | Pass |
@@ -333,9 +346,9 @@ Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | Required Input (Date) | Display message to user for unfilled input field | Submit form with empty inputs | Message displayed notifying of empty input field | Pass |
 | Required Input (Max Party Size) | Display message to user for unfilled input field | Submit form with empty inputs | Message displayed notifying of empty input field | Pass |
 | Required Input (Description) | Display message to user for unfilled input field | Submit form with empty inputs | Message displayed notifying of empty input field | Pass |
-| Radio Input (Beginner) | Radio button highligted when input selected | Select input | Radio button highlighted | Pass |
-| Radio Input (Everyone) | Radio button highligted when input selected | Select input | Radio button highlighted | Pass |
-| Radio Input (Experienced) | Radio button highligted when input selected | Select input | Radio button highlighted | Pass |
+| Radio Input (Beginner) | Radio button highlighted when input selected | Select input | Radio button highlighted | Pass |
+| Radio Input (Everyone) | Radio button highlighted when input selected | Select input | Radio button highlighted | Pass |
+| Radio Input (Experienced) | Radio button highlighted when input selected | Select input | Radio button highlighted | Pass |
 | Popover Message (Beginner) | Display popover message when hovering over question mark icon | Hover over icon | Corresponding popover message displayed | Pass |
 | Popover Message (Experienced) | Display popover message when hovering over question mark icon | Hover over icon | Corresponding popover message displayed | Pass |
 | Popover Message (Experienced) | Display popover message when hovering over question mark icon | Hover over icon | Corresponding popover message displayed | Pass |
@@ -348,7 +361,7 @@ Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | Description Validation (End with Space) | Reload page and display flash message | Input form with space at end of Description input | Page reloaded and relevant message displayed | Pass |
 | Event Created Successfully | Redirect to events page and display flash message | Submit form with valid inputs | Redirected to events page and relevant message displayed | Pass |
 | `Edit Event Page` |
-| Prevent logged out users from accessing the page | Users who aren't logged in will recieve a flash message and be redirected to the log in page. | Access the page via the url link whilst logged out | Redirected to log in page and flash message displayed | Pass |
+| Prevent logged out users from accessing the page | Users who aren't logged in will receive a flash message and be redirected to the log in page. | Access the page via the URL link whilst logged out | Redirected to log in page and flash message displayed | Pass |
 | Character Counter (Username) | Dynamically display character number as input is entered | Enter input data | Counter displays current character number | Pass |
 | Character Counter (Description) | Dynamically display character number as input is entered | Enter input data | Counter displays current character number | Pass |
 | Select Dropdown (Location) | Display list of location options | Click input | Displays list of location options | Pass |
@@ -358,9 +371,9 @@ Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | Required Input (Date) | Display message to user for unfilled input field | Submit form with empty inputs | Message displayed notifying of empty input field | Pass |
 | Required Input (Max Party Size) | Display message to user for unfilled input field | Submit form with empty inputs | Message displayed notifying of empty input field | Pass |
 | Required Input (Description) | Display message to user for unfilled input field | Submit form with empty inputs | Message displayed notifying of empty input field | Pass |
-| Radio Input (Beginner) | Radio button highligted when input selected | Select input | Radio button highlighted | Pass |
-| Radio Input (Everyone) | Radio button highligted when input selected | Select input | Radio button highlighted | Pass |
-| Radio Input (Experienced) | Radio button highligted when input selected | Select input | Radio button highlighted | Pass |
+| Radio Input (Beginner) | Radio button highlighted when input selected | Select input | Radio button highlighted | Pass |
+| Radio Input (Everyone) | Radio button highlighted when input selected | Select input | Radio button highlighted | Pass |
+| Radio Input (Experienced) | Radio button highlighted when input selected | Select input | Radio button highlighted | Pass |
 | Popover Message (Beginner) | Display popover message when hovering over question mark icon | Hover over icon | Corresponding popover message displayed | Pass |
 | Popover Message (Experienced) | Display popover message when hovering over question mark icon | Hover over icon | Corresponding popover message displayed | Pass |
 | Popover Message (Experienced) | Display popover message when hovering over question mark icon | Hover over icon | Corresponding popover message displayed | Pass |
@@ -372,14 +385,14 @@ Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | Description Validation (Start with Space) | Reload page and display flash message | Input form with space at start of Description input | Page reloaded and relevant message displayed | Pass |
 | Description Validation (End with Space) | Reload page and display flash message | Input form with space at end of Description input | Page reloaded and relevant message displayed | Pass |
 | Reduce Party Size Below Joined Members | Reload page and display flash message | Reduce the Max Party Size input below the number of joined members | Page reloaded and relevant message displayed | Pass |
-| Event Editted Successfully | Redirect to events page and display flash message | Submit form with valid inputs | Redirected to events page and relevant message displayed | Pass |
+| Event Edited Successfully | Redirect to events page and display flash message | Submit form with valid inputs | Redirected to events page and relevant message displayed | Pass |
 | `Delete Event Modal` |
 | Button Hover Effect | Button colour darkens on mouse hover | Hover mouse over button | Button colour darkens | Pass |
 | Cancel Button | Close delete modal | Click button | Modal closed | Pass |
 | Delete Button | Delete event data and redirect to events page | Click button | Redirected to events page and event deleted | Pass |
 | Close Modal (Click outside modal window) | Close modal by clicking outside window | Click outside modal window | Modal closed | Pass |
 | `Sign Up Page` |
-| Prevent logged in users from accessing the page | Users who are logged in will recieve a flash message and be redirected to their profile page. | Access the page via the url link whilst logged in | Redirected to profile page and flash message displayed | Pass |
+| Prevent logged in users from accessing the page | Users who are logged in will receive a flash message and be redirected to their profile page. | Access the page via the URL link whilst logged in | Redirected to profile page and flash message displayed | Pass |
 | Valid Input (Username) | Input border turns green and displays "valid" text | Enter valid input | Input border turned green and displayed "valid" text | Pass |
 | Invalid Input (Username) | Input border turns red and displays "invalid entry" text | Enter invalid input | Input border turned red and displayed "invalid entry" text | Pass |
 | Valid Input (Password) | Input border turns green and displays "valid" text | Enter valid input | Input border turned green and displayed "valid" text | Pass |
@@ -394,12 +407,12 @@ Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | Required Input (Confirm Password) | Display message to user for unfilled input field | Submit form with empty inputs | Message displayed notifying of empty input field | Pass |
 | Input Pattern Recognition | Display message to user if keys outside the pattern requirements are entered | Submit form with invalid inputs | Message displayed notifying of incorrect input type | Pass |
 | Check Passwords Match | Reload page and display message if passwords don't match | Submit form with unmatched password inputs | Page reloaded and flash message displayed | Pass |
-| Check Username Exists | Reload page and display message if username exisits | Submit form with exisiting username | Page reloaded and flash message displayed | Pass |
+| Check Username Exists | Reload page and display message if username exists | Submit form with existing username | Page reloaded and flash message displayed | Pass |
 | Link Hover Effect | Text underlines on mouse hover | Hover over link text | Link text underlined | Pass |
 | Log In Link | Redirect to login page | Click button | Redirected to login page | Pass |
 | Successful Sign Up | Redirect to profile page | Submit valid sign up details | Redirected to profile page | Pass |
 | `Login Page` |
-| Prevent logged in users from accessing the page | Users who are logged in will recieve a flash message and be redirected to their profile page. | Access the page via the url link whilst logged in | Redirected to profile page and flash message displayed | Pass |
+| Prevent logged in users from accessing the page | Users who are logged in will receive a flash message and be redirected to their profile page. | Access the page via the URL link whilst logged in | Redirected to profile page and flash message displayed | Pass |
 | Valid Input (Username) | Input border turns green and displays "valid" text | Enter valid input | Input border turned green and displayed "valid" text | Pass |
 | Invalid Input (Username) | Input border turns red and displays "invalid entry" text | Enter invalid input | Input border turned red and displayed "invalid entry" text | Pass |
 | Valid Input (Password) | Input border turns green and displays "valid" text | Enter valid input | Input border turned green and displayed "valid" text | Pass |
@@ -415,8 +428,8 @@ Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | Invalid Password | Display message notifying of invalid username or password | Submit incorrect password | Message displayed notifying of invalid username or password | Pass |
 | Successful Login | Redirect to profile page | Submit valid login details | Redirected to profile page | Pass |
 | `Profile Page` |
-| Prevent logged out users from accessing the page | Users who aren't logged in will recieve a flash message and be redirected to the log in page. | Access the page via the url link whilst logged out | Redirected to log in page and flash message displayed | Pass |
-| Prevent users from accessing profile's of other users | If currenly logged in user doesn't match the username passed to the url a 403 error will trigger | Access the page via the url link whilst logged in as a different user | Redirected to 403 error page | Pass |
+| Prevent logged out users from accessing the page | Users who aren't logged in will receive a flash message and be redirected to the log in page. | Access the page via the URL link whilst logged out | Redirected to log in page and flash message displayed | Pass |
+| Prevent users from accessing profile's of other users | If currently logged in user doesn't match the username passed to the URL a 403 error will trigger | Access the page via the URL link whilst logged in as a different user | Redirected to 403 error page | Pass |
 | Button Hover Effect | Button scale increase on mouse hover | Hover mouse over button | Button scale increases | Pass |
 | Button Click Animation | Button scale decreases on click | Click button | Button scale decreases | Pass |
 | Create Event Button | Redirect to the create event page | Click button | Redirected to create event page | Pass |
@@ -491,7 +504,7 @@ Upon researching online, I discovered that this issue is widely documented and f
 
 ![Section Pixel Bug](documentation/testing/section-pixel-bug.jpg)
 
-Despite thorough research, I couldn't find a definitive solution to this issue. It occurs when two sections with the same background color connect, resulting in occasional misalignment and a 1 or 2-pixel white line gap between them. The size of this gap varies based on the width of the display screen. To mitigate this, I adjusted the height of the header section, which removed it from the range of display widths that the site can be viewed. However, I'm unsure if this would fix the issue across all browsers.
+Despite thorough research, I couldn't find a definitive solution to this issue. It occurs when two sections with the same background colour connect, resulting in occasional misalignment and a 1 or 2-pixel white line gap between them. The size of this gap varies based on the width of the display screen. To mitigate this, I adjusted the height of the header section, which removed it from the range of display widths that the site can be viewed. However, I'm unsure if this would fix the issue across all browsers.
 
 #### Select Required Mobile Bug
 

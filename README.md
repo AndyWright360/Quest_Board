@@ -6,7 +6,7 @@
 
 Quest Board is more than just a website; it's a thriving community crafted for Dungeons & Dragons enthusiasts in South Wales. Whether you're a seasoned adventurer or a novice seeking your first quest, this is the place to connect with like-minded individuals, create memorable events, and embark on epic journeys together.
 
-So sharpen those pencils, dust off your dice, and prepare for adventure!
+So, sharpen those pencils, dust off your dice, and prepare for adventure!
 
 This project was created as part of the Code Institute Level 5 Diploma in Web Application Development course.
 
@@ -20,64 +20,64 @@ This project was created as part of the Code Institute Level 5 Diploma in Web Ap
 
 ## **Contents** <!-- omit in toc --> 
 
-- [**User Experience (UX)**](#user-experience-ux)
-  - [**Initial Concept**](#initial-concept)
-  - [**User Stories**](#user-stories)
-- [**Design**](#design)
-  - [**Colour Scheme**](#colour-scheme)
-    - [**Primary Palette**](#primary-palette)
-    - [**Additional Colours**](#additional-colours)
-  - [**Typography**](#typography)
-    - [**Dragon Hunter**](#dragon-hunter)
-    - [**Charm**](#charm)
-  - [**Imagery**](#imagery)
-  - [**Wireframes**](#wireframes)
-    - [**Home Page**](#home-page)
-    - [**Events Page**](#events-page)
-    - [**Event Page**](#event-page)
-    - [**Create Event Page**](#create-event-page)
-    - [**Edit Event Page**](#edit-event-page)
-    - [**Sign Up Page**](#sign-up-page)
-    - [**Login Page**](#login-page)
-    - [**Profile Page**](#profile-page)
-- [**Features**](#features)
-  - [**General Features**](#general-features)
-    - [**Responsive Design**](#responsive-design)
-    - [**Page Heading**](#page-heading)
-    - [**Navbar**](#navbar)
-    - [**Flash Messages**](#flash-messages)
-    - [**Footer**](#footer)
+- [**User Experience (UX)**](#user-experience-ux) 
+  - [**Initial Concept**](#initial-concept) 
+  - [**User Stories**](#user-stories) 
+- [**Design**](#design) 
+  - [**Colour Scheme**](#colour-scheme) 
+    - [**Primary Palette**](#primary-palette) 
+    - [**Additional Colours**](#additional-colours) 
+  - [**Typography**](#typography) 
+    - [**Dragon Hunter**](#dragon-hunter) 
+    - [**Charm**](#charm) 
+  - [**Imagery**](#imagery) 
+  - [**Wireframes**](#wireframes) 
+    - [**Home Page WF**](#home-page-wf) 
+    - [**Events Page WF**](#events-page-wf) 
+    - [**Event Page WF**](#event-page-wf) 
+    - [**Create Event Page WF**](#create-event-page-wf) 
+    - [**Edit Event Page WF**](#edit-event-page-wf) 
+    - [**Sign Up Page WF**](#sign-up-page-wf) 
+    - [**Login Page WF**](#login-page-wf) 
+    - [**Profile Page WF**](#profile-page-wf) 
+- [**Features**](#features) 
+  - [**General Features**](#general-features) 
+    - [**Responsive Design**](#responsive-design) 
+    - [**Page Heading**](#page-heading) 
+    - [**Navbar**](#navbar) 
+    - [**Flash Messages**](#flash-messages) 
+    - [**Footer**](#footer) 
     - [**Buttons**](#buttons)
   - [**Home Page**](#home-page)
-  - [**Sign Up/Login Page**](#sign-up/login-page)
-  - [**Profile Page**](#profile-page)
-  - [**Events Page**](#events-page)
-  - [**Event Page**](#event-page)
-  - [**Create/Edit Event Page**](#create/edit-event-page)
-  - [**Error Pages**](#error-pages)
-  - [**Future Implementations**](#future-implementations)
-    - [**Profile Personalisation**](#profile-personalisation)
-    - [**Party Creation**](#party-creation)
-    - [**Message System**](#message-system)
-- [**Technologies Used**](#technologies-used)
-  - [**Languages Used**](#languages-used)
-  - [**Frameworks, Libraries \& Programs Used**](#frameworks-libraries--programs-used)
-- [**Deployment \& Local Development**](#deployment--local-development)
-  - [**Deployment**](#deployment)
-  - [**Local Development**](#local-development)
-    - [**How to Fork**](#how-to-fork)
-    - [**How to Clone**](#how-to-clone)
-- [**Testing**](#testing)
-- [**Credits**](#credits)
-  - [**Code Used**](#code-used)
-  - [**Content**](#content)
-  - [**Media**](#media)
-    - [**AI Generated Images**](#ai-generated-images)
-    - [**Footer Icons**](#footer-icons)
-    - [**Home Page Images**](#home-page-images)
-    - [**Events Page Images**](#events-page-images)
-    - [**Create Event Images**](#create-event-images)
-    - [**Error Page Images**](#error-page-images)
+  - [**Sign Up \& Login Page**](#sign-up--login-page)  
+  - [**Profile Page**](#profile-page) 
+  - [**Events Page**](#events-page) 
+  - [**Event Page**](#event-page) 
+  - [**Create \& Edit Event Page**](#create--edit-event-page)
+  - [**Error Pages**](#error-pages) 
+  - [**Future Implementations**](#future-implementations) 
+    - [**Profile Personalisation**](#profile-personalisation) 
+    - [**Party Creation**](#party-creation) 
+    - [**Message System**](#message-system) 
+- [**Technologies Used**](#technologies-used) 
+  - [**Languages Used**](#languages-used) 
+  - [**Frameworks, Libraries \& Programs Used**](#frameworks-libraries--programs-used) 
+- [**Deployment \& Local Development**](#deployment--local-development) 
+  - [**Deployment**](#deployment) 
+  - [**Local Development**](#local-development) 
+    - [**How to Fork**](#how-to-fork) 
+    - [**How to Clone**](#how-to-clone) 
+- [**Testing**](#testing) 
+- [**Credits**](#credits) 
+  - [**Code Used**](#code-used) 
+  - [**Content**](#content) 
+  - [**Media**](#media) 
+    - [**AI Generated Images**](#ai-generated-images) 
+    - [**Footer Icons**](#footer-icons) 
+    - [**Home Page Images**](#home-page-images) 
+    - [**Events Page Images**](#events-page-images) 
+    - [**Create Event Images**](#create-event-images) 
+    - [**Error Page Images**](#error-page-images) 
   - [**Acknowledgments**](#acknowledgments)
 
 --- 
@@ -158,35 +158,35 @@ At the heart of the site's concept was the idea of adventurers receiving quests 
 
 Wireframes were generated using Balsamiq for desktop, tablet, and mobile screen dimensions, ensuring a responsive design. This method aids in visualising and configuring the layout, allowing for a more uniformed user experience across various devices.
 
-#### **Home Page**
+#### **Home Page WF**
 
 ![Home page wireframes](documentation/wireframes/home.png)
 
-#### **Events Page**
+#### **Events Page WF**
 
 ![Events page wireframes](documentation/wireframes/events.png)
 
-#### **Event Page**
+#### **Event Page WF**
 
 ![Event page wireframes](documentation/wireframes/event.png)
 
-#### **Create Event Page**
+#### **Create Event Page WF**
 
 ![Create event page wireframes](documentation/wireframes/create-event.png)
 
-#### **Edit Event Page**
+#### **Edit Event Page WF**
 
 ![Edit event page wireframes](documentation/wireframes/edit-event.png)
 
-#### **Sign Up Page**
+#### **Sign Up Page WF**
 
 ![Sign up page wireframes](documentation/wireframes/sign-up.png)
 
-#### **Login Page**
+#### **Login Page WF**
 
 ![Login page wireframes](documentation/wireframes/login.png)
 
-#### **Profile Page**
+#### **Profile Page WF**
 
 ![Profile page wireframes](documentation/wireframes/profile.png)
 
@@ -381,7 +381,7 @@ A relational database schema was implemented using PostgreSQL, featuring primary
 
 - **Auto-Play Gallery:** The gallery features an auto-play function, scrolling through each image on a timer. The images depict past events, offering users a visual preview of what to anticipate from upcoming gatherings.
 
-### **Sign Up/Login Page**
+### **Sign Up & Login Page**
 
 <details><summary>Screenshots</summary>
 
@@ -470,7 +470,7 @@ A relational database schema was implemented using PostgreSQL, featuring primary
 
 - **Centralised Event Management:** Access to all events created and joined by the user is provided, allowing easy management within a single space. User-created and joined events are arranged into separate sections for enhanced clarity and organisation.
 
-- **No Events Message:** In case no created or joined events exist, a message prompts the user to either create a new event or explore existing events on the events page. This encourages user engagement and activity to further foster a sense of community amoungst users.
+- **No Events Message:** In case no created or joined events exist, a message prompts the user to either create a new event or explore existing events on the events page. This encourages user engagement and activity to further foster a sense of community amongst users.
 
 - **Delete Modal:** Upon clicking the 'Delete' button, a modal will appear to confirm that the user wants to proceed with this action.
 
@@ -532,7 +532,7 @@ A relational database schema was implemented using PostgreSQL, featuring primary
 
 - **Join & Leave Events:** Events created by other users will instead display a "join" button, which changes to "leave" if the user has already joined the event.
 
-- **Feedback on Full Events:** Once the maximum party members have been reached, a "full" stamp will replace the "join" button, signaling to users that the event is at capacity and can no longer be joined.
+- **Feedback on Full Events:** Once the maximum party members have been reached, a "full" stamp will replace the "join" button, signalling to users that the event is at capacity and can no longer be joined.
 
 - **Deletion Notification:** A modal prompts user confirmation to delete an event, preventing accidental selections that can't be undone.
 
@@ -574,7 +574,7 @@ A relational database schema was implemented using PostgreSQL, featuring primary
 
 - **Join & Leave:** Users can join or leave events created by other users form this page.
 
-### **Create/Edit Event Page**
+### **Create & Edit Event Page**
 
 <details><summary>Screenshots</summary>
 
@@ -666,9 +666,9 @@ The form on this page incorporates several features aimed at helping users under
 
 </details>
 
-- **Error Image:** The prominant image of each page is of a D20 that has landed on a 1. This references the game of Dungeons & Dragons and is the lowest roll that can occur when attempting an action.
+- **Error Image:** The prominent image of each page is of a D20 that has landed on a 1. This references the game of Dungeons & Dragons and is the lowest roll that can occur when attempting an action.
 
-- **Error Message:** The error message for each page is written from a Dungeon Master's perpective to a player. Offering a humerous explanation of the error tailored to the fantasy theme.
+- **Error Message:** The error message for each page is written from a Dungeon Master's perspective to a player. Offering a humorous explanation of the error tailored to the fantasy theme.
 
 - **Return Home Button:** Prominently placed on each page, the "Return Home" button offers straightforward navigation. Allowing users to easily return to the main page.
 
@@ -692,7 +692,7 @@ In the future, I aim to implement a feature that automatically deletes expired e
 
 #### **Background Image Failsafe**
 
-Given that many content containers rely on background images, there's a concern regarding font readability should these images fail to load. As the images have tranparent elements, the option to include a background colour wasn't available. To address this, I intend to implement a feature in the future as a failsafe measure. This could involve using JavaScript to check if the image has loaded, and if not, provide an alternative option. Alternatively, divs with background colors could be positioned absolutely behind the background image, using z-index to keep them hidden unless the image fails to load.
+Given that many content containers rely on background images, there's a concern regarding font readability should these images fail to load. As the images have transparent elements, the option to include a background colour wasn't available. To address this, I intend to implement a feature in the future as a failsafe measure. This could involve using JavaScript to check if the image has loaded, and if not, provide an alternative option. Alternatively, divs with background colours could be positioned absolutely behind the background image, using z-index to keep them hidden unless the image fails to load.
 
 ---
 
@@ -753,7 +753,7 @@ Given that many content containers rely on background images, there's a concern 
 
 - **Google Chrome Dev Tools**
 
-    - Utilised to inspect page elements, debug site issues, and test responsiveness on various mockup devices.
+    - Utilised to inspect page elements, debug site issues, and test responsiveness on various mock-up devices.
 
 - **Google Maps API**
 
@@ -842,7 +842,7 @@ This web application is deployed using Heroku. Follow these steps to recreate th
 9. **Deployment**
 
 - Enable automatic deploys (this step is optional).
-- Within the Manual deploy section. Select the "main" brack from the list of branch options.
+- Within the Manual deploy section. Select the "main" branch from the list of branch options.
 - Click the "Manual Deploy" button.
 
 10. **Table Creation**
@@ -938,9 +938,9 @@ For a detailed overview of all conducted testing, please refer to the [TESTING.m
 
   - This documentation helped me to implement custom interactive Google map markers.
 
-- [Checkbox Filtering with Subfilters by Kassandra Flanders](https://codepen.io/tornadicshark/pen/XWboaRp?editors=1010)
+- [Checkbox Filtering with Sub Filters by Kassandra Flanders](https://codepen.io/tornadicshark/pen/XWboaRp?editors=1010)
 
-  - This code helped me create the filter search functionalitly across multiple categories.
+  - This code helped me create the filter search functionality across multiple categories.
 
 - [User Registration Page with Flask-SQLAlchemy & PostgreSQL by Sandeep Sudhakaran](https://www.youtube.com/watch?v=7EeAZx78P2U)
 
