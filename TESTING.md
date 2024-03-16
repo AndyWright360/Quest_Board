@@ -322,24 +322,31 @@ Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | Full Event | Display "Full" stamp when party list reaches capacity | Fill party list | "Full" stamp displays on event | Pass |
 | `Create Event Page` |
 | Prevent logged out users from accessing the page | Users who aren't logged in will recieve a falsh message and be redirected to the log in page. | Access the page via the url link whilst logged out | Redirected to log in page and flash message displayed | Pass |
-| Valid Input (Username) | Input border turns green | Enter valid input | Input border turned green | - |
-| Invalid Input (Username) | Input border turns red and displays "invalid entry" text | Enter invalid input | Input border turned red and displayed "invalid entry" text | - |
-| Valid Input (Max Party Size) | Input border turns green | Enter valid input | Input border turned green | - |
-| Invalid Input (Max Party Size) | Input border turns red and displays "max 10" text | Enter invalid input | Input border turned red and displayed "max 10" text | - |
-| Valid Input (Description) | Input border turns green | Enter valid input | Input border turned green | - |
-| Invalid Input (Description) | Input border turns red and displays "invalid entry" text | Enter invalid input | Input border turned red and displayed "invalid entry" text | - |
-| Character Counter (Username) | Dynamically display character number as input is entered | Enter input data | Counter displays current character number | - |
-| Character Counter (Description) | Dynamically display character number as input is entered | Enter input data | Counter displays current character number | - |
-| Select Dropdown (Location) | Display list of location options | Click input | Displays list of location options | - |
-| Select Dropdown (Time) | Display list of time options | Click input | Displays list of time options | - |
-| Date Picker | Open date picker modal | Click date input | Date picker modal opens | - |
-| Required Inputs | Display message to user for unfilled input field | Submit form with empty inputs | Message displayed notifying of empty input field | - |
-| Radio Input (Beginner) | Radio button highligted when input selected | Select input | Radio button highlighted | - |
-| Radio Input (Everyone) | Radio button highligted when input selected | Select input | Radio button highlighted | - |
-| Radio Input (Experienced) | Radio button highligted when input selected | Select input | Radio button highlighted | - |
-| Popover Message (Beginner) | Display popover message when hovering over question mark icon | Hover over icon | Corresponding popover message displayed | - |
-| Popover Message (Everyone) | Display popover message when hovering over question mark icon | Hover over icon | Corresponding popover message displayed | - |
-| Popover Message (Experienced) | Display popover message when hovering over question mark icon | Hover over icon | Corresponding popover message displayed | - |
+| Character Counter (Username) | Dynamically display character number as input is entered | Enter input data | Counter displays current character number | Pass |
+| Character Counter (Description) | Dynamically display character number as input is entered | Enter input data | Counter displays current character number | Pass |
+| Select Dropdown (Location) | Display list of location options | Click input | Displays list of location options | Pass |
+| Select Dropdown (Time) | Display list of time options | Click input | Displays list of time options | Pass |
+| Date Picker | Open date picker modal | Click date input | Date picker modal opens | Pass |
+| Required Input (Event Name) | Display message to user for unfilled input field | Submit form with empty inputs | Message displayed notifying of empty input field | Pass |
+| Required Input (Location) | Display message to user for unfilled input field | Submit form with empty inputs | Message displayed notifying of empty input field | Pass |
+| Required Input (Time) | Display message to user for unfilled input field | Submit form with empty inputs | Message displayed notifying of empty input field | Pass |
+| Required Input (Date) | Display message to user for unfilled input field | Submit form with empty inputs | Message displayed notifying of empty input field | Pass |
+| Required Input (Max Party Size) | Display message to user for unfilled input field | Submit form with empty inputs | Message displayed notifying of empty input field | Pass |
+| Required Input (Description) | Display message to user for unfilled input field | Submit form with empty inputs | Message displayed notifying of empty input field | Pass |
+| Radio Input (Beginner) | Radio button highligted when input selected | Select input | Radio button highlighted | Pass |
+| Radio Input (Everyone) | Radio button highligted when input selected | Select input | Radio button highlighted | Pass |
+| Radio Input (Experienced) | Radio button highligted when input selected | Select input | Radio button highlighted | Pass |
+| Popover Message (Beginner) | Display popover message when hovering over question mark icon | Hover over icon | Corresponding popover message displayed | Pass |
+| Popover Message (Experienced) | Display popover message when hovering over question mark icon | Hover over icon | Corresponding popover message displayed | Pass |
+| Popover Message (Experienced) | Display popover message when hovering over question mark icon | Hover over icon | Corresponding popover message displayed | Pass |
+| Event Name Validation (Spaces Only) | Reload page and display flash message | Input form with spaces only as Event Name input | Page reloaded and relevant message displayed | Pass |
+| Event Name Validation (Start with Space) | Reload page and display flash message | Input form with space at start of Event Name input | Page reloaded and relevant message displayed | Pass |
+| Event Name Validation (End with Space) | Reload page and display flash message | Input form with space at end of Event Name input | Page reloaded and relevant message displayed | Pass |
+| Date Validation (Can't be a past date) | Reload page and display flash message | Input form with past date as input | Page reloaded and relevant message displayed | Pass |
+| Description Validation (Spaces Only) | Reload page and display flash message | Input form with spaces only as Description input | Page reloaded and relevant message displayed | Pass |
+| Description Validation (Start with Space) | Reload page and display flash message | Input form with space at start of Description input | Page reloaded and relevant message displayed | Pass |
+| Description Validation (End with Space) | Reload page and display flash message | Input form with space at end of Description input | Page reloaded and relevant message displayed | Pass |
+| Event Created Successfully | Redirect to events page and display flash message | Submit form with valid inputs | Redirected to events page and relevant message displayed | Pass |
 | `Edit Event Page` |
 | Valid Input (Event Name) | Input border turns green | Enter valid input | Input border turned green | - |
 | Invalid Input (Event Name) | Input border turns red and displays "invalid entry" text | Enter invalid input | Input border turned red and displayed "invalid entry" text | - |
