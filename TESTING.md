@@ -399,13 +399,15 @@ Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | Log In Link | Redirect to login page | Click button | Redirected to login page | Pass |
 | Successful Sign Up | Redirect to profile page | Submit valid sign up details | Redirected to profile page | Pass |
 | `Login Page` |
+| Prevent logged in users from accessing the page | Users who are logged in will recieve a flash message and be redirected to their profile page. | Access the page via the url link whilst logged in | Redirected to profile page and flash message displayed | - |
 | Valid Input (Username) | Input border turns green and displays "valid" text | Enter valid input | Input border turned green and displayed "valid" text | - |
 | Invalid Input (Username) | Input border turns red and displays "invalid entry" text | Enter invalid input | Input border turned red and displayed "invalid entry" text | - |
 | Valid Input (Password) | Input border turns green and displays "valid" text | Enter valid input | Input border turned green and displayed "valid" text | - |
 | Invalid Input (Password) | Input border turns red and displays "invalid entry" text | Enter invalid input | Input border turned red and displayed "invalid entry" text | - |
 | Character Counter (Username) | Dynamically display character number as input is entered | Enter input data | Counter displays current character number | - |
 | Character Counter (Password) | Dynamically display character number as input is entered | Enter input data | Counter displays current character number | - |
-| Required Inputs | Display message to user for unfilled input field | Submit form with empty inputs | Message displayed notifying of empty input field | - |
+| Required Input (Username) | Display message to user for unfilled input field | Submit form with empty inputs | Message displayed notifying of empty input field | - |
+| Required Input (Password) | Display message to user for unfilled input field | Submit form with empty inputs | Message displayed notifying of empty input field | - |
 | Input Pattern Recognition | Display message to user if keys outside the pattern requirements are entered | Submit form with invalid inputs | Message displayed notifying of incorrect input type | - |
 | Link Hover Effect | Text underlines on mouse hover | Hover over link text | Link text underlined | - |
 | Sign Up Link | Redirect to sign up page | Click button | Redirected to sign up page | - |

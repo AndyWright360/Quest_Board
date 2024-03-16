@@ -135,8 +135,8 @@ def profile(username):
         return redirect(url_for("log_in"))
 
 
-@app.route("/logout")
-def logout():
+@app.route("/log_out")
+def log_out():
     """
     Prevent users who aren't logged in from accessing the function,
     Removes the username from the session cookie

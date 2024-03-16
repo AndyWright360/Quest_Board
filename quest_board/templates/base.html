@@ -48,7 +48,7 @@
                     {% if session.user %}
                         <li {% if request.endpoint == 'events' %} class="active-link" {% endif %}><a href="{{ url_for('events') }}" aria-label="Events">Events</a></li>
                         <li {% if request.endpoint == 'profile' %} class="active-link" {% endif %}><a href="{{ url_for('profile', username=session['user']) }}" aria-label="Profile">Profile</a></li>
-                        <li><a href="{{ url_for('logout') }} " aria-label="Log Out">Log Out</a></li>
+                        <li><a href="{{ url_for('log_out') }} " aria-label="Log Out">Log Out</a></li>
                     {% else %}
                         <li {% if request.endpoint == 'sign_up' %} class="active-link" {% endif %}><a href="{{ url_for('sign_up') }}" aria-label="Sign Up">Sign Up</a></li>
                         <li {% if request.endpoint == 'log_in' %} class="active-link" {% endif %}><a href="{{ url_for('log_in') }}" aria-label="Log In">Log In</a></li>
@@ -63,7 +63,7 @@
             {% if session.user %}
                 <li {% if request.endpoint == 'events' %} class="active-link" {% endif %}><a href="{{ url_for('events') }}" aria-label="Events">Events</a></li>
                 <li {% if request.endpoint == 'profile' %} class="active-link" {% endif %}><a href="{{ url_for('profile', username=session['user']) }}" aria-label="Profile">Profile</a></li>
-                <li><a href="{{ url_for('logout') }}" aria-label="Log Out">Log Out</a></li>
+                <li><a href="{{ url_for('log_out') }}" aria-label="Log Out">Log Out</a></li>
             {% else %}
                 <li {% if request.endpoint == 'sign_up' %} class="active-link" {% endif %}><a href="{{ url_for('sign_up') }}" aria-label="Sign Up">Sign Up</a></li>
                 <li {% if request.endpoint == 'log_in' %} class="active-link" {% endif %}><a href="{{ url_for('log_in') }}" aria-label="Log In">Log In</a></li>
