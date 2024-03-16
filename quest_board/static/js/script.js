@@ -18,7 +18,7 @@ $(document).ready(function () {
     });
 
     // Initialise character counter for forms
-    $('input#event_name, textarea#description').characterCounter();
+    $('input#event_name, textarea#description, input#username, input#password, input#confirm_password').characterCounter();
 
     // Initialise collapsible
     $('.collapsible').collapsible();
@@ -28,11 +28,17 @@ $(document).ready(function () {
 
     // Apply required functionality to Materialize select input
     // Credit Imran Saleem - Stack Overflow
-    $("select[required]").css({display: "block", height: 0, padding: 0, width: 0, position: 'absolute'});
+    $("select[required]").css({
+        display: "block",
+        height: 0,
+        padding: 0,
+        width: 0,
+        position: 'absolute'
+    });
 
     // Materialise select input bug fix for mobile.
     // Credit Akintomiwa Opemipo - Stack Overflow
-    $(document).click(function(){
+    $(document).click(function () {
         $('li[id^="select-options"]').on('touchend', function (e) {
             e.stopPropagation();
         });
@@ -40,6 +46,7 @@ $(document).ready(function () {
 
     // Sets an auto timer to scroll to the next slide for the carousel.
     autoplay();
+
     function autoplay() {
         $('.carousel').carousel('next');
         setTimeout(autoplay, 5000);

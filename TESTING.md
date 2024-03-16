@@ -281,7 +281,7 @@ Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | Display Previous Gallery Image | Previous gallery image displays on screen | Drag gallery image to the right | Previous gallery image displayed | Pass |
 | Select Gallery Indicator | Display the selected gallery image | Click gallery indicator | Selected gallery image displayed | Pass |
 | `Events Page` |
-| Prevent logged out users from accessing the page | Users who aren't logged in will recieve a falsh message and be redirected to the log in page. | Access the page via the url link whilst logged out | Redirected to log in page and flash message displayed | Pass |
+| Prevent logged out users from accessing the page | Users who aren't logged in will recieve a flash message and be redirected to the log in page. | Access the page via the url link whilst logged out | Redirected to log in page and flash message displayed | Pass |
 | Fliter Dropdown (Open) | Open filter dropdown to display search options | Click filter | Filter dropdown opens | Pass |
 | Fliter Dropdown (Close) | Close filter dropdown to remove search options | Click filter | Filter dropdown closes | Pass |
 | Filter Checkbox (Cardiff) | Display events matching selected option | Click checkbox | Display corresponding events | Pass |
@@ -312,7 +312,7 @@ Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | GET Method Leave | Redirect to 405 error page and display flash message | Attempt to leave event via the url link | Redirected to 405 error page and flash message displayed | Pass |
 | Join Full Event | Redirect to events page and display flash message | Attempt to join an event that's full | Redirected to events page and flash message displayed | Pass |
 | `Event Page` |
-| Prevent logged out users from accessing the page | Users who aren't logged in will recieve a falsh message and be redirected to the log in page. | Access the page via the url link whilst logged out | Redirected to log in page and flash message displayed | Pass |
+| Prevent logged out users from accessing the page | Users who aren't logged in will recieve a flash message and be redirected to the log in page. | Access the page via the url link whilst logged out | Redirected to log in page and flash message displayed | Pass |
 | Button Hover Effect | Button scale increase on mouse hover | Hover mouse over button | Button scale increases | Pass |
 | Button Click Animation | Button scale decreases on click | Click button | Button scale decreases | Pass |
 | Edit Button | Redirect to the edit event page | Click button | Redirected to edit event page | Pass |
@@ -321,7 +321,7 @@ Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | Leave Button | Remove username from party member list | Click button | Username removed from party list | Pass |
 | Full Event | Display "Full" stamp when party list reaches capacity | Fill party list | "Full" stamp displays on event | Pass |
 | `Create Event Page` |
-| Prevent logged out users from accessing the page | Users who aren't logged in will recieve a falsh message and be redirected to the log in page. | Access the page via the url link whilst logged out | Redirected to log in page and flash message displayed | Pass |
+| Prevent logged out users from accessing the page | Users who aren't logged in will recieve a flash message and be redirected to the log in page. | Access the page via the url link whilst logged out | Redirected to log in page and flash message displayed | Pass |
 | Character Counter (Username) | Dynamically display character number as input is entered | Enter input data | Counter displays current character number | Pass |
 | Character Counter (Description) | Dynamically display character number as input is entered | Enter input data | Counter displays current character number | Pass |
 | Select Dropdown (Location) | Display list of location options | Click input | Displays list of location options | Pass |
@@ -348,7 +348,7 @@ Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | Description Validation (End with Space) | Reload page and display flash message | Input form with space at end of Description input | Page reloaded and relevant message displayed | Pass |
 | Event Created Successfully | Redirect to events page and display flash message | Submit form with valid inputs | Redirected to events page and relevant message displayed | Pass |
 | `Edit Event Page` |
-| Prevent logged out users from accessing the page | Users who aren't logged in will recieve a falsh message and be redirected to the log in page. | Access the page via the url link whilst logged out | Redirected to log in page and flash message displayed | Pass |
+| Prevent logged out users from accessing the page | Users who aren't logged in will recieve a flash message and be redirected to the log in page. | Access the page via the url link whilst logged out | Redirected to log in page and flash message displayed | Pass |
 | Character Counter (Username) | Dynamically display character number as input is entered | Enter input data | Counter displays current character number | Pass |
 | Character Counter (Description) | Dynamically display character number as input is entered | Enter input data | Counter displays current character number | Pass |
 | Select Dropdown (Location) | Display list of location options | Click input | Displays list of location options | Pass |
@@ -379,14 +379,22 @@ Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | Delete Button | Delete event data and redirect to events page | Click button | Redirected to events page and event deleted | Pass |
 | Close Modal (Click outside modal window) | Close modal by clicking outside window | Click outside modal window | Modal closed | Pass |
 | `Sign Up Page` |
+| Prevent logged in users from accessing the page | Users who are logged in will recieve a flash message and be redirected to their profile page. | Access the page via the url link whilst logged in | Redirected to profile page and flash message displayed | Pass |
 | Valid Input (Username) | Input border turns green and displays "valid" text | Enter valid input | Input border turned green and displayed "valid" text | - |
 | Invalid Input (Username) | Input border turns red and displays "invalid entry" text | Enter invalid input | Input border turned red and displayed "invalid entry" text | - |
 | Valid Input (Password) | Input border turns green and displays "valid" text | Enter valid input | Input border turned green and displayed "valid" text | - |
 | Invalid Input (Password) | Input border turns red and displays "invalid entry" text | Enter invalid input | Input border turned red and displayed "invalid entry" text | - |
+| Valid Input (Confirm Password) | Input border turns green and displays "valid" text | Enter valid input | Input border turned green and displayed "valid" text | - |
+| Invalid Input (Confirm Password) | Input border turns red and displays "invalid entry" text | Enter invalid input | Input border turned red and displayed "invalid entry" text | - |
 | Character Counter (Username) | Dynamically display character number as input is entered | Enter input data | Counter displays current character number | - |
 | Character Counter (Password) | Dynamically display character number as input is entered | Enter input data | Counter displays current character number | - |
-| Required Inputs | Display message to user for unfilled input field | Submit form with empty inputs | Message displayed notifying of empty input field | - |
+| Character Counter (Confirm Password) | Dynamically display character number as input is entered | Enter input data | Counter displays current character number | - |
+| Required Input (Username) | Display message to user for unfilled input field | Submit form with empty inputs | Message displayed notifying of empty input field | - |
+| Required Input (Password) | Display message to user for unfilled input field | Submit form with empty inputs | Message displayed notifying of empty input field | - |
+| Required Input (Confirm Password) | Display message to user for unfilled input field | Submit form with empty inputs | Message displayed notifying of empty input field | - |
 | Input Pattern Recognition | Display message to user if keys outside the pattern requirements are entered | Submit form with invalid inputs | Message displayed notifying of incorrect input type | - |
+| Check Passwords Match | Reload page and display message if passwords don't match | Submit form with unmatched password inputs | Page reloaded and flash message displayed | - |
+| Check Username Exists | Reload page and display message if username exisits | Submit form with exisiting username | Page reloaded and flash message displayed | - |
 | Link Hover Effect | Text underlines on mouse hover | Hover over link text | Link text underlined | - |
 | Log In Link | Redirect to login page | Click button | Redirected to login page | - |
 | Successful Sign Up | Redirect to profile page | Submit valid sign up details | Redirected to profile page | - |
