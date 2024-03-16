@@ -165,6 +165,7 @@ Lighthouse within Chrome Developer Tools was used to assess the website's perfor
 | 400.html | ![Lighthouse results for desktop](documentation/testing/400-dt.jpg) |
 | 403.html | ![Lighthouse results for desktop](documentation/testing/403-dt.jpg) |
 | 404.html | ![Lighthouse results for desktop](documentation/testing/404-dt.jpg) |
+| 405.html | ![Lighthouse results for desktop](documentation/testing/405-dt.jpg) |
 | 500.html | ![Lighthouse results for desktop](documentation/testing/500-dt.jpg) |
 
 #### **Mobile Results**
@@ -182,6 +183,7 @@ Lighthouse within Chrome Developer Tools was used to assess the website's perfor
 | 400.html | ![Lighthouse results for desktop](documentation/testing/400-mob.jpg) |
 | 403.html | ![Lighthouse results for desktop](documentation/testing/403-mob.jpg) |
 | 404.html | ![Lighthouse results for desktop](documentation/testing/404-mob.jpg) |
+| 405.html | ![Lighthouse results for desktop](documentation/testing/405-mob.jpg) |
 | 500.html | ![Lighthouse results for desktop](documentation/testing/500-mob.jpg) |
 
 ---
