@@ -415,6 +415,7 @@ Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | Invalid Password | Display message notifying of invalid username or password | Submit incorrect password | Message displayed notifying of invalid username or password | Pass |
 | Successful Login | Redirect to profile page | Submit valid login details | Redirected to profile page | Pass |
 | `Profile Page` |
+| Prevent logged out users from accessing the page | Users who aren't logged in will recieve a flash message and be redirected to the log in page. | Access the page via the url link whilst logged out | Redirected to log in page and flash message displayed | - |
 | Button Hover Effect | Button scale increase on mouse hover | Hover mouse over button | Button scale increases | - |
 | Button Click Animation | Button scale decreases on click | Click button | Button scale decreases | - |
 | Create Event Button | Redirect to the create event page | Click button | Redirected to create event page | - |

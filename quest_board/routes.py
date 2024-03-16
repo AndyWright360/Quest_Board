@@ -111,25 +111,28 @@ def log_in():
 def profile(username):
     """
     Prevent logged out users from accessing the page,
-    Search database for user object that matches the username,
-    Retrive all events associated with the user and pass them
+    Check if the session user matches the requested profile username,
+    Retrieve all events associated with the user and pass them
     through to the profile page
     """
     if "user" in session:  # Checks if user is logged in
         # Retrieve the user object from the database
         user = User.query.filter_by(username=session["user"]).first()
 
-        # Retrieve events created by the user
-        created_events = Event.query.filter_by(
-            created_by=user.username).order_by(Event.date).all()
+        # Check if the session user matches the requested profile username
+        if user.username == username:
+            # Retrieve events created by the user
+            created_events = Event.query.filter_by(
+                created_by=username).order_by(Event.date).all()
 
-        # Retrieve events joined by the user
-        joined_events = user.events
+            # Retrieve events joined by the user
+            joined_events = user.events
 
-        return render_template("profile.html", username=username,
-                               created_events=created_events,
-                               joined_events=joined_events)
-
+            return render_template("profile.html", username=username,
+                                   created_events=created_events,
+                                   joined_events=joined_events)
+        else:
+            abort(403)  # User is not authorised to view this profile
     else:
         flash("You need to be logged in to access this page")
         return redirect(url_for("log_in"))
