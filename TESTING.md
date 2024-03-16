@@ -298,26 +298,28 @@ Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | Button Hover Effect | Button scale increase on mouse hover | Hover mouse over button | Button scale increases | Pass |
 | Button Click Animation | Button scale decreases on click | Click button | Button scale decreases | Pass |
 | Create Event Button | Redirect to the create event page | Click button | Redirected to create event page | Pass |
-| Edit Button | Redirect to the edit event page | Click button | Redirected to edit event page | - |
-| Delete Button | Open delete event modal | Click button | Delete event modal opened | - |
-| Join Button | Increase party member display by one | Click button | Party member display increased by one | - |
-| Leave Button | Decrease party member display by one | Click button | Party member display decreased by one | - |
-| Full Event | Display "Full" stamp when party list reaches capacity | Fill party list | "Full" stamp displays on event | - |
-| Event Stamp | Redirect to the selected event page | Click stamp | Redirected to selected event page | - |
+| Edit Button | Redirect to the edit event page | Click button | Redirected to edit event page | Pass |
+| Delete Button | Open delete event modal | Click button | Delete event modal opened | Pass |
+| Join Button | Increase party member display by one | Click button | Party member display increased by one | Pass |
+| Leave Button | Decrease party member display by one | Click button | Party member display decreased by one | Pass |
+| Full Event | Display "Full" stamp when party list reaches capacity | Fill party list | "Full" stamp displays on event | Pass |
+| Event Stamp | Redirect to the selected event page | Click stamp | Redirected to selected event page | Pass |
 | Unathorised Deletion | Redirect to 403 error page and display flash message | Attempt to delete other users event via the url link | Redirected to 403 error page and flash message displayed | Pass |
 | Unathorised Edit | Redirect to 403 error page and display flash message | Attempt to edit other users event via the url link | Redirected to 403 error page and flash message displayed | Pass |
 | Logged Out Deletion | Redirect to log in page and display flash message | Attempt to delete event via the url link while logged out | Redirected to log in page and flash message displayed | Pass |
 | Logged Out Edit | Redirect to log in page and display flash message | Attempt to edit event via the url link while logged out | Redirected to log in page and flash message displayed | Pass |
 | GET Method Join | Redirect to 405 error page and display flash message | Attempt to join event via the url link | Redirected to 405 error page and flash message displayed | Pass |
 | GET Method Leave | Redirect to 405 error page and display flash message | Attempt to leave event via the url link | Redirected to 405 error page and flash message displayed | Pass |
+| Join Full Event | Redirect to events page and display flash message | Attempt to join an event that's full | Redirected to events page and flash message displayed | Pass |
 | `Event Page` |
-| Button Hover Effect | Button scale increase on mouse hover | Hover mouse over button | Button scale increases | - |
-| Button Click Animation | Button scale decreases on click | Click button | Button scale decreases | - |
-| Edit Button | Redirect to the edit event page | Click button | Redirected to edit event page | - |
-| Delete Button | Open delete event modal | Click button | Delete event modal opened | - |
-| Join Button | Add username to party member list | Click button | Username added to party list | - |
-| Leave Button | Remove username from party member list | Click button | Username removed from party list | - |
-| Full Event | Display "Full" stamp when party list reaches capacity | Fill party list | "Full" stamp displays on event | - |
+| Prevent logged out users from accessing the page | Users who aren't logged in will recieve a falsh message and be redirected to the log in page. | Access the page via the url link whilst logged out | Redirected to log in page and flash message displayed | Pass |
+| Button Hover Effect | Button scale increase on mouse hover | Hover mouse over button | Button scale increases | Pass |
+| Button Click Animation | Button scale decreases on click | Click button | Button scale decreases | Pass |
+| Edit Button | Redirect to the edit event page | Click button | Redirected to edit event page | Pass |
+| Delete Button | Open delete event modal | Click button | Delete event modal opened | Pass |
+| Join Button | Add username to party member list | Click button | Username added to party list | Pass |
+| Leave Button | Remove username from party member list | Click button | Username removed from party list | Pass |
+| Full Event | Display "Full" stamp when party list reaches capacity | Fill party list | "Full" stamp displays on event | Pass |
 | `Create Event Page` |
 | Valid Input (Username) | Input border turns green | Enter valid input | Input border turned green | - |
 | Invalid Input (Username) | Input border turns red and displays "invalid entry" text | Enter invalid input | Input border turned red and displayed "invalid entry" text | - |
