@@ -652,6 +652,10 @@ The form on this page incorporates several features aimed at helping users under
 
 *404 Error Page*
 
+<img src="documentation/features/405-error.jpg">
+
+*405 Error Page*
+
 <img src="documentation/features/500-error.jpg">
 
 *500 Error Page*
