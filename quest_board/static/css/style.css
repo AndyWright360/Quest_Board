@@ -187,7 +187,6 @@ button:focus-visible {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 54px;
 }
 
 .flash-message {
@@ -195,6 +194,7 @@ button:focus-visible {
     font-weight: 700;
     margin: 0;
     text-align: center;
+    padding: 10px 0;
 }
 
 /*---------- Navbar ----------*/
