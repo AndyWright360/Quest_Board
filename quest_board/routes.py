@@ -334,24 +334,28 @@ def join_event(event_id):
     """
     Prevent logged out users from accessing the page,
     Check if username exists within user table,
-    Add relevant username to party_members table
+    Add relevant username to party_members table,
+    Abort to 405 error page if not accessed by POST method
     """
-    if "user" in session:  # Check if user is logged in
-        event = Event.query.get_or_404(event_id)
-        user = User.query.filter_by(username=session["user"]).first()
+    if request.method == "POST":
+        if "user" in session:  # Check if user is logged in
+            event = Event.query.get_or_404(event_id)
+            user = User.query.filter_by(username=session["user"]).first()
 
-        # Check username exists, if so add them to party member list
-        if user:
-            event.party_members.append(user)
-            db.session.commit()
-            flash(f"You have joined '{event.event_name}'")
-            return redirect(url_for('event', event_id=event_id))
+            # Check username exists, if so add them to party member list
+            if user:
+                event.party_members.append(user)
+                db.session.commit()
+                flash(f"You have joined '{event.event_name}'")
+                return redirect(url_for('event', event_id=event_id))
+            else:
+                flash("User not found")
+                return redirect(url_for('event', event_id=event_id))
         else:
-            flash("User not found")
-            return redirect(url_for('event', event_id=event_id))
+            flash("You need to be logged in to join an event")
+            return redirect(url_for('log_in'))
     else:
-        flash("You need to be logged in to join an event")
-        return redirect(url_for('log_in'))
+        abort(405)  # Redirect to 405 error page if method is not POST
 
 
 @app.route("/leave_event/<int:event_id>", methods=["POST"])
@@ -359,24 +363,28 @@ def leave_event(event_id):
     """
     Prevent logged out users from accessing the page,
     Check if username exists within party_members table,
-    Remove relevant username from party_members table
+    Remove relevant username from party_members table,
+    Abort to 405 error page if not accessed by POST method
     """
-    if "user" in session:  # Check if user is logged in
-        event = Event.query.get_or_404(event_id)
-        user = User.query.filter_by(username=session["user"]).first()
+    if request.method == "POST":
+        if "user" in session:  # Check if user is logged in
+            event = Event.query.get_or_404(event_id)
+            user = User.query.filter_by(username=session["user"]).first()
 
-        # Check username exists within list of party members
-        if user in event.party_members:
-            event.party_members.remove(user)
-            db.session.commit()
-            flash(f"You have left '{event.event_name}'")
-            return redirect(url_for('event', event_id=event_id))
+            # Check username exists within list of party members
+            if user in event.party_members:
+                event.party_members.remove(user)
+                db.session.commit()
+                flash(f"You have left '{event.event_name}'")
+                return redirect(url_for('event', event_id=event_id))
+            else:
+                flash("You are not currently a member of this event")
+                return redirect(url_for('event', event_id=event_id))
         else:
-            flash("You are not currently a member of this event")
-            return redirect(url_for('event', event_id=event_id))
+            flash("You need to be logged in to leave an event")
+            return redirect(url_for('log_in'))
     else:
-        flash("You need to be logged in to leave an event")
-        return redirect(url_for('log_in'))
+        abort(405)  # Redirect to 405 error page if method is not POST
 
 
 @app.errorhandler(400)
@@ -401,6 +409,14 @@ def page_not_found(error):
     Render custom error page when corresponding error detected
     """
     return render_template('404.html'), 404
+
+
+@app.errorhandler(405)
+def page_not_found(error):
+    """
+    Render custom error page when corresponding error detected
+    """
+    return render_template('405.html'), 405
 
 
 @app.errorhandler(500)
