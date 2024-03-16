@@ -308,8 +308,8 @@ Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | Unathorised Edit | Redirect to 403 error page and display flash message | Attempt to edit other users event via the url link | Redirected to 403 error page and flash message displayed | Pass |
 | Logged Out Deletion | Redirect to log in page and display flash message | Attempt to delete event via the url link while logged out | Redirected to log in page and flash message displayed | Pass |
 | Logged Out Edit | Redirect to log in page and display flash message | Attempt to edit event via the url link while logged out | Redirected to log in page and flash message displayed | Pass |
-| GET Method Join | Redirect to 405 error page and display flash message | Attempt to join event via the url link | Redirected to 405 error page and flash message displayed | - |
-| GET Method Leave | Redirect to 405 error page and display flash message | Attempt to leave event via the url link | Redirected to 405 error page and flash message displayed | - |
+| GET Method Join | Redirect to 405 error page and display flash message | Attempt to join event via the url link | Redirected to 405 error page and flash message displayed | Pass |
+| GET Method Leave | Redirect to 405 error page and display flash message | Attempt to leave event via the url link | Redirected to 405 error page and flash message displayed | Pass |
 | `Event Page` |
 | Button Hover Effect | Button scale increase on mouse hover | Hover mouse over button | Button scale increases | - |
 | Button Click Animation | Button scale decreases on click | Click button | Button scale decreases | - |

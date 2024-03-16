@@ -334,6 +334,7 @@ def join_event(event_id):
     """
     Prevent logged out users from accessing the page,
     Check if username exists within user table,
+    Check if event has space available,
     Add relevant username to party_members table,
     Abort to 405 error page if not accessed by POST method
     """
@@ -342,15 +343,19 @@ def join_event(event_id):
             event = Event.query.get_or_404(event_id)
             user = User.query.filter_by(username=session["user"]).first()
 
-            # Check username exists, if so add them to party member list
-            if user:
-                event.party_members.append(user)
-                db.session.commit()
-                flash(f"You have joined '{event.event_name}'")
-                return redirect(url_for('event', event_id=event_id))
+            # Check if the event has available slots
+            if len(event.party_members) < event.party_size:
+                # Check username exists, if so add them to party member list
+                if user:
+                    event.party_members.append(user)
+                    db.session.commit()
+                    flash(f"You have joined '{event.event_name}'")
+                    return redirect(url_for('event', event_id=event_id))
+                else:
+                    flash("User not found")
             else:
-                flash("User not found")
-                return redirect(url_for('event', event_id=event_id))
+                flash("Sorry, this event is already full")
+            return redirect(url_for('event', event_id=event_id))
         else:
             flash("You need to be logged in to join an event")
             return redirect(url_for('log_in'))
