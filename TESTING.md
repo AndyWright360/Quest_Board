@@ -374,10 +374,10 @@ Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | Reduce Party Size Below Joined Members | Reload page and display flash message | Reduce the Max Party Size input below the number of joined members | Page reloaded and relevant message displayed | Pass |
 | Event Editted Successfully | Redirect to events page and display flash message | Submit form with valid inputs | Redirected to events page and relevant message displayed | Pass |
 | `Delete Event Modal` |
-| Button Hover Effect | Button colour darkens on mouse hover | Hover mouse over button | Button colour darkens | - |
-| Cancel Button | Close delete modal | Click button | Modal closed | - |
-| Delete Button | Delete event data and redirect to events page | Click button | Redirected to events page and event deleted | - |
-| Close Modal (Click outside modal window) | Close modal by clicking outside window | Click outside modal window | Modal closed | - |
+| Button Hover Effect | Button colour darkens on mouse hover | Hover mouse over button | Button colour darkens | Pass |
+| Cancel Button | Close delete modal | Click button | Modal closed | Pass |
+| Delete Button | Delete event data and redirect to events page | Click button | Redirected to events page and event deleted | Pass |
+| Close Modal (Click outside modal window) | Close modal by clicking outside window | Click outside modal window | Modal closed | Pass |
 | `Sign Up Page` |
 | Valid Input (Username) | Input border turns green and displays "valid" text | Enter valid input | Input border turned green and displayed "valid" text | - |
 | Invalid Input (Username) | Input border turns red and displays "invalid entry" text | Enter invalid input | Input border turned red and displayed "invalid entry" text | - |
