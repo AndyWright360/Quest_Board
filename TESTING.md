@@ -380,24 +380,24 @@ Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | Close Modal (Click outside modal window) | Close modal by clicking outside window | Click outside modal window | Modal closed | Pass |
 | `Sign Up Page` |
 | Prevent logged in users from accessing the page | Users who are logged in will recieve a flash message and be redirected to their profile page. | Access the page via the url link whilst logged in | Redirected to profile page and flash message displayed | Pass |
-| Valid Input (Username) | Input border turns green and displays "valid" text | Enter valid input | Input border turned green and displayed "valid" text | - |
-| Invalid Input (Username) | Input border turns red and displays "invalid entry" text | Enter invalid input | Input border turned red and displayed "invalid entry" text | - |
-| Valid Input (Password) | Input border turns green and displays "valid" text | Enter valid input | Input border turned green and displayed "valid" text | - |
-| Invalid Input (Password) | Input border turns red and displays "invalid entry" text | Enter invalid input | Input border turned red and displayed "invalid entry" text | - |
-| Valid Input (Confirm Password) | Input border turns green and displays "valid" text | Enter valid input | Input border turned green and displayed "valid" text | - |
-| Invalid Input (Confirm Password) | Input border turns red and displays "invalid entry" text | Enter invalid input | Input border turned red and displayed "invalid entry" text | - |
-| Character Counter (Username) | Dynamically display character number as input is entered | Enter input data | Counter displays current character number | - |
-| Character Counter (Password) | Dynamically display character number as input is entered | Enter input data | Counter displays current character number | - |
-| Character Counter (Confirm Password) | Dynamically display character number as input is entered | Enter input data | Counter displays current character number | - |
-| Required Input (Username) | Display message to user for unfilled input field | Submit form with empty inputs | Message displayed notifying of empty input field | - |
-| Required Input (Password) | Display message to user for unfilled input field | Submit form with empty inputs | Message displayed notifying of empty input field | - |
-| Required Input (Confirm Password) | Display message to user for unfilled input field | Submit form with empty inputs | Message displayed notifying of empty input field | - |
-| Input Pattern Recognition | Display message to user if keys outside the pattern requirements are entered | Submit form with invalid inputs | Message displayed notifying of incorrect input type | - |
-| Check Passwords Match | Reload page and display message if passwords don't match | Submit form with unmatched password inputs | Page reloaded and flash message displayed | - |
-| Check Username Exists | Reload page and display message if username exisits | Submit form with exisiting username | Page reloaded and flash message displayed | - |
-| Link Hover Effect | Text underlines on mouse hover | Hover over link text | Link text underlined | - |
-| Log In Link | Redirect to login page | Click button | Redirected to login page | - |
-| Successful Sign Up | Redirect to profile page | Submit valid sign up details | Redirected to profile page | - |
+| Valid Input (Username) | Input border turns green and displays "valid" text | Enter valid input | Input border turned green and displayed "valid" text | Pass |
+| Invalid Input (Username) | Input border turns red and displays "invalid entry" text | Enter invalid input | Input border turned red and displayed "invalid entry" text | Pass |
+| Valid Input (Password) | Input border turns green and displays "valid" text | Enter valid input | Input border turned green and displayed "valid" text | Pass |
+| Invalid Input (Password) | Input border turns red and displays "invalid entry" text | Enter invalid input | Input border turned red and displayed "invalid entry" text | Pass |
+| Valid Input (Confirm Password) | Input border turns green and displays "valid" text | Enter valid input | Input border turned green and displayed "valid" text | Pass |
+| Invalid Input (Confirm Password) | Input border turns red and displays "invalid entry" text | Enter invalid input | Input border turned red and displayed "invalid entry" text | Pass |
+| Character Counter (Username) | Dynamically display character number as input is entered | Enter input data | Counter displays current character number | Pass |
+| Character Counter (Password) | Dynamically display character number as input is entered | Enter input data | Counter displays current character number | Pass |
+| Character Counter (Confirm Password) | Dynamically display character number as input is entered | Enter input data | Counter displays current character number | Pass |
+| Required Input (Username) | Display message to user for unfilled input field | Submit form with empty inputs | Message displayed notifying of empty input field | Pass |
+| Required Input (Password) | Display message to user for unfilled input field | Submit form with empty inputs | Message displayed notifying of empty input field | Pass |
+| Required Input (Confirm Password) | Display message to user for unfilled input field | Submit form with empty inputs | Message displayed notifying of empty input field | Pass |
+| Input Pattern Recognition | Display message to user if keys outside the pattern requirements are entered | Submit form with invalid inputs | Message displayed notifying of incorrect input type | Pass |
+| Check Passwords Match | Reload page and display message if passwords don't match | Submit form with unmatched password inputs | Page reloaded and flash message displayed | Pass |
+| Check Username Exists | Reload page and display message if username exisits | Submit form with exisiting username | Page reloaded and flash message displayed | Pass |
+| Link Hover Effect | Text underlines on mouse hover | Hover over link text | Link text underlined | Pass |
+| Log In Link | Redirect to login page | Click button | Redirected to login page | Pass |
+| Successful Sign Up | Redirect to profile page | Submit valid sign up details | Redirected to profile page | Pass |
 | `Login Page` |
 | Valid Input (Username) | Input border turns green and displays "valid" text | Enter valid input | Input border turned green and displayed "valid" text | - |
 | Invalid Input (Username) | Input border turns red and displays "invalid entry" text | Enter invalid input | Input border turned red and displayed "invalid entry" text | - |
