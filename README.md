@@ -962,6 +962,10 @@ For a detailed overview of all conducted testing, please refer to the [TESTING.m
 
   - Implemented this code as a bug fix to address the known issue with Materialize select inputs on touch screen devices.
 
+- [How to Fix Closed Server Connection by Nick](https://stackoverflow.com/questions/55457069/how-to-fix-operationalerror-psycopg2-operationalerror-server-closed-the-conn/67421581#67421581)
+
+  - This code helped me to fix the database connection time out issue.
+
 ### **Content**
 
 All content for the website was written by the developer Andrew Wright.

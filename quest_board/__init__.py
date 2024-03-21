@@ -19,6 +19,7 @@ else:
 db = SQLAlchemy(app)
 
 # Configure SQLAlchemy with pool_pre_ping option
+# Credit Nick - Stack Overflow
 app.config['SQLALCHEMY_ENGINE_OPTIONS'] = {"pool_pre_ping": True}
 
 from quest_board import routes  # noqa
