@@ -6,7 +6,7 @@
 
 This is the testing documentation for the Quest Board website. [The full README is available here.](README.md)
 
-[Click here to visit Quest Board](https://quest-board-a1869a6a1ddf.herokuapp.com/)
+[Click here to visit Quest Board](https://questboard-6b26caf529bf.herokuapp.com/)
 
 **By [Andrew Wright](https://github.com/AndyWright360)**
 
@@ -43,6 +43,7 @@ This is the testing documentation for the Quest Board website. [The full README 
     - [**Navbar Link Bug**](#navbar-link-bug)
     - [**Materialize Select Validation Bug**](#materialize-select-validation-bug)
     - [**Materialize Select Input Mobile Bug**](#materialize-select-input-mobile-bug)
+    - [**Database Connection Time Out**](#database-connection-time-out)
   - [**Known Bugs**](#known-bugs)
     - [**Section Pixel Bug**](#section-pixel-bug)
     - [**Select Required Mobile Bug**](#select-required-mobile-bug)

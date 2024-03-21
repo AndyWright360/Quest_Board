@@ -12,7 +12,7 @@ This project was created as part of the Code Institute Level 5 Diploma in Web Ap
 
 ![Quest Board displayed on miltiple devices](documentation/responsive.jpg)
 
-[Click here to visit Quest Board](https://quest-board-a1869a6a1ddf.herokuapp.com/)
+[Click here to visit Quest Board](https://questboard-6b26caf529bf.herokuapp.com/)
 
 **By [Andrew Wright](https://github.com/AndyWright360)**
 
