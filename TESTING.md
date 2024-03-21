@@ -498,6 +498,20 @@ I encountered this issue while testing the site on an iPhone. The Materialize se
 
 Upon researching online, I discovered that this issue is widely documented and found a solution on Stack Overflow.
 
+#### **Database Connection Time Out**
+
+![Connection Timeout](documentation/testing/connection-error.jpg)
+
+This issue occurred when remaining idle on a page for an extended period of time. After approximately 15-30 minutes, the connection to the database would time out. Consequently, the next request resulted in a 500 server error. Upon inspecting the error in debug mode to gather further details, I investigated the issue.
+
+After researching the error online, I discovered a solution by applying the following settings to the `__init__.py` file:
+
+```bash
+app.config['SQLALCHEMY_ENGINE_OPTIONS'] = {"pool_pre_ping": True}
+```
+
+By adding the `pool_pre_ping` setting, the application checks the connection to the database before making a request. If the connection has closed, it attempts to re-establish a connection and proceed with the request. This effectively resolved the issue I encountered.
+
 ### **Known Bugs**
 
 #### **Section Pixel Bug**
