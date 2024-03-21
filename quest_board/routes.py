@@ -237,7 +237,7 @@ def edit_event(event_id):
                 if new_party_size < len(event.party_members):
                     flash(
                         "Party size can't be less than current joined members"
-                        )
+                    )
                     return redirect(url_for("edit_event", event_id=event_id))
 
                 # Check event date against current date
@@ -353,13 +353,17 @@ def join_event(event_id):
                     event.party_members.append(user)
                     db.session.commit()
                     flash(f"You have joined '{event.event_name}'")
-                    return redirect(url_for('event', event_id=event_id))
+                    return redirect(
+                        request.referrer or url_for('event', event_id=event_id)
+                    )
                 else:
                     flash("User not found")
-                    return redirect(url_for('event', event_id=event_id))
+                    return redirect(
+                        request.referrer or url_for('event', event_id=event_id)
+                    )
             else:
                 flash("Sorry, this event is already full")
-                return redirect(url_for("events"))
+                return redirect(request.referrer or url_for("events"))
         else:
             flash("You need to be logged in to join an event")
             return redirect(url_for('log_in'))
@@ -385,10 +389,14 @@ def leave_event(event_id):
                 event.party_members.remove(user)
                 db.session.commit()
                 flash(f"You have left '{event.event_name}'")
-                return redirect(url_for('event', event_id=event_id))
+                return redirect(
+                    request.referrer or url_for('event', event_id=event_id)
+                )
             else:
                 flash("You are not currently a member of this event")
-                return redirect(url_for('event', event_id=event_id))
+                return redirect(
+                    request.referrer or url_for('event', event_id=event_id)
+                )
         else:
             flash("You need to be logged in to leave an event")
             return redirect(url_for('log_in'))
