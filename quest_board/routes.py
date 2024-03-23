@@ -295,8 +295,8 @@ def delete_event(event_id):
             db.session.delete(event)
             db.session.commit()
             flash("Event deleted successfully")
-            # Check the URL the user came from and redirect accordingly
-            if "profile" in request.referrer:
+            # Check referrer is not None and contains "profile"
+            if request.referrer and "profile" in request.referrer:
                 return redirect(url_for('profile', username=session["user"]))
             else:
                 return redirect(url_for('events'))
