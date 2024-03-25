@@ -14,7 +14,8 @@ $(document).ready(function () {
 
     // Initialise datepicker
     $('.datepicker').datepicker({
-        format: "dd mmm, yyyy"
+        format: "dd mmm, yyyy",
+        minDate: new Date(),
     });
 
     // Initialise character counter for forms

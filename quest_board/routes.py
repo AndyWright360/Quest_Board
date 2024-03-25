@@ -158,21 +158,13 @@ def log_out():
 def create_event():
     """
     Prevent logged out users from accessing the page,
-    Prevent date input from being in the past,
     Checks text inputs contain valid data,
     Posts event data to relevant database table
     """
     if "user" in session:  # Check if user is logged in
         if request.method == "POST":
-            event_date = datetime.strptime(request.form.get(
-                "date"), "%d %b, %Y").date()
             event_name = request.form.get("event_name")
             description = request.form.get("description")
-
-            # Check event date against current date
-            if event_date < datetime.today().date():
-                flash("Event date can't be in the past")
-                return redirect(url_for("create_event"))
 
             # Check if text inputs are only white spaces
             if event_name.strip() == "" or description.strip() == "":
