@@ -159,6 +159,7 @@ def create_event():
     """
     Prevent logged out users from accessing the page,
     Checks text inputs contain valid data,
+    Store form data if error is detected,
     Posts event data to relevant database table
     """
     if "user" in session:  # Check if user is logged in
@@ -168,21 +169,25 @@ def create_event():
 
             # Check if text inputs are only white spaces
             if event_name.strip() == "" or description.strip() == "":
+                session['form_data'] = request.form
                 flash("Inputs must not be empty")
-                return redirect(url_for("create_event"))
+                return render_template("create_event.html",
+                                       form_data=session["form_data"])
 
             # Check if text inputs start or end with spaces
             if (event_name != event_name.strip() or
                     description != description.strip()):
+                session['form_data'] = request.form
                 flash("Inputs must not start or end with spaces")
-                return redirect(url_for("create_event"))
+                return render_template("create_event.html",
+                                       form_data=session["form_data"])
 
             event = Event(
                 event_name=event_name,
                 location=request.form.get("location"),
                 time=request.form.get("time"),
                 date=datetime.strptime(request.form.get(
-                "date"), "%d %b, %Y").date(),
+                    "date"), "%d %b, %Y").date(),
                 created_by=session["user"],
                 party_size=request.form.get("party_size"),
                 description=description,
@@ -190,6 +195,11 @@ def create_event():
             )
             db.session.add(event)
             db.session.commit()
+
+            # Clear form data from the session after successful submission
+            if "form_data" in session:
+                session.pop("form_data")
+
             flash((f"Event '{event.event_name}' created"))
             return redirect(url_for("events"))
 

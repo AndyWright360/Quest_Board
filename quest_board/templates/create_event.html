@@ -27,7 +27,7 @@
                     <div class="row">
                         <!-- Event Name Input -->
                         <div class="input-field col s12">
-                            <input id="event_name" name="event_name" type="text" data-length="24" maxlength="24" required>
+                            <input id="event_name" name="event_name" {% if form_data %}value="{{ form_data.event_name }}"{% endif %} type="text" data-length="24" maxlength="24" required>
                             <label for="event_name">Event Name</label>
                         </div>
                     </div>
@@ -35,22 +35,22 @@
                         <!-- Dropbox - Select Location -->
                         <div class="input-field col s12 m6">
                             <select id="location" name="location" required>
-                                <option value="" disabled selected>Select Location</option>
-                                <option value="swansea">Swansea</option>
-                                <option value="bridgend">Bridgend</option>
-                                <option value="cardiff">Cardiff</option>
-                                <option value="newport">Newport</option>
+                                <option value="" disabled {% if not form_data %}selected{% endif %}>Select Location</option>
+                                <option value="swansea" {% if form_data and form_data.location == "swansea" %}selected{% endif %}>Swansea</option>
+                                <option value="bridgend" {% if form_data and form_data.location == "bridgend" %}selected{% endif %}>Bridgend</option>
+                                <option value="cardiff" {% if form_data and form_data.location == "cardiff" %}selected{% endif %}>Cardiff</option>
+                                <option value="newport" {% if form_data and form_data.location == "newport" %}selected{% endif %}>Newport</option>
                             </select>
                             <label for="location">Location</label>
                         </div>
                         <!-- Dropbox - Select Time -->
                         <div class="input-field col s12 m6">
                             <select id="time" name="time" required>
-                                <option value="" disabled selected>Select Time</option>
-                                <option value="10am">10am</option>
-                                <option value="12pm">12pm</option>
-                                <option value="2pm">2pm</option>
-                                <option value="4pm">4pm</option>
+                                <option value="" disabled {% if not form_data %}selected{% endif %}>Select Time</option>
+                                <option value="10am" {% if form_data and form_data.time == "10am" %}selected{% endif %}>10am</option>
+                                <option value="12pm" {% if form_data and form_data.time == "12pm" %}selected{% endif %}>12pm</option>
+                                <option value="2pm" {% if form_data and form_data.time == "2pm" %}selected{% endif %}>2pm</option>
+                                <option value="4pm" {% if form_data and form_data.time == "4pm" %}selected{% endif %}>4pm</option>
                             </select>
                             <label for="time">Time</label>
                         </div>
@@ -58,12 +58,12 @@
                     <div class="row">
                         <!-- Datepicker -->
                         <div class="input-field col s12 m6">
-                            <input id="date" name="date" type="text" class="datepicker" required>
+                            <input id="date" name="date" {% if form_data %}value="{{ form_data.date }}"{% endif %} type="text" class="datepicker" required>
                             <label for="date">Date</label>
                         </div>
                         <!-- Party Size Input -->
                         <div class="input-field col s12 m6">
-                            <input id="party_size" name="party_size" type="number" min="1" max="10" step="1" required>
+                            <input id="party_size" name="party_size" {% if form_data %}value="{{ form_data.party_size }}"{% endif %} type="number" min="1" max="10" step="1" required>
                             <label for="party_size">Max Party Size</label>
                             <span class="helper-text">Between 1-10</span>
                         </div>
@@ -71,7 +71,7 @@
                     <div class="row">
                         <!-- Description Textarea -->
                         <div class="input-field col s12">
-                            <textarea id="description" name="description" class="materialize-textarea" data-length="250" maxlength="250" required></textarea>
+                            <textarea id="description" name="description" class="materialize-textarea" data-length="250" maxlength="250" required>{% if form_data %}{{ form_data.description }}{% endif %}</textarea>
                             <label for="description">Description</label>
                         </div>
                     </div>
@@ -80,7 +80,7 @@
                         <div class="col s12 m4 center-align">
                             <p class="radio-container">
                                 <label for="beginner">
-                                    <input class="with-gap" name="exp_level" value="beginner" id="beginner" type="radio" checked />
+                                    <input class="with-gap" name="exp_level" value="beginner" id="beginner" type="radio" {% if not form_data or (form_data and form_data.exp_level == "beginner") %}checked{% endif %}>
                                     <span>Beginner</span>
                                     <img class="stamp" img src="{{ url_for('static', filename='images/seal-green.webp') }}" alt="A green wax seal with a D20 symbol">
                                 </label>
@@ -99,7 +99,7 @@
                         <div class="col s12 m4 center-align">
                             <p class="radio-container">
                                 <label for="everyone">
-                                    <input class="with-gap" name="exp_level" value="everyone" id="everyone" type="radio">
+                                    <input class="with-gap" name="exp_level" value="everyone" id="everyone" type="radio" {% if form_data and form_data.exp_level == "everyone" %}checked{% endif %}>
                                     <span>Everyone</span>
                                     <img class="stamp" img src="{{ url_for('static', filename='images/seal-yellow.webp') }}" alt="A yellow wax seal with a D20 symbol">
                                 </label>
@@ -117,7 +117,7 @@
                             <!-- Radio Button - Experienced -->
                             <p class="radio-container">
                                 <label for="experienced">
-                                    <input class="with-gap" name="exp_level" value="experienced" id="experienced" type="radio">
+                                    <input class="with-gap" name="exp_level" value="experienced" id="experienced" type="radio" {% if form_data and form_data.exp_level == "experienced" %}checked{% endif %}>
                                     <span>Experienced</span>
                                     <img class="stamp" img src="{{ url_for('static', filename='images/seal-red.webp') }}" alt="A red wax seal with a D20 symbol">
                                 </label>
