@@ -181,7 +181,8 @@ def create_event():
                 event_name=event_name,
                 location=request.form.get("location"),
                 time=request.form.get("time"),
-                date=event_date,
+                date=datetime.strptime(request.form.get(
+                "date"), "%d %b, %Y").date(),
                 created_by=session["user"],
                 party_size=request.form.get("party_size"),
                 description=description,
