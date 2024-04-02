@@ -598,6 +598,10 @@ A relational database schema was implemented using PostgreSQL, featuring primary
 
 *Required Input Notification*
 
+<img src="documentation/features/save-input-on-error.gif">
+
+*Save Inputs on Error*
+
 <img src="documentation/features/date-picker.gif">
 
 *Date Picker*
@@ -625,6 +629,8 @@ The form on this page incorporates several features aimed at helping users under
 - **Required Field Indication:** Required inputs are marked to alert users to any missed fields during submission.
 
 - **Input Validation:** Implemented for text and number fields, visually indicating validity with green or invalidity with red cues.
+
+- **Save Inputs on Error:** To provide a better user experience when filling out the create event form, I opted to save the input data if an error is detected. This eliminates the need for users to re-enter information in the event of accidental errors.
 
 - **Date Picker:** Implemented the Materialize date picker modal. Offering users an intuitive way to input dates that was easily customisable to match the colour theme of the website. 
 
